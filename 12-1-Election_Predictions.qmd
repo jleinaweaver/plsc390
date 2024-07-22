@@ -1,0 +1,84 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**III. The 2024 Election**
+
+- Let's talk predictions!
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. ...
+
+<br>
+
+
+:::
+
+
+## {background-image="Images/12_1-Go_Vote.jpg" .center  background-size='70%'}
+
+::: notes
+
+Go Vote! 
+
+Make a plan and execute it!
+
+:::
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+ASSIGNMENT - Make specific predictions for the big uncertainties in today's election. Provide evidence to support your "take" on each (Not just polling results, but a news story. Try to avoid overlapping evidence).
+
+1) Who will win the presidential election?
+2) Which party will control the Senate?
+3) Which party will control the House?
+4) ...Add the ballot measures that make it...
+- Require Citizenship to Vote and Prohibit Ranked-Choice Voting Amendment
+- Minimum Wage and Earned Paid Sick Time Initiative
+- Right to Reproductive Freedom Amendment
+- Sports Betting Amendment
+
+
+::: notes
+
+In class build arguments for each side and discuss
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+The aftermath!
+
+ASSIGNMENT - Submit something specific (e.g. a "hot take", data, etc) that we can use as a jumping off point to discuss the aftermath of the election!
+
+::: notes
+
+:::

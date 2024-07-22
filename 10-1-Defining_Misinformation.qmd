@@ -1,0 +1,109 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**I. How serious is the problem of misinformation in the American electorate?**
+
+1. Defining "misinformation"
+
+2. Evaluating a model of "misinformation"
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Update attendance list before class
+
+2. Readings
+    - Kavanagh, J., & Rich, M. D. (2018). Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
+    - Vraga, E. K., & Bode, L. (2020). Defining Misinformation and Understanding its Bounded Nature: Using Expertise and Evidence for Describing Misinformation. Political Communication, 37(1), 136–144. https://doi.org/10.1080/10584609.2020.1716500
+    - Li, J., & Wagner, M. W. (2020). The Value of Not Knowing: Partisan Cue-Taking and Belief Updating of the Uninformed, the Ambiguous, and the Misinformed. Journal of Communication, 70(5), 646–669. https://doi.org/10.1093/joc/jqaa022
+
+<br>
+
+
+
+:::
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining the concepts and giving us a basic model to clarify our thinking about the problem
+
+1. Kavanagh and Rich (2018), "Chapter 1 Introduction"
+
+2. Vraga and Bode (2020)
+
+3. Li and Wagner (2020)
+
+::: notes
+
+Avoid overlap, first-come, first-served
+
+Include APA citations with web links!
+
+:::
+
+
+
+## What do we mean by "misinformation"? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: notes
+
+Compare and contrast Kavanagh and Rich's (2018) concept "truth decay" to the academic treatments in Vraga and Bode (2020) and Li and Wagner (2020)
+
+:::
+
+
+
+## Li and Wagner (2020): The Model {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: notes
+
+- Three types of individuals: the uninformed, the ambiguous, and the misinformed
+
+:::
+
+
+
+## Li and Wagner (2020): The Results {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+1. Kavanagh and Rich (2018) "Chapter 5. The Consequences of Truth Decay"
+
+2. Gawiser and Witt (2006)
+
+3. YouGov survey (2023) on belief in conspiracy theories
+
+4. KFF (2023) health misinformation survey
+
+
+::: notes
+
+:::

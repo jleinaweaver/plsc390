@@ -1,0 +1,364 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+**Welcome to The Policy Lab!**
+
+1. Big picture goals
+
+2. The syllabus
+    
+3. "Skeptical Knowing"
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Update attendance list before class
+
+2. Make sure this week's modules visible in Canvas
+
+<br>
+
+*As students come in*
+
+Welcome all.
+
+- Sit down, introduce yourself to the people around you and get chatting about my prompt on the board.
+
+- Build two lists as a group!
+
+<br>
+
+*ON BOARD*
+
+### Ok, what is on your lists?
+
+- SHARE and DISCUSS
+
+<br>
+
+**SLIDE**: Let's make sure we're all in the right place!
+:::
+
+
+## Introductions {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+<br>
+
+1. Name
+
+2. Year in school
+
+3. Major
+
+4. Are you registered to vote?
+
+5. Do you have a plan to vote?
+
+::: notes
+
+1. Name: I'm Dr. Leinaweaver.
+
+2. Year in school: 12th year at Drury
+
+3. Major: Political scientist with primary research interests in international policy-making and problem-solving
+
+4. Yes
+
+5. First thing. Get up a little early and vote before work.
+
+<br>
+
+### Your turn!
+
+<br>
+
+**SLIDE**: Back to the board!
+:::
+
+
+
+## {background-image="Images/01_1-elections_graphic.png"  .center background-size='75%'}
+
+::: notes
+
+Big picture election talk: What are the stakes? How are you feeling?
+
+:::
+
+
+
+
+## Learning Outcomes {background-image="Images/background-white_house_graphic_v4_muted_text.png"  .center}
+
+::: {.incremental}
+- **Methods Knowledge**: Students should demonstrate an ability to work productively on policy or measurement challenges in our community
+
+- **Critical Thinking and Problem Solving Skills**: Students should be able to understand, analyze, and produce arguments on matters of substantive importance in our community
+
+- **Communication Skills**: Students should demonstrate effective written communication skills.
+
+:::
+
+::: notes
+
+**Everybody good with these?**
+
+:::
+
+
+
+## Seminar, not a lecture {background-image="Images/background-white_house_graphic_v4_muted_text.png"  .center}
+
+::: notes
+
+Lots of hands-on work
+
+- Analyzing and discussing cutting edge published research
+
+- Hands-on data
+
+- Connected to ongoing election
+
+:::
+
+
+
+## Semester Outline {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+<br>
+
+1. How serious is the problem of misinformation in the American electorate? What can we do about it?
+
+2. How serious is the problem of affective polarization in the American electorate? What can we do about it?
+
+3. Election Week!
+
+4. How serious and substantial are the threats to American democracy? What can we do about it?
+
+::: notes
+
+Alright, so that's our plan for the semester.
+
+### Questions on this?
+
+:::
+
+
+
+## Course Grade {background-image="Images/background-white_house_graphic_v4_muted_text.png"}
+
+```{r}
+tibble(
+  col1 = c("Participation", "Argument Paper 1", "Argument Paper 2", "Argument Paper 3", "Total"),
+  col2 = c("", "(Feb 9)", "(Mar 22)", "(Final Exam)", ""),
+  col3 = c(rep(25, 4), 100)
+) |>
+  kableExtra::kbl(align = c("l", "c", "c"), col.names = c("", "", "%")) |>
+  kableExtra::kable_styling(font_size = 50) |>
+  kableExtra::column_spec(1, width = "11em") |>
+  kableExtra::column_spec(2, width = "7em") |>
+  kableExtra::row_spec(c(0, 5), bold = TRUE, background = "#b3ccff")
+```
+
+::: notes
+Course grade is pretty simple.
+
+- Four equal pieces because being here and being engaged is as important to me as you learning to write convincing academic arguments.
+
+<br>
+
+Let's talk attendance and participation.
+:::
+
+
+
+## The Attendance Cliff {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-coyote.jpg")
+```
+
+::: notes
+NOTE: This is an intro class, don't rush this!!!
+
+<br>
+
+My attendance policy is simple.
+
+- The only way I can ensure everyone makes progress on the LOs is by being in class and doing the work.
+
+- This means I have to make sure you are here!
+
+<br>
+
+To help encourage you I use an attendance cliff.
+
+- Anyone with more than FOUR unexcused absences in the semester cannot earn higher than a ‘C’ in the course
+
+- Regardless of grades earned on other assignments.
+
+<br>
+
+### Questions on this?
+:::
+
+
+## Keep me in the loop! {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-office_space.jpg")
+```
+
+::: notes
+What if you have an excused absence coming up?
+
+- **It is your responsibility to email me BEFORE the absence in order to receive a make-up assignment.**
+
+- Easy peasy
+
+<br>
+
+This is also the place where I say to you, whatever is going on that might keep you out of class, please keep me in the loop. 
+
+- I genuinely want you to make progress on our learning outcomes
+
+<br>
+
+So, if things are getting rough for you please come talk to me.
+
+### I will always offer you flexibility in the face of struggle IF YOU COME TO ME BEFORE DEADLINES HAVE PASSED!
+
+<br>
+
+### Questions on this?
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-participation-points.jpg")
+```
+
+::: notes
+Ok, so I've got you coming to class now how do I make sure you're engaged?
+
+- Participation points!
+
+<br>
+
+Basically, if you:
+
+- Get to class on time,
+
+- Have the materials you need to work, and
+
+- Submit all daily required assignments BEFORE class,
+
+You'll be good to go and these are easy free points.
+
+<br>
+
+Before most classes we will have a reading and a discussion question.
+
+- You must submit your answer to that question on our Canvas discussion board BEFORE class begins to earn your participation point.
+
+- The syllabus is marked for all class sessions that have a pre-class assignment
+
+<br>
+
+### Important note: Canvas will not tell you about discussion post requirements in your to do list. You have to keep track using the syllabus.
+
+<br>
+
+### Each participation point you lose will reduce your participation grade by 1/3 of a letter grade
+
+### - e.g. A, A-, B+, B, B-, C+, etc.
+
+<br>
+
+### Questions on this?
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-matrix_meme.jpg")
+```
+
+::: notes
+Your first job is to download the syllabus from Canvas and read it carefully.
+
+It includes detail on everything you need to know.
+- Assignment deadlines
+- Readings
+- Drury policies
+- Office hours
+
+ALSO, I can see who downloaded it, so don’t delay!
+
+<br>
+
+We'll be using Canvas for submitting assignments, posting to the discussions and accessing the class readings.
+
+- Let me know if you have trouble accessing our materials on Canvas.
+:::
+
+
+## Skeptical Knowing {background-image="Images/background-white_house_graphic_v4_muted_text.png"}
+
+::: notes
+
+So, how do we "follow" the election? How do we separate the useful information from the noise? Explore the advice about "skeptical knowing" in 
+
+- Daily news coverage? (Kovach, B., & Rosenstiel, T. (2011). Chapter 3 The Way of Skeptical Knowing: The Tradecraft of Verification. In Blur: How to Know What’s True in the Age of Information Overload (p. 240). Bloomsbury Publishing. https://www.bloomsbury.com/us/blur-9781608193011)
+
+:::
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Submit to Canvas:
+
+1. A single piece of evidence (no overlap!) to support the argument that the US has a serious problem with "misinformation"
+
+2. A single piece of evidence (no overlap!) to support the argument that the US has a serious problem with "polarization"
+
+::: notes
+
+Avoid overlap, first-come, first-served
+
+Include APA citations with web links!
+
+:::
+
+
+
+
+
+
+
+
+

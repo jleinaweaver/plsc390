@@ -1,0 +1,67 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**I. How serious is the problem of misinformation in the American electorate?**
+
+Policies to Address Misinformation
+
+- Proposal 4: Reducing misinformation on social media
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Budak, C., Nyhan, B., Rothschild, D. M., Thorson, E., & Watts, D. J. (2024). Misunderstanding the harms of online misinformation. Nature, 630(8015), 45–53. https://doi.org/10.1038/s41586-024-07417-w
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Proposal 4: Reducing misinformation on social media
+
+1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
+
+2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+
+::: notes
+
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+TBD
+
+::: notes
+
+:::

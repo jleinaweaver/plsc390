@@ -1,0 +1,126 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**IV. How serious and substantial are the threats to American democracy?**
+
+- Getting hands-on with the US data in order to describe the variation and identify the threats to our national democracy
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - TBD
+
+<br>
+
+:::
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+Defining and Measuring Democracy (national)
+
+- Getting hands-on with the US data!
+
+- ...
+
+::: notes
+
+Analyzing US data across time
+
+1. The founding to the Civil War (1789-1865): Polity, V-Dem
+
+2. The Civil War to WW2 (1866-1946): Polity, V-Dem
+
+3. The Cold War (1947-1991): Polity, V-Dem, DD
+
+4. The post-Cold War world (1992-2020): Polity, V-Dem, DD, FH
+
+5. The most recent updates (2021-2023): V-Dem, FH
+
+
+
+1. Analyze US data from our founding to the start of the Cold War (approx 1947): Polity, V-Dem
+
+2. Analyze US data to the end of the Trump admin (1950-2020): Polity, V-Dem, DD, FH
+
+3. Analyze most recent updates (2021-2023): V-Dem, FH
+
+
+
+US Data Across Time
+- 1789-1949: Polity, V-Dem
+- 1950-1971: Polity, V-Dem, DD
+- 1971-2020: Polity, V-Dem, DD, FH
+- 2021-2023: V-Dem, FH
+
+Polity V (in progress)
+- US: 1789-2020
+
+FH
+- US: 1972-2023
+
+Democracy and Dictatorship
+- US: 1950-2020
+
+- https://sites.google.com/site/joseantoniocheibub/datasets/democracy-and-dictatorship-revisited
+- https://xmarquez.github.io/democracyData/reference/pacl.html
+- Extended version available through democracyData package
+- remotes::install_github("xmarquez/democracyData")
+
+V-Dem
+- US: 1789-2023
+
+- Electoral democracy index (polyarchy)
+- Liberal democracy index
+- Participatory democracy index
+- Deliberative democracy index
+
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining and Measuring Democracy (sub-national)
+
+- Grumbach (2023)
+
+
+::: notes
+
+:::

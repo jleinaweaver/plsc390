@@ -1,0 +1,78 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**II. How serious is the problem of affective polarization in the American electorate?**
+
+- Policies to Address Affective Polarization: Overcoming Misperceptions
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Gidron, N., Adams, J., & Horne, W. (2019). How Ideology, Economics and Institutions Shape Effective Polarization in Democratic Polities [Working Paper]. https://ces.fas.harvard.edu/uploads/files/events/GAH-Affective-Polarization-in-Democratic-Polities.pdf
+
+<br>
+
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Policies to Address Affective Polarization: Inequality
+
+1. Gidron, Adams and Horne (2019)
+
+2. ASSIGNMENT - Find us an example of inequality or socioeconomic class playing a significant role in polarizing the 2024 election. Are you convinced that these dynamics feed affective polarization? Why or why not?
+
+::: notes
+
+In class debate: Does this mean that redistribution policies (taxes, subsidies, welfare, etc) are the tools we need to fight AP?
+
+Gidron, N., Adams, J., & Horne, W. (2019). How Ideology, Economics and Institutions Shape Effective Polarization in Democratic Polities [Working Paper]. https://ces.fas.harvard.edu/uploads/files/events/GAH-Affective-Polarization-in-Democratic-Polities.pdf
+- A full on article manuscript (30 pages but double-spaced), HOWEVER, some really nice cross-national data AND "We conclude that affective polarization is more intense where unemployment and income inequality are high, and in countries with majoritarian political institutions" which is super interesting!
+
+Save for Class:
+Stewart, A. J., Plotkin, J. B., & McCarty, N. (2021). Inequality, identity, and partisanship: How redistribution can stem the tide of mass polarization. Proceedings of the National Academy of Sciences, 118(50), e2102140118. https://doi.org/10.1073/pnas.2102140118
+- I want to like this article so much but it is crazy wonky. Also, this is primarily a model and not an accessible test of it. Too bad. Maybe you can present it in an accessible way?
+
+
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+TBD
+
+::: notes
+
+:::

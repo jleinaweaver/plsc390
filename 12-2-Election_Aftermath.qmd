@@ -1,0 +1,80 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**III. The 2024 Election**
+
+- What just happened?!?!
+
+- What will happen next?
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Definitely need laptops in class next week! Or computer lab?
+
+<br>
+
+
+:::
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+The aftermath!
+
+ASSIGNMENT - Submit something specific (e.g. a "hot take", data, etc) that we can use as a jumping off point to discuss the aftermath of the election!
+
+
+::: notes
+
+In class build arguments for each side and discuss
+
+:::
+
+
+## Section 4: How serious and substantial are the threats to American democracy? What can we do about it? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: notes
+
+Final section of our class!
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining and Measuring Democracy (national)
+
+1. Diamond (1999)
+
+2. ASSIGNMENT - After completing the reading, submit to Canvas your preferred definition of democracy. In other words, what are the primary criteria or conditions you believe must be present to describe a state as a democracy?
+
+3. Tons of other references/resources on Canvas!
+
+::: notes
+
+:::

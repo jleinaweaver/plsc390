@@ -1,0 +1,80 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**II. How serious is the problem of affective polarization in the American electorate?**
+
+- Defining affective polarization
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Iyengar, S., Lelkes, Y., Levendusky, M., Malhotra, N., & Westwood, S. J. (2019). The Origins and Consequences of Affective Polarization in the United States. Annual Review of Political Science, 22(1), 129–146. https://doi.org/10.1146/annurev-polisci-051117-073034
+
+<br>
+
+
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining and Measuring Affective Polarization
+
+1. Iyengar, Lelkes, Levendusky, Malhotra, & Westwood (2019)
+
+2. ASSIGNMENT - Find us an example of affective polarization in action with the current election. In other words, an expression of "animosity between the parties" that is NOT based on a difference in policy preferences.
+
+::: notes
+
+- Touches on describing what is happening, introducing the danger and three proposed mechanisms for addressing it. This might be a good choice as a preview of what's to come.
+- Sections: Theory - AP as social identity (and the factors that strengthen it); Difficulty measuring it; Origins and causes (theory again?); Nonpolitical consequences; Strategies to address it; open questions remaining
+- Dig into how hard it is to measure this stuff
+
+Save for Class
+Webster, S. W., & Abramowitz, A. I. (2017). The Ideological Foundations of Affective Polarization in the U.S. Electorate. American Politics Research, 45(4), 621–647. https://doi.org/10.1177/1532673X17703132
+- Argues that other research gets it wrong, affective polarization and policy polarization are correlated
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining and Measuring Political Sectarianism
+
+1. Finkel, Bail, Cikara, Ditto, Iyengar, Klar, Mason, McGrath, Nyhan, Rand, Skitka, Tucker, Van Bavel, Wang, & Druckman (2020)
+
+2.  ASSIGNMENT - Find us an example of political sectarianism in action with the current election. In other words, an expression of "othering", "aversion" or "moralization" that goes beyond the affective polarization from last class.
+
+::: notes
+
+:::

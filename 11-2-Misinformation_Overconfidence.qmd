@@ -1,0 +1,155 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**I. How serious is the problem of misinformation in the American electorate?**
+
+1. Theories of Misinformation: Psychology
+    - Repetition and Overconfidence
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Update attendance list before class
+
+2. Readings
+    - Gordon Pennycook, Tyrone D. Cannon, and David G. Rand (2018). “Prior exposure increases perceived accuracy of fake news.” Journal of Experimental Psychology: General 147(12): 1865–1880. https://static1.squarespace.com/static/51ed234ae4b0867e2385d879/t/5c0b718d352f539a3059adb9/1544253851708/2018+Pennycook+-+JEPG.pdf
+    
+    - Benjamin A. Lyons, Jacob M. Montgomery, Andrew M. Guess, Brendan Nyhan, and Jason Reifler (2021). “Overconfidence in news judgments is associated with false news susceptibility.” Proceedings of the National Academy of Sciences June 8, 2021 118 (23) e2019527118.
+https://www.pnas.org/doi/10.1073/pnas.2019527118
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+1. Pennycook, Cannon and Rand (2018) on repetition
+
+2. Lyons et al (2021) on overconfidence
+
+3. Lyons appendix which has their survey questions for us to evaluate: Are these good tests of knowledge? Of misinformation?
+
+::: notes
+
+- Both articles are fairly short, describe survey experiments and extrapolate out
+- In class explore the articles (Research question, theory, data and analysis) then extrapolate to current election and tease out policy design to address it: what does this mean we can do about it?
+- End class by connecting these arguments to the current election
+
+Save for Class (data figures):
+Michael Barthel, Amy Mitchell and Jesse Holcomb (2016). “Many Americans Believe Fake News Is Sowing Confusion.” Pew Research Center, December 15, 2016.
+- The Pew Report is very accessible and paints a picture of Americans suspicious of fake news and way too confident in their own ability to spot and ignore it
+
+Gordon Pennycook, Tyrone D. Cannon, and David G. Rand (2018). “Prior exposure increases perceived accuracy of fake news.” Journal of Experimental Psychology: General 147(12): 1865–1880. 
+
+Nice opening section on why we should care about misinformation
+
+RQ: How do people come to believe stories that are patently and demonstrably untrue? (1866)
+
+“Fake news” defined (p1865): “…news stories that were fabricated (but presented as if from legitimate sources) and promoted on social media to deceive the public for ideological and/or financial gain (Lazer et al., 2018).”
+
+Causal mechanism: Prior Exposure  
+- The “illusory truth effect”: Repetition eases processing (i.e. processing fluency) and that fluency comes to serve as a heuristic device to infer accuracy (p1866)
+
+Authors suggest two boundary conditions that may reduce the power of the repetition effect  
+1. Fake news is often implausible  
+2. Fake news is highly partisan and motivated reasoning may work internally to a respondent to deny its acceptance
+
+Experiment 1 (1867-1868): Extreme implausibility limits the illusory truth effect  
+- Repetition works if the truth of the “fact” is unknown to the respondent
+
+Experiment 2 (1868-1871): A SINGLE prior exposure boosts perceived accuracy for both fake and real news.  
+- This works even if a) the fake news is flagged (fact checking), b) the news conflicts with your partisan view of the world, and c) when focused on stories perceived as unknown during the “familiarity stage” of the experiment.
+
+Experiment 3 (1871-1874): The effect of repetition persists over time (1 week later) and increases with additional repetition of the treatment
+
+General Discussion (1874-1875)  
+- Small effect after the first repetition (EXPLORE THIS IN CLASS)  
+- Scary that this effect works even when we aren’t aware of the exposure! Suggests that this fluency effect is powerful and may be subconscious  
+- The effect is NOT countered by by motivated reasoning  
+- Fact checking may help BUT it does not outweigh the effect of the repetition
+
+
+
+
+Benjamin A. Lyons, Jacob M. Montgomery, Andrew M. Guess, Brendan Nyhan, and Jason Reifler (2021). “Overconfidence in news judgments is associated with false news susceptibility.” Proceedings of the National Academy of Sciences June 8, 2021 118 (23) e2019527118.
+https://www.pnas.org/doi/10.1073/pnas.2019527118
+
+Why do we care?
+- However, though Americans believe confusion caused by false news is extensive, relatively few indicate having seen or shared it
+
+RQ: How pervasive is overconfidence? Is overconfidence related to false news exposure? Are overconfident individuals actually more likely to hold misperceptions or share false stories?
+1. To what extent will people who are least accurate at distinguishing between legitimate and false
+news overrate their ability to distinguish mainstream from false news?
+2. Is overconfidence in one’s ability to distinguish mainstream from false news positively related to false news exposure?
+3. (1) Is overconfidence positively related to holding misperceptions on specific topics? (2) Is this relationship stronger when the claim is politically congenial?
+4. (1) Is overconfidence positively related to self-reported willingness to like or share false content? (2) Is this relationship stronger when the claim is politically congenial?
+
+Bottom line: Our results paint a worrying picture. The vast majority of respondents (about 90%) reported that they are above average in their ability to discern false and legitimate news headlines, meaning that many Americans substantially overestimate their abilities. Accordingly, people’s self-perceptions are only weakly correlated with actual performance. Further, using data measuring respondents’ online behavior, we show that those who overrate their ability more frequently visit websites known to spread false or misleading news (1).
+
+Prior Research on p2: Who Spreads False News? 1) Partisanship / motivated reasoning, 2) information literacy skills matter, 3) analytical not emotional thinking
+
+This paper seems to spread the theory in the section(s) that pitches each research question. Let's unpack it... All if it seems to hinge on the the Dunning–Kruger Effect (DKE)
+- Generally speaking, poor performers in social and intellectual domains tend to be unaware of their own deficiency whereas competent performers slightly underestimate their own ability relative to others
+- Poor performers suffer from a double bind: Not only does a lack of expertise produce errors in the first place, it also prevents recognition of these errors and awareness of others’ capabilities.
+- To begin, we expect a positive association between overconfidence and visits to false news websites. The DKE implies less ability to discern which news stories are false when an individual is exposed (e.g., on a social media platform) combined with lesser awareness of this discernment deficiency, which would lead to greater incidental exposure to false news stories.
+- Similarly, overconfidence may be seen as a form of invulnerability bias in which assumed mastery leads people to feel little need to take preventative actions (e.g., to be cautious or
+engage in deliberate thinking about which sites one visits), which may produce additional exposure to questionable media messages (28, 29).
+- high confidence is associated with less reflection. As a result, people who are overconfident may be more willing to accept false claims and to engage with false content in the form of liking or sharing these stories
+- individuals are generally more likely to believe false claims when they are consistent with their own prior political beliefs
+
+Definitely review the survey questions in the appendix
+
+Results p3-6; tons to discuss
+
+Discussion conclusions p7
+- "We find that respondents tend to think they are better than the average person at news discernment, and perceived ability is only weakly associated with actual ability, with the worst performers also being the most overconfident. Importantly, overconfidence is associated with a range of normatively troubling outcomes, including visits to false news websites in online behavior data. The overconfident also express greater willingness to share false headlines and are less able to discern between true and false statements about contemporaneous news events. Notably, the overconfident are particularly susceptible to congenial false news. These results suggest that overconfidence may be a crucial factor for explaining how false and low-quality information spreads via social media."
+- "Targeting these overconfident individuals could be an important step toward reducing misinformation on social media sites, though how best to do so remains an open question."
+- "Most critically, our analyses are correlational and, thus, face concerns about endogeneity. ... For instance, habitual exposure to false news might lead to poorly calibrated estimates of one’s ability to detect it, especially given the tendency for people to treat incoming information as true and the subsequent effects this can have on feelings of fluency (54). Overconfidence and false news engagement could even mutually reinforce one another over time (55)."
+
+
+
+
+
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+1. ASSIGNMENT - Bring a case from the current election that illustrates any of the dynamics discussed in the readings for today (e.g. paranoia, conspiracy theories, elites promoting these kinds of ideas)
+
+2. Oliver and Wood (2014) on paranoia and belief in conspiracies
+
+3. Clayton et al (2021) on elite cues
+
+
+::: notes
+
+:::

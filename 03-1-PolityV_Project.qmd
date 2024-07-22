@@ -1,0 +1,101 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**I. How serious is the problem of misinformation in the American electorate?**
+
+Policies to Address Misinformation
+
+- Proposal 1: Teaching information literacy
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Association of College and Research Libraries (ACRL). (2015). Framework for Information Literacy for Higher Education. https://www.ala.org/acrl/standards/ilframework
+
+    - Association of College and Research Libraries (ACRL). (2015). Framework for Information Literacy for Higher Education. https://www.ala.org/acrl/standards/ilframework
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Proposal 1: Teaching information literacy
+
+1. ACRL (2015) on the big ideas underpinning IL
+
+2. Kavanagh and Rich (2018) "Chapter 2. Truth Decay’s Four Trends"
+
+::: notes
+1. Really need to unpack the ACRL 2015 document
+- Defining IL
+- Examining each frame, connecting them to specific habits and processes
+2. Use the four trends in the Truth Decay book as a test to consider. Would an embrace of IL counter each of these trends?
+3. How would we implement this as a policy?
+
+Association of College and Research Libraries (ACRL). (2015). Framework for Information Literacy for Higher Education. https://www.ala.org/acrl/standards/ilframework
+- Fascinating but very dense set of "frames" or ideas
+- IL definition: "Information literacy is the set of integrated abilities encompassing the reflective discovery of information, the understanding of how information is produced and valued, and the use of information in creating new knowledge and participating ethically in communities of learning" (p3).
+- We really need to spend time exploring and discussing each frame (See Harden and Harden 2019 for specific activities/prompts for examining some of the frames)
+	- What does this frame really mean?
+	- How do I "do it"?
+	- How close to this ideal do I come day-to-day? Is it possible to self-diagnose the problem? Why or why not?
+- Bottom line, should IL (and these six frames) be a primary objective for all students at Drury? Why or why not?
+- How would a deeper expertise in IL change the election? Our government? Our communities? 
+
+Kavanagh, J., & Rich, M. D. (2018). Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
+
+Machete, P., & Turpin, M. (2020). The Use of Critical Thinking to Identify Fake News: A Systematic Literature Review. Responsible Design, Implementation and Use of Information and Communication Technology, 12067, 235–246.
+
+Harden, M., & Harden, J. J. (2020). Embedding the New Information Literacy Framework in Undergraduate Political Science Courses. PS: Political Science & Politics, 53(2), 344–348. https://doi.org/10.1017/S1049096519001756
+
+NOTE: I cannot find any high quality research testing if these IL skills "work" in the real world
+- The ILT test is not obtainable and is a 1 hour multiple choice test
+- There are a couple articles I can find testing IL but the analyses suck, the samples are tiny and the interventions are non-transparent
+- Jones-Jang, S. M., Mortensen, T., & Liu, J. (2021). Does Media Literacy Help Identification of Fake News? Information Literacy Helps, but Other Literacies Don’t. American Behavioral Scientist, 65(2), 371–388
+
+
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Proposal 2: Investing in institutions for "fact-checking"
+
+1. Bisgaard (2019)
+
+2. ASSIGNMENT - Find us an example of "fact-checking" in the media you think is effective AND find us an example you think isn't effective.
+
+
+::: notes
+
+:::

@@ -1,0 +1,107 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**I. Previewing our semester**
+
+1. Real-world cases of misinformation
+    
+2. Real-world cases of polarization
+
+3. Is American democracy under serious threat?
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Update attendance list before class
+
+2. Make sure this week's modules visible in Canvas
+
+<br>
+
+:::
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Submit to Canvas:
+
+1. A single piece of evidence (no overlap!) to support the argument that the US has a serious problem with "misinformation"
+
+2. A single piece of evidence (no overlap!) to support the argument that the US has a serious problem with "polarization"
+
+::: notes
+
+Avoid overlap, first-come, first-served
+
+Include APA citations with web links!
+
+:::
+
+
+
+## Argument: The US has a serious problem with "misinformation" {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: notes
+
+In class discuss each prompt seminar-style (define the target concept based on the cases submitted, discuss cases, ?), build arguments to answer each prompt on the board
+
+How do we collectively define misinformation?
+
+:::
+
+
+
+## Argument: The US has a serious problem with "polarization" {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: notes
+
+In class discuss each prompt seminar-style (define the target concept based on the cases submitted, discuss cases, ?), build arguments to answer each prompt on the board
+
+How do we collectively define polarization?
+
+:::
+
+
+
+## Is American democracy under serious threat? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining the concepts and giving us a basic model to clarify our thinking about the problem
+
+1. Kavanagh and Rich (2018), "Chapter 1 Introduction"
+
+2. Vraga and Bode (2020)
+
+3. Li and Wagner (2020)
+
+::: notes
+
+:::

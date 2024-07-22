@@ -1,0 +1,87 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**II. How serious is the problem of affective polarization in the American electorate?**
+
+- Policies to Address Affective Polarization: Overcoming Misperceptions
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Druckman, J. N., Klar, S., Krupnikov, Y., Levendusky, M., & Ryan, J. B. (2022). (Mis)estimating Affective Polarization. The Journal of Politics, 84(2), 1106–1117. https://doi.org/10.1086/715603
+
+    - Combs, A., Tierney, G., Guay, B., Merhout, F., Bail, C. A., Hillygus, D. S., & Volfovsky, A. (2023). Reducing political polarization in the United States with a mobile chat platform. Nature Human Behaviour, 7(9), 1454–1461. https://doi.org/10.1038/s41562-023-01655-0
+
+<br>
+
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Policies to Address Affective Polarization: Overcoming Misperceptions
+
+1. Druckman, Klar, Krupnikov, Levendusky, & Ryan (2022)
+
+2. Combs, Tierney, Guay, Merhout, Bail, Hillygus, & Volfovsky (2023)
+
+::: notes
+
+1. Refresh mechanism from last class; Does that explain the current election well?
+2. Druckman et al's argument? Evidence?
+3. Are you persudaded by the Combs et al platform? Why or why not?
+4. Connect to the election
+
+Druckman, J. N., Klar, S., Krupnikov, Y., Levendusky, M., & Ryan, J. B. (2022). (Mis)estimating Affective Polarization. The Journal of Politics, 84(2), 1106–1117. https://doi.org/10.1086/715603
+- AP in part sourced from "misperceptions of the other party’s voters"
+- "We show that when partisans learn that reality, partisan animus falls sharply; partisans do
+not have much animus toward the typical member of the other party. Our results suggest antidotes for vitiating affective polarization but also complicate understandings of good citizenship."
+
+Combs, A., Tierney, G., Guay, B., Merhout, F., Bail, C. A., Hillygus, D. S., & Volfovsky, A. (2023). Reducing political polarization in the United States with a mobile chat platform. Nature Human Behaviour, 7(9), 1454–1461. https://doi.org/10.1038/s41562-023-01655-0
+- A little geeky (focused as much on designing the platform as the effects of the intervention), but short and different
+
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Policies to Address Affective Polarization: Inequality
+
+1. Gidron, Adams and Horne (2019)
+
+2. ASSIGNMENT - Find us an example of inequality or socioeconomic class playing a significant role in polarizing the 2024 election. Are you convinced that these dynamics feed affective polarization? Why or why not?
+
+::: notes
+
+:::

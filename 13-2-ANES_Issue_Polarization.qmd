@@ -1,0 +1,460 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+
+# Input ANES data
+d <- read_excel("../../Data_to_Explore/ANES/ANES-1978-2020-Selected_Variables.xlsx", na = "NA", guess_max = 100000)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**II. How serious is the problem of affective polarization in the American electorate?**
+
+- Getting hands-on with ANES data to examine polarization trends since 2008
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - (Homans and McFadden 2022 - NYT on how politics is ending friendships and harming relationships)
+    - (Aldrich 2017 on ANES, e.g. what is it?)
+    - (Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded)
+
+:::
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Getting hands-on with ANES data to examine polarization trends since 2008
+
+1. Homans and McFadden (2022)
+
+2. Aldrich (2017) on ANES
+
+3. Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded
+
+::: notes
+
+
+:::
+
+
+## Is something changing? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Homans and McFadden 2022 - NYT on how politics is ending friendships and harming relationships
+
+
+
+## What is the ANES? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Aldrich 2017 on ANES, e.g. what is it?
+
+
+
+## The ANES Codebook {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded
+
+- Evaluate the survey designs
+- What does this show us?
+
+
+
+## The ANES Data: Prompt 1 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: {.r-fit-text}
+Count proportion party identification across time (omit don't knows)
+:::
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
+# p116-117: Party Identification - VCF0303 (Party Identification - Summary 3 categories)
+parties_time <- d |>
+  group_by(Year) |>
+  count(VCF0303) |>
+  mutate(
+    party = case_when(
+      VCF0303 == 0 ~ "Don't know",
+      VCF0303 == 1 ~ "Democrats",
+      VCF0303 == 2 ~ "Independents",
+      VCF0303 == 3 ~ "Republicans"
+    )
+  ) |>
+  select(-VCF0303)
+
+# # Table
+# parties_time |>
+#   pivot_wider(names_from = party, values_from = n)
+
+## Version 1: Filled bar plot
+parties_time |>
+  filter(party != "Don't know") |>
+  ggplot(aes(x = Year, y = n, fill = party)) +
+  geom_col(position = "fill") +
+  theme_bw() +
+  labs(x = "", y = "", fill = "") +
+  scale_fill_manual(values = c("dodgerblue", "bisque1", "firebrick2")) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  guides(fill = "none") +
+  annotate("text", x = 1978, y = .13, label = "Republican", srt = 90, color = "white") +
+  annotate("text", x = 1978, y = .71, label = "Democratic", srt = 90, color = "white")
+```
+
+
+
+## The ANES Data: Prompt 1 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: {.r-fit-text}
+Count proportion party identification across time (omit don't knows)
+:::
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+# p116-117: Party Identification - VCF0303 (Party Identification - Summary 3 categories)
+
+## Version 2: Line plot of percentages across time
+parties_time |>
+  filter(party != "Don't know") |>
+  mutate(
+    Total = sum(n),
+    Proportion = n/Total
+  ) |>
+  ggplot(aes(x = Year, y = Proportion, color = party)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "", y = "", fill = "") +
+  scale_color_manual(values = c("dodgerblue", "tan1", "firebrick2")) +
+  scale_y_continuous(limits = c(0, .65), breaks = seq(0, .6, .1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  guides(color = "none") +
+  annotate("text", x = 1980, y = c(.6, .27, .08), label = c("Democratic", "Republican", "Independent"), color = c("dodgerblue", "firebrick2", "tan1"))
+```
+
+
+
+## The ANES Data: Prompt 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+How much does each group like their own party (averages across time)? 
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+# Split sample
+reps <- subset(d, d$VCF0303 == 3)
+dems <- subset(d, d$VCF0303 == 1)
+
+# Calculate own feeling average
+# VCF0224 - Republican Party
+# VCF0218 - Democratic Party
+x1 <- reps |>
+  group_by(Year) |>
+  summarize(
+    Own_Avg = mean(VCF0224, na.rm = TRUE),
+    Own_Med = median(VCF0224, na.rm = TRUE),
+    Own_Weighted = weighted.mean(VCF0224, Weights, na.rm = TRUE)
+  ) |>
+  mutate(
+    Group = "Republicans"
+  )
+
+x2 <- dems |>
+  group_by(Year) |>
+  summarize(
+    Own_Avg = mean(VCF0218, na.rm = TRUE),
+    Own_Med = median(VCF0218, na.rm = TRUE),
+    Own_Weighted = weighted.mean(VCF0218, Weights, na.rm = TRUE)
+  ) |>
+  mutate(
+    Group = "Democrats"
+  )
+
+rbind(x1, x2) |>
+  ggplot(aes(x = Year, y = Own_Avg, color = Group)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "", y = "Thermometer Scale (0-100)",
+       title = "Party Identifiers' Self-Reflection") +
+  scale_y_continuous(limits = c(0, 100)) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  scale_color_manual(values = c("dodgerblue","firebrick2")) +
+  guides(color = "none")
+```
+
+
+
+## The ANES Data: Prompt 3 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+How much does each group like the other party (averages across time)? 
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+# Calculate other feeling average
+# VCF0224 - Republican Party
+# VCF0218 - Democratic Party
+x1a <- reps |>
+  group_by(Year) |>
+  summarize(
+    Other_Avg = mean(VCF0218, na.rm = TRUE),
+    Other_Med = median(VCF0218, na.rm = TRUE),
+    Other_Weighted = weighted.mean(VCF0218, Weights, na.rm = TRUE)
+  ) |>
+  mutate(
+    Group = "Republicans"
+  )
+
+x2a <- dems |>
+  group_by(Year) |>
+  summarize(
+    Other_Avg = mean(VCF0224, na.rm = TRUE),
+    Other_Med = median(VCF0224, na.rm = TRUE),
+    Other_Weighted = weighted.mean(VCF0224, Weights, na.rm = TRUE)
+  ) |>
+  mutate(
+    Group = "Democrats"
+  )
+
+rbind(x1a, x2a) |>
+  ggplot(aes(x = Year, y = Other_Avg, color = Group)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "", y = "Thermometer Scale (0-100)",
+       title = "Party Identifiers' Feelings About the Other Party") +
+  scale_y_continuous(limits = c(0, 100)) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  scale_color_manual(values = c("dodgerblue","firebrick2")) +
+  guides(color = "none")
+```
+
+::: notes
+
+
+
+:::
+
+
+
+## The ANES Data: Prompt 4 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Is the difference growing or shrinking across time? e.g. own party average minus rival party average feelings across time
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+# Calculate other feeling average
+# VCF0224 - Republican Party
+# VCF0218 - Democratic Party
+x4a <- reps |>
+  group_by(Year) |>
+  summarize(
+    Self_Avg = mean(VCF0224, na.rm = TRUE),
+    Other_Avg = mean(VCF0218, na.rm = TRUE),
+    Difference = Self_Avg - Other_Avg
+  ) |>
+  mutate(
+    Group = "Republicans"
+  )
+
+x4b <- dems |>
+  group_by(Year) |>
+  summarize(
+    Self_Avg = mean(VCF0218, na.rm = TRUE),
+    Other_Avg = mean(VCF0224, na.rm = TRUE),
+    Difference = Self_Avg - Other_Avg
+  ) |>
+  mutate(
+    Group = "Democrats"
+  )
+
+rbind(x4a, x4b) |>
+  ggplot(aes(x = Year, y = Difference, color = Group)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "", y = "Thermometer Scale (0-100)",
+       title = "The Difference Between Approval of the Self and Other") +
+  scale_y_continuous(limits = c(20, 55)) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  scale_color_manual(values = c("dodgerblue","firebrick2")) +
+  guides(color = "none")
+```
+
+::: notes
+
+Next slide: underlying averages
+
+:::
+
+
+## The ANES Data: Prompt 4 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Is the difference growing or shrinking across time? e.g. own party average minus rival party average feelings across time
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+# Calculate other feeling average
+# VCF0224 - Republican Party
+# VCF0218 - Democratic Party
+combo4 <- rbind(x4a, x4b)
+
+combo4_pre <- subset(combo4, Year <= 2002)
+combo4_post <- subset(combo4, Year >= 2002)
+
+combo4 |>
+  ggplot(aes(x = Year, y = Difference, color = Group)) +
+  geom_point() +
+  geom_smooth(data = combo4_pre, method = "lm", se = FALSE) +
+  geom_smooth(data = combo4_post, method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(x = "", y = "Thermometer Scale (0-100)",
+       title = "Something happened in 2000...") +
+  scale_y_continuous(limits = c(20, 55)) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  scale_color_manual(values = c("dodgerblue","firebrick2")) +
+  guides(color = "none")
+```
+
+::: notes
+
+
+:::
+
+
+
+## The ANES Data: Prompt 5 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Are the effects more dramatic for the politically active? e.g. "Voter" variable I created that asks if the respondent voted in the last election
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+x5a <- reps |>
+  filter(!is.na(Voter)) |>
+  group_by(Voter, Year) |>
+  summarize(
+    Self_Avg = mean(VCF0224, na.rm = TRUE),
+    Other_Avg = mean(VCF0218, na.rm = TRUE),
+    Difference = Self_Avg - Other_Avg
+  ) |>
+  mutate(
+    Group = "Republicans"
+  )
+
+x5b <- dems |>
+  filter(!is.na(Voter)) |>
+  group_by(Voter, Year) |>
+  summarize(
+    Self_Avg = mean(VCF0218, na.rm = TRUE),
+    Other_Avg = mean(VCF0224, na.rm = TRUE),
+    Difference = Self_Avg - Other_Avg
+  ) |>
+  mutate(
+    Group = "Democrats"
+  )
+
+rbind(x5a, x5b) |>
+  ggplot(aes(x = Year, y = Difference, color = Voter)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "", y = "Differences (Thermometer Scale, 0-100)") +
+  scale_y_continuous(limits = c(10, 60), breaks = seq(10, 60, 10)) +
+  scale_x_continuous(breaks = seq(1978, 2020, 4)) +
+  scale_color_manual(values = c("darkorange1","forestgreen")) +
+  theme(legend.position = "bottom") +
+  facet_wrap(~ Group)
+```
+
+::: notes
+
+
+:::
+
+
+
+## The ANES Data: Prompt 6 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+Are the effects more dramatic for various confounders? e.g. age, gender, race/ethnicity, education, region, knowledge
+
+```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8}
+# Various confounders to consider (taken from the ANES visualization tool): Age - Recoded from VCF0103 (Respondent - Age); Gender - VCF0104 (Respondent - Gender); Race/Ethnicity - VCF0105b (Race-Ethnicity Summary, 4 categories); Education - Recoded from VCF0110 (Respondent - Education 4 categories); Region - VCF0113 (Political South/Nonsouth); Party Identification - VCF0303 (Party Identification - Summary 3 categories); Knowledge - VCF0729 (Party with House majority before Election?)
+
+# Gender
+x5a <- reps |>
+  filter(!is.na(VCF0104), VCF0104 != 3, VCF0104 != 0) |>
+  group_by(VCF0104, Year) |>
+  summarize(
+    Self_Avg = mean(VCF0224, na.rm = TRUE),
+    Other_Avg = mean(VCF0218, na.rm = TRUE),
+    Difference = Self_Avg - Other_Avg
+  ) |>
+  mutate(
+    Group = "Republicans"
+  )
+
+x5b <- dems |>
+  filter(!is.na(VCF0104), VCF0104 != 3, VCF0104 != 0) |>
+  group_by(VCF0104, Year) |>
+  summarize(
+    Self_Avg = mean(VCF0218, na.rm = TRUE),
+    Other_Avg = mean(VCF0224, na.rm = TRUE),
+    Difference = Self_Avg - Other_Avg
+  ) |>
+  mutate(
+    Group = "Democrats"
+  )
+
+rbind(x5a, x5b) |>
+  ggplot(aes(x = Year, y = Difference, color = factor(VCF0104))) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "", y = "Differences (Thermometer Scale, 0-100)") +
+  scale_y_continuous(limits = c(10, 60), breaks = seq(10, 60, 10)) +
+  scale_x_continuous(breaks = seq(1978, 2020, 4)) +
+  scale_color_manual(values = c("darkorange1","forestgreen")) +
+  theme(legend.position = "bottom") +
+  facet_wrap(~ Group)
+
+```
+
+::: notes
+
+- Check your results while adjusting for the confounder
+
+- Omitted: Repeat prompts 1-4 using ideology not party
+
+:::
+
+
+
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining and Measuring Affective Polarization
+
+1. Iyengar, Lelkes, Levendusky, Malhotra, & Westwood (2019)
+
+2. ASSIGNMENT - Find us an example of affective polarization in action with the current election. In other words, an expression of "animosity between the parties" that is NOT based on a difference in policy preferences.
+
+
+::: notes
+
+:::

@@ -1,0 +1,132 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**II. How serious is the problem of affective polarization in the American electorate?**
+
+- Defining and Measuring Polarization
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Fiorina, M. P., & Abrams, S. J. (2008). Political Polarization in the American Public. Annual Review of Political Science, 11(1), 563–588.
+
+:::
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+1. Fiorina and Abrams (2008)
+
+2. ASSIGNMENT - What are the biggest POLICY differences between the two parties today? Submit evidence to support your answer and let's try to build a big list across the class (e.g. minimize the overlap!).
+
+::: notes
+
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig1.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig3.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig4.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig5.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig6.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig8.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Fig9.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+## {background-image="Images/07_1-Fiorina2008-Table1.png" .center background-size='75%'}
+
+::: notes
+
+:::
+
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+Getting hands-on with ANES data to examine polarization trends since 2008
+
+1. Homans and McFadden (2022)
+
+2. Aldrich (2017) on ANES
+
+3. Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded
+    - Have a laptop! Or do we need a pc lab?
+
+::: notes
+
+:::

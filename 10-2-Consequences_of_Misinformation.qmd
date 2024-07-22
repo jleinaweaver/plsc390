@@ -1,0 +1,95 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**I. How serious is the problem of misinformation in the American electorate?**
+
+1. Exploring the current evidence of misinformation?
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Update attendance list before class
+
+2. Readings
+    - Kavanagh, J., & Rich, M. D. (2018). Chapter 5 The Consequences of Truth Decay. In Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
+
+    - Gawiser, S. R., & Witt, G. E. (2006). 20 Questions A Journalist Should Ask About Poll Results (3rd Edition). The National Council on Public Polls. https://ropercenter.cornell.edu/media-usage-guide-20-questions-journalist-should-ask-about-poll-results
+    
+    - Orth, T. (2023, December 8). Which conspiracy theories do Americans believe? YouGov. https://today.yougov.com/politics/articles/48113-which-conspiracy-theories-do-americans-believe
+        - AND the link to the survey: https://d3nkl3psvxxpe9.cloudfront.net/documents/Conspiracy_Theories_poll_results.pdf
+    
+    - Lopes, L., Kearney, A., Washington, I., Valdes, I., Yilma, H., & Hamel, L. (2023, August 22). KFF Health Misinformation Tracking Poll Pilot. KFF. https://www.kff.org/coronavirus-covid-19/poll-finding/kff-health-misinformation-tracking-poll-pilot/
+        - And survey link: https://files.kff.org/attachment/Topline-KFF-Health-Misinformation-Tracking-Poll-Pilot-August-2023.pdf
+
+
+:::
+
+
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+1. Kavanagh and Rich (2018) "Chapter 5. The Consequences of Truth Decay"
+
+2. Gawiser and Witt (2006)
+
+3. YouGov survey (2023) on belief in conspiracy theories
+
+4. KFF (2023) health misinformation survey
+
+::: notes
+
+Current evidence of misinformation?
+1. What are the consequences? Why do we care?
+- Discuss Ch 5 in Kavanagh and Rich 2018
+2. Crash course in data (and surveys)
+- Moving from concept to data requires operationalization, instrumentation, measurement
+- Surveys add their own complications (question wording, question ordering) 
+- Yes, Minister clip!
+- Check old data analysis class slides (2018FA 08-2, 2019FA 06-2, ??? you have a more recent version of this material. What class was that??? Political violence has a slide in 2023FA 04-3 that is good one page summary)
+- Extrapolating from sample to population requires thoughtful case selection / sampling technique
+3. How serious a problem are the results in the YouGov survey?
+- Evaluate design, sampling and results
+4. How serious a problem are the results in the KFF survey?
+5. What are the consequences of these beliefs? 
+
+:::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+1. Pennycook, Cannon and Rand (2018) on repetition
+
+2. Lyons et al (2021) on overconfidence
+
+3. Lyons appendix which has their survey questions for us to evaluate: Are these good tests of knowledge? Of misinformation?
+
+::: notes
+
+:::

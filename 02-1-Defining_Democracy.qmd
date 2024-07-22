@@ -1,0 +1,212 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**IV. How serious and substantial are the threats to American democracy?**
+
+- Crash course in the concept of democracy + measuring American democracy (national level)
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Readings
+    - Diamond, L. (1999). Defining and Developing Democracy. In R. A. Dahl, I. Shapiro, & J. A. Cheibub (Eds.), The Democracy Sourcebook (pp. 1–23). MIT Press.
+    - V-Dem Methodology p4 "2.1 Principles – Measured by V-Dem’s Democracy Indices" on how the V-Dem project identifies the flavors of democracy
+    - V-Dem Codebook "Appendix A", p416-418 on the indicators selected to build each index of democracy
+
+<br>
+
+:::
+
+
+## Section 4: How serious and substantial are the threats to American democracy? What can we do about it? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: notes
+
+Final section of our class!
+
+:::
+
+
+## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+Defining and Measuring Democracy (national)
+
+1. Diamond (1999)
+
+2. - V-Dem Methodology p4 "2.1 Principles – Measured by V-Dem’s Democracy Indices" on how the V-Dem project identifies the flavors of democracy
+
+3. V-Dem Codebook "Appendix A", p416-418 on the indicators selected to build each index of democracy
+
+4. ASSIGNMENT - After completing the readings, submit to Canvas your preferred definition of democracy. In other words, what are the primary criteria or conditions you believe must be present to describe a state as a democracy? Does your preferred definition come closest to one of the V-Dem indexes? Which one and why?
+
+::: notes
+
+Diamond, L. (1999). Defining and Developing Democracy. In R. A. Dahl, I. Shapiro, & J. A. Cheibub (Eds.), The Democracy Sourcebook (pp. 1–23). MIT Press.
+
+- Section: The Best Form of Government (discusses the many benefits of democracy as a normative goal)
+- Section: Conceptualizing Democracy (quotes Collier and Levitsky identifying some 550 subtypes of democracy in 150 "recent" studies; electoral vs liberal strands along with midrange concepts; introduces a group of states as pseudodemocracies anticipating the competitive authoritarianism we will discuss next week)
+
+<br>
+
+Today we need to explore the concept "democracy"
+- What are the primary debate points (e.g. areas of disagreement)?
+- Let's PLEASE put a stake in the heart of the "republic not a democracy" idea. Why is it silly? And, if silly, why does it keep getting repeated?
+- How have measures of democracy evolved across time?
+	- FH to Polity to DD to V-Dem
+- Use the Canvas submissions as an entry point into the five high level indicies of democracy produced by V-Dem
+- Look for consensus in the class: What do we learn from what you picked? What do we learn from what you omitted?
+
+<br>
+
+Attempts to measure "democracy" quantitatively
+- Lipset (1959): democracy is "a political system which supplies regular constitutional opportunities for changing the governing officials, and a social mechanism which permits the largest possible part of the population to influence major decisions by choosing among contenders for political office" (Lipset, 1959: 71).
+- Dahl (1971) introduces "polyarchy": two theoretical dimensions of democratization (polyarchy): 1) Public contestation, and 2) the right to participate in elections (Vanhanen 2000, p252).
+- Freedom House (since 1972-1973) has rated countries in terms of 'political rights' and 'civil liberties'
+- The Polity Project has, since the 1970s, produced an additive, ten-point scale of institutionalized democracy that includes measures focused on competitiveness of political participation (1-3), the competitiveness of executive recruitment(1-2), the openness of executive recruitment(1), and constraints on the chief executive (Vanhanen 2000, p252).
+- Alvarez, Cheibub, Limongi, & Przeworski (1996): "contestation" as the essential feature of democracy. "Democracy...is thus a regime in which some governmental offices are filled as a consequence of contested elections. This definition has two parts: 'offices' and 'contestation'" (p4)
+- Przeworski (2009): Extends and operationalizes the above. For a regime to be democratic, both the chief executive office and the legislative body must be filled by elections. Contestation occurs when there exists an opposition that has some chance of winning office as a consequence of elections. This entails three features (Przeworski 1991):
+1. Ex ante uncertainty: the outcome of the election is not known before it takes place.
+2. Ex post irreversibility: the winner of the electoral contest actually takes office.
+3. Repeatability: elections that meet the first two criteria occur at regular and known intervals.
+- Cheibub, Gandhi, & Vreeland (2010). Democracy and Dictatorship Revisited offers a minimalist dichotomous measure of political regime (building on Alvarez et al 1996 and Przeworski 2000). (p69) A regime is classified as a democracy if it meets the requirements stipulated in all of the following four rules:
+1. The chief executive must be chosen by popular election or by a body that was itself popularly elected.
+2. The legislature must be popularly elected.
+3. There must be more than one party competing in the elections.
+4. An alternation in power under electoral rules identical to the ones that brought the incumbent to office must have taken place.
+- New hotness: Varieties of Democracy (V-Dem Codebook 2024) separately measures five "high-level" Democracy Indices: 
+- Electoral democracy index (D) (v2x_polyarchy) p47
+- Liberal democracy index (D) (v2x_libdem) p48
+- Participatory democracy index (D) (v2x_partipdem) p48
+- Deliberative democracy index (D) (v2x_delibdem) p48
+- Egalitarian democracy index (D) (v2x_egaldem) p49
+
+Bottom line: Democracy and republic are essentially synonyms. Stop repeating the nonsense "we're a republic not a democracy"
+
+:::
+
+
+
+
+
+## Freedom House {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+Freedom House (since 1972-1973) has rated countries in terms of 'political rights' and 'civil liberties' (Vanhanen 2000, p252).
+
+::: notes
+
+
+:::
+
+
+
+## The Polity Project {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+The Polity Project has, since the 1970s, produced an additive,ten-point scale of institutionalized democracy that includes measures focused on competitiveness of political participation (1-3), the competitiveness of executive recruitment(1-2), the openness of executive recruitment(1), and constraints on the chief executive (Vanhanen 2000, p252).
+
+::: notes
+
+
+:::
+
+
+
+##  {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+Alvarez, M., Cheibub, J. A., Limongi, F., & Przeworski, A. (1996). Classifying political regimes. Studies in Comparative International Development, 31(2), 3–36.
+
+- Following on from Schumpeter (1942) and Dahl (1971): "contestation" as the essential feature of democracy
+- "Our purpose is to distinguish regimes that allow some, even if limited, regularized competition among conflicting visions and interests from this in which some values or interests enjoy a monopoly buttressed by a threat or the actual use of force" (p4)
+- "Democracy...is thus a regime in which some governmental offices are filled as a consequence of contested elections. This definition has two parts: 'offices' and 'contestation'" (p4)
+
+::: notes
+
+
+:::
+
+
+
+##  {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+Przeworski, A. (Ed.). (2009). Democracy and development: Political institutions and well-being in the world, 1950 - 1990 (8. print). Cambridge University Press.
+
+- Tweaks and extends Alvarez et al 1996
+- "Democracies are regimes in which governmental offices are filled as a consequence of contested elections. This definition has two main parts: “offices” and “contestation.” For a regime to be democratic, both the chief executive office and the legislative body must be filled by elections. Contestation occurs when there exists an opposition that has some chance of winning office as a consequence of elections. This entails three features (Przeworski 1991):
+
+1. Ex ante uncertainty: the outcome of the election is not known before it takes place.
+2. Ex post irreversibility: the winner of the electoral contest actually takes office.
+3. Repeatability: elections that meet the first two criteria occur at regular and known intervals.
+
+
+
+## Democracy and Dictatorship Dataset {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+Cheibub, J. A., Gandhi, J., & Vreeland, J. R. (2010). Democracy and Dictatorship Revisited. Public Choice, 143, 67–101.
+
+- a minimalist dichotomous measure of political regime (building on Alvarez et al 1996 and Przeworski 2000)
+- (p69) A regime is classified as a democracy if it meets the requirements stipulated in all of the following four rules:
+
+1. The chief executive must be chosen by popular election or by a body that was itself popularly elected.
+2. The legislature must be popularly elected.
+3. There must be more than one party competing in the elections.
+4. An alternation in power under electoral rules identical to the ones that brought the incumbent to office must have taken place.
+
+::: notes
+
+
+:::
+
+
+
+## Varieties of Democracy (V-Dem) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+Varieties of Democracy (V-Dem Codebook 2024) separately measures four "high-level" Democracy Indices
+
+1. Electoral democracy index (polyarchy): "The electoral principle of democracy seeks to embody the core value of making rulers responsive to citizens, achieved through electoral competition for the electorate’s approval under circumstances when suffrage is extensive; political and civil society organizations can operate freely; elections are clean and not marred by fraud or systematic irregularities; and elections affect the composition of the chief executive of the country. In between elections, there is freedom of expression and an independent media capable of presenting alternative views on matters of political relevance. In the V-Dem conceptual scheme, electoral democracy is understood as an essential element of any other conception of representative democracy — liberal, participatory, deliberative, egalitarian, or some other" (47).
+2. Liberal democracy index: "The liberal principle of democracy emphasizes the importance of protecting individual and minority rights against the tyranny of the state and the tyranny of the majority. The liberal model takes a "negative" view of political power insofar as it judges the quality of democracy by the limits placed on government. This is achieved by constitutionally protected civil liberties, strong rule of law, an independent judiciary, and effective checks and balances that, together, limit the exercise of executive power. To make this a measure of liberal democracy, the index also takes the level of electoral democracy into account" (48).
+3. Participatory democracy index: "The participatory principle of democracy emphasizes active participation by citizens in all political processes, electoral and non-electoral. It is motivated by uneasiness about a bedrock practice of electoral democracy: delegating authority to representatives. Thus, direct rule by citizens is preferred, wherever practicable. This model of democracy thus takes suffrage for granted, emphasizing engagement in civil society organizations, direct democracy, and subnational elected bodies. To make it a measure of participatory democracy, the index also takes the level of electoral democracy into account" (48).
+4. Deliberative democracy index: "The deliberative principle of democracy focuses on the process by which decisions are reached in a polity. A deliberative process is one in which public reasoning focused on the common good motivates political decisions—as contrasted with emotional appeals, solidary attachments, parochial interests, or coercion. According to this principle, democracy requires more than an aggregation of existing preferences. There should also be respectful dialogue at all levels—from preference formation to final decision—among informed and competent participants who are open to persuasion. To make it a measure of not only the deliberative principle but also of democracy, the index also takes the level of electoral democracy into account" (48-49).
+
+Bottom line: Democracy and republic are essentially synonyms. Stop repeating the nonsense "we're a republic not a democracy"
+
+::: notes
+
+
+:::
+
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+Defining and Measuring Democracy (national)
+
+- Getting hands-on with the US data!
+
+- ...
+
+::: notes
+
+:::
