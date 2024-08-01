@@ -14,15 +14,13 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. Previewing our semester**
+1. "The Way of Skeptical Knowing"
 
-1. Real-world cases of misinformation
-    
-2. Real-world cases of polarization
-
-3. Is American democracy under serious threat?
+2. The stakes of the current election
 
 :::
+
+<br>
 
 <br>
 
@@ -35,73 +33,289 @@ Prep for Class
 
 1. Update attendance list before class
 
-2. Make sure this week's modules visible in Canvas
+2. Readings
+    - Kovach, B., & Rosenstiel, T. (2011). Chapter 3 The Way of Skeptical Knowing: The Tradecraft of Verification. In Blur: How to Know What’s True in the Age of Information Overload (p. 240). Bloomsbury Publishing.
 
 <br>
 
-:::
+Welcome back all!
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
-
-<br>
-
-Submit to Canvas:
-
-1. A single piece of evidence (no overlap!) to support the argument that the US has a serious problem with "misinformation"
-
-2. A single piece of evidence (no overlap!) to support the argument that the US has a serious problem with "polarization"
-
-::: notes
-
-Avoid overlap, first-come, first-served
-
-Include APA citations with web links!
-
-:::
-
-
-
-## Argument: The US has a serious problem with "misinformation" {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-::: notes
-
-In class discuss each prompt seminar-style (define the target concept based on the cases submitted, discuss cases, ?), build arguments to answer each prompt on the board
-
-How do we collectively define misinformation?
-
-:::
-
-
-
-## Argument: The US has a serious problem with "polarization" {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-::: notes
-
-In class discuss each prompt seminar-style (define the target concept based on the cases submitted, discuss cases, ?), build arguments to answer each prompt on the board
-
-How do we collectively define polarization?
-
-:::
-
-
-
-## Is American democracy under serious threat? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-
-
-## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+- **How's your semester starting off?**
 
 <br>
 
-Defining the concepts and giving us a basic model to clarify our thinking about the problem
+Let's warm up with election news!
 
-1. Kavanagh and Rich (2018), "Chapter 1 Introduction"
+- **What's been going on since we last met? Anything noteworthy?**
 
-2. Vraga and Bode (2020)
+<br>
 
-3. Li and Wagner (2020)
+SLIDE: A good segue into our work for today!
+
+:::
+
+
+
+
+## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+1. "The Way of Skeptical Knowing"
+
+2. The News "Neighborhoods"
+:::
 
 ::: notes
 
+I like to use the Kovach and Rosenstiel as a starting point for any class focused on current events.
+
+- Their entire book is designed to help us be better consumers of the news
+
+- In other words, their book is an effort to increase your "information literacy" skills
+
+<br>
+
+The chapter has two big and related ideas.
+
+1. Skeptical knowing: There are steps we can follow to protect ourselves and generate real knowledge about the world.
+
+2. We have to be aware of "the neighborhood" we are in when gathering the news.
+
+<br>
+
+SLIDE: Let's start by recognizing the neighborhoods we are in
+
 :::
+
+
+
+## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+<br>
+
+**Models of Journalism**
+
+- Verification Journalism
+
+- Assertion Journalism
+
+- Affirmation Journalism
+
+- Interest-group Journalism
+
+::: notes
+
+Per the chapter there are four distinct models of journalism
+
+- **Is everybody clear on each of these and the examples from the chapter?**
+
+<br>
+
+1. Verification Journalism: Characterized by "empiricism and humility", Multiple sources; Skepticism of claims by sources; Vetting of all claims; Provides context for understanding the "facts" being reported
+2. Assertion Journalism: Fundamentally stenographic; Journalist as passive conduit / enabler for sources and newsmakers; Gives the sources more power because access, not truth, is everything; Bias towards speed over accuracy
+3. Affirmation Journalism: Neo-partisan form of news; aim is to affirm the preconceptions of the audience; one-sided broadcast of cherry-picked facts; propaganda, persuasion and manipulation
+4. Interest-group Journalism
+
+<br>
+
+Ok, self-audit time! 
+
+- I'd like each of you to reflect on your primary news diet. Where do you get most of your news? Which "neighborhood" do you rely on the most?
+
+- *SHARE and DISCUSS*
+
+<br>
+
+**Are there any news sources today that are 100% verification journalism? Why or why not?**
+
+<br>
+
+SLIDE: One problem for us is that so much of the news we are inundated with these days is not "verification journalism" so that means we absolutely need...
+
+:::
+
+
+
+
+## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+<br>
+
+**"The Way of Skeptical Knowing"**
+
+1. What kind of content is this?
+
+2. Is the information complete? What is missing?
+
+3. Who are the sources? Are they believable?
+
+4. What is the evidence? How vetted?
+
+5. What is a possible alternative explanation?
+
+6. Am I learning what I need to?
+
+::: notes
+
+**What questions do you have about applying the six steps when evaluating a news story?**
+
+<br>
+
+That last point might need unpacking:
+
+- Do our sources of news give us the info we need to evaluate their quality?
+- Does this source tell me everything I need to know to understand the story?
+- Is the author/creator resorting to jargon/gobbledygook to obscure?
+- Does the author/creator provide enough background so we understand the topic clearly (e.g. focusing on a single study without provide the context of how it fits into the research landscape)?
+    
+<br>
+
+Again, time for self reflection!
+
+- **Be honest, what proportion of the six steps of skeptical knowing do you follow every time?**
+
+- **Which ones most?**
+
+- **Which ones least?**
+
+<br>
+
+**Is there a way to use skeptical knowing but still get all your news from affirmation type sources? Why or why not?**
+
+<br>
+
+**Bottom line, what are the key lessons for us as consumers of "the news"?**
+
+- **Does this approach imply that we have to use multiple media sources to verify any piece of current events?**
+
+:::
+
+
+
+## Assignment for Today {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+<br>
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01-2-Assignment.png")
+```
+
+::: notes
+
+Enough preamble, let's get to the stakes of this insane election!
+
+- *ON BOARD*: I'll try to take notes on the board as we go
+
+- **Who wants to go first?**
+
+<br>
+
+SLIDE: *After the class is done you can get their thoughts on the MO ballot initiatives*
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-MO_Ballot1.png")
+```
+
+::: notes
+
+**Had anybody heard of this amendment proposed by the legislature?**
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-MO_Ballot2.png")
+```
+
+::: notes
+
+**Has anybody heard of this amendment proposed by citizen petition? Did anybody sign up to endorse it?**
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+<br>
+
+SLIDE: Last one...
+
+:::
+
+
+
+## Missouri Right to Reproductive Freedom Amendment (2024) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+
+<br>
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_1-MO_Ballot3b.png")
+```
+
+
+::: notes
+
+**Has anybody heard of this amendment proposed by citizen petition? Did anybody sign up to endorse it?**
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+:::
+
+
+
+## Bottom line, how high are the stakes of the 2024 election? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+
+
+## Assignment for Today {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+<br>
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01-2-Assignment_for_Next.png")
+```
+
+::: notes
+
+Next week we begin our exploration of democracy as a contested concept.
+
+- I have given you a reading that presents an overview of the big debates related to defining democracy
+
+- I want each of you to reflect on that reading and then submit your take BEFORE class
+
+<br>
+
+**Questions?**
+
+
+:::
+
+
