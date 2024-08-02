@@ -73,7 +73,7 @@ I like to use the Kovach and Rosenstiel as a starting point for any class focuse
 
 - Their entire book is designed to help us be better consumers of the news
 
-- In other words, their book is an effort to increase your "information literacy" skills
+- Specifically, these authors are trying to boost your "information literacy" skills
 
 <br>
 
@@ -82,6 +82,7 @@ The chapter has two big and related ideas.
 1. Skeptical knowing: There are steps we can follow to protect ourselves and generate real knowledge about the world.
 
 2. We have to be aware of "the neighborhood" we are in when gathering the news.
+    - They refer to these as the "Models of Journalism"
 
 <br>
 
