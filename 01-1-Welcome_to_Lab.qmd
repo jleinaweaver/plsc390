@@ -42,6 +42,104 @@ Prep for Class
 - Four Columns "Confident D", "Not Confident D", "Confident R", "Not Confident R"
 - Three rows: President; Senate; House; MO Governor
 
+<br>
+
+SLIDES x 4: 
+
+1. 538 presidential polls web page
+2. Cook Political Ratings - Senate (not updated without subscription?)
+3. Cook Political Ratings - House (not updated without subscription?)
+4. 538 MO governor polls web page
+
+:::
+
+
+
+## Election 2024: Presidential Race {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{=html}
+<iframe width="1200" height="600" src="https://projects.fivethirtyeight.com/polls/president-general/2024/national/"></iframe>
+```
+
+::: notes
+
+538 poll aggregation's as of today
+
+<br>
+
+**Does this change anybody's overall prediction? Why or why not?**
+
+- **Does it affect your confidence in your prediction?**
+
+:::
+
+
+
+## Election 2024: The Senate {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{=html}
+<iframe width="1200" height="600" src="https://www.270towin.com/2024-senate-election/consensus-2024-senate-forecast"></iframe>
+```
+
+::: notes
+
+Currently: The Senate is composed of 49 Republicans, 47 Democrats, and 4 independents; all the independents caucus with the Democrats. 
+
+- Manchin (WV), Sinema (AZ), King (ME), Sanders (VT)
+
+<br>
+
+Democrats defending MANY more seats then the Republicans
+
+- Web page is the consensus forecasts from 270towin.com
+
+<br>
+
+**Does this change anybody's overall prediction? Why or why not?**
+
+- **Does it affect your confidence in your prediction?**
+
+:::
+
+
+
+## Election 2024: The House {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{=html}
+<iframe width="1200" height="600" src="https://www.270towin.com/2024-house-election/"></iframe>
+```
+
+::: notes
+
+Republicans currently with a slim House majority
+
+<br>
+
+**Does this change anybody's overall prediction? Why or why not?**
+
+- **Does it affect your confidence in your prediction?**
+
+
+:::
+
+
+
+## Election 2024: MO Governor {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{=html}
+<iframe width="1200" height="600" src="https://projects.fivethirtyeight.com/polls/governor/2024/missouri/general/"></iframe>
+```
+
+::: notes
+
+538 poll aggregation's as of today
+
+<br>
+
+**Does this change anybody's overall prediction? Why or why not?**
+
+- **Does it affect your confidence in your prediction?**
+
 :::
 
 
@@ -167,9 +265,9 @@ SECOND, I wanted an opportunity to think critically about the health of American
 
 Evaluating the health of our democracy requires us to answer questions like:
 
-- What do we specifically mean by "democracy"?
+- What do we mean by "democracy"?
 
-- Why do some people argue we are a republic and not a democracy?
+- Why do some people claim we are a republic and not a democracy?
 
 - How "democratic" are we currently? What are our strengths and weaknesses?
 
@@ -210,7 +308,7 @@ SLIDE: We'll work on these three goals by splitting the semester essentially in 
 
 
 
-## Section 1 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Class Design: Section 1 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
 
 <br>
 
@@ -236,11 +334,11 @@ We'll spend the first half of the semester road-testing different measures of de
 
 My plan is that we will have time to:
 
-- Explore the design of each definition,
+- Unpack each definition,
 
-- Use each definition to evaluate the health of American democracy, and
+- Apply each definition to the US case (how democratic are we?), and
 
-- To identify which specific threats this definition suggests are most concerning.
+- To identify the specific threats we should be most concenred about
 
 <br>
 
@@ -252,7 +350,7 @@ Doing this will let us get hands-on with real-world data which always makes me h
 
 
 
-## Section 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Class Design: Section 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
 
 <br>
 
@@ -274,15 +372,28 @@ In the second half of the semester we'll shift our focus to the cutting edge of 
 
 <br>
 
-Misinformation, the belief in things that aren't true, may be on the rise
+Threat 1: Misinformation appears to be on the rise!
 
-- We need to dig into the literature on the why and how of this problem if we hope to solve it.
+- e.g. the belief in things that are demonstrably untrue
 
 <br>
 
-We also keep hearing about how polarized we are as a society and how that is definitely a bad thing.
+Threat 2: Issue polarization may be on the rise
 
-- Again, we need to explore the literature and data on this problem so we can figure out what is going on and what is to be done.
+- e.g. a growing divide in the kinds of policies we want to solve the problems we face
+
+<br>
+
+Threat 3: Affective polarization may be on the rise
+
+- e.g. a growing animosity in the way we view each other
+
+<br>
+
+In all three cases I want to see what the state of the art in the literature tells us, and
+
+- If the state of our current knowledge can help us address these problems going forward
+
 
 <br>
 
@@ -291,9 +402,7 @@ SLIDE: That's the big picture plan, let's now talk details!
 
 
 
-## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-<br>
+## The Answers are (probably) on the Syllabus! {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_1-Syllabus.png")
@@ -313,6 +422,8 @@ Everybody log onto Canvas and download the syllabus so we can hit the highlights
 
 - Excused absences
 
+- Excused absence coming up? **It is your responsibility to email me BEFORE the absence in order to receive a make-up assignment.**
+
 - Participation points
 
 - Paper requirements: APA, submitted on Canvas, NO AI TOOLS
@@ -322,6 +433,20 @@ Everybody log onto Canvas and download the syllabus so we can hit the highlights
 <br>
 
 **Any questions on our aims for the semester or my expectations for you as represented by the syllabus?**
+
+<br>
+
+Please keep me in the loop this semester!
+
+- I genuinely want you to make progress on our learning outcomes
+
+- So, if things are getting rough for you please come talk to me.
+
+- I will always offer you flexibility in the face of struggle IF YOU COME TO ME BEFORE DEADLINES HAVE PASSED!
+
+<br>
+
+**Questions on this?**
 
 :::
 

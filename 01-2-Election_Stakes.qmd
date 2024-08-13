@@ -296,7 +296,7 @@ knitr::include_graphics("Images/01_1-MO_Ballot3b.png")
 
 
 
-## Assignment for Today {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Assignment for Next Class {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
 
 <br>
 
