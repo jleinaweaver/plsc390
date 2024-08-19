@@ -197,8 +197,6 @@ Again, time for self reflection!
 
 ## Assignment for Today {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
 
-<br>
-
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01-2-Assignment.png")
 ```
@@ -213,7 +211,145 @@ Enough preamble, let's get to the stakes of this insane election!
 
 <br>
 
-SLIDE: *After the class is done you can get their thoughts on the MO ballot initiatives*
+SLIDE: *After the class is done you can get their thoughts on the certified MO ballot initiatives*
+
+- [LINK](https://www.sos.mo.gov/elections/petitions/2024BallotMeasures)
+:::
+
+
+## MO Amendment 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_2-MO2_Ballot.png")
+```
+
+::: notes
+
+Proposed by Initiative Petition
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+:::
+
+
+
+## MO Amendment 6 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_2-MO6_Ballot.png")
+```
+
+::: notes
+
+Proposed by the General Assembly
+
+- In 2020, the Missouri Supreme Court said a $3 fee that was charged on every court case in Missouri to fund the sheriffs’ retirement system was an unconstitutional “sale of justice.”
+
+- This would undo that ruling
+
+- I will note there is some concern that this amendment creates incentives whereby sheriff's pension contributions are tied directly to the volume of arrests, prosecutions, and other aspects of the criminal justice system...
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+:::
+
+
+## MO Amendment 7 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_2-MO7_Ballot.png")
+```
+
+::: notes
+
+Proposed by the General Assembly
+
+- This one's a little funky...
+
+<br>
+
+1. Does this actually protect voting?
+    - Currently the constitution says voting is open to "All citizens of the United States"
+
+    - This would make it "Only citizens of the United States"
+    
+    - State constitution does not authorize noncitizen voting so this isn't really a change
+    
+    - THIS is what the supporters want you to focus on
+    
+2. POINTS 2 and 3 are why this amendment was actually proposed
+    - An attempt to stop cities and counties from considering alternative voting systems
+    
+    - e.g. ranked choice voting, top-2 and top-4 primaries, etc
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+:::
+
+
+## MO Proposition A {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_2-MO_propA_Ballot.png")
+```
+
+::: notes
+
+Proposed by Initiative Petition
+
+<br>
+
+**Predictions on the outcome?**
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+:::
+
+
+
+## MO Amendment 3 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/01_2-MO3_Ballot.png")
+```
+
+::: notes
+
+Proposed by Initiative Petition
+
+<br>
+
+**Predictions on the outcome?**
+
+<br>
+
+- **Why do you think yes or no?**
+
+- **How confident are you in the prediction?**
+
+<br>
+
+SLIDE: AG Jay Ashcroft has written the following "fair ballot" language that will be posted in every polling place in the state
 
 :::
 
@@ -221,74 +357,17 @@ SLIDE: *After the class is done you can get their thoughts on the MO ballot init
 
 ## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
 
-```{r, fig.align='center'}
-knitr::include_graphics("Images/01_1-MO_Ballot1.png")
-```
+![](Images/01_2-MO3_Ballot.png){width="750" style="display: block; margin: 0 auto"}
+
+![](Images/01_2-MO3_fair_Ballot.png){width="750" style="display: block; margin: 0 auto"}
 
 ::: notes
 
-**Had anybody heard of this amendment proposed by the legislature?**
-
-<br>
-
-**Predictions on the outcome?**
-
-- **Why do you think yes or no?**
-
-- **How confident are you in the prediction?**
+**Is this a fair summary of the proposed amendment? Why or why not?**
 
 :::
 
 
-
-## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-```{r, fig.align='center'}
-knitr::include_graphics("Images/01_1-MO_Ballot2.png")
-```
-
-::: notes
-
-**Has anybody heard of this amendment proposed by citizen petition? Did anybody sign up to endorse it?**
-
-<br>
-
-**Predictions on the outcome?**
-
-- **Why do you think yes or no?**
-
-- **How confident are you in the prediction?**
-
-<br>
-
-SLIDE: Last one...
-
-:::
-
-
-
-## Missouri Right to Reproductive Freedom Amendment (2024) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
-
-<br>
-
-```{r, fig.align='center'}
-knitr::include_graphics("Images/01_1-MO_Ballot3b.png")
-```
-
-
-::: notes
-
-**Has anybody heard of this amendment proposed by citizen petition? Did anybody sign up to endorse it?**
-
-<br>
-
-**Predictions on the outcome?**
-
-- **Why do you think yes or no?**
-
-- **How confident are you in the prediction?**
-
-:::
 
 
 
