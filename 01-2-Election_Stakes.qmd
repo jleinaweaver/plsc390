@@ -2,7 +2,7 @@
 format: revealjs
 ---
 
-## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Today's Agenda {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r}
 # background-size="1920px 1080px"
@@ -46,6 +46,8 @@ Welcome back all!
 
 Let's warm up with election news!
 
+- *Open google news and search 'election'*
+
 - **What's been going on since we last met? Anything noteworthy?**
 
 <br>
@@ -57,7 +59,7 @@ SLIDE: A good segue into our work for today!
 
 
 
-## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_color.png" .center}
 
 <br>
 
@@ -92,7 +94,7 @@ SLIDE: Let's start by recognizing the neighborhoods we are in
 
 
 
-## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_color.png" .center}
 
 <br>
 
@@ -140,7 +142,7 @@ SLIDE: One problem for us is that so much of the news we are inundated with thes
 
 
 
-## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+## Kovach and Rosenstiel (2011) {background-image="Images/background-white_house_graphic_color.png" .center}
 
 <br>
 
@@ -195,7 +197,7 @@ Again, time for self reflection!
 
 
 
-## Assignment for Today {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Assignment for Today {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01-2-Assignment.png")
@@ -217,7 +219,7 @@ SLIDE: *After the class is done you can get their thoughts on the certified MO b
 :::
 
 
-## MO Amendment 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## MO Amendment 2 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_2-MO2_Ballot.png")
@@ -239,7 +241,7 @@ Proposed by Initiative Petition
 
 
 
-## MO Amendment 6 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## MO Amendment 6 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_2-MO6_Ballot.png")
@@ -266,7 +268,7 @@ Proposed by the General Assembly
 :::
 
 
-## MO Amendment 7 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## MO Amendment 7 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_2-MO7_Ballot.png")
@@ -305,7 +307,7 @@ Proposed by the General Assembly
 :::
 
 
-## MO Proposition A {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## MO Proposition A {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_2-MO_propA_Ballot.png")
@@ -327,7 +329,7 @@ Proposed by Initiative Petition
 
 
 
-## MO Amendment 3 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## MO Amendment 3 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_2-MO3_Ballot.png")
@@ -355,7 +357,7 @@ SLIDE: AG Jay Ashcroft has written the following "fair ballot" language that wil
 
 
 
-## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ![](Images/01_2-MO3_Ballot.png){width="750" style="display: block; margin: 0 auto"}
 
@@ -371,11 +373,11 @@ SLIDE: AG Jay Ashcroft has written the following "fair ballot" language that wil
 
 
 
-## Bottom line, how high are the stakes of the 2024 election? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Bottom line, how high are the stakes of the 2024 election? {background-image="Images/background-white_house_graphic_color.png" .center}
 
 
 
-## Assignment for Next Class {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Assignment for Next Class {background-image="Images/background-white_house_graphic_color.png" .center}
 
 <br>
 

@@ -3,7 +3,7 @@ format: revealjs
 ---
 
 
-## Let's make some predictions! {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Let's make some predictions! {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r}
 # background-size="1920px 1080px"
@@ -55,7 +55,7 @@ SLIDES x 4:
 
 
 
-## Election 2024: Presidential Race {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+## Election 2024: Presidential Race {background-image="Images/background-white_house_graphic_color.png"}
 
 ```{=html}
 <iframe width="1200" height="600" src="https://projects.fivethirtyeight.com/polls/president-general/2024/national/"></iframe>
@@ -75,7 +75,7 @@ SLIDES x 4:
 
 
 
-## Election 2024: The Senate {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Election 2024: The Senate {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{=html}
 <iframe width="1200" height="600" src="https://www.270towin.com/2024-senate-election/consensus-2024-senate-forecast"></iframe>
@@ -103,7 +103,7 @@ Democrats defending MANY more seats then the Republicans
 
 
 
-## Election 2024: The House {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Election 2024: The House {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{=html}
 <iframe width="1200" height="600" src="https://www.270towin.com/2024-house-election/"></iframe>
@@ -124,7 +124,7 @@ Republicans currently with a slim House majority
 
 
 
-## Election 2024: MO Governor {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+## Election 2024: MO Governor {background-image="Images/background-white_house_graphic_color.png"}
 
 ```{=html}
 <iframe width="1200" height="600" src="https://projects.fivethirtyeight.com/polls/governor/2024/missouri/general/"></iframe>
@@ -144,7 +144,7 @@ Republicans currently with a slim House majority
 
 
 
-## Welcome to The Policy Lab! {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Welcome to The Policy Lab! {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r}
 # background-size="1920px 1080px"
@@ -217,7 +217,7 @@ SLIDE: Let's take roll and introduce ourselves to each other before we dive into
 
 
 
-## Goal 1 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Goal 1 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ::: {.r-fit-text}
 **Tracking the 2024 Election**
@@ -248,7 +248,7 @@ We'll still keep an ear and an eye on all the chaos, that's fun too, but I want 
 
 
 
-## Goal 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Goal 2 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ::: {.r-fit-text}
 **Evaluating the Health of American Democracy**
@@ -281,7 +281,7 @@ We'll focus the first half of our semester on many of these questions.
 
 
 
-## Goal 3 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Goal 3 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ::: {.r-fit-text}
 **Planning for the Future**
@@ -308,7 +308,7 @@ SLIDE: We'll work on these three goals by splitting the semester essentially in 
 
 
 
-## Class Design: Section 1 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Class Design: Section 1 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 <br>
 
@@ -350,7 +350,7 @@ Doing this will let us get hands-on with real-world data which always makes me h
 
 
 
-## Class Design: Section 2 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Class Design: Section 2 {background-image="Images/background-white_house_graphic_color.png" .center}
 
 <br>
 
@@ -402,7 +402,7 @@ SLIDE: That's the big picture plan, let's now talk details!
 
 
 
-## The Answers are (probably) on the Syllabus! {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## The Answers are (probably) on the Syllabus! {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r, fig.align='center'}
 knitr::include_graphics("Images/01_1-Syllabus.png")
@@ -476,7 +476,7 @@ I should note that there isn't really any evidence the curse is actually Chinese
 
 
 
-## May you live in interesting times... {background-image="Images/background-white_house_graphic_v4_muted_text.png" .center}
+## May you live in interesting times... {background-image="Images/background-white_house_graphic_blue" .center}
 
 <br>
 

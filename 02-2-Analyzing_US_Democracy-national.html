@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="13-2-Analyzing_US_Democracy-national_files/libs/clipboard/clipboard.min.js"></script>
-<script src="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/tabby.min.js"></script>
-<script src="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/popper.min.js"></script>
-<script src="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="13-2-Analyzing_US_Democracy-national_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+<script src="02-2-Analyzing_US_Democracy-national_files/libs/clipboard/clipboard.min.js"></script>
+<script src="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/tabby.min.js"></script>
+<script src="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/popper.min.js"></script>
+<script src="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="02-2-Analyzing_US_Democracy-national_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.555">
 
   <title>analyzing_us_democracy-national</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -155,7 +155,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -324,13 +325,13 @@
     <div class="slides">
 
 
-<section id="todays-agenda" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<section id="todays-agenda" class="slide level2 center" data-background-image="Images/background-white_house_graphic_color.png">
 <h2>Today’s Agenda</h2>
 <p><br></p>
 <div class="r-fit-text">
-<p><strong>IV. How serious and substantial are the threats to American democracy?</strong></p>
+<p><strong>I. Road testing measures of democracy</strong></p>
 <ul>
-<li>Getting hands-on with the US data in order to describe the variation and identify the threats to our national democracy</li>
+<li>Measuring American democracy</li>
 </ul>
 </div>
 <p><br></p>
@@ -340,12 +341,16 @@
 <aside class="notes">
 <p>Prep for Class</p>
 <ol type="1">
-<li>Readings
-<ul>
-<li>TBD</li>
-</ul></li>
+<li><p>Review Canvas submissions</p></li>
+<li><p>Publish the Mike Lee website statement</p></li>
 </ol>
 <p><br></p>
+<p>Let’s warm up with election news!</p>
+<ul>
+<li><p><em>Open google news and search ‘election’</em></p></li>
+<li><p><strong>What’s been going on since we last met? Anything noteworthy?</strong></p></li>
+<li><p><strong>Any changes in the stakes we discussed last class?</strong></p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -358,15 +363,23 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="for-today" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
+<section id="for-today" class="slide level2 center" data-background-image="Images/background-white_house_graphic_color.png">
 <h2>For Today</h2>
-<p>Defining and Measuring Democracy (national)</p>
-<ul>
-<li><p>Getting hands-on with the US data!</p></li>
-<li><p>…</p></li>
-</ul>
-<aside class="notes">
 
+<img data-src="Images/02_1-ASSIGN.png" class="r-stretch"><aside class="notes">
+<p>For today each of you road-tested your two measures of democracy on the US as a case study.</p>
+<ul>
+<li><strong>Big picture, how did this go?</strong></li>
+</ul>
+<p><br></p>
+<p>15 mins: Go back to your groups and debrief each other on your results</p>
+<ul>
+<li><p>What were the results of applying your measures to the US case?</p></li>
+<li><p>What kinds of evidence did you select?</p></li>
+<li><p>What big threats did your measure lead you to?</p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: Let’s report back and see where we stand.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -379,15 +392,24 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="for-next-class" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
-<h2>For Next Class</h2>
+<section id="is-the-us-currently-a-democracy" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue.png">
+<h2>Is the US currently a democracy?</h2>
 <p><br></p>
-<p>Defining and Measuring Democracy (sub-national)</p>
-<ul>
-<li>Grumbach (2023)</li>
-</ul>
+<h3 id="yes-or-no">- Yes or No?</h3>
 <aside class="notes">
-
+<p>Alright groups, let’s focus on the results of applying your nominal measures.</p>
+<p><br></p>
+<p><strong>Per your instrument, is the US currently a democracy? Why or why not?</strong></p>
+<p><br></p>
+<ul>
+<li><p><em>DISCUSS any differences in results across groups</em></p></li>
+<li><p><em>DISCUSS any differences in instruments across groups</em></p></li>
+</ul>
+<p><br></p>
+<p><strong>Per your evidence, how confident are you about your rating?</strong></p>
+<ul>
+<li><strong>Is your evidence high quality enough? How do we tell?</strong></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -399,27 +421,235 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="how-democratic-is-the-us-currently" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue.png">
+<h2>How democratic is the US currently?</h2>
+<p><br></p>
+<ol type="1">
+<li><p>“No democracy at all”</p></li>
+<li><p>“Very little democracy”</p></li>
+<li><p>“Some democracy”</p></li>
+<li><p>“A great deal of democracy”</p></li>
+</ol>
+<aside class="notes">
+<p>Alright groups, let’s focus on the results of applying your ordinal measures.</p>
+<p><br></p>
+<p><strong>Per your instrument, how democratic is the US currently?</strong></p>
+<ul>
+<li><strong>What are the biggest drivers of this score?</strong></li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>DISCUSS any differences in results across groups</em></p></li>
+<li><p><em>DISCUSS any differences in instruments across groups</em></p></li>
+</ul>
+<p><br></p>
+<p><strong>Per your evidence, how confident are you about your rating?</strong></p>
+<ul>
+<li><strong>Is your evidence high quality enough? How do we tell?</strong></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="per-your-work-what-are-the-biggest-current-threats-to-american-democracy" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue.png">
+<h2>Per your work, what are the biggest current threats to American democracy?</h2>
+<aside class="notes">
+<p><strong>Alright, based on your work what are the specific, current threats to American democracy?</strong></p>
+<ul>
+<li><strong>The threats should be derived from the specifics of your instrument!</strong></li>
+</ul>
+<p><br></p>
+<p><em>PRESENT and DISCUSS each</em></p>
+<p><br></p>
+<p><em>IF TIME REMAINS</em></p>
+<p>SLIDE: Ok, now it’s time for a tangent into the real world implications of our research this week.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2 center" data-background-image="Images/background-white_house_graphic_color.png">
+<h2></h2>
+
+<img data-src="Images/02_1-TPUSA-Republic.png" style="display: block; margin: 0 auto" class="r-stretch"><aside class="notes">
+<p><strong>Who here has encountered the “we’re a republic, not a democracy” argument?</strong></p>
+<p><br></p>
+<p>On Canvas I have shared a statement by Senator Mike Lee of Utah making this argument.</p>
+<ul>
+<li>Everybody read it and then we can talk.</li>
+</ul>
+<p><br></p>
+<p><strong>Based on your work this week operationalizing and measuring democracy, evaluate this argument for me. Is it convincing?</strong></p>
+<p><br></p>
+<ul>
+<li>(SLIDE with two of Lee’s tweets on this and your points)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_color.png">
+<h2></h2>
+
+<img data-src="Images/02_1-Mike_Lee_Tweets.webp" style="display: block; margin: 0 auto" class="r-stretch"><aside class="notes">
+<p>FIRST, the argument pretends “democracy” has a single, VERY limited definition</p>
+<ul>
+<li><p>Specifically, this defines democracy ONLY as in its <em>direct</em> form meaning everyone votes on everything and 51% can do anything to anyone</p></li>
+<li><p>Funnily enough, he gives the whole thing away with the second paragraph when points out that only the straw man version of democracy enables him to make his argument</p></li>
+</ul>
+<p><br></p>
+<p><strong>From your work on democracy this week, how many possible principles of democracy does this ignore?</strong></p>
+<ul>
+<li><p><strong>And how many countries in the world would meet his straw man definition of democracy?</strong></p></li>
+<li><p>(None?)</p></li>
+</ul>
+<p><br></p>
+<p>SECOND, this doesn’t really define “republic” very clearly at all</p>
+<ul>
+<li><p>“Power is not found in mere majorities, but in carefully balanced power.”</p></li>
+<li><p>“Democratic principles have proven essential to those goals, but only as part of a system of checks and balances among the executive, legislative, and judicial branches of the federal government, as well as between the federal government and the states.”</p></li>
+</ul>
+<p><br></p>
+<p>The problem here for Lee is twofold</p>
+<ol type="1">
+<li>Republic is a categorical label we don’t really use anymore because it isn’t very useful for describing the world as it currently exists</li>
+</ol>
+<ul>
+<li><p>In the era of our forefathers, a republic was meant to tell you we didn’t have a monarch</p></li>
+<li><p>In other words, a republican form of government exists to the benefit of its people and not to the benefit of its king</p></li>
+</ul>
+<ol start="2" type="1">
+<li>If we extend “republic” to mean “representative government”, as Lee does in this argument, than republic is just a synonym for some principles of democracy (checks and balances)</li>
+</ol>
+<ul>
+<li><p>In that case he has simply argued that America simply has some principles of democracy and not others</p></li>
+<li><p>A much less impressive conclusion, no?</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_color.png">
+<h2></h2>
+
+<img data-src="Images/02_1-Facebook_Republic_not_Democracy.jpg" style="display: block; margin: 0 auto" class="r-stretch"><aside class="notes">
+<p>Here’s another one I hear from time to time</p>
+<ul>
+<li><strong>Based on our work this week, evaluate this argument for me. Is it convincing?</strong></li>
+</ul>
+<p><br></p>
+<p>FIRST, our founding fathers didn’t agree on almost anything, stop pretending that they did</p>
+<ul>
+<li>BUT, they did mostly agree that we shouldn’t have a king and hence the repeated use of the word “republic”!</li>
+</ul>
+<p><br></p>
+<p>SECOND, there are lots of rights we enjoy as citizens that cannot be found with a keyword search through the constitution</p>
+<ul>
+<li><p>the right to travel, the right to vote, the right to keep personal matters private and to make important decisions about one’s health care</p></li>
+<li><p>see the 9th amendment and unenumerated rights</p></li>
+</ul>
+<p><br></p>
+<p>BUT MOST IMPORTANTLY, the key here is that our founding documents are FULL of the many elements of democracy we have been exploring in class today!</p>
+<ul>
+<li>The word “democracy” isn’t magic, it is a label covering all these different principles</li>
+</ul>
+<p><br></p>
+<p><strong>Does everyone see why I described this as a rhetorical strategy and not a high quality argument?</strong></p>
+<p><br></p>
+<p>Bottom line, I want you to see that your work this week coming to understand democracy as a contested concept will make you a better consumer of the news and political rhetoric!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="next-week-the-polity-project" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
+<h2>Next Week: The Polity Project!</h2>
+<p><br></p>
+<h3 id="institutionalized-democracy">“Institutionalized Democracy”</h3>
+<p>“The Polity Project has, since the 1970s, produced an additive, ten-point scale of institutionalized democracy that includes measures focused on competitiveness of political participation (1-3), the competitiveness of executive recruitment (1-2), the openness of executive recruitment (1), and constraints on the chief executive” (Vanhanen 2000, p252).</p>
+<aside class="notes">
+<p>Next week we explore our first academic research project that aims to measure democracy</p>
+<ul>
+<li>The Polity Project is the grand-daddy of the democracy measuring projects!</li>
+</ul>
+<p><br></p>
+<p>Everybody take a look at the syllabus and the modules for next week</p>
+<ul>
+<li><strong>Any questions on what I’m asking you to do for next class?</strong></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="13-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="02-2-Analyzing_US_Democracy-national_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -429,7 +659,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -728,10 +957,27 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -741,8 +987,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -756,7 +1011,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
