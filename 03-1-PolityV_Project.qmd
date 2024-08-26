@@ -14,13 +14,11 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
-
-Policies to Address Misinformation
-
-- Proposal 1: Teaching information literacy
+**I. Road testing measures of democracy**
 
 :::
+
+- What does the Polity Project tell us about the health of American democracy? 
 
 <br>
 
@@ -31,57 +29,150 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Association of College and Research Libraries (ACRL). (2015). Framework for Information Literacy for Higher Education. https://www.ala.org/acrl/standards/ilframework
+1. Readings/Data
+    - The Polity Codebook
+    - PolityV-USA.xlsx
+    - "So you need to explore some data.pdf"
+    
+<br>
 
-    - Association of College and Research Libraries (ACRL). (2015). Framework for Information Literacy for Higher Education. https://www.ala.org/acrl/standards/ilframework
+Let's warm up with election news!
 
-:::
+- *Open google news and search 'election'*
 
+- **What's been going on since we last met? Anything noteworthy?**
 
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+- **Any changes in the stakes we discussed last class?**
 
 <br>
 
-Proposal 1: Teaching information literacy
+Let's segue into the next portion of our class
 
-1. ACRL (2015) on the big ideas underpinning IL
+- Last week we began to explore and evaluate democracy as a contested concept.
 
-2. Kavanagh and Rich (2018) "Chapter 2. Truth Decay’s Four Trends"
+<br>
+
+Over the next four weeks we will examine four research projects that each aim to define and measure democracy
+
+- In class we will evaluate their designs, summarize their findings and attempt to extend their measures into the present day
+
+<br>
+
+SLIDE: All of this represents the baseline work you will need for your first paper assignment of the class
+
+:::
+
+
+
+
+## Research Paper 1 (due Oct 6th) {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+<br>
+
+Write a report **summarizing and evaluating** the current health of American democracy
+
+<br>
+
+::: {.fragment}
+
+Assume the recipient of your report:
+
+- Is deeply interested in understanding the strengths and weaknesses of American democracy, 
+
+- Is NOT a statistician, and 
+
+- Is completely unfamiliar with projects we have explored.
+
+:::
 
 ::: notes
-1. Really need to unpack the ACRL 2015 document
-- Defining IL
-- Examining each frame, connecting them to specific habits and processes
-2. Use the four trends in the Truth Decay book as a test to consider. Would an embrace of IL counter each of these trends?
-3. How would we implement this as a policy?
 
-Association of College and Research Libraries (ACRL). (2015). Framework for Information Literacy for Higher Education. https://www.ala.org/acrl/standards/ilframework
-- Fascinating but very dense set of "frames" or ideas
-- IL definition: "Information literacy is the set of integrated abilities encompassing the reflective discovery of information, the understanding of how information is produced and valued, and the use of information in creating new knowledge and participating ethically in communities of learning" (p3).
-- We really need to spend time exploring and discussing each frame (See Harden and Harden 2019 for specific activities/prompts for examining some of the frames)
-	- What does this frame really mean?
-	- How do I "do it"?
-	- How close to this ideal do I come day-to-day? Is it possible to self-diagnose the problem? Why or why not?
-- Bottom line, should IL (and these six frames) be a primary objective for all students at Drury? Why or why not?
-- How would a deeper expertise in IL change the election? Our government? Our communities? 
+On Oct 6th you will submit a report that takes the work we have completed in the first half of the class and uses it to make a convincing argument
 
-Kavanagh, J., & Rich, M. D. (2018). Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
+- Your paper MUST utilize ALL four of the data projects we will explore in class
 
-Machete, P., & Turpin, M. (2020). The Use of Critical Thinking to Identify Fake News: A Systematic Literature Review. Responsible Design, Implementation and Use of Information and Communication Technology, 12067, 235–246.
+- This means your argument about American democracy must consider our institutions, elections, guaranteed rights and egalitarian ideals
 
-Harden, M., & Harden, J. J. (2020). Embedding the New Information Literacy Framework in Undergraduate Political Science Courses. PS: Political Science & Politics, 53(2), 344–348. https://doi.org/10.1017/S1049096519001756
+<br>
 
-NOTE: I cannot find any high quality research testing if these IL skills "work" in the real world
-- The ILT test is not obtainable and is a 1 hour multiple choice test
-- There are a couple articles I can find testing IL but the analyses suck, the samples are tiny and the interventions are non-transparent
-- Jones-Jang, S. M., Mortensen, T., & Liu, J. (2021). Does Media Literacy Help Identification of Fake News? Information Literacy Helps, but Other Literacies Don’t. American Behavioral Scientist, 65(2), 371–388
+REVEAL: Assumptions about the reader of your report
 
+<br>
+
+My advice to you is to use this as the lens for all of the work we will do over the next four weeks
+
+- Be sure to use every minute of our class time together to prepare for this report
+
+- Don't treat our work over the next four weeks as "simply for class"
+
+- All of this work is to prepare you to write a compelling and convincing argument paper
+
+<br>
+
+**Big picture questions on the assignment?**
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+## The Polity Project: Polity5 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/03_1-polity1800.jpg")
+```
+
+::: notes
+
+
+
+GROUPS: Examine the design of the "institutional democracy" index (Polity V project). Is this valid and reliable data? How is it gathered? How is it audited?
+
+- Which "flavor" of democracy does Polity's work focus on?
+
+- "The unit of analysis is the “polity.” Webster’s New World College Dictionary defines a “polity” as a “political or governmental organization; a society or institution with an organized government; state; body politic” (p1).
+
+
+
+
+
+
+
+
+
+EXCEL: Explore the polity data for the US over time; what do we learn from this? Where is the key variation? How well does this cover "democracy" as a concept (week 2 work)? Hitting all the parts we think are important? How does this help us think about the stakes of the election?
+
+APPLY: How could we use visualizations and/or descriptive stats to summarize Polity's measurements of American democracy?
+
+Assignment for next class
+:::
+
+
+## Polity5 {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: {.r-fit-text}
+The "Institutional Democracy" Index
+:::
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/03_1-Polity5-Democ_Index.png")
+```
+
+::: notes
+
+"The Polity Project has, since the 1970s, produced an additive, ten-point scale of institutionalized democracy that includes measures focused on competitiveness of political participation (1-3), the competitiveness of executive recruitment (1-2), the openness of executive recruitment (1), and constraints on the chief executive" (Vanhanen 2000, p252).
 
 
 :::
+
 
 
 
@@ -89,13 +180,23 @@ NOTE: I cannot find any high quality research testing if these IL skills "work" 
 
 <br>
 
-Proposal 2: Investing in institutions for "fact-checking"
+::: {.r-fit-text}
 
-1. Bisgaard (2019)
+1. Linz (1990) The Perils of Presidentialism
 
-2. ASSIGNMENT - Find us an example of "fact-checking" in the media you think is effective AND find us an example you think isn't effective.
+2. Canvas Assignment
+    - Updating the Polity Measures
 
+:::
 
 ::: notes
+
+1. Focus on the specific indicators Polity V uses to measure democracy in a country and identify the ones you believe are most likely to change (and in which direction) in a second Trump administration (provide evidence for your argument).
+
+2. Repeat the exercise for a Harris administration (provide evidence for your argument).
+
+<br>
+
+**Questions on the assignment?**
 
 :::

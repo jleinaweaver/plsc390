@@ -284,26 +284,83 @@ Bottom line, I want you to see that your work this week coming to understand dem
 
 
 
-## Next Week: The Polity Project! {background-image="Images/background-blue_triangles_flipped.png" .center}
+## Next Week: The Polity Project {background-image="Images/background-white_house_graphic_color.png" .center}
 
-<br>
-
-### "Institutionalized Democracy"
-
-"The Polity Project has, since the 1970s, produced an additive, ten-point scale of institutionalized democracy that includes measures focused on competitiveness of political participation (1-3), the competitiveness of executive recruitment (1-2), the openness of executive recruitment (1), and constraints on the chief executive" (Vanhanen 2000, p252).
+```{r, fig.align='center'}
+knitr::include_graphics("Images/03_1-polity1800.jpg")
+```
 
 ::: notes
 
 Next week we explore our first academic research project that aims to measure democracy
 
-- The Polity Project is the grand-daddy of the democracy measuring projects!
+- The Polity Project is the grand-daddy of the projects that aim to measure regime types across the world
+
+- It has been working to measure the world since the 1970s
 
 <br>
 
-Everybody take a look at the syllabus and the modules for next week
+This is the line plot they include on their website showing the breakdown of countries by regime type across time
 
-- **Any questions on what I'm asking you to do for next class?**
+- e.g. how many democracies, anocracies and autocracies are there each year?
 
+- “Anocracies” are regimes in the muddled middle, e.g. those with "odd combinations of democratic and autocratic authority patterns"
+
+<br>
+
+**What stands out to you in this plot?**
+
+- (The number of countries is increasing across time)
+
+- (Dictatorships spiked during the cold war)
+
+- (Many dictatorships converted to democracies or anocracies after the fall of the USSR)
+
+<br>
+
+SLIDE: Our focus on Tuesday is to unpack this blue line: The institutionalized democracy index
 
 :::
+
+
+
+## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+<br>
+
+::: {.incremental}
+1. Evaluate the **source of the data** used by Polity5 to measure the level of "democracy" in a country
+
+2. Evaluate the **process** used by Polity5 to **produce** and to **audit** its measures of "democracy"
+
+3. What "flavor" of democracy discussed by Diamond (1999) does this approach come closest to?
+
+:::
+
+::: notes
+
+For next class you will need to:
+
+- Review the Polity Codebook (selections in syllabus)
+
+- Open and make sure you understand the structure of a data spreadsheet, and
+
+- Submit a Canvas assignment before class
+
+<br>
+
+The assignment is meant to get you ready to analyze the Polity5 data in class
+
+- REVEAL: To use the Polity measures you need to understand where their data comes from
+
+- REVEAL: To use the Polity measures you need to understand how they turn data into specific measures of democracy
+
+- REVEAL: To use the Polity measures you also need to understand what they are omitting from their definition of democracy
+
+<br>
+
+**Any questions on what I'm asking you to do?**
+
+:::
+
 
