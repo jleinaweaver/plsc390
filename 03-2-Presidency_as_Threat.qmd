@@ -2,25 +2,33 @@
 format: revealjs
 ---
 
-## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Today's Agenda {background-image="Images/background-white_house_graphic_color.png" .center}
 
 ```{r}
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+library(kableExtra)
+
+d <- read_excel("../../Data_to_Explore/Polity/PolityV-USA.xlsx")
+
+# Omit transition codes
+d2 <- read_excel("../../Data_to_Explore/Polity/PolityV-USA.xlsx", na = c("-77", "-88"))
 ```
 
 <br>
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**I. Road testing measures of democracy**
 
-Policies to Address Misinformation
+- Juan Linz on the Perils of Presidentialism
 
-- Proposal 2: Investing in institutions for "fact-checking"
+- Forecasting the future of American democracy using Polity5
 
 :::
+
+<br>
 
 <br>
 
@@ -31,39 +39,311 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Martin Bisgaard (2019). “How Getting the Facts Right Can Fuel Partisan-Motivated Reasoning.” American Journal of Political Science. 63(4): 824–839.
+1. Check Canvas submissions
 
-:::
-
-
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+2. Reading: Linz (1990) The Perils of Presidentialism
 
 <br>
 
-Proposal 2: Investing in institutions for "fact-checking"
+Let's warm up with election news!
 
-1. Bisgaard (2019)
+- *Open google news and search 'election'*
 
-2. ASSIGNMENT - Find us an example of "fact-checking" in the media you think is effective AND find us an example you think isn't effective.
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
+
+<br>
+
+This week we've begun exploring our first research project that aims to measure democracy
+
+- SLIDE: Refresher on evaluating a measure of democracy
+
+:::
+
+
+
+## Evaluating a Measure of Democracy {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+A useful argument about the quality of any measure of democracy should consider:
+
+1. The definition of democracy being used,
+
+2. The source(s) of the data being analyzed, 
+
+3. The instrument(s) being applied to that data, and 
+
+4. The measurement process being used.
 
 ::: notes
 
-Martin Bisgaard (2019). “How Getting the Facts Right Can Fuel Partisan-Motivated Reasoning.” American Journal of Political Science. 63(4): 824–839.
+Specifically this week we've been focused on the Polity5 Project's measure of institutionalized democracy
 
-- How might partisans react to fact checking? Rationalizing reality using selective attribution
+<br>
 
-In Class Introduce Table 1 from: James Druckman and Mary C. McGrath (2019) “The evidence for motivated reasoning in climate change preference formation.” Nature Climate Change 9: 111–119.
-
-- A really interesting article that lays out a bunch of different possible theories of information processing. The Bayesian processing may be confusing but the structure being built may lend itself to really useful theorizing and policy design
-
-Also consider:
-
-Matthew H. Graham and Shikhar Singh (2024). “An Outbreak of Selective Attribution: Partisanship and Blame in the COVID-19 Pandemic.” American Political Science Review.
+**As a refresher, what strengths and weaknesses did we highlight when discussing the Polity approach to measuring democracy?**
 
 :::
+
+
+
+## {background-image="Images/background-white_house_graphic_color.png"}
+
+![](Images/03_1-Polity_Concept_v2.png){style="display: block; margin: 0 auto"}
+
+![](Images/03_1-Polity5-Democ_Index_v2.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Ok, the first thing I asked you to do for today was to update the component measures for the current year (2024).
+
+- Compare work in your group and get ready to report back the scores you decided on.
+
+<br>
+
+*PRESENT and DISCUSS each*
+
+- *Make sure to ask for, and to discuss, the evidence underpinning each score*
+
+<br>
+
+Alright groups, second job, forecast the scores for 2026 under a second Trump administration.
+
+- *PRESENT and DISCUSS each*
+
+<br>
+
+Finally, groups, get ready t report back your scores for a first Harris presidency in 2026.
+
+- *PRESENT and DISCUSS each*
+
+:::
+
+
+
+## Polity5 Takeaways? {background-image="Images/background-white_house_graphic_color.png" .center}
+
+```{r, fig.align='center', fig.asp=0.618, fig.retina=3}
+d |>
+  mutate(
+    democ = if_else(democ < 0, NA_integer_, democ)
+  ) |>
+  ggplot(aes(x = year, y = democ)) +
+  annotate("rect", xmin = 1789, xmax = 2020, ymin = 0, ymax = 5.99, fill = "pink", alpha=.3) +
+  annotate("rect", xmin = 1789, xmax = 2020, ymin = 6, ymax = 10, fill = "blue", alpha=.1) +
+  geom_line(linewidth = 1.3) +
+  theme_bw() +
+  scale_y_continuous(breaks = 0:10, limits = c(0, 10.1)) +
+  scale_x_continuous(breaks = seq(1780, 2020, by = 10), limits = c(1789, 2020)) +
+  labs(x = "", y = "Democ Index (0 - 10)",
+       title = "Variations in the US score of the institutionalized democracy index across time",
+       caption = "Source: Polity5 (2022)") +
+  annotate("text", x = 1905, y = c(5.5, 6.5), label = c("Non-Democracy", "Democracy"))
+```
+
+::: notes
+
+**Under what circumstances do we believe Polity is a useful measure of democracy?**
+
+- **What kinds of research question or policy problem is this best suited for?**
+
+:::
+
+
+
+## Linz (1990) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### The Perils of Presidentialism
+
+::: notes
+
+Let's switch our focus to the Linz article I gave you for today.
+
+- I wanted to find us a research article that tied directly to the kinds of mechanisms and questions the Polity data is best designed to investigate.
+
+- Executive institutions matter for Polity's definition of democracy and this article suggests how our particular approach could go very, very wrong
+
+<br>
+
+**Has anybody read this very heavily cited article before?**
+
+<br>
+
+**What's the central conclusion of this article?**
+
+- **What is Linz trying to convince you to accept?**
+
+- (SLIDE: On balance, parliamentarism is "more conducive to stable democracy" than presidentialism.)
+
+:::
+
+
+
+## Linz (1990) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### The Perils of Presidentialism
+
+<br>
+
+On balance, parliamentarism is "more conducive to stable democracy" than presidentialism.
+
+::: notes
+
+Take a few minutes with your group to go through the article and extract all of the key premises supporting this conclusion.
+
+- Get ready to report back!
+
+<br>
+
+*ON BOARD*
+
+- *PRESENT and DISCUSS each*
+
+<br>
+
+1. Conflicts over democratic legitimacy
+    - In presidential systems both the legislature and the president claim democratic legitimacy
+    - There are no "democratic principles" to resolve these conflicts
+    - If it gets really bad the military may step in!
+    - **"Even more ominously, in the absence of any principled method of distinguishing the true bearer of democratic legitimacy, the president may use ideological formulations to discredit his foes; institutional rivalry may thus assume the character of potentially explosive social and political strife. Institutional tensions that in some societies can be peacefully settled through negotiation or legal means may in other, less happy lands seek their resolution in the streets"** (64).
+
+2. Presidential succession during a term is not designed to promote the best possible leaders
+    - Running mates chosen for electoral advantages not ability to lead 
+
+3. Presidential constitutions are inherently paradoxical
+    - Include BOTH a strong executive AND heavy interference in that executive's powers (advice and consent, impeachment, independent judiciary)
+
+4. Presidentialism can poison our politics
+    - Long fixed-terms in office promote winner-take-all elections and viewing politics as a zero-sum game
+
+5. Presidentialism sets up an impossible job
+    - It is hard for the president to perform both the unifying role as head of state AND to act as a political animal seeking to make partisan policy
+    - - **Presidents may come to view themselves as "the only elected representative of the whole people and the accompanying risk that he will tend to conflate his supporters with "the people" as a whole ... The doleful potential for displays of cold indifference, disrespect, or even downright hostility toward the opposition is not to be scanted"** (61).
+
+6. It is VERY hard to remove bad presidents from office 
+
+<br>
+
+*Notes from my reading*
+
+Linz, Juan. (1990). The Perils of Presidentialism. Journal of Democracy, Volume 1, Number 1, Winter 1990, pp. 51-69.
+
+- "...the vast majority of the stable democracies in the world today are parliamentary regimes... By contrast, the only presidential democracy with a long history of constitutional continuity is the United States" (51-52).
+
+- The Argument: On balance, parliamentarism is "more conducive to stable democracy" than presidentialism.
+
+- In parliamentarism the government's authority is completely dependent upon parliamentary confidence AND the PM cannot easily appeal directly to the people over the heads of their representatives (52).
+
+Section: Parliamentary vs. Presidential Systems (52-54)
+
+- First problem of presidentialism: Democratic legitimacy
+    - In presidentialism the executive typically has "considerable constitutional powers" AND "is independent of parliamentary votes of confidence" (52).
+    - President's terms are fixed and they have a "strong claim to democratic, even plebiscitarian, legitimacy" (53)
+    - BUT in presidential systems it is also true that the legislators can ALSO "claim democratic legitimacy"... Under such circumstances, who has the stronger claim to speak on behalf of the people: the president or the legislative majority that opposes his policies? ... There is no democratic principle on the basis of which it can be resolved... ... It is therefore no accident that in some such situations in the past, the armed forces were often tempted to intervene as a mediating power (53).
+
+- Second problem of presidentialism: President's fixed term of office
+    - Terms are "rigidly demarcated," "leaving no room for the continuous readjustments that events may demand" (54).
+    - Especially problematic if the president dies or is incapacitated in office: successor may be from a different party (big changes in policy) or have been selected as a running mate for reasons entirely separate from ability to govern.
+    - "It is a paradox of presidential government that while it leads to the personalization of power, its legal mechanisms may also lead, in the event of a sudden midterm succession, to the rise of someone whom the ordinary electoral process would never have made the chief of state" (54).
+
+Paradoxes of Presidentialism (54-55)
+
+- "Presidential constitutions paradoxically incorporate contradictory principles and assumptions": powers for a strong, stable executive AND mechanisms to dilute those powers (and prevent a king), e.g. legislative advice-and-consent powers over presidential appointments, impeachment mechanisms, judicial independence, etc.
+
+Zero-sum Elections (55-58)
+
+- "In addition, however, one must attend to the ways in which political competition is structured in systems of direct presidential elections; the styles of leadership in such systems; the relations between the president, the political elites, and society at large; and the ways in which power is exercised and conflicts are resolved" (55).
+
+- Presidentialism is a problem "because it operates according to the rule of "winner-take-all" -- an arrangement that tends to make democratic politics a zero-sum game. ... Although parliamentary elections can produce an absolute majority for a single party, they more often give representation to a number of parties. Power-sharing and coalition-forming are fairly common, and incumbents are accordingly attentive to the demands and interests of even the smaller parties. These parties in turn retain expectations of sharing in power and, therefore, of having a stake in the system as a whole" (56).
+
+- Presidentialism is a problem because the fixed term in office means the "Winners and losers are sharply defined for the entire period of the presidential mandate. There is no hope for shifts in alliances, expansion of the government's base of support through national-unity or emergency grand coalitions, new elections in response to major new events, and so on. Instead, the losers must wait at least four or five years without any access to executive power and patronage. The zero-sum game in presidential regimes raises the stakes of presidential elections and inevitably exacerbates their attendant tension and polarization" (56).
+
+- These dangers are not as problematic in countries "where the preponderance of voters is centrist, agrees on the exclusion of extremists, and expects both rightist and leftist candidates to differ only within a larger, moderate consensus" ... "But societies beset by grave social and economic problems, divided about recent authoritarian regimes that once enjoyed significant popular support, and in which well-disciplined extremist parties have considerable electoral appeal, do not fit the model presented by the United States" (57).
+
+The spanish Example (58-60)
+
+The Style of Presidential Politics (60-62)
+
+- It is hard for the president to perform both the unifying role as head of state AND political animal
+
+- **Presidents may come to view themselves as "the only elected representative of the whole people and the accompanying risk that he will tend to conflate his supporters with "the people" as a whole** ... The doleful potential for displays of cold indifference, disrespect, or even downright hostility toward the opposition is not to be scanted" (61).
+
+The Problem of Dual Legitimacy (62-64)
+
+- "Given his unavoidable institutional situation, a president bids fair to become the focus for whatever exaggerated expectations his supporters may harbor. They are prone to think that he has more power than he really has or should have and may sometimes be politically mobilized against any adversaries who bar his way" (62).
+
+- "A presidential cabinet is less likely than its parliamentary counterpart to contain strong and independent-minded members. The officers of a president's cabinet hold their posts purely at the sufferance of their chief; if dismissed, they are out of public life altogether" (63).
+
+- **"Even more ominously, in the absence of any principled method of distinguishing the true bearer of democratic legitimacy, the president may use ideological formulations to discredit his foes; institutional rivalry may thus assume the character of potentially explosive social and political strife. Institutional tensions that in some societies can be peacefully settled through negotiation or legal means may in other, less happy lands seek their resolution in the streets"** (64).
+
+The Issue of Stability (64-66)
+
+- Many argue that presidential systems are more stable, BUT this underestimates the stability in parliamentary systems and may ignore the instability in presidential cabinets (64)
+
+- 'Stability' is also rigidity and inflexibility in the face of changing circumstances. "Even when polarization has intensified to the point of violence and illegality, a stubborn incumbent may remain in office" ... "Impeachment is a very uncertain and time-consuming process, especially compared with the simple parliamentary vote of no confidence" ... "There are, moreover, risks attached even to these entirely legal methods; the incumbent's supporters may feel cheated by them and rally behind him, thus exacerbating the crisis" (65).
+
+The Time Factor (66-68)
+
+- Rigidity of term + considerable powers of president tends to lead to re-election limits that can be frustrating in practice and can lead presidents to be more reckless when trying to advance their program in the time alotted (66).
+
+- "The time constraints associated with presidentialism, combined with the zero-sum character of presidential elections, are likely to render such contests more dramatic and divisive than parliamentary elections" (67).
+
+Parliamentarism and Political Stability (68-69)
+
+- Wraps it all up
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+::: {.r-fit-text}
+**Did Linz (1990) predict where we are headed?**
+:::
+
+```{r, fig.align='center', fig.asp=0.618, fig.retina=3}
+d |>
+  mutate(
+    democ = if_else(democ < 0, NA_integer_, democ)
+  ) |>
+  ggplot(aes(x = year, y = democ)) +
+  annotate("rect", xmin = 1789, xmax = 2020, ymin = 0, ymax = 5.99, fill = "pink", alpha=.3) +
+  annotate("rect", xmin = 1789, xmax = 2020, ymin = 6, ymax = 10, fill = "blue", alpha=.1) +
+  geom_line(linewidth = 1.3) +
+  theme_bw() +
+  scale_y_continuous(breaks = 0:10, limits = c(0, 10.1)) +
+  scale_x_continuous(breaks = seq(1780, 2020, by = 10), limits = c(1789, 2020)) +
+  labs(x = "", y = "Democ Index (0 - 10)",
+       title = "Variations in the US score of the institutionalized democracy index across time",
+       caption = "Source: Polity5 (2022)") +
+  annotate("text", x = 1905, y = c(5.5, 6.5), label = c("Non-Democracy", "Democracy"))
+```
+
+::: notes
+
+**Is there a connection between what Linz was theorizing 34 years ago and what Polity is showing us currently?**
+
+- **Are these changes somewhat inevitable in a presidential system that is becoming more polarized over time?**
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### According to Linz and Polity, what is the implication for American democracy of the SCOTUS ruling on presidential immunity?
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/03_2-SCOTUS_Immunity.png")
+```
+
 
 
 
@@ -71,12 +351,25 @@ Matthew H. Graham and Shikhar Singh (2024). “An Outbreak of Selective Attribut
 
 <br>
 
-Proposal 3: Changing the news consumption habits of American voters/consumers
+1. **Compare and contrast** the instruments for measuring democracy you created in Week 2 to the electoral democracy index created by V-Dem
 
-1. Peterson and Iyengar (2021)
-
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
+2. **Evaluate the process** used by V-Dem to measure electoral democracy around the world. What are the strengths and weaknesses of their approach to gathering real world observations and then converting them into measurements of democracy?
 
 ::: notes
 
+Next class we shift to our next research project that aims to measure democracy!
+
+- This approach focuses on elections as the primary mechanism of democracy
+
+<br>
+
+**Questions on the assignment?**
+
 :::
+
+
+
+
+
+
+

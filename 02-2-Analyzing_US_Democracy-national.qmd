@@ -306,15 +306,26 @@ This is the line plot they include on their website showing the breakdown of cou
 
 - “Anocracies” are regimes in the muddled middle, e.g. those with "odd combinations of democratic and autocratic authority patterns"
 
+- So, in 1800 there were approximately 20 autocracies, 5 anocracies and 0 democracies coded by the Polity project team
+
+- How many total in 1800? Hard to say but estimates vary from 20 up to 40 ([LINK](https://ourworldindata.org/grapher/number-of-countries?tab=table))
+
 <br>
 
-**What stands out to you in this plot?**
+**What do we learn from this line plot?**
 
-- (The number of countries is increasing across time)
+- **Tell me about the world of regime types across time!**
 
-- (Dictatorships spiked during the cold war)
+<br>
 
-- (Many dictatorships converted to democracies or anocracies after the fall of the USSR)
+- (The actual number of countries being coded has increased dramatically across time)
+    - More "polities" with recognized borders and sovereignty
+
+- (Basically no democracies until the late 19th century)
+
+- (Cold War period sees an increase in the number of democracies but a MASSIVE increase in the number of autocracies)
+
+- (Post Cold War we see many autocracies converted into anocracies and democracies)
 
 <br>
 
@@ -329,11 +340,9 @@ SLIDE: Our focus on Tuesday is to unpack this blue line: The institutionalized d
 <br>
 
 ::: {.incremental}
-1. Evaluate the **source of the data** used by Polity5 to measure the level of "democracy" in a country
+1. **Compare and contrast** the instruments for measuring democracy you created in Week 2 to the institutionalized democracy index created by Polity5
 
-2. Evaluate the **process** used by Polity5 to **produce** and to **audit** its measures of "democracy"
-
-3. What "flavor" of democracy discussed by Diamond (1999) does this approach come closest to?
+2. **Evaluate the process** used by Polity5 to measure democracy around the world. What are the strengths and weaknesses of their approach to gathering real world observations and then converting them into measurements of democracy?
 
 :::
 
@@ -341,21 +350,32 @@ SLIDE: Our focus on Tuesday is to unpack this blue line: The institutionalized d
 
 For next class you will need to:
 
-- Review the Polity Codebook (selections in syllabus)
+Read the selections from the codebook focusing on the design and measurement of the institutionalized democracy index, make sure you can open the data spreadsheet (and understand how it is organized), then submit your responses to the following: 
 
-- Open and make sure you understand the structure of a data spreadsheet, and
+- Read the Polity5 Codebook focusing on the design and measurement of the institutionalized democracy index
+    - p#s are in the syllabus (**updated yesterday**)
+
+- Open and make sure you understand the structure of the Polity5 data spreadsheet, and
 
 - Submit a Canvas assignment before class
 
 <br>
 
-The assignment is meant to get you ready to analyze the Polity5 data in class
+REVEAL: First reflection is to make sure you are connecting the work you did last week thinking critically about democracy to the work done by the Polity5 team
 
-- REVEAL: To use the Polity measures you need to understand where their data comes from
+- Research choices matter and I hope you now have a much better appreciation for what they are trying to do 
 
-- REVEAL: To use the Polity measures you need to understand how they turn data into specific measures of democracy
+- So, how are their choices similar to yours and how are they different?
 
-- REVEAL: To use the Polity measures you also need to understand what they are omitting from their definition of democracy
+<br>
+
+REVEAL: Second reflection is on how the research team actually does their work
+
+- Who does the measuring?
+
+- What real world data are they relying on?
+
+- How do they audit their results?
 
 <br>
 
