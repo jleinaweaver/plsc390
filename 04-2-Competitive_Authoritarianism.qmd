@@ -8,19 +8,22 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+
+# Input the VDem data
+d <- read_excel("../../Data_to_Explore/V-Dem/V-Dem-USA-1789-2023-Electoral_Democracy_Index.xlsx", na ="NA")
 ```
 
 <br>
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
-
-Policies to Address Misinformation
-
-- Proposal 4: Reducing misinformation on social media
+**I. Road testing measures of democracy**
 
 :::
+
+- Forecasting the future of American democracy using V-Dem
+
+- Is competitive authoritarianism in our future?
 
 <br>
 
@@ -31,28 +34,193 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Budak, C., Nyhan, B., Rothschild, D. M., Thorson, E., & Watts, D. J. (2024). Misunderstanding the harms of online misinformation. Nature, 630(8015), 45–53. https://doi.org/10.1038/s41586-024-07417-w
+1. Review Canvas submissions
 
-:::
-
-
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+2. Readings
+    - Levitsky and Way 2002
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
+Let's warm up with election news!
 
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
+- *Open google news and search 'election'*
 
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
+
+<br>
+
+This week we've been exploring our second research project that aims to measure democracy
+
+- SLIDE: Refresher on evaluating a measure of democracy
+:::
+
+
+## V-Dem Electoral Democracy Index {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<br>
+
+<br>
+
+A useful argument about the quality of any measure of democracy should consider the **definition**, data **sources**, the **instrument** and the measurement **process**.
+:::
+
+::: {.column width="40%"}
+![](Images/04_1-VDem_electoral_index_components.png)
+:::
+
+::::
 
 ::: notes
 
+Specifically this week we've been focused on the V-Dem's electoral democracy index
+
+<br>
+
+**As a refresher, what strengths and weaknesses did we highlight when discussing the V-Dem approach to measuring democracy?**
+
+- **Considering any of the key elements?**
 
 :::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+**Extending the V-Dem Electoral Democracy Index**
+:::
+
+![](Images/04_1-VDem_electoral_index_components.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Ok, the first thing I asked you to do for today was to apply the V-Dem instrument in order to project any changes in the five categories for the current year (2024).
+
+- Compare work in your group and get ready to report back the scores you decided on.
+
+<br>
+
+*PRESENT and DISCUSS each*
+
+<br>
+
+Alright groups, second job, forecast the changes in the five scores under a second Trump administration.
+
+- *PRESENT and DISCUSS each*
+
+<br>
+
+Finally, groups, get ready to report back your changes in the scores for a first Harris presidency in 2026.
+
+- *PRESENT and DISCUSS each*
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_color.png" .center}
+
+::: {.r-fit-text}
+**V-Dem Electoral Democracy Takeaways?**
+:::
+
+```{r, fig.retina=3, fig.align='center', fig.height=6.5}
+d |>
+  ggplot(aes(x = year, y = v2x_polyarchy)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Electoral Democracy Index",
+       caption = "Source: V-Dem (2024)") +
+  scale_x_continuous(breaks = seq(1785, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1))
+```
+
+::: notes
+
+**Under what circumstances do we believe this V-Dem index is a useful measure of democracy?**
+
+- **What kinds of research question or policy problem is this best suited for?**
+
+:::
+
+
+
+## Levitsky and Way (2002)  {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### The Rise of Competitive Authoritarianism
+
+::: notes
+
+Let's switch our focus to the Levitsky and Way article I gave you for today.
+
+- I wanted to find us a research article that tied directly to the kinds of mechanisms and questions the V-Dem electoral index is best designed to investigate.
+
+- Elections matter for V-Dem's definition of democracy and this article suggests how our particular approach could go very, very wrong
+
+<br>
+
+**Has anybody read this very heavily cited article before?**
+
+<br>
+
+**Let's start big picture! How do the authors define "competitive authoritarianism"?**
+
+- Definition: "In competitive authoritarian regimes, formal democratic institutions are widely viewed as the principal means of obtaining and exercising political authority. Incumbents violate those rules so often and to such an extent, however, that the regime fails to meet conventional minimum standards for democracy" (52).
+
+- In essence, competitive authoritarian regimes frequently violate the basic criteria of democracy (1 free and fair elections, 2 wide suffrage, 3 rights and liberties protected, 4 elected authorities actually in charge, not subsidiary to religious or military leaders) in order to "create an uneven playing field between government and opposition" (53).
+
+- Competitive authoritarianism fall short of democracy but are also not full authoritarian systems. Rules manipulated but leader not powerful enough to remove them. Extensive harrassment but using legal means
+
+<br>
+
+**Per the reading, what is the process by which a democracy may "decay" into a competitive authoritarian regime?**
+
+- "A third path to competitive authoritarianism was the decay of a democratic regime. In these cases, deep and often longstanding political and economic crises created conditions under which freely elected governments undermined democratic institutions—either via a presidential “self-coup” or through selective, incremental abuses—but lacked the will or capacity to eliminate them entirely. Examples of such transitions include Peru in the early 1990s and perhaps contemporary Venezuela" (61).
+
+<br>
+
+**Is this our future? Why or why not?**
+
+<br>
+
+*Other notes from reading*
+
+Aim here is to unpack one of the "new" hybrid regimes: Competitive Authoritarianism
+
+"Due to the persistence of meaningful democratic institutions in competitive authoritarian regimes, arenas of contestation exist through which opposition forces may periodically challenge, weaken, and occasionally even defeat autocratic incumbents. Four such arenas are of particular importance: 1) the electoral arena; 2) the legislature; 3) the judiciary; and 4) the media" (54).
+
+1. Elections bitterly fought. Process may be biased but still contested, regular and free of "massive" fraud (55)
+
+2. Weak legislature BUT can become a focal point of opposition. May block or water down policies of the executive or host public denouncements of the leader
+
+3. Maverick judges may interfere in leader actions
+
+4. Media targeted for harassment/bribery BUT remains powerful/influential
+
+- Competitive authoritarian systems are inherently unstable because they are built on conflicting foundations, some democratic and some autocratic (59)
+
+3 Paths to Competitive Authoritarianism
+
+1. Decay of a dictatorship
+
+2. ? seems to be a repeat of path 1?
+
+3. Decay of a democracy (61)
+
+US led liberal international order matters!
+
+- Yet if the prospects for full-scale democratization remained bleak in much of the post–Cold War world, so too were the prospects for building and sustaining full-scale authoritarian regimes. ... As Andrew Janos has argued, periods of liberal hegemony place a “web of constraints” on nondemocratic governments that seek to maintain international respectability and viability" (61).
+
+:::
+
 
 
 
@@ -60,8 +228,24 @@ Proposal 4: Reducing misinformation on social media
 
 <br>
 
-TBD
+::: {.r-fit-text}
+**Evaluating the Freedom House "Freedom in the World" index**
+:::
+
+```{r, fig.align='center'}
+knitr::include_graphics("Images/04_2-ASSIGN.png")
+```
 
 ::: notes
 
+Next class we shift to our next research project that aims to measure democracy, or in this case, freedom!
+
+- The Freedom House approach focuses on civili liberties and political rights as the primary mechanisms of interest
+
+<br>
+
+**Questions on the assignment?**
+
 :::
+
+

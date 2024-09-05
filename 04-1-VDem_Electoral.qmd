@@ -8,19 +8,21 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+
+# Input the VDem data
+d <- read_excel("../../Data_to_Explore/V-Dem/V-Dem-USA-1789-2023-Electoral_Democracy_Index.xlsx", na ="NA")
+
 ```
 
 <br>
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
-
-Policies to Address Misinformation
-
-- Proposal 3: Changing the news consumption habits of American voters/consumers
+**I. Road testing measures of democracy**
 
 :::
+
+- What does the V-Dem Electoral Democracy Index tell us about the health of American democracy? 
 
 <br>
 
@@ -31,46 +33,452 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+1. Review Canvas submissions AND publish the optional dataset (V-Dem-2023-polyarchy_all_countries.xlsx)
 
-:::
+2. Readings: V-Dem Methodology
+    - "2.1 Principles – Measured by V-Dem’s Democracy Indices" p4, on how the V-Dem project identifies the flavors of democracy
+    - "3.2 Coding Types and the V-Dem Codebook" p11, on the different types of measure included in V-Dem: facts and evaluations
+    - "3.4 Country Expert Recruitment" p13-14, experts used for evaluation data
+    - "4. Measurement" p21-26 on the lengths implemented to quantify and minimize error
 
+3. Readings: V-Dem Codebook
+    - The components of the electoral democracy index are on p41
+    - Each indicator is described in Section 3 of the codebook p61-243
 
+3. Data: V-Dem-USA-1789-2023-Electoral_Democracy_Index.xlsx
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
-
-<br>
-
-Proposal 3: Changing the news consumption habits of American voters/consumers
-
-1. Peterson and Iyengar (2021)
-
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
-
-::: notes
-
-Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
-
-- Paying for the "right" answers doesn't overcome partisan motivated reasoning
-- Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)
-
-
-:::
-
-
-
-## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+4. Note: I also posted the polyarchy scores for all countries in most recent year (2023) as context for thinking about the US scores
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
+Let's warm up with election news!
 
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
+- *Open google news and search 'election'*
 
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
+
+<br>
+
+*Split class into new groups! (3 each)*
+
+- Time to work with new people!
+
+:::
+
+
+
+## Research Paper 1 (due Oct 6th) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+Write a report **summarizing and evaluating** the current health of American democracy
+
+<br>
+
+The target of your report:
+
+- Is deeply interested in understanding the strengths and weaknesses of American democracy, 
+
+- Is NOT a statistician, and 
+
+- Is completely unfamiliar with projects we have explored.
 
 ::: notes
 
+**With a week of work on our first data project under your belt, any questions on the target assignment?**
+
 :::
+
+
+
+## Comparing Democracy Indices {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+![](Images/03_1-Polity5-Democ_Index_v2.png){.absolute left=0}
+
+![](Images/04_1-VDem_electoral_index_components.png){.absolute right=0}
+
+::: notes
+
+Our first job today is to analyze the key definitional choices made by the V-Dem team in constructing their electoral democracy index
+
+- So, I have two interrelated questions:
+
+1. How different are these two definitions of democracy?
+
+2. How SUBSTANTIVE are these differences?
+
+<br>
+
+GROUPS, share your Canvas answers with each other and get ready to report back to the class!
+
+<br>
+
+**FIRST, how different are the definitions?**
+
+- **Do any of the V-Dem categories overlap most directly with the Polity5 components?**
+
+- (Some conceptual overlap with the "elected officials" index and the "freedom of association" index)
+
+<br>
+
+**SECOND, how BIG are the differences?**
+
+<br>
+
+**On a conceptual level, do you have any concerns with the 40 variables included here? e.g. variables you don't think are related to democracy?**
+
+- **Are we clear on what each one measures?**
+
+<br>
+
+SLIDE: Ok, let's start analyzing the data!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+
+**Make a line plot of v2x_polyarchy for the US across time**
+
+:::
+
+::: {.fragment}
+
+```{r, fig.retina=3, fig.align='center', fig.height=6.5}
+d |>
+  ggplot(aes(x = year, y = v2x_polyarchy)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Electoral Democracy Index",
+       caption = "Source: V-Dem (2024)") +
+  scale_x_continuous(breaks = seq(1785, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1))
+```
+
+:::
+
+::: notes
+
+Let's visualize the data!
+
+- v2x_polyarchy is the variable name for the electoral democracy index
+
+- It is an interval variable running from low (0) to high (1)
+
+- An interval scale is one where there is order and the difference between two values is meaningful.
+
+- In other words, a move from .3 to .4 on this index is the same magnitude of change as a move from .6 to .7
+
+- **Make sense?**
+
+<br>
+
+**Groups, discuss the variation here and report back. What do we see?**
+
+- 1860 Civil War?
+
+- 1895 jump in score?
+
+- 1921 women's suffrage?
+
+- 1965 voting rights act?
+
+- 2016 Trump gets elected?
+
+<br>
+
+On Canvas I shared a second data file with you: V-Dem-2023-polyarchy_all_countries.xlsx
+
+- Open that file and scan through the current placement of countries on the V-Dem electoral democracy index
+
+- Get ready to report back how this context changes your view of American democracy over time
+
+<br>
+
+SLIDE: *REPORT BACK*
+:::
+
+
+
+## V-Dem Electoral Democracy Index {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.height=6.5}
+# Let's add context
+# Pull in all 2023 scores
+d2023 <- read_csv("../../Data_to_Explore/V-Dem/V-Dem-2023-polyarchy.csv")
+
+d_bad <- d2023 |>
+  filter(country_text_id %in% c("SAU", "CHN", "VEN"))
+
+d_mid_bad <- d2023 |>
+  filter(country_text_id %in% c("PAK", "SRB", "MEX", "POL"))
+
+d_better <- d2023 |>
+  filter(country_text_id %in% c("KOR", "GRC"))
+
+d_best <- d2023 |>
+  filter(country_text_id %in% c("DNK", "IRL"))
+
+d |>
+  ggplot(aes(x = year, y = v2x_polyarchy)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Electoral Democracy Index",
+       caption = "Source: V-Dem (2024)") +
+  scale_x_continuous(breaks = seq(1785, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1)) +
+  geom_text(data = d_bad, aes(label = country_name), color = "red") +
+  geom_text(data = d_mid_bad, aes(label = country_name), color = "orange") +
+  geom_text(data = d_better, aes(label = country_name), color = "cadetblue3") +
+  geom_text(data = d_best, aes(label = country_name), color = "blue")
+
+## Alternative: random sample approach
+# d_sample1 <- d2023 |>
+#   slice_sample(prop = .3)
+# 
+# d |>
+#   ggplot(aes(x = year, y = v2x_polyarchy)) +
+#   geom_line() +
+#   theme_bw() +
+#   labs(x = "", y = "Electoral Democracy Index",
+#        caption = "Source: V-Dem (2024)") +
+#   scale_x_continuous(breaks = seq(1780, 2020, 10)) +
+#   scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1)) +
+#   ggrepel::geom_text_repel(data = d_sample1, aes(label = country_name))
+
+```
+
+::: notes
+
+**How does this added context influence your analysis of American democracy over time?**
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+
+**Make a line plot of the five category indicies in the overall index**
+
+- v2x_freexp_altinf, v2x_frassoc_thick, v2x_suffr, v2xel_frefair, (omit v2x_elecoff)
+
+:::
+
+```{r, fig.retina=3, fig.align='center', fig.height=6.5}
+d |>
+  ggplot(aes(x = year, y = v2x_elecoff)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Elected Officials Index",
+       caption = "Source: V-Dem (2024)",
+       title = "There is no measured variation in the institutional design of US office holding") +
+  scale_x_continuous(breaks = seq(1785, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1))
+```
+
+::: notes
+
+Let's track down the key sources of variation in the US experience of democracy
+
+- Clearly, we have no measured variation in the institutional design of US office holding as measured by V-Dem so we'll set that one aside
+
+- *YOU divy out the line plots to the groups BUT SKIP v2x_elecoff (4 categories, 4 groups)*
+
+<br>
+
+Groups, make a line plot and analyze the results for us
+
+- Get ready to report back your findings!
+
+<br>
+
+*PRESENT and DISCUSS each*
+
+- (SLIDE with line plots and the components of the index)
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+![](Images/04_1-VDem_electoral_index_components.png){.absolute left=0}
+
+```{r, fig.retina=3, fig.align='right', fig.asp=1.3, out.width="55%"}
+d |>
+  pivot_longer(cols = c(v2x_freexp_altinf, v2x_frassoc_thick, v2x_suffr, v2xel_frefair), names_to = "Index", values_to = "Value") |>
+  ggplot(aes(x = year, y = Value)) +
+  geom_line() +
+  facet_wrap(~Index, ncol = 1) +
+  theme_bw() +
+  labs(x = "", y = "Index Score (0-1)",
+       caption = "Source: V-Dem (2024)",
+       title = "V-Dem Electoral Democracy Components") +
+  scale_x_continuous(breaks = seq(1785, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1))
+```
+
+::: notes
+
+Indicates the US has strengths in free association, access to information and freedom of expression 
+
+- Although a small divot in free expression during the Trump administration
+
+<br>
+
+Substantial growth in the suffrage measure over time
+
+- 15th Amendment in 1870 (voting rights cannot be denied or abridged based on "Race, color, or previous condition of servitude")
+
+- 19th Amendment in 1920 (Sex)
+
+- 24th Amendment in 1964 ("[F]ailure to pay any poll tax or other tax" for federal elections)
+
+- VRA in 1965
+
+- 26th Amendment in 1971 (lowers voting age to 18)
+
+<br>
+
+LOTS of variation in "Free and Fair elections" index
+
+- US didn't widely adopt the secret ballot for federal elections until the 1890s
+
+- Per wikipedia: Before the final years of the 19th century, partisan newspapers printed filled-out ballots, which party workers distributed on election day so voters could drop them directly into the boxes.
+
+- (SLIDE: Unpack all measures with variation in "Free and Fair elections" index)
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+![](Images/04_1-clean_elections_index.png){style="display: block; margin: 0 auto"}
+
+```{r, fig.retina=3, fig.align='center', fig.width=11}
+d |>
+  pivot_longer(cols = c(v2elembaut_ord, v2elembcap_ord, v2elrgstry_ord, v2elvotbuy_ord, v2elirreg_ord, v2elintim_ord, v2elpeace_ord, v2elfrfair_ord), names_to = "Index", values_to = "Value") |>
+  ggplot(aes(x = year, y = Value)) +
+  geom_line() +
+  facet_wrap(~Index, ncol=4) +
+  theme_bw() +
+  labs(x = "", y = "Index Score (0-1)",
+       caption = "Source: V-Dem (2024)",
+       title = "V-Dem Electoral Democracy Components") +
+  scale_x_continuous(breaks = seq(1785, 2025, 30))
+```
+
+::: notes
+
+Generally speaking, the story since the Civil War has been one of elections getting cleaner over time!
+
+- Adopting a secret ballot, less vote buying, less political violence around elections
+
+<br>
+
+SLIDE: Evaluate the methodology
+
+:::
+
+
+
+## Evaluating a Measure of Democracy {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+A useful argument about the quality of any measure of democracy should consider:
+
+1. The definition of democracy being used,
+
+2. The source(s) of the data being analyzed, 
+
+3. The instrument(s) being applied to that data, and 
+
+4. The measurement process being used.
+
+::: notes
+
+All of our work so far has been built on the assumption that the V-Dem electoral democracy index is highly precise and reliable
+
+- HOWEVER, we wouldn't want to provide V-Dem's answers to our big questions unless we've grappled with the strengths and weaknesses in the work.
+
+<br>
+
+Groups, review the Canvas submissions and let's discuss the strengths and weaknesses of how V-Dem creates this index of democracy
+
+- *ON BOARD: Two Lists*
+
+<br>
+
+Strengths:
+
+- 
+
+Weaknesses:
+
+- 
+
+<br>
+
+**Bottom line, how much uncertainty do we believe surrounds each score on the index and its component measures in a given year?**
+
+:::
+
+
+
+## {background-image="Images/background-blue_triangles_flipped.png"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<br>
+
+**For Next Class**
+
+1. Levitsky and Way (2002)
+
+2. Update V-Dem in 2024
+
+3. Make projections
+
+:::
+
+::: {.column width="50%"}
+
+![](Images/04_1-VDem_electoral_index_components.png)
+
+:::
+
+::::
+
+::: notes
+
+Same exercise as last week.
+
+- A reading that proposes a set of threats to American democracy, and
+
+- An exercise in using the instruments for measuring democracy designed by the research team
+
+<br>
+
+For this one I will ask you to focus on the five categories they include under the broad index of electoral democracy.
+
+- Your job will be to describe how you think each index has changed, or is likely to change
+
+- Think of this like forecasting a rising score, a falling score or a score that stays the same.
+
+<br>
+
+**Questions on the assignment?**
+
+:::
+

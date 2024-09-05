@@ -62,20 +62,26 @@ This week we've begun exploring our first research project that aims to measure 
 :::
 
 
+## Polity5 Institutionalized Democracy {background-image="Images/background-white_house_graphic_blue_v2.png"}
 
-## Evaluating a Measure of Democracy {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+:::: {.columns}
+
+::: {.column width="60%"}
 
 <br>
 
-A useful argument about the quality of any measure of democracy should consider:
+<br>
 
-1. The definition of democracy being used,
+A useful argument about the quality of any measure of democracy should consider the **definition**, data **sources**, the **instrument** and the measurement **process**.
+:::
 
-2. The source(s) of the data being analyzed, 
+::: {.column width="40%"}
+![](Images/03_1-Polity_Concept_v2.png)
 
-3. The instrument(s) being applied to that data, and 
+![](Images/03_1-Polity5-Democ_Index_v2.png)
+:::
 
-4. The measurement process being used.
+::::
 
 ::: notes
 
@@ -84,6 +90,8 @@ Specifically this week we've been focused on the Polity5 Project's measure of in
 <br>
 
 **As a refresher, what strengths and weaknesses did we highlight when discussing the Polity approach to measuring democracy?**
+
+- **Considering any of the key elements?**
 
 :::
 
@@ -351,9 +359,9 @@ knitr::include_graphics("Images/03_2-SCOTUS_Immunity.png")
 
 <br>
 
-1. **Compare and contrast** the instruments for measuring democracy you created in Week 2 to the electoral democracy index created by V-Dem
-
-2. **Evaluate the process** used by V-Dem to measure electoral democracy around the world. What are the strengths and weaknesses of their approach to gathering real world observations and then converting them into measurements of democracy?
+```{r, fig.align='center'}
+knitr::include_graphics("Images/03_2-ASSIGN.png")
+```
 
 ::: notes
 
