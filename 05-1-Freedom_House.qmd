@@ -8,19 +8,24 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+
+# Input data
+# Add a corrected "year" because FH "Edition" refers to the reporting year and not the year being coded
+d <- read_excel("../../Data_to_Explore/Freedom_House/Freedom_House_US_Data-1973-2024.xlsx") |>
+  mutate(
+    year = Edition - 1
+  )
 ```
 
 <br>
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
-
-Policies to Address Misinformation
-
-- Proposal 3: Changing the news consumption habits of American voters/consumers
+**I. Road testing measures of democracy**
 
 :::
+
+- What does the Freedom House Index tell us about the health of American democracy? 
 
 <br>
 
@@ -31,31 +36,576 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+1. Review Canvas submissions
+
+2. Readings: [Freedom House Methodology](https://freedomhouse.org/reports/freedom-world/freedom-world-research-methodology)
+
+3. Data: Freedom_House_US_Data-1973-2024.xlsx
+
+<br>
+
+Let's warm up with election news!
+
+- *Open google news and search 'election'*
+
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
+
+:::
+
+
+
+## Research Paper 1 (due Oct 6th) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+Write a report **summarizing and evaluating** the current health of American democracy
+
+<br>
+
+The target of your report:
+
+- Is deeply interested in understanding the strengths and weaknesses of American democracy, 
+
+- Is NOT a statistician, and 
+
+- Is completely unfamiliar with projects we have explored.
+
+::: notes
+
+**Two weeks into our review of competing academic measures of democracy, any questions on the target assignment?**
+
+:::
+
+
+
+## Comparing Democracy Indices {background-image="Images/background-white_house_graphic_blue_v2.png" .smaller}
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+**Freedom House Total Score**
+
+- PR + CL
+
+**Political Rights (PR)**
+
+- A. Electoral Process (x3)
+- B. Pluralism & Participation (x4)
+- C. Functioning of Government (x3)
+
+**Civil Liberties (CL)**
+
+- D. Freedom of Expression & Belief (x4)
+- E. Associational Rights (x3)
+- F. Rule of Law (x4)
+- G. Personal Autonomy & Rights (x4)
+
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="45%"}
+**Polity5 "Institutionalized Democracy"**
+
+- Competitiveness and openness of executive recruitment
+- Constraints on chief executive
+- Competitiveness of party competition
+
+**V-Dem "Electoral Democracy"**
+
+- Free expression and sources of info
+- Free association
+- Wide suffrage
+- Clean elections
+- Elected officials
+
+:::
+
+::::
+
+::: notes
+
+Our first job today is to analyze the key definitional choices made by the Freedom House team in constructing their index
+
+- Same questions as last week: 1) How different is this definition, and 2) how substantive are these differences?
+
+- GROUPS, share your Canvas answers with each other and get ready to report back to the class!
+
+<br>
+
+*REPORT BACK and DISCUSS*
+
+<br>
+
+SLIDE: In order to analyze this data we have to clarify a few things and clean the data a bit
+
+:::
+
+
+
+## Working with FH Data {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+:::: {.r-fit-text}
+
+::: {.incremental}
+
+1. Create a new variable: 
+    - Year = Edition - 1
+
+2. Focus on the "Scores" and NOT the "Ratings
+    - Political Rights: 0 - 40
+    - Civil Liberties: 0 - 60
+    - Total: 0 - 100
+
+:::
+
+::::
+
+::: notes
+
+REVEAL: FH datasets typically organized by "Edition" which is the year the report was released
+
+- Actual year being coded was essentially always the year before
+
+- So, create a new "Year" variable in your spreadsheet
+
+<br>
+
+REVEAL: From the start of the project until about 2000 the primary measurement outputs of the "Freedom in the World" project were the PR and CL "ratings"
+
+- Each converted the many, many underlying questions into variables on a 1-7 scale
+
+- 1 representing the greatest degree of freedom, and 
+
+- 7 the smallest degree of freedom
+
+- The average of those two ratings thus determined the country's classification as either "free," "partly free" or "not free"
+
+<br>
+
+REVEAL x 3: The problems in this approach were many
+
+1. Never throw away variation!
+    - Our whole job is to explain variation!
+    
+    - Countries vary across a 0-100 score in FH, why would we prefer converting that down to 1-7? Why lose 14x the available variation??
+
+2. WHATEVER process you choose for converting a 100 point scale down to a 7 point scale will have huge impacts on the results
+    - Why introduce all that subjectivity into your measures?
+    
+<br>
+
+**Any questions on this?**
+:::
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+
+**Make a line plot of the "Total" score for the US since 2012**
+
+:::
+
+::: {.fragment}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=0.618}
+d |>
+  filter(!is.na(PR)) |>
+  ggplot(aes(x = year, y = Total)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Freedom House 'Total' Scores",
+       caption = "Source: Freedom House (2024)",
+       title = "The variation in US freedom across time...") +
+  scale_x_continuous(breaks = seq(2012, 2024, 1)) +
+  scale_y_continuous(breaks = seq(0, 100, 5), limits = c(80,100))
+```
+
+:::
+
+::: notes
+
+Make the plot and discuss the results with the people around you!
+
+- Get ready to report back what you learn from the variation in our top-line score only
+
+<br>
+
+**REVEAL: How significant is this decline in American freedom over time?**
+
+- *REPORT back and DISCUSS*
+
+<br>
+
+SLIDE: A question on designing statistical visualizations
+
+:::
+
+
+
+## Which figure is the "correct" one? {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r, fig.retina=3, fig.align='center', fig.asp=.9, fig.width=6.5}
+d |>
+  filter(!is.na(PR)) |>
+  ggplot(aes(x = year, y = Total)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Freedom House 'Total' Scores",
+       caption = "Source: Freedom House (2024)",
+       title = "Option 1: Focus on the variation?") +
+  scale_x_continuous(breaks = seq(2012, 2024, 1)) +
+  scale_y_continuous(breaks = seq(0, 100, 1), limits = c(82,94))
+```
+:::
+
+::: {.column width="50%"}
+```{r, fig.retina=3, fig.align='center', fig.asp=.9, fig.width=6.5}
+d |>
+  filter(!is.na(PR)) |>
+  ggplot(aes(x = year, y = Total)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Freedom House 'Total' Scores",
+       caption = "Source: Freedom House (2024)",
+       title = "Option 2: Provide the full range?") +
+  scale_x_continuous(breaks = seq(2012, 2024, 1)) +
+  scale_y_continuous(breaks = seq(0, 100, 10), limits = c(0,100))
+```
+
+:::
+
+::::
+
+::: notes
+
+With your target reports in mind, let's talk visualizations for a moment
+
+- **When you include a line plot like this in your report, should the y-axis focus in on the area with variation (left) or show the full possible range (right)?**
+
+<br>
+
+It depends on what you are trying to communicate to the reader!
+
+- Statistics is both an art and a science
+
+- BUT that doesn't mean you should aim to mislead!
+
+<br>
+
+Two aspects of this assignment lead me to prefer the full range
+
+1. The FH Total score has a constrained range
+    - There are no values outside 0 to 100 so placement within that range has meaning
+    
+    - High scores are likely democracies and low scores are probably not
+    
+2. The target of our reports are interested non-experts and we don't want to mislead them
+    - A zoomed in version will lead someone who doesn't understand the FH measure to think American freedom has fallen off a proverbial cliff.
+    
+<br>
+
+**Does that make sense?**
+
+<br>
+
+Optional: Use both!
+
+- Start with the full range to introduce the measure and place the US on the broad spectrum of freedom
+
+- THEN zoom in to have a more fine-grained discussion of variation in the measures
+
+<br>
+
+**Any questions on this?**
 
 :::
 
 
 
 
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
 
-<br>
+::: {.r-fit-text}
 
-Proposal 3: Changing the news consumption habits of American voters/consumers
+**Make a line plot of `PR` and `CL` for the US since 2012**
 
-1. Peterson and Iyengar (2021)
+:::
 
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
+::: {.fragment}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+## Facet version
+# d |>
+#   filter(!is.na(PR)) |>
+#   pivot_longer(cols = c(PR, CL), names_to = "Index", values_to = "Value") |>
+#   mutate(
+#     Index2 = ifelse(Index == "PR", "Political Rights (0-40)", "Civil Liberties (0-60)")
+#   ) |>
+#   ggplot(aes(x = year, y = Value)) +
+#   geom_line() +
+#   theme_bw() +
+#   facet_wrap(~ Index2, ncol = 1, scales = "free_y") +
+#   labs(x = "", y = "Index Scores",
+#        caption = "Source: Freedom House (2024)") +
+#   scale_x_continuous(breaks = seq(2012, 2024, 1))
+
+# # One plot version
+#RColorBrewer::brewer.pal(3, name = "Dark2")
+
+d |>
+  filter(!is.na(PR)) |>
+  pivot_longer(cols = c(PR, CL), names_to = "Index", values_to = "Value") |>
+  mutate(
+    Index2 = ifelse(Index == "PR", "Political Rights (0-40)", "Civil Liberties (0-60)")
+  ) |>
+  ggplot(aes(x = year, y = Value, color = Index)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Index Scores",
+       caption = "Source: Freedom House (2024)",
+       title = "America is becoming less 'free' over time") +
+  guides(color = FALSE) +
+  scale_x_continuous(breaks = seq(2012, 2024, 1)) +
+  scale_y_continuous(breaks = seq(0, 60, 5), limits = c(0,61)) +
+  scale_color_brewer(palette = "Dark2") +
+  geom_hline(yintercept = 60, linetype = "dashed", color = "#1B9E77") +
+  geom_hline(yintercept = 40, linetype = "dashed", color = "#D95F02") +
+  annotate("text", x = 2018, y = c(61, 41), label = c("Civil Liberties", "Political Rights"), color = c("#1B9E77", "#D95F02"))
+```
+
+:::
 
 ::: notes
 
-Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+So, the level of "freedom" in the US is declining.
 
-- Paying for the "right" answers doesn't overcome partisan motivated reasoning
-- Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)
+- Is this primarily being driven by our a reduction in our political rights or civil liberties?
 
+- Try putting both lines on the same plot!
+    - Highlight "year", "PR" and "CL" then input the scatter with lines
+
+- I know you can do this evaluation just looking at the spreadsheet, but this exercise is about communicating your findings to an audience, so make this plot!
+
+<br>
+
+**REVEAL: First of all, do we like a version of this plot with both lines on it or is this confusing?**
+
+- (I'm on the fence with this choice...)
+
+- (Maybe? better as separate plots with different y-axis ranges...)
+
+<br>
+
+**So, what does this tell us about American freedom?**
+
+- **Is this more useful than a change in the top-line score? Why or why not?**
+
+- *REPORT back and DISCUSS the finding*
+
+<br>
+
+SLIDE: Let's go one level deeper!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+## Separate plots for PR and CL
+# A and C have 3 questions so top out at 12pts
+# B has 4 so tops out at 16pts
+
+#RColorBrewer::brewer.pal(3, name = "Dark2")
+
+d |>
+  filter(!is.na(PR)) |>
+  pivot_longer(cols = c(A, B, C), names_to = "Index", values_to = "Value") |>
+  ggplot(aes(x = year, y = Value, color = Index)) +
+  geom_hline(yintercept = c(12, 16), linetype = "dashed", color = "grey") +
+  geom_line() +
+  theme_bw() +
+  #facet_wrap(~ Index, ncol = 4) +
+  labs(x = "", y = "Index Scores",
+       caption = "Source: Freedom House (2024)",
+       title = "Political Rights Categories") +
+  scale_x_continuous(breaks = seq(2012, 2024, 1)) +
+  scale_y_continuous(breaks = seq(2, 16, 2), limits = c(1, 16)) +
+  guides(color = FALSE) +
+  annotate("text", x = 2012, y = c(9.5, 10.6, 15.5), label = c("C. Functioning of Government", "A. Electoral Process", "B. Pluralism & Participation"), size = 3, hjust = 0, color = c("#7570B3", "#1B9E77", "#D95F02")) +
+  scale_color_brewer(palette = "Dark2")
+```
+
+::: notes
+
+This plot unpacks the three categories that combine to make the "Political Rights" index.
+
+- Note that category B has 4 questions with 4 points each for a total of 16 possible points
+
+- Categories A and C have 3 questions so top out at 12 points
+
+<br>
+
+Given how contested the definitions of "freedom", "political rights" and "civil liberties" are, I think this indicator level is where we actually start getting useful measures of American democracy
+
+- **What do we learn from this about freedom in America over the recent past?**
+
+- **Do we have a significant problem in terms of threats to our political rights or not?**
+
+<br>
+
+**Is everyone confident they could make this plot in Excel?**
+
+<br>
+
+SLIDE: Let's now do civil liberties
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+## Separate plots for PR and CL
+#RColorBrewer::brewer.pal(4, name = "Dark2")
+
+d |>
+  filter(!is.na(PR)) |>
+  pivot_longer(cols = c(D,E,F,G), names_to = "Index", values_to = "Value") |>
+  ggplot(aes(x = year, y = Value, color = Index)) +
+  geom_hline(yintercept = c(12, 16), linetype = "dashed", color = "grey") +
+  geom_line() +
+  theme_bw() +
+  #facet_wrap(~ Index, ncol = 4) +
+  labs(x = "", y = "Index Scores",
+       caption = "Source: Freedom House (2024)",
+       title = "Civil Liberties Categories") +
+  scale_x_continuous(breaks = seq(2012, 2024, 1)) +
+  scale_y_continuous(breaks = seq(2, 16, 2), limits = c(1, 16.5)) +
+  scale_color_brewer(palette = "Dark2") +
+  guides(color = FALSE) +
+  annotate("text", x = 2012, y = c(10.5, 13.5, 14.5, 16.5), label = c("E. Associational Rights", "F. Rule of Law", "G. Personal Autonomy", "D. Freedom of Expression"), size = 3, hjust = 0, color = c("#D95F02", "#7570B3", "#E7298A", "#1B9E77"))
+  
+```
+
+::: notes
+
+This plot unpacks the four categories that combine to make the "Civil Liberties" index.
+
+- Categories D, F and G ar 16 points each and E is worth 12 points
+
+<br>
+
+**What do we learn from this about freedom in America over the recent past?**
+
+- **Do we have a significant problem in terms of threats to our civil liberties or not?**
+
+<br>
+
+SLIDE: One way to communicate these changes to a reader is to focus on the net change in a score over time
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+# Dot plot with arrow segments for changes since 2012
+d |>
+  filter(year %in% c(2012, 2023)) |>
+  pivot_longer(cols = c(A,B,C,D,E,F,G), names_to = "Index", values_to = "Values") |>
+  select(`Country/Territory`, year, Index, Values) |>
+  pivot_wider(names_from = year, values_from = Values, names_prefix = "yr_") |>
+  mutate(
+    Change = yr_2023 - yr_2012
+  ) |>
+  arrange(Change) |>
+  mutate(
+    Index = case_when(
+      Index == "A" ~ "A. Electoral Process",
+      Index == "B" ~ "B. Pluralism and Participation",
+      Index == "C" ~ "C. Functioning of Government",
+      Index == "D" ~ "D. Freedom of Expression",
+      Index == "E" ~ "E. Associational Rights",
+      Index == "F" ~ "F. Rule of Law",
+      Index == "G" ~ "G. Personal Autonomy"
+    )
+  ) |>
+  ggplot(aes(y = reorder(Index, Change), x = Change)) +
+  geom_point() +
+  theme_bw() +
+  labs(x = "Change in Score (2012 to 2023)", y = "",
+       title = "The US is experiencing declines in 'freedom' across six of the seven indicators") +
+  annotate("segment", x = 0, xend = -.9, y = c(6, 5, 4), yend = c(6, 5, 4), arrow = arrow(length = unit(0.2,"in")), color = "red") +
+  annotate("segment", x = 0, xend = -1.9, y = c(3, 2), yend = c(3, 2), arrow = arrow(length = unit(0.2,"in")), color = "red", linewidth = 1.6) +
+  annotate("segment", x = 0, xend = -2.9, y = c(1), yend = c(1), arrow = arrow(length = unit(0.2,"in")), color = "red", linewidth = 2.3)
+```
+
+::: notes
+
+In a sense, the Freedom House analyses of threats to American democracy can be summed up like this. 
+
+- **Per your intuitions, is this an accurate diagnosis of the current pressing threats to American democracy? Why or why not?**
+
+:::
+
+
+
+
+## Evaluating a Measure of Democracy {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+A useful argument about the quality of any measure of democracy should consider:
+
+1. The definition of democracy being used,
+
+2. The source(s) of the data being analyzed, 
+
+3. The instrument(s) being applied to that data, and 
+
+4. The measurement process being used.
+
+::: notes
+
+All of our work so far has been built on the assumption that the Freedom House measures are highly precise and reliable
+
+- HOWEVER, we wouldn't want to provide Freedom House's answers to our big questions unless we've grappled with the strengths and weaknesses in the work.
+
+<br>
+
+Groups, review the Canvas submissions and let's discuss the strengths and weaknesses of how Freedom House creates their indicies of freedom
+
+- *ON BOARD: Two Lists*
+
+<br>
+
+Strengths:
+
+- 
+
+Weaknesses:
+
+- 
+
+<br>
+
+**Bottom line, how much uncertainty do we believe surrounds each score on the index and its component measures in a given year?**
 
 :::
 
@@ -65,12 +615,10 @@ Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Informati
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
-
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
-
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+![](Images/05_1-ASSIGN.png)
 
 ::: notes
+
+**Questions on the assignment?**
 
 :::
