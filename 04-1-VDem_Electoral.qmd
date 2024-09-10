@@ -61,7 +61,7 @@ Let's warm up with election news!
 
 <br>
 
-*Split class into new groups! (3 each)*
+*Split class into new groups (four members per group minimum so they can each make one of the line plots)*
 
 - Time to work with new people!
 
@@ -289,7 +289,7 @@ Let's track down the key sources of variation in the US experience of democracy
 
 - Clearly, we have no measured variation in the institutional design of US office holding as measured by V-Dem so we'll set that one aside
 
-- *YOU divy out the line plots to the groups BUT SKIP v2x_elecoff (4 categories, 4 groups)*
+- *Each group makes all four plots, one per person in the group, SKIP v2x_elecoff (4 categories, 4 groups)*
 
 <br>
 
