@@ -8,19 +8,20 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+
+# Input the VDem data
+d <- read_excel("../../Data_to_Explore/V-Dem/V-Dem-USA-1789-2023-Egalitarian_Democracy_Index.xlsx", na ="NA")
 ```
 
 <br>
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
-
-Policies to Address Misinformation
-
-- Proposal 3: Changing the news consumption habits of American voters/consumers
+**I. Road testing measures of democracy**
 
 :::
+
+- What does the V-Dem Egalitarian Democracy Index tell us about the health of American democracy? 
 
 <br>
 
@@ -32,30 +33,616 @@ Justin Leinaweaver (Fall 2024)
 Prep for Class
 
 1. Readings
-    - Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+    - Sigman and Lindberg (2019), ONLY p595-600 and skim the rest
+    - V-Dem Codebook selections:
+    - p49 on the egalitarian democracy index
+    - p418 on the components in the index
+    - review the coding for each relevant components in Section 3, p61-242)
+    
+2. Data
+    - V-Dem-USA-1789-2023-Egalitarian_Democracy_Index.xlsx
+    - V-Dem-2023-egalitarian_all_countries.xlsx
+
+<br>
+
+Let's warm up with election news!
+
+- *Open google news and search 'election'*
+
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
 
 :::
 
 
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+## Research Paper 1 (due Oct 6th) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 <br>
 
-Proposal 3: Changing the news consumption habits of American voters/consumers
+Write a report **summarizing and evaluating** the current health of American democracy
 
-1. Peterson and Iyengar (2021)
+<br>
 
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
+The target of your report:
+
+- Is deeply interested in understanding the strengths and weaknesses of American democracy, 
+
+- Is NOT a statistician, and 
+
+- Is completely unfamiliar with projects we have explored.
 
 ::: notes
 
-Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+This week we tackle our final data project that aims to measure democracy around the world.
 
-- Paying for the "right" answers doesn't overcome partisan motivated reasoning
-- Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)
+- Next week we work on the assignment!
 
+:::
+
+
+
+## Comparing Democracy Indices {background-image="Images/background-white_house_graphic_blue_v2.png" .smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<br>
+
+**Egalitarian democracy index**
+
+**(v2x_egaldem)**
+
+![](Images/06_1-egalitarian_components.png)
+
+:::
+
+::: {.column width="40%"}
+**Polity5 "Institutionalized Democracy"**
+
+- Competitiveness and openness of executive recruitment, Constraints on chief executive, Competitiveness of party competition
+
+**V-Dem "Electoral Democracy"**
+
+- Free expression, Free association, Wide suffrage, Clean elections, Elected officials
+
+**Freedom House "Total" Score**
+
+- Political Rights (PR) and Civil Liberties (CL)
+:::
+
+::::
+
+::: notes
+
+Our first job today is to analyze the key definitional choices made by the V-Dem team in constructing their index
+
+- Same questions as last week:
+
+1. How different is this definition, and 
+
+2. How substantive are these differences?
+
+<br>
+
+GROUPS, share your Canvas answers with each other and get ready to report back to the class!
+
+- ALSO, be sure to consider the discussions in Sigman and Lindberg (2019)
+
+<br>
+
+*REPORT BACK and DISCUSS*
+
+<br>
+
+*Sigman and Lindberg (2019) Notes*
+
+- "Yet, the concept of equality occupies a central place in democratic theory. ... Equality, moreover, figures prominently in theories
+of democratic durability, effectiveness and legitimacy" (595).
+
+- "This paper develops the concept of egalitarian democracy as a type of democracy in which citizens across all social groups are equally capable of exercising their political rights and freedoms, and of influencing political and governing processes" (596).
+
+- "The importance of egalitarianism in democratic theory arises, in part, out of the distinction between democratic forms of government and aristocratic ones. ...self government is not merely procedural
+but constitutes substantive power-sharing in itself, thus requiring 'intrinsic equality”—the belief that all beings are equally suited to rule'" (596).
+
+- "...existing inequalities—economic or otherwise—are likely to undermine the ability of poorer or marginalized populations to participate meaningfully in self-rule" (597).
+
+- "Regarding legitimacy in particular, equality minimizes the “resentments and frustrations” of some groups in society (Dahl 1971, 82), thereby leading to greater overall acceptance of the system in place" (598).
+
+- "First, we focus on the provision or deprivation of de facto rights for all citizens, or what we call Equal Protection. Second, we focus on Equal Distribution, or the extent to which the government ensures that the entire population enjoys the basic necessities that enable them to participate in political and governing processes. We also identify a third principle relating to Equal Access emphasizing the de facto distribution of power in society" (598).
+
+- "Equal Protection implies that the state grants and actively protects rights and freedoms evenly across the population, such that all citizens are free to engage in the political process" (598).
+
+- "The literature on equality and democracy suggests that a more Equal Distribution of Resources across social groups is also necessary to achieve political equality" (599).
+
+- Equal Access to Power: "Ideally, all groups should enjoy equal de facto capabilities to participate; to serve in positions of political power; to put issues on the agenda; and to influence policymaking" (600).
+
+- Plus useful material comparing this new index to Freedom House and  exploring their approach to measurement
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+
+**Make a line plot of v2x_egaldem for the US across time**
+
+- Context: V-Dem-2023-egalitarian_all_countries.xlsx
+
+:::
+
+::: {.fragment}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width='80%'}
+# Let's add context
+# Pull in all 2023 scores
+d2023 <- read_csv("../../Data_to_Explore/V-Dem/V-Dem-2023-egalitarian_all_countries.csv")
+
+d_bad <- d2023 |>
+  filter(country_text_id %in% c("AFG", "RUS", "CUB"))
+
+d_mid_bad <- d2023 |>
+  filter(country_text_id %in% c("MEX", "SGP", "COL"))
+
+d_better <- d2023 |>
+  filter(country_text_id %in% c("POL", "KOR", "CAN"))
+
+d_best <- d2023 |>
+  filter(country_text_id %in% c("DNK", "IRL"))
+
+d |>
+  ggplot(aes(x = year, y = v2x_egaldem)) +
+  geom_line(color = "darkgreen", linewidth = 1.2) +
+  theme_bw() +
+  labs(x = "", y = "Egalitarian Democracy Index",
+       title = "Tracking the US on the Egalitarian Democracy Index",
+       caption = "Source: V-Dem (2024)") +
+  scale_x_continuous(breaks = seq(1900, 2025, 10), limits = c(1895, 2030)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1)) +
+  geom_text(data = d_bad, aes(label = country_name), color = "red", hjust = 0) +
+  geom_text(data = d_mid_bad, aes(label = country_name), color = "orange", hjust = 0) +
+  geom_text(data = d_better, aes(label = country_name), color = "cadetblue3", hjust = 0) +
+  geom_text(data = d_best, aes(label = country_name), color = "blue", hjust = 0) +
+  annotate("text", x = 1905, y = .1, label = "United\nStates", color = "darkgreen")
+```
+
+:::
+
+::: notes
+
+Everybody make this line plot and evaluate it using the context of all other countries in 2023
+
+- Discuss with the people around you!
+
+<br>
+
+(REVEAL)
+
+- In 2023 Denmark represents the highest current score (.88) and the lowest is Afghanistan and South Sudan (.03)
+
+<br>
+
+SLIDE: The two main components of the egalitarian index
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+#RColorBrewer::brewer.pal(n = 3, name = "Dark2")
+
+d |>
+  pivot_longer(cols = c(v2x_polyarchy, v2x_egal), names_to = "Index", values_to = "Value") |>
+  ggplot(aes(x = year, y = Value, color = Index)) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Index Score (0-1)",
+       caption = "Source: V-Dem (2024)",
+       title = "V-Dem Egalitarian Democracy Components") +
+  scale_x_continuous(breaks = seq(1900, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1)) +
+  scale_color_brewer(palette = "Dark2") +
+  annotate("text", x = 1900, y = c(.27, .49), label = c("Egalitarian\nComponents", "Electoral\nDemocracy"), hjust = 0, color = c("#1B9E77", "#D95F02")) +
+  guides(color = "none")
+```
+
+::: notes
+
+The egalitarian democracy index includes two main components
+
+1. The electoral democracy index we analyzed two weeks ago, and
+
+2. A series of components it uses to operationalize the egalitarian principle
+
+<br>
+
+**What do we learn about the American case by adding the egalitarian components here?**
+
+- **How are the lines similar and how are they different?**
+
+1. (In 2020 our electoral democracy began to strengthen, but our egalitarian nature began to plummet!)
+    
+2. (Is this evidence that the Polity researchers are right that institutional changes precede and drive societal improvements?)
+
+<br>
+
+SLIDE: Technically, the Egalitarian Components index "is formed by averaging" three other indices...
+
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### Unpack the Egalitarian Components
+
+<br>
+
+### Make a SINGLE line plot with three variables
+
+1. Equal Protection (v2xeg_eqprotec)
+
+2. Equal Access (v2xeg_eqaccess)
+
+3. Equal Distribution of Resources (v2xeg_eqdr)
+
+::: notes
+
+There are three indices that combine to make the egalitarian components
+
+- Make a single line plot with all three of: the Equal protection index, the Equal access index and the Equal distribution of resources index
+
+<br>
+
+(SLIDE)
+
+::: 
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, cache=TRUE}
+# d |>
+#   pivot_longer(cols = c(v2xeg_eqprotec, v2xeg_eqaccess, v2xeg_eqdr), names_to = "Index", values_to = "Value") |>
+#   mutate(
+#     Index = case_when(
+#       Index == "v2xeg_eqprotec" ~ "Equal Protection",
+#       Index == "v2xeg_eqaccess" ~ "Equal Access",
+#       Index == "v2xeg_eqdr" ~ "Equal Distribution"
+#     )
+#   ) |>
+#   ggplot(aes(x = year, y = Value, color = Index, linetype = Index)) +
+#   geom_line(linewidth = 1.2) +
+#   #facet_wrap(~Index, ncol = 1) +
+#   theme_bw() +
+#   labs(x = "", y = "Index Score (0-1)",
+#        caption = "Source: V-Dem (2024)",
+#        title = "V-Dem Egalitarian Democracy Components") +
+#   scale_x_continuous(breaks = seq(1900, 2025, 10)) +
+#   scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1)) +
+#   #guides(color = "none") +
+#   theme(legend.position = "inside", legend.position.inside = c(0.8, 0.2)) +
+#   scale_color_brewer(palette = "Dark2")
+
+# Try an animated version to cycle through the lines
+library(gganimate)
+
+d2 <- d |>
+  pivot_longer(cols = c(v2xeg_eqprotec, v2xeg_eqaccess, v2xeg_eqdr), names_to = "Index", values_to = "Value") |>
+  mutate(
+    Index = case_when(
+      Index == "v2xeg_eqprotec" ~ "Equal Protection",
+      Index == "v2xeg_eqaccess" ~ "Equal Access",
+      Index == "v2xeg_eqdr" ~ "Equal Distribution"
+    )
+  )
+
+d2 |>
+  ggplot(aes(x = year, y = Value)) +
+  geom_line(data = d, aes(x = year, y = v2xeg_eqprotec), color = "grey") +
+  geom_line(data = d, aes(x = year, y = v2xeg_eqaccess), color = "grey") +
+  geom_line(data = d, aes(x = year, y = v2xeg_eqdr), color = "grey") +
+  geom_line(data = d2, aes(color = Index), linewidth = 1.2) +
+  transition_states(Index, state_length = .1) +
+  theme_bw() +
+  labs(x = "", y = "Index Score (0-1)",
+       caption = "Source: V-Dem (2024)",
+       title = "V-Dem Egalitarian Democracy Components") +
+  scale_x_continuous(breaks = seq(1900, 2025, 10)) +
+  scale_y_continuous(breaks = seq(0, 1, .1), limits = c(0,1)) +
+  theme(legend.position = "inside", legend.position.inside = c(0.8, 0.2)) +
+  scale_color_brewer(palette = "Dark2")
+```
+
+::: notes
+
+**What do we learn from these three measures about the nature of American democracy?**
+
+- (Equal distribution is stable but the lowest score across the modern range)
+
+- (Equal access has remained fairly stable and is more or less our best scoring index)
+
+- (Equal protection has fallen off the proverbial cliff!)
+
+<br>
+
+*SPLIT class into three groups*
+
+<br>
+
+Questions for three groups:
+
+1. Why is our equal access score less than perfect?
+
+2. Why is our equal distribution score less than perfect?
+
+3. Why did our equal protection score fall off a cliff in 2020?
+
+<br>
+
+Unpack the variables that feed into these indices and identify where we are falling short in terms of these egalitarian principles
+    
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+**Why is our equal access score less than perfect?**
+:::
+
+```{r, fig.retina=3, fig.align='center'}
+d |>
+  pivot_longer(cols = c(v2pepwrgen_ord, v2pepwrses_ord, v2pepwrsoc_ord), names_to = "Index", values_to = "Values") |>
+  mutate(
+    Index = case_when(
+    Index == "v2pepwrgen_ord" ~ "Power distributed by gender",
+    Index == "v2pepwrses_ord" ~ "Power distributed by social group",
+    Index == "v2pepwrsoc_ord" ~ "Power distributed by socioeconomic position")
+  ) |>
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line(linewidth = 1.2) +
+  theme_bw() +
+  facet_wrap(~ Index) +
+  labs(x = "", y = "Ordinal Values",
+       caption = "Source: V-Dem (2024)") +
+  guides(color = "none") +
+  scale_y_continuous(limits = c(0, 4)) +
+  scale_color_brewer(palette = "Dark2")
+```
+
+::: notes
+
+"The index is formed by taking the point estimates from a Bayesian factor analysis model of the indicators power distributed by socioeconomic position (v2pepwrses), power distributed by social group (v2pepwrsoc), and power distributed by gender (v2pepwrgen)" (Codebook, 60).
+
+power distributed by gender (v2pepwrgen)
+
+- 0: Men have a near-monopoly on political power.
+- 1: Men have a dominant hold on political power. Women have only marginal influence.
+- 2: Men have much more political power but women have some areas of influence.
+- 3: Men have somewhat more political power than women.
+- 4: Men and women have roughly equal political power.
+
+power distributed by social group (v2pepwrsoc)
+
+- 0: Political power is monopolized by one social group comprising a minority of the population. This monopoly is institutionalized, i.e., not subject to frequent change.
+- 1: Political power is monopolized by several social groups comprising a minority of the population. This monopoly is institutionalized, i.e., not subject to frequent change.
+- 2: Political power is monopolized by several social groups comprising a majority of the population. This monopoly is institutionalized, i.e., not subject to frequent change.
+- 3: Either all social groups possess some political power, with some groups having more power than others; or different social groups alternate in power, with one group controlling much of the political power for a period of time, followed by another — but all significant groups have a turn at the seat of power.
+- 4: All social groups have roughly equal political power or there are no strong ethnic, caste, linguistic, racial, religious, or regional differences to speak of. Social group characteristics are not relevant to politics.
+
+Power distributed by socioeconomic position (v2pepwrses)
+
+- 0: Wealthy people enjoy a virtual monopoly on political power. Average and poorer people have almost no influence.
+- 1: Wealthy people enjoy a dominant hold on political power. People of average income have little say. Poorer people have essentially no influence.
+- 2: Wealthy people have a very strong hold on political power. People of average or poorer income have some degree of influence but only on issues that matter less for wealthy people.
+- 3: Wealthy people have more political power than others. But people of average income have almost as much influence and poor people also have a significant degree of political power.
+- 4: Wealthy people have no more political power than those whose economic status is average or poor. Political power is more or less equally distributed across economic groups.
+
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+**Why is our equal distribution score less than perfect?**
+:::
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.75, fig.width=7.5}
+d |>
+  pivot_longer(cols = c(v2dlencmps_ord, v2dlunivl_ord, v2peedueq_ord, v2pehealth_ord), names_to = "Index", values_to = "Values") |>
+  mutate(
+    Index = case_when(
+    Index == "v2dlencmps_ord" ~ "Particularistic or Public good",
+    Index == "v2dlunivl_ord" ~ "Means-tested vs. universalistic policy (0-5)",
+    Index == "v2peedueq_ord" ~ "Educational equality",
+    Index == "v2pehealth_ord" ~ "Health equality")
+  ) |>
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line(linewidth = 1.2) +
+  theme_bw() +
+  facet_wrap(~ Index) +
+  labs(x = "", y = "Ordinal Values",
+       caption = "Source: V-Dem (2024)") +
+  guides(color = "none") +
+  scale_y_continuous(limits = c(0, 4)) +
+  scale_color_brewer(palette = "Dark2")
+```
+
+::: notes
+
+"The index is formed by taking the point estimates from a Bayesian factor analysis model of the indicators for particularistic or public goods v2dlencmps, means tested vs. universalistic welfare policies v2dlunivl, educational equality v2peedueq and health equality v2pehealth" (Codebook, 60).
+
+Particularistic or Public good (v2dlencmps_ord)
+
+- 0: Almost all of the social and infrastructure expenditures are particularistic.
+- 1: Most social and infrastructure expenditures are particularistic, but a significant portion (e.g. 1/4 or 1/3) is public-goods.
+- 2: Social and infrastructure expenditures are evenly divided between particularistic and public-goods programs.
+- 3: Most social and infrastructure expenditures are public-goods but a significant portion (e.g., 1/4 or 1/3) is particularistic.
+- 4: Almost all social and infrastructure expenditures are public-goods in character. Only a small portion is particularistic.
+
+Means-tested vs. universalistic policy (v2dlunivl_ord)
+
+- 0: There are no, or extremely limited, welfare state policies (education, health, retirement, unemployment, poverty programs).
+- 1: Almost all of the welfare state policies are means-tested.
+- 2: Most welfare state policies means-tested, but a significant portion (e.g. 1/4 or 1/3) is universalistic and potentially benefits everyone in the population.
+- 3: The welfare state policies are roughly evenly divided between means-tested and universalistic.
+- 4: Most welfare state policies are universalistic, but a significant portion (e.g., 1/4 or 1/3) are means-tested.
+- 5: Almost all welfare state policies are universal in character. Only a small portion is means-tested.
+
+Educational equality (v2peedueq_ord)
+
+- 0: Extreme. Provision of high quality basic education is extremely unequal and at least 75 percent (%) of children receive such low-quality education that undermines their ability to exercise their basic rights as adult citizens.
+- 1: Unequal. Provision of high quality basic education is extremely unequal and at least 25 percent (%) of children receive such low-quality education that undermines their ability to exercise their basic rights as adult citizens.
+- 2: Somewhat equal. Basic education is relatively equal in quality but ten to 25 percent (%) of children receive such low-quality education that undermines their ability to exercise their basic rights as adult citizens.
+- 3: Relatively equal. Basic education is overall equal in quality but five to ten percent (%) of children receive such low-quality education that probably undermines their ability to exercise their basic rights as adult citizens.
+- 4: Equal. Basic education is equal in quality and less than five percent (%) of children receive such low-quality education that probably undermines their ability to exercise their basic rights as adult citizens.
+
+Health equality (v2pehealth_ord)
+
+- 0: Extreme. Because of poor-quality healthcare, at least 75 percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.
+- 1: Unequal. Because of poor-quality healthcare, at least 25 percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.
+- 2: Somewhat equal. Because of poor-quality healthcare, ten to 25 percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.
+- 3: Relatively equal. Basic health care is overall equal in quality but because of poor-quality healthcare, five to ten percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.
+- 4: Equal. Basic health care is equal in quality and less than five percent (%) of citizens cannot exercise their basic political rights as adult citizens.
+    
+:::
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.r-fit-text}
+**Why did our equal protection score fall off a cliff in 2020?**
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r, fig.retina=3, fig.asp=.85, fig.width=6}
+d |>
+  ggplot(aes(x = year, y = v2clsnlpct)) +
+  geom_line(linewidth = 1.2) +
+  theme_bw() +
+  labs(x = "", y = "Percent (%)",
+       title = "Weaker civil liberties population (v2clsnlpct)",
+       caption = "Source: V-Dem (2024)") +
+  scale_y_continuous(limits = c(0, 35)) +
+  scale_color_brewer(palette = "Dark2")
+```
+:::
+
+::: {.column width="50%"}
+```{r, fig.retina=3, fig.width=6, fig.height=7, out.height='85%'}
+d |>
+  pivot_longer(cols = c(v2clacjust_ord, v2clsocgrp_ord), names_to = "Index", values_to = "Values") |>
+  mutate(
+    Index = case_when(
+    Index == "v2clacjust_ord" ~ "Social class equality in respect for civil liberty (v2clacjust)",
+    Index == "v2clsocgrp_ord" ~ "Social group equality in respect for civil liberties (v2clsocgrp)")
+  ) |>
+  ggplot(aes(x = year, y = Values, color = Index)) +
+  geom_line(linewidth = 1.2) +
+  theme_bw() +
+  facet_wrap(~ Index, ncol = 1) +
+  labs(x = "", y = "Ordinal Values",
+       caption = "Source: V-Dem (2024)") +
+  guides(color = "none") +
+  scale_y_continuous(limits = c(0, 4)) +
+  scale_color_brewer(palette = "Dark2")
+```
+:::
+
+::::
+
+::: notes
+
+*Notes for you to share*
+
+- I explored the measures of uncertainty in these variables and it appears that the level of disagreement between the experts on these three measures is increasing drmataically over time.
+
+<br>
+
+"The index is formed by taking the point estimates from a Bayesian factor analysis model of the indicators for social class equality in respect for civil liberties (v2clacjust), social group equality in respect for civil liberties (v2clsocgrp) and percent of population with weaker civil liberties (v2clsnlpct); reversed scale" (Codebook, 59).
+
+Social class equality in respect for civil liberty (v2clacjust)
+
+- 0: Poor people enjoy much fewer civil liberties than rich people.
+- 1: Poor people enjoy substantially fewer civil liberties than rich people.
+- 2: Poor people enjoy moderately fewer civil liberties than rich people.
+- 3: Poor people enjoy slightly fewer civil liberties than rich people.
+- 4: Poor people enjoy the same level of civil liberties as rich people.
+
+Social group equality in respect for civil liberties (v2clsocgrp)
+
+- 0: Members of some social groups enjoy much fewer civil liberties than the general population.
+- 1: Members of some social groups enjoy substantially fewer civil liberties than the general population.
+- 2: Members of some social groups enjoy moderately fewer civil liberties than the general population.
+- 3: Members of some social groups enjoy slightly fewer civil liberties than the general population.
+- 4: Members of all salient social groups enjoy the same level of civil liberties.
+
+Weaker civil liberties population (v2clsnlpct)
+
+- What percentage (%) of the total population of the country lives in the areas where government officials’ respect for civil liberties is significantly weaker than the country average?
+    
+:::
+
+
+
+
+
+
+## Evaluating a Measure of Democracy {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+A useful argument about the quality of any measure of democracy should consider:
+
+1. The definition of democracy being used,
+
+2. The source(s) of the data being analyzed, 
+
+3. The instrument(s) being applied to that data, and 
+
+4. The measurement process being used.
+
+::: notes
+
+All of our work so far has been built on the assumption that the V-Dem egalitarian democracy index is highly precise and reliable
+
+- HOWEVER, we wouldn't want to provide V-Dem's answers to our big questions unless we've grappled with the strengths and weaknesses in the work.
+
+<br>
+
+Groups, review the Canvas submissions and let's discuss the strengths and weaknesses of how V-Dem creates this index of democracy
+
+- *ON BOARD: Two Lists*
+
+<br>
+
+Strengths:
+
+- 
+
+Weaknesses:
+
+- 
+
+<br>
+
+**Bottom line, how much uncertainty do we believe surrounds each score on the index and its component measures in a given year?**
 
 :::
 
@@ -65,12 +652,10 @@ Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Informati
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
-
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
-
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+![](Images/06_1-ASSIGN.png)
 
 ::: notes
+
+**Questions on the assignment?**
 
 :::

@@ -8,7 +8,7 @@
 <link href="06-1-VDem_Egalitarian_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="06-1-VDem_Egalitarian_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="06-1-VDem_Egalitarian_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.4.555">
 
   <title>vdem_egalitarian</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -155,7 +155,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -328,12 +329,11 @@
 <h2>Today’s Agenda</h2>
 <p><br></p>
 <div class="r-fit-text">
-<p><strong>I. How serious is the problem of misinformation in the American electorate?</strong></p>
-<p>Policies to Address Misinformation</p>
-<ul>
-<li>Proposal 3: Changing the news consumption habits of American voters/consumers</li>
-</ul>
+<p><strong>I. Road testing measures of democracy</strong></p>
 </div>
+<ul>
+<li>What does the V-Dem Egalitarian Democracy Index tell us about the health of American democracy?</li>
+</ul>
 <p><br></p>
 <div class="r-stack">
 <p>Justin Leinaweaver (Fall 2024)</p>
@@ -343,9 +343,25 @@
 <ol type="1">
 <li>Readings
 <ul>
-<li>Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.</li>
+<li>Sigman and Lindberg (2019), ONLY p595-600 and skim the rest</li>
+<li>V-Dem Codebook selections:</li>
+<li>p49 on the egalitarian democracy index</li>
+<li>p418 on the components in the index</li>
+<li>review the coding for each relevant components in Section 3, p61-242)</li>
+</ul></li>
+<li>Data
+<ul>
+<li>V-Dem-USA-1789-2023-Egalitarian_Democracy_Index.xlsx</li>
+<li>V-Dem-2023-egalitarian_all_countries.xlsx</li>
 </ul></li>
 </ol>
+<p><br></p>
+<p>Let’s warm up with election news!</p>
+<ul>
+<li><p><em>Open google news and search ‘election’</em></p></li>
+<li><p><strong>What’s been going on since we last met? Anything noteworthy?</strong></p></li>
+<li><p><strong>Any changes in the stakes we discussed last class?</strong></p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -358,20 +374,432 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="for-today" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
-<h2>For Today</h2>
+<section id="research-paper-1-due-oct-6th" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Research Paper 1 (due Oct 6th)</h2>
 <p><br></p>
-<p>Proposal 3: Changing the news consumption habits of American voters/consumers</p>
+<p>Write a report <strong>summarizing and evaluating</strong> the current health of American democracy</p>
+<p><br></p>
+<p>The target of your report:</p>
+<ul>
+<li><p>Is deeply interested in understanding the strengths and weaknesses of American democracy,</p></li>
+<li><p>Is NOT a statistician, and</p></li>
+<li><p>Is completely unfamiliar with projects we have explored.</p></li>
+</ul>
+<aside class="notes">
+<p>This week we tackle our final data project that aims to measure democracy around the world.</p>
+<ul>
+<li>Next week we work on the assignment!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="comparing-democracy-indices" class="slide level2 smaller" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Comparing Democracy Indices</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><br></p>
+<p><strong>Egalitarian democracy index</strong></p>
+<p><strong>(v2x_egaldem)</strong></p>
+<p><img data-src="Images/06_1-egalitarian_components.png"></p>
+</div><div class="column" style="width:40%;">
+<p><strong>Polity5 “Institutionalized Democracy”</strong></p>
+<ul>
+<li>Competitiveness and openness of executive recruitment, Constraints on chief executive, Competitiveness of party competition</li>
+</ul>
+<p><strong>V-Dem “Electoral Democracy”</strong></p>
+<ul>
+<li>Free expression, Free association, Wide suffrage, Clean elections, Elected officials</li>
+</ul>
+<p><strong>Freedom House “Total” Score</strong></p>
+<ul>
+<li>Political Rights (PR) and Civil Liberties (CL)</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Our first job today is to analyze the key definitional choices made by the V-Dem team in constructing their index</p>
+<ul>
+<li>Same questions as last week:</li>
+</ul>
 <ol type="1">
-<li><p>Peterson and Iyengar (2021)</p></li>
-<li><p>ASSIGNMENT - 1) What are the “best” sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?</p></li>
+<li><p>How different is this definition, and</p></li>
+<li><p>How substantive are these differences?</p></li>
+</ol>
+<p><br></p>
+<p>GROUPS, share your Canvas answers with each other and get ready to report back to the class!</p>
+<ul>
+<li>ALSO, be sure to consider the discussions in Sigman and Lindberg (2019)</li>
+</ul>
+<p><br></p>
+<p><em>REPORT BACK and DISCUSS</em></p>
+<p><br></p>
+<p><em>Sigman and Lindberg (2019) Notes</em></p>
+<ul>
+<li><p>“Yet, the concept of equality occupies a central place in democratic theory. … Equality, moreover, figures prominently in theories of democratic durability, effectiveness and legitimacy” (595).</p></li>
+<li><p>“This paper develops the concept of egalitarian democracy as a type of democracy in which citizens across all social groups are equally capable of exercising their political rights and freedoms, and of influencing political and governing processes” (596).</p></li>
+<li><p>“The importance of egalitarianism in democratic theory arises, in part, out of the distinction between democratic forms of government and aristocratic ones. …self government is not merely procedural but constitutes substantive power-sharing in itself, thus requiring ‘intrinsic equality”—the belief that all beings are equally suited to rule’” (596).</p></li>
+<li><p>“…existing inequalities—economic or otherwise—are likely to undermine the ability of poorer or marginalized populations to participate meaningfully in self-rule” (597).</p></li>
+<li><p>“Regarding legitimacy in particular, equality minimizes the “resentments and frustrations” of some groups in society (Dahl 1971, 82), thereby leading to greater overall acceptance of the system in place” (598).</p></li>
+<li><p>“First, we focus on the provision or deprivation of de facto rights for all citizens, or what we call Equal Protection. Second, we focus on Equal Distribution, or the extent to which the government ensures that the entire population enjoys the basic necessities that enable them to participate in political and governing processes. We also identify a third principle relating to Equal Access emphasizing the de facto distribution of power in society” (598).</p></li>
+<li><p>“Equal Protection implies that the state grants and actively protects rights and freedoms evenly across the population, such that all citizens are free to engage in the political process” (598).</p></li>
+<li><p>“The literature on equality and democracy suggests that a more Equal Distribution of Resources across social groups is also necessary to achieve political equality” (599).</p></li>
+<li><p>Equal Access to Power: “Ideally, all groups should enjoy equal de facto capabilities to participate; to serve in positions of political power; to put issues on the agenda; and to influence policymaking” (600).</p></li>
+<li><p>Plus useful material comparing this new index to Freedom House and exploring their approach to measurement</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="r-fit-text">
+<p><strong>Make a line plot of v2x_egaldem for the US across time</strong></p>
+<ul>
+<li>Context: V-Dem-2023-egalitarian_all_countries.xlsx</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Everybody make this line plot and evaluate it using the context of all other countries in 2023</p>
+<ul>
+<li>Discuss with the people around you!</li>
+</ul>
+<p><br></p>
+<p>(REVEAL)</p>
+<ul>
+<li>In 2023 Denmark represents the highest current score (.88) and the lowest is Afghanistan and South Sudan (.03)</li>
+</ul>
+<p><br></p>
+<p>SLIDE: The two main components of the egalitarian index</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p>The egalitarian democracy index includes two main components</p>
+<ol type="1">
+<li><p>The electoral democracy index we analyzed two weeks ago, and</p></li>
+<li><p>A series of components it uses to operationalize the egalitarian principle</p></li>
+</ol>
+<p><br></p>
+<p><strong>What do we learn about the American case by adding the egalitarian components here?</strong></p>
+<ul>
+<li><strong>How are the lines similar and how are they different?</strong></li>
+</ul>
+<ol type="1">
+<li><p>(In 2020 our electoral democracy began to strengthen, but our egalitarian nature began to plummet!)</p></li>
+<li><p>(Is this evidence that the Polity researchers are right that institutional changes precede and drive societal improvements?)</p></li>
+</ol>
+<p><br></p>
+<p>SLIDE: Technically, the Egalitarian Components index “is formed by averaging” three other indices…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<p><br></p>
+<h3 id="unpack-the-egalitarian-components">Unpack the Egalitarian Components</h3>
+<p><br></p>
+<h3 id="make-a-single-line-plot-with-three-variables">Make a SINGLE line plot with three variables</h3>
+<ol type="1">
+<li><p>Equal Protection (v2xeg_eqprotec)</p></li>
+<li><p>Equal Access (v2xeg_eqaccess)</p></li>
+<li><p>Equal Distribution of Resources (v2xeg_eqdr)</p></li>
 </ol>
 <aside class="notes">
-<p>Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.</p>
+<p>There are three indices that combine to make the egalitarian components</p>
 <ul>
-<li>Paying for the “right” answers doesn’t overcome partisan motivated reasoning</li>
-<li>Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)</li>
+<li>Make a single line plot with all three of: the Equal protection index, the Equal access index and the Equal distribution of resources index</li>
 </ul>
+<p><br></p>
+<p>(SLIDE)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-4-1.gif" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p><strong>What do we learn from these three measures about the nature of American democracy?</strong></p>
+<ul>
+<li><p>(Equal distribution is stable but the lowest score across the modern range)</p></li>
+<li><p>(Equal access has remained fairly stable and is more or less our best scoring index)</p></li>
+<li><p>(Equal protection has fallen off the proverbial cliff!)</p></li>
+</ul>
+<p><br></p>
+<p><em>SPLIT class into three groups</em></p>
+<p><br></p>
+<p>Questions for three groups:</p>
+<ol type="1">
+<li><p>Why is our equal access score less than perfect?</p></li>
+<li><p>Why is our equal distribution score less than perfect?</p></li>
+<li><p>Why did our equal protection score fall off a cliff in 2020?</p></li>
+</ol>
+<p><br></p>
+<p>Unpack the variables that feed into these indices and identify where we are falling short in terms of these egalitarian principles</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="r-fit-text">
+<p><strong>Why is our equal access score less than perfect?</strong></p>
+</div>
+
+<img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p>“The index is formed by taking the point estimates from a Bayesian factor analysis model of the indicators power distributed by socioeconomic position (v2pepwrses), power distributed by social group (v2pepwrsoc), and power distributed by gender (v2pepwrgen)” (Codebook, 60).</p>
+<p>power distributed by gender (v2pepwrgen)</p>
+<ul>
+<li>0: Men have a near-monopoly on political power.</li>
+<li>1: Men have a dominant hold on political power. Women have only marginal influence.</li>
+<li>2: Men have much more political power but women have some areas of influence.</li>
+<li>3: Men have somewhat more political power than women.</li>
+<li>4: Men and women have roughly equal political power.</li>
+</ul>
+<p>power distributed by social group (v2pepwrsoc)</p>
+<ul>
+<li>0: Political power is monopolized by one social group comprising a minority of the population. This monopoly is institutionalized, i.e., not subject to frequent change.</li>
+<li>1: Political power is monopolized by several social groups comprising a minority of the population. This monopoly is institutionalized, i.e., not subject to frequent change.</li>
+<li>2: Political power is monopolized by several social groups comprising a majority of the population. This monopoly is institutionalized, i.e., not subject to frequent change.</li>
+<li>3: Either all social groups possess some political power, with some groups having more power than others; or different social groups alternate in power, with one group controlling much of the political power for a period of time, followed by another — but all significant groups have a turn at the seat of power.</li>
+<li>4: All social groups have roughly equal political power or there are no strong ethnic, caste, linguistic, racial, religious, or regional differences to speak of. Social group characteristics are not relevant to politics.</li>
+</ul>
+<p>Power distributed by socioeconomic position (v2pepwrses)</p>
+<ul>
+<li>0: Wealthy people enjoy a virtual monopoly on political power. Average and poorer people have almost no influence.</li>
+<li>1: Wealthy people enjoy a dominant hold on political power. People of average income have little say. Poorer people have essentially no influence.</li>
+<li>2: Wealthy people have a very strong hold on political power. People of average or poorer income have some degree of influence but only on issues that matter less for wealthy people.</li>
+<li>3: Wealthy people have more political power than others. But people of average income have almost as much influence and poor people also have a significant degree of political power.</li>
+<li>4: Wealthy people have no more political power than those whose economic status is average or poor. Political power is more or less equally distributed across economic groups.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-5" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="r-fit-text">
+<p><strong>Why is our equal distribution score less than perfect?</strong></p>
+</div>
+
+<img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="720"><aside class="notes">
+<p>“The index is formed by taking the point estimates from a Bayesian factor analysis model of the indicators for particularistic or public goods v2dlencmps, means tested vs.&nbsp;universalistic welfare policies v2dlunivl, educational equality v2peedueq and health equality v2pehealth” (Codebook, 60).</p>
+<p>Particularistic or Public good (v2dlencmps_ord)</p>
+<ul>
+<li>0: Almost all of the social and infrastructure expenditures are particularistic.</li>
+<li>1: Most social and infrastructure expenditures are particularistic, but a significant portion (e.g.&nbsp;1/4 or 1/3) is public-goods.</li>
+<li>2: Social and infrastructure expenditures are evenly divided between particularistic and public-goods programs.</li>
+<li>3: Most social and infrastructure expenditures are public-goods but a significant portion (e.g., 1/4 or 1/3) is particularistic.</li>
+<li>4: Almost all social and infrastructure expenditures are public-goods in character. Only a small portion is particularistic.</li>
+</ul>
+<p>Means-tested vs.&nbsp;universalistic policy (v2dlunivl_ord)</p>
+<ul>
+<li>0: There are no, or extremely limited, welfare state policies (education, health, retirement, unemployment, poverty programs).</li>
+<li>1: Almost all of the welfare state policies are means-tested.</li>
+<li>2: Most welfare state policies means-tested, but a significant portion (e.g.&nbsp;1/4 or 1/3) is universalistic and potentially benefits everyone in the population.</li>
+<li>3: The welfare state policies are roughly evenly divided between means-tested and universalistic.</li>
+<li>4: Most welfare state policies are universalistic, but a significant portion (e.g., 1/4 or 1/3) are means-tested.</li>
+<li>5: Almost all welfare state policies are universal in character. Only a small portion is means-tested.</li>
+</ul>
+<p>Educational equality (v2peedueq_ord)</p>
+<ul>
+<li>0: Extreme. Provision of high quality basic education is extremely unequal and at least 75 percent (%) of children receive such low-quality education that undermines their ability to exercise their basic rights as adult citizens.</li>
+<li>1: Unequal. Provision of high quality basic education is extremely unequal and at least 25 percent (%) of children receive such low-quality education that undermines their ability to exercise their basic rights as adult citizens.</li>
+<li>2: Somewhat equal. Basic education is relatively equal in quality but ten to 25 percent (%) of children receive such low-quality education that undermines their ability to exercise their basic rights as adult citizens.</li>
+<li>3: Relatively equal. Basic education is overall equal in quality but five to ten percent (%) of children receive such low-quality education that probably undermines their ability to exercise their basic rights as adult citizens.</li>
+<li>4: Equal. Basic education is equal in quality and less than five percent (%) of children receive such low-quality education that probably undermines their ability to exercise their basic rights as adult citizens.</li>
+</ul>
+<p>Health equality (v2pehealth_ord)</p>
+<ul>
+<li>0: Extreme. Because of poor-quality healthcare, at least 75 percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.</li>
+<li>1: Unequal. Because of poor-quality healthcare, at least 25 percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.</li>
+<li>2: Somewhat equal. Because of poor-quality healthcare, ten to 25 percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.</li>
+<li>3: Relatively equal. Basic health care is overall equal in quality but because of poor-quality healthcare, five to ten percent (%) of citizens’ ability to exercise their political rights as adult citizens is undermined.</li>
+<li>4: Equal. Basic health care is equal in quality and less than five percent (%) of citizens cannot exercise their basic political rights as adult citizens.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-6" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="r-fit-text">
+<p><strong>Why did our equal protection score fall off a cliff in 2020?</strong></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-7-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="06-1-VDem_Egalitarian_files/figure-revealjs/unnamed-chunk-8-1.png" style="height:85.0%" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p><em>Notes for you to share</em></p>
+<ul>
+<li>I explored the measures of uncertainty in these variables and it appears that the level of disagreement between the experts on these three measures is increasing drmataically over time.</li>
+</ul>
+<p><br></p>
+<p>“The index is formed by taking the point estimates from a Bayesian factor analysis model of the indicators for social class equality in respect for civil liberties (v2clacjust), social group equality in respect for civil liberties (v2clsocgrp) and percent of population with weaker civil liberties (v2clsnlpct); reversed scale” (Codebook, 59).</p>
+<p>Social class equality in respect for civil liberty (v2clacjust)</p>
+<ul>
+<li>0: Poor people enjoy much fewer civil liberties than rich people.</li>
+<li>1: Poor people enjoy substantially fewer civil liberties than rich people.</li>
+<li>2: Poor people enjoy moderately fewer civil liberties than rich people.</li>
+<li>3: Poor people enjoy slightly fewer civil liberties than rich people.</li>
+<li>4: Poor people enjoy the same level of civil liberties as rich people.</li>
+</ul>
+<p>Social group equality in respect for civil liberties (v2clsocgrp)</p>
+<ul>
+<li>0: Members of some social groups enjoy much fewer civil liberties than the general population.</li>
+<li>1: Members of some social groups enjoy substantially fewer civil liberties than the general population.</li>
+<li>2: Members of some social groups enjoy moderately fewer civil liberties than the general population.</li>
+<li>3: Members of some social groups enjoy slightly fewer civil liberties than the general population.</li>
+<li>4: Members of all salient social groups enjoy the same level of civil liberties.</li>
+</ul>
+<p>Weaker civil liberties population (v2clsnlpct)</p>
+<ul>
+<li>What percentage (%) of the total population of the country lives in the areas where government officials’ respect for civil liberties is significantly weaker than the country average?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="evaluating-a-measure-of-democracy" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Evaluating a Measure of Democracy</h2>
+<p><br></p>
+<p>A useful argument about the quality of any measure of democracy should consider:</p>
+<ol type="1">
+<li><p>The definition of democracy being used,</p></li>
+<li><p>The source(s) of the data being analyzed,</p></li>
+<li><p>The instrument(s) being applied to that data, and</p></li>
+<li><p>The measurement process being used.</p></li>
+</ol>
+<aside class="notes">
+<p>All of our work so far has been built on the assumption that the V-Dem egalitarian democracy index is highly precise and reliable</p>
+<ul>
+<li>HOWEVER, we wouldn’t want to provide V-Dem’s answers to our big questions unless we’ve grappled with the strengths and weaknesses in the work.</li>
+</ul>
+<p><br></p>
+<p>Groups, review the Canvas submissions and let’s discuss the strengths and weaknesses of how V-Dem creates this index of democracy</p>
+<ul>
+<li><em>ON BOARD: Two Lists</em></li>
+</ul>
+<p><br></p>
+<p>Strengths:</p>
+<ul>
+<li></li>
+</ul>
+<p>Weaknesses:</p>
+<ul>
+<li></li>
+</ul>
+<p><br></p>
+<p><strong>Bottom line, how much uncertainty do we believe surrounds each score on the index and its component measures in a given year?</strong></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -387,13 +815,9 @@
 <section id="for-next-class" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
 <h2>For Next Class</h2>
 <p><br></p>
-<p>Proposal 4: Reducing misinformation on social media</p>
-<ol type="1">
-<li><p>Budak, Nyhan, Rothschild, Thorson &amp; Watts (2024)</p></li>
-<li><p>Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?</p></li>
-</ol>
-<aside class="notes">
 
+<img data-src="Images/06_1-ASSIGN.png" class="r-stretch"><aside class="notes">
+<p><strong>Questions on the assignment?</strong></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -405,8 +829,10 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -435,7 +861,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -734,10 +1159,27 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -747,8 +1189,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -762,7 +1213,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
