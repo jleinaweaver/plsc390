@@ -8,17 +8,24 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+
+# Input data
+d_in <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022-Input_Data.xlsx")
+d_index <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022_state_democracy_index.xlsx")
+
+# Subsets
+d_mo_index <- d_index |> filter(state == "Missouri")
+d_index_2000 <- d_index |> filter(year == 2000)
+d_index_2018 <- d_index |> filter(year == 2018)
 ```
 
 <br>
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**I. Road testing measures of democracy**
 
-Policies to Address Misinformation
-
-- Proposal 3: Changing the news consumption habits of American voters/consumers
+- Sub-national measures of American democracy 
 
 :::
 
@@ -32,45 +39,421 @@ Justin Leinaweaver (Fall 2024)
 Prep for Class
 
 1. Readings
-    - Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+    - Grumbach, J. M. (2023). Laboratories of Democratic Backsliding. American Political Science Review, 117(3), 967–984. https://doi.org/10.1017/S0003055422000934
+    - Figures in paper: https://www.cambridge.org/core/journals/american-political-science-review/article/laboratories-of-democratic-backsliding/0742F08306EFDD8612539F089853E4FE#figures
 
-:::
-
-
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
-
-<br>
-
-Proposal 3: Changing the news consumption habits of American voters/consumers
-
-1. Peterson and Iyengar (2021)
-
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
-
-::: notes
-
-Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
-
-- Paying for the "right" answers doesn't overcome partisan motivated reasoning
-- Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)
-
-
-:::
-
-
-
-## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+2. Data
+    - Grumbach2022-Input_Data.xlsx
+    - Grumbach2022_state_democracy_index.xlsx
+    - Grumbach2022-Variables_list.xlsx
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
+Let's warm up with election news!
 
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
+- *Open google news and search 'election'*
 
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
+
+<br>
+
+SLIDE: Plan for today
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+![](Images/08_1-Grumbach2023-Header.png)
 
 ::: notes
 
+The Grumbach paper represents an ambitious attempt to both:
+
+1. Measure the quality of American democracy at the state level, AND
+
+2. Explain the observed variation in American democracy over time.
+
+<br>
+
+Grumbach is transparent in his methodology and provides access to all of it to any researcher who wants to audit his work or re-examine the question
+
+- SO, let's get hands on with the data!
+
 :::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### Grumbach2022_state_democracy_index.xlsx
+
+- Analyze the variation in state scores on the State Democracy Index (`democracy_mcmc`) in 2018
+
+::: notes
+
+Let's start in the most recent year available (2018)
+
+- Don't focus on individual states yet, we want to analyze the spread first
+
+<br>
+
+Work with the people around you to analyze the level of democracy across the US states in 2018?
+
+- What's the average score?
+
+- What's the median score?
+
+- What's the spread look like?
+
+<br>
+
+SLIDE: Discussion and histogram
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
+# Histogram
+d_index |>
+  filter(year == 2018) |>
+  ggplot(aes(x = democracy_mcmc)) +
+  geom_histogram(bins = 11, color = "white") +
+  theme_bw() +
+  labs(x = "The State Democracy Index", y = "",
+       caption = "Source: Grumbach (2023)",
+       title = "The American states vary dramatically in the health of their democracies") +
+  scale_x_continuous(breaks = -3:2)
+```
+
+::: notes
+
+**What do we learn from this spread?**
+
+<br>
+
+Summary stats
+
+```{r}
+summary(d_index$democracy_mcmc[d_index$year == 2018])
+```
+
+Standard deviation: `r sd(d_index$democracy_mcmc[d_index$year == 2018])`
+
+<br>
+
+Now I want you to focus on the states themselves
+
+- Sort the states by their 2018 score and get ready to talk to me about democracy in specific cases across the country
+
+- (SLIDE: Version on 2018 by state)
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
+# dot plot by state
+d_index |>
+  filter(year == 2018) |>
+  ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
+  geom_text(aes(label = state, color = democracy_mcmc), size = 3.5) +
+  theme_bw() +
+  labs(x = "The State Democracy Index in 2018", y = "",
+       caption = "Source: Grumbach (2023)") +
+  theme(axis.text.y = element_blank()) +
+  guides(color = "none") +
+  scale_color_gradient2(low = "red", mid = "black", high = "blue")
+```
+
+::: notes
+
+Let's now look at the states themselves
+
+- **What do we take from this? Any surprises?**
+
+<br>
+
+Ok, next challenge!
+
+- How have these scores and this distribution changed since 2000?
+
+- Compare these results to the spread and scores in 2000 and report back to me the differences
+
+<br>
+
+(SLIDE)
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
+# Arrow segments for differences
+d_index |>
+  filter(year %in% c(2000, 2018)) |>
+  select(state, year, democracy_mcmc) |>
+  pivot_wider(names_from = year, values_from = democracy_mcmc, names_prefix = "yr") |>
+  mutate(
+    diff = yr2018 - yr2000
+  ) |>
+  ggplot(aes(x = diff, y = reorder(state, diff))) +
+  geom_text(aes(label = state, color = diff), size = 3.5) +
+  labs(x = "", y = "",
+       title = "State Movements (2000 to 2018) on the State Democracy Index",
+       caption = "Source: Grumbach (2023)") +
+  theme(axis.text.y = element_blank()) +
+  guides(color = "none") +
+  scale_color_gradient2(low = "red", mid = "black", high = "blue")
+
+
+# Arrow segments arranged by size of move
+d_index |>
+  filter(year %in% c(2000, 2018)) |>
+  select(state, year, democracy_mcmc) |>
+  pivot_wider(names_from = year, values_from = democracy_mcmc, names_prefix = "yr") |>
+  mutate(
+    diff = yr2018 - yr2000
+  ) |> 
+  ggplot(aes(y = reorder(state, diff))) +
+  # geom_point(aes(x = yr2000)) +
+  # geom_point(aes(x = yr2018)) +
+  geom_segment(aes(x = yr2000, xend = yr2018), arrow = arrow()) +
+  theme_bw()
+
+
+order2 <- d_index_2000 |>
+  arrange(desc(state)) |>
+  select(state)
+
+d_index |>
+  filter(year %in% c(2000, 2018)) |>
+  ggplot(aes(x = democracy_mcmc, y = state)) +
+  geom_point() +
+  scale_y_discrete(limits = order2[[1]]) +
+  theme_bw()
+
+
+
+
+# dot plot by state (labels in 2000, arrow to score in 2018)
+order1 <- d_index_2000 |>
+  arrange(democracy_mcmc) |>
+  select(state)
+
+d_index_2000 |>
+  ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
+  geom_point(data = d_index_2018, aes(x = democracy_mcmc, y = state)) +
+  geom_text(aes(label = state), size = 3.5) +
+  #geom_point(aes(x = democracy_mcmc, y = state)) +
+  theme_bw() +
+  labs(x = "The State Democracy Index", y = "",
+       title = "Time (the GOP?) has not been kind to American democracy",
+       caption = "Source: Grumbach (2023)") +
+  guides(color = "none") +
+  scale_y_discrete(limits = order1[[1]])
+
+# d_index_2000 |>
+#   ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
+#   geom_text(aes(label = state), size = 3.5) +
+#   geom_point(data = d_index_2018, aes(x = democracy_mcmc, y = state)) +
+#   theme_bw() +
+#   labs(x = "The State Democracy Index", y = "",
+#        title = "Time (the GOP?) has not been kind to American democracy",
+#        caption = "Source: Grumbach (2023)") +
+#   theme(axis.text.y = element_blank()) +
+#   guides(color = "none") +
+#   scale_y_discrete(limits = order1[[1]])
+
+
+
+
+```
+
+::: notes
+
+
+
+
+:::
+
+
+
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### Grumbach2022_state_democracy_index.xlsx
+
+- Make a line plot of Missouri's scores on the State Democracy Index (`democracy_mcmc`)
+
+::: notes
+
+`democracy_mcmc` is the variable name for the State Democracy Index created in the paper
+
+- Remember, these scores are the results of a factor analysis run on 51 indicators of democracy.
+
+- Let's visualize Missouri!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
+# MO trajectory over time
+d_index |>
+  ggplot() +
+  geom_line(aes(x = year, y = democracy_mcmc, color = state)) +
+  geom_line(data = d_mo_index, aes(x = year, y = democracy_mcmc), color = "darkred", linewidth = 1.4) +
+  theme_bw() +
+  scale_y_continuous(limits = c(-3.2, 2)) +
+  scale_x_continuous(breaks = seq(2000, 2018, 2), limits = c(2000, 2018)) +
+  scale_color_manual(values = rep("lightgrey", 50)) +
+  guides(color = "none") +
+  labs(x = "", y = "Democracy Score", 
+       title = "Missouri's democracy was on the weak side of American states and it is declining over time!",
+       caption = "Source: Grumbach (2023)")
+
+# # Descriptive stats
+# mo_2000 <- d_mo_index$democracy_mcmc[d_mo_index$year == 2000]
+# 
+# quantile(d_index$democracy_mcmc[d_index$year == 2000], probs = c(.204))
+# 
+# mo_2018 <- d_mo_index$democracy_mcmc[d_mo_index$year == 2018]
+# 
+# quantile(d_index$democracy_mcmc[d_index$year == 2018], probs = c(.06))
+
+```
+
+::: notes
+
+In 2000, MO had a negative democracy score AND was only in the 20th percentile of US states by health of American democracy
+
+- 40 states had a better democracy score!
+
+<br>
+
+In 2018, MO's score drops to -2 which is the 6th percentile!
+
+- 47 states have a better democracy score than us
+
+- Thanks to Tennessee, North Carolina and Wisconsin for sucking just slightly more than we do!
+
+<br>
+
+SLIDE: Add some context!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
+# MO trajectory over time
+labs_better <- d_index_2018 |>
+  filter(state %in% c("Florida", "Iowa", "Washington", "California", "Colorado")) |>
+  mutate(
+    year2 = year + .5
+  )
+
+labs_worse <- d_index_2018 |>
+  filter(state %in% c("Tennessee", "North Carolina", "Wisconsin", "Alabama", "Oklahoma", "Kansas")) |>
+  mutate(
+    year2 = year + .5
+  )
+
+d_index |>
+  ggplot() +
+  geom_line(aes(x = year, y = democracy_mcmc, color = state)) +
+  geom_line(data = d_mo_index, aes(x = year, y = democracy_mcmc), color = "darkred", linewidth = 1.4) +
+  theme_bw() +
+  scale_y_continuous(limits = c(-3.2, 2)) +
+  scale_x_continuous(breaks = seq(2000, 2018, 2), limits = c(2000, 2020)) +
+  scale_color_manual(values = rep("lightgrey", 50)) +
+  guides(color = "none") +
+  labs(x = "", y = "Democracy Score", 
+       title = "Missouri's democracy was on the weak side of American states and it is declining over time!",
+       caption = "Source: Grumbach (2023)") +
+  geom_label(data = labs_better, aes(x = year2, y = democracy_mcmc, label = state), hjust = 0, size = 4, fill = "lightblue") +
+  geom_label(data = labs_worse, aes(x = year2, y = democracy_mcmc, label = state), hjust = 0, size = 4, fill = "pink")
+```
+
+::: notes
+
+I gotta be honest, my gut intuition had been that Kansas, Oklahoma and Alabama would be way lower
+
+- But that's the value of data over intuitions!
+
+- On the other hand, I wouldn't exactly celebrate a score in the negative digits so maybe my intuitions aren't that far off
+
+<br>
+
+SLIDE: Alright, let's unpack that Missouri score
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### Grumbach2022-Input_Data.xlsx
+
+### Grumbach2022-Variables_list.xlsx
+
+- Which variables does Missouri score the worst in?
+
+- Which the best?
+
+::: notes
+
+```{r}
+# Best and worst input variables for Missouri in 2018
+d_in |>
+  filter(state == "Missouri") |> View()
+
+d_in |>
+  filter(state == "Missouri", year == 2018) |>
+  t()
+
+summary(d_in)
+
+
+
+
+```
+
+2. Analyze and describe the sub-indicators chosen by Grumbach
+- How do the different measures of democracy compare? How highly do they correlate?
+- What specific indicators is MO best in? Which worst? What is the trajectory over time?
+- What are the primary areas we could target in MO to improve our democracy? How hard would it be to change these things?
+
+:::
+
+
+
+
+
+
+
+
+

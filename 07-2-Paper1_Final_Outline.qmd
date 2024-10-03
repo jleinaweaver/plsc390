@@ -16,7 +16,7 @@ library(readxl)
 
 **I. Road testing measures of democracy**
 
-- Outlining the research paper 
+- Finishing the plan of the research paper 
 
 :::
 
@@ -177,9 +177,13 @@ Ok, pair off (new partners!) and share revised outlines!
 
 ## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
 
+### Evaluating Sub-National American Democracy
+
 <br>
 
-![](Images/07_2-ASSIGN.png)
+Grumbach, J. M. (2023). Laboratories of Democratic Backsliding. *American Political Science Review*, 117(3), 967–984.
+
+- Submit to Canvas your reaction to the Grumbach (2023) article. Were you convinced by his conclusions? Why or why not?
 
 ::: notes
 

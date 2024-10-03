@@ -8,7 +8,7 @@
 <link href="08-2-Grumbach2023_Data_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="08-2-Grumbach2023_Data_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="08-2-Grumbach2023_Data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.5.57">
 
   <title>grumbach2023_data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -155,7 +155,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -328,10 +329,9 @@
 <h2>Today’s Agenda</h2>
 <p><br></p>
 <div class="r-fit-text">
-<p><strong>I. How serious is the problem of misinformation in the American electorate?</strong></p>
-<p>Policies to Address Misinformation</p>
+<p><strong>I. Road testing measures of democracy</strong></p>
 <ul>
-<li>Proposal 3: Changing the news consumption habits of American voters/consumers</li>
+<li>Sub-national measures of American democracy</li>
 </ul>
 </div>
 <p><br></p>
@@ -343,9 +343,25 @@
 <ol type="1">
 <li>Readings
 <ul>
-<li>Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.</li>
+<li>Grumbach, J. M. (2023). Laboratories of Democratic Backsliding. American Political Science Review, 117(3), 967–984. https://doi.org/10.1017/S0003055422000934</li>
+<li>Figures in paper: https://www.cambridge.org/core/journals/american-political-science-review/article/laboratories-of-democratic-backsliding/0742F08306EFDD8612539F089853E4FE#figures</li>
+</ul></li>
+<li>Data
+<ul>
+<li>Grumbach2022-Input_Data.xlsx</li>
+<li>Grumbach2022_state_democracy_index.xlsx</li>
+<li>Grumbach2022-Variables_list.xlsx</li>
 </ul></li>
 </ol>
+<p><br></p>
+<p>Let’s warm up with election news!</p>
+<ul>
+<li><p><em>Open google news and search ‘election’</em></p></li>
+<li><p><strong>What’s been going on since we last met? Anything noteworthy?</strong></p></li>
+<li><p><strong>Any changes in the stakes we discussed last class?</strong></p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: Plan for today</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -358,19 +374,19 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="for-today" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
-<h2>For Today</h2>
-<p><br></p>
-<p>Proposal 3: Changing the news consumption habits of American voters/consumers</p>
+<section id="section" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="Images/08_1-Grumbach2023-Header.png" class="r-stretch"><aside class="notes">
+<p>The Grumbach paper represents an ambitious attempt to both:</p>
 <ol type="1">
-<li><p>Peterson and Iyengar (2021)</p></li>
-<li><p>ASSIGNMENT - 1) What are the “best” sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?</p></li>
+<li><p>Measure the quality of American democracy at the state level, AND</p></li>
+<li><p>Explain the observed variation in American democracy over time.</p></li>
 </ol>
-<aside class="notes">
-<p>Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.</p>
+<p><br></p>
+<p>Grumbach is transparent in his methodology and provides access to all of it to any researcher who wants to audit his work or re-examine the question</p>
 <ul>
-<li>Paying for the “right” answers doesn’t overcome partisan motivated reasoning</li>
-<li>Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)</li>
+<li>SO, let’s get hands on with the data!</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -384,16 +400,27 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="for-next-class" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
-<h2>For Next Class</h2>
+<section id="section-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
 <p><br></p>
-<p>Proposal 4: Reducing misinformation on social media</p>
-<ol type="1">
-<li><p>Budak, Nyhan, Rothschild, Thorson &amp; Watts (2024)</p></li>
-<li><p>Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?</p></li>
-</ol>
+<h3 id="grumbach2022_state_democracy_index.xlsx">Grumbach2022_state_democracy_index.xlsx</h3>
+<ul>
+<li>Analyze the variation in state scores on the State Democracy Index (<code>democracy_mcmc</code>) in 2018</li>
+</ul>
 <aside class="notes">
-
+<p>Let’s start in the most recent year available (2018)</p>
+<ul>
+<li>Don’t focus on individual states yet, we want to analyze the spread first</li>
+</ul>
+<p><br></p>
+<p>Work with the people around you to analyze the level of democracy across the US states in 2018?</p>
+<ul>
+<li><p>What’s the average score?</p></li>
+<li><p>What’s the median score?</p></li>
+<li><p>What’s the spread look like?</p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: Discussion and histogram</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -405,8 +432,334 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="section-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
+<p><strong>What do we learn from this spread?</strong></p>
+<p><br></p>
+<p>Summary stats</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-3.10021 -0.65410  0.01288 -0.16254  0.48285  1.92009 </code></pre>
+</div>
+</div>
+<p>Standard deviation: 1.0723474</p>
+<p><br></p>
+<p>Now I want you to focus on the states themselves</p>
+<ul>
+<li><p>Sort the states by their 2018 score and get ready to talk to me about democracy in specific cases across the country</p></li>
+<li><p>(SLIDE: Version on 2018 by state)</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
+<p>Let’s now look at the states themselves</p>
+<ul>
+<li><strong>What do we take from this? Any surprises?</strong></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<p><br></p>
+<h3 id="grumbach2022_state_democracy_index.xlsx-1">Grumbach2022_state_democracy_index.xlsx</h3>
+<ul>
+<li>Make a line plot of Missouri’s scores on the State Democracy Index (<code>democracy_mcmc</code>)</li>
+</ul>
+<aside class="notes">
+<p><code>democracy_mcmc</code> is the variable name for the State Democracy Index created in the paper</p>
+<ul>
+<li><p>Remember, these scores are the results of a factor analysis run on 51 indicators of democracy.</p></li>
+<li><p>Let’s visualize Missouri!</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-5" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
+<p>In 2000, MO had a negative democracy score AND was only in the 20th percentile of US states by health of American democracy</p>
+<ul>
+<li>40 states had a better democracy score!</li>
+</ul>
+<p><br></p>
+<p>In 2018, MO’s score drops to -2 which is the 6th percentile!</p>
+<ul>
+<li><p>47 states have a better democracy score than us</p></li>
+<li><p>Thanks to Tennessee, North Carolina and Wisconsin for sucking just slightly more than we do!</p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: Add some context!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-6" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
+<p>I gotta be honest, my gut intuition had been that Kansas, Oklahoma and Alabama would be way lower</p>
+<ul>
+<li><p>But that’s the value of data over intuitions!</p></li>
+<li><p>On the other hand, I wouldn’t exactly celebrate a score in the negative digits so maybe my intuitions aren’t that far off</p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: Alright, let’s unpack that Missouri score</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-7" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<p><br></p>
+<h3 id="grumbach2022-input_data.xlsx">Grumbach2022-Input_Data.xlsx</h3>
+<h3 id="grumbach2022-variables_list.xlsx">Grumbach2022-Variables_list.xlsx</h3>
+<ul>
+<li><p>Which variables does Missouri score the worst in?</p></li>
+<li><p>Which the best?</p></li>
+</ul>
+<aside class="notes">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                               [,1]        
+...1                           "2463"      
+year                           "2018"      
+state                          "Missouri"  
+absvot                         "0"         
+earlvot                        "0"         
+nofelons                       "0.015875"  
+w_felon_disenfranchise         "0"         
+sdr                            "0"         
+avr_any                        "0"         
+avr_backend                    "0"         
+voterid_any                    "1"         
+voterid_strict                 "1"         
+prisoner_vote                  "0"         
+website_pollingplace           "1"         
+website_reg_status             "1"         
+website_precinct_ballot        "1"         
+website_absentee_status        "0"         
+website_provisional_status     "0"         
+reg_rej                        "0.0051779" 
+prov_partic                    "0.0017601" 
+prov_rej_all                   "0.0011605" 
+uocava_rej                     "0.0635151" 
+uocava_nonret                  "0.3467222" 
+eavs_completeness              "0.882166"  
+post_election_audit            "1"         
+nonvoter_illness_onyear_pct    "0.1709015" 
+nonvoter_illness_offyear_pct   "0.1351317" 
+nonvoter_reg_onyear_pct        "0.05723101"
+nonvoter_reg_offyear_pct       "0.0339938" 
+online_reg                     "1"         
+wait                           "7.875763"  
+residual                       "0.01128196"
+pct_reg_of_vep_vrs             "0.8674462" 
+compactness                    "51.22667"  
+econ_opinion_residual          "0.03463433"
+social_opinion_residual        "3.668816"  
+youth_preregistration          "2"         
+registration_drive_restriction "2"         
+EG_s                           "0.05858689"
+mean_median_s                  "0.07192691"
+symmetry_s                     "0.145845"  
+declination2_s                 "0.7679836" 
+EG_pres_s                      "0.09832455"
+mean_median_pres_s             "0.06385573"
+declination2_pres_s            "0.9803221" 
+symmetry_pres_s                "0.1464027" 
+EG_c                           "0.1215502" 
+mean_median_c                  "0.1029657" 
+symmetry_c                     "0.1363636" 
+declination2_c                 "0.4454367" 
+EG_pres_c                      "0.05940456"
+mean_median_pres_c             "0.08264561"
+declination2_pres_c            "0.3407394" 
+symmetry_pres_c                "0.1363636" </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      ...1             year         state               absvot      
+ Min.   :  30.0   Min.   :2000   Length:950         Min.   :0.0000  
+ 1st Qu.: 739.5   1st Qu.:2004   Class :character   1st Qu.:0.0000  
+ Median :1375.5   Median :2009   Mode  :character   Median :1.0000  
+ Mean   :1365.9   Mean   :2009                      Mean   :0.5105  
+ 3rd Qu.:2018.8   3rd Qu.:2014                      3rd Qu.:1.0000  
+ Max.   :2488.0   Max.   :2018                      Max.   :1.0000  
+    earlvot          nofelons        w_felon_disenfranchise      sdr        
+ Min.   :0.0000   Min.   :0.000000   Min.   :0.0000         Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.004259   1st Qu.:0.0000         1st Qu.:0.0000  
+ Median :0.0000   Median :0.008254   Median :0.0000         Median :0.0000  
+ Mean   :0.2958   Mean   :0.009150   Mean   :0.3379         Mean   :0.2232  
+ 3rd Qu.:1.0000   3rd Qu.:0.012676   3rd Qu.:1.0000         3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :0.032005   Max.   :2.0000         Max.   :1.0000  
+    avr_any         avr_backend        voterid_any     voterid_strict  
+ Min.   :0.00000   Min.   :0.000000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.00000   1st Qu.:0.000000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :0.00000   Median :0.000000   Median :0.0000   Median :0.0000  
+ Mean   :0.01158   Mean   :0.005263   Mean   :0.4421   Mean   :0.1474  
+ 3rd Qu.:0.00000   3rd Qu.:0.000000   3rd Qu.:1.0000   3rd Qu.:0.0000  
+ Max.   :1.00000   Max.   :1.000000   Max.   :1.0000   Max.   :1.0000  
+ prisoner_vote  website_pollingplace website_reg_status website_precinct_ballot
+ Min.   :0.00   Min.   :0.0000       Min.   :0.0000     Min.   :0.0000         
+ 1st Qu.:0.00   1st Qu.:1.0000       1st Qu.:0.0000     1st Qu.:0.0000         
+ Median :0.00   Median :1.0000       Median :1.0000     Median :1.0000         
+ Mean   :0.04   Mean   :0.8126       Mean   :0.7035     Mean   :0.5042         
+ 3rd Qu.:0.00   3rd Qu.:1.0000       3rd Qu.:1.0000     3rd Qu.:1.0000         
+ Max.   :1.00   Max.   :1.0000       Max.   :1.0000     Max.   :1.0000         
+ website_absentee_status website_provisional_status    reg_rej        
+ Min.   :0.0000          Min.   :0.0000             Min.   :0.000000  
+ 1st Qu.:0.0000          1st Qu.:0.0000             1st Qu.:0.004614  
+ Median :1.0000          Median :0.0000             Median :0.039070  
+ Mean   :0.6153          Mean   :0.4252             Mean   :0.054058  
+ 3rd Qu.:1.0000          3rd Qu.:1.0000             3rd Qu.:0.063343  
+ Max.   :1.0000          Max.   :1.0000             Max.   :0.671974  
+  prov_partic         prov_rej_all        uocava_rej      uocava_nonret   
+ Min.   :0.0000000   Min.   :0.000000   Min.   :0.00000   Min.   :0.0000  
+ 1st Qu.:0.0007535   1st Qu.:0.000270   1st Qu.:0.02259   1st Qu.:0.2128  
+ Median :0.0031853   Median :0.001453   Median :0.04606   Median :0.2778  
+ Mean   :0.0106869   Mean   :0.002608   Mean   :0.05574   Mean   :0.3189  
+ 3rd Qu.:0.0096773   3rd Qu.:0.003394   3rd Qu.:0.07375   3rd Qu.:0.3491  
+ Max.   :0.0894693   Max.   :0.019162   Max.   :0.50000   Max.   :0.8805  
+ eavs_completeness post_election_audit nonvoter_illness_onyear_pct
+ Min.   :0.0000    Min.   :0.0000      Min.   :0.03417            
+ 1st Qu.:0.8889    1st Qu.:0.0000      1st Qu.:0.12815            
+ Median :0.9634    Median :1.0000      Median :0.16029            
+ Mean   :0.9104    Mean   :0.5526      Mean   :0.15616            
+ 3rd Qu.:1.0000    3rd Qu.:1.0000      3rd Qu.:0.18059            
+ Max.   :1.0000    Max.   :1.0000      Max.   :0.23240            
+ nonvoter_illness_offyear_pct nonvoter_reg_onyear_pct nonvoter_reg_offyear_pct
+ Min.   :0.04675              Min.   :0.008173        Min.   :0.007456        
+ 1st Qu.:0.10696              1st Qu.:0.046514        1st Qu.:0.025623        
+ Median :0.12463              Median :0.062407        Median :0.032804        
+ Mean   :0.12581              Mean   :0.062127        Mean   :0.037141        
+ 3rd Qu.:0.14412              3rd Qu.:0.080254        3rd Qu.:0.044921        
+ Max.   :0.18657              Max.   :0.139338        Max.   :0.102112        
+   online_reg          wait            residual        pct_reg_of_vep_vrs
+ Min.   :0.0000   Min.   : 0.4064   Min.   :0.001717   Min.   :0.6400    
+ 1st Qu.:0.0000   1st Qu.: 5.3197   1st Qu.:0.006981   1st Qu.:0.7952    
+ Median :0.0000   Median : 8.6466   Median :0.010565   Median :0.8305    
+ Mean   :0.2277   Mean   :11.4473   Mean   :0.011282   Mean   :0.8228    
+ 3rd Qu.:0.1708   3rd Qu.:14.3159   3rd Qu.:0.014128   3rd Qu.:0.8555    
+ Max.   :1.0000   Max.   :61.5021   Max.   :0.031688   Max.   :0.9181    
+  compactness    econ_opinion_residual social_opinion_residual
+ Min.   :28.27   Min.   :0.000001      Min.   :0.0000         
+ 1st Qu.:46.58   1st Qu.:0.072661      1st Qu.:0.1657         
+ Median :53.99   Median :0.270853      Median :0.7536         
+ Mean   :53.85   Mean   :0.596249      Mean   :1.3378         
+ 3rd Qu.:61.58   3rd Qu.:0.778242      3rd Qu.:2.0035         
+ Max.   :76.70   Max.   :5.161743      Max.   :7.9601         
+ youth_preregistration registration_drive_restriction      EG_s          
+ Min.   :0.0000        Min.   :0.0000                 Min.   :0.0005928  
+ 1st Qu.:0.0000        1st Qu.:0.0000                 1st Qu.:0.0231092  
+ Median :0.0000        Median :0.0000                 Median :0.0502146  
+ Mean   :0.9905        Mean   :0.7463                 Mean   :0.0517019  
+ 3rd Qu.:2.0000        3rd Qu.:1.0000                 3rd Qu.:0.0717428  
+ Max.   :4.0000        Max.   :3.0000                 Max.   :0.1882276  
+ mean_median_s         symmetry_s      declination2_s        EG_pres_s        
+ Min.   :0.0002024   Min.   :0.00000   Min.   :0.0003496   Min.   :0.0009308  
+ 1st Qu.:0.0147589   1st Qu.:0.02727   1st Qu.:0.1430357   1st Qu.:0.0384284  
+ Median :0.0312234   Median :0.05455   Median :0.2955310   Median :0.0771721  
+ Mean   :0.0319238   Mean   :0.05565   Mean   :0.3077990   Mean   :0.0828082  
+ 3rd Qu.:0.0427077   3rd Qu.:0.07845   3rd Qu.:0.4156834   3rd Qu.:0.1136057  
+ Max.   :0.1019909   Max.   :0.18320   Max.   :1.2786009   Max.   :0.2656436  
+ mean_median_pres_s  declination2_pres_s symmetry_pres_s         EG_c          
+ Min.   :0.0001843   Min.   :0.003857    Min.   :0.001212   Min.   :0.0000891  
+ 1st Qu.:0.0165988   1st Qu.:0.212066    1st Qu.:0.033939   1st Qu.:0.0682178  
+ Median :0.0315778   Median :0.478382    Median :0.060506   Median :0.0744741  
+ Mean   :0.0316353   Mean   :0.485960    Mean   :0.062383   Mean   :0.0744741  
+ 3rd Qu.:0.0449479   3rd Qu.:0.673014    3rd Qu.:0.079431   3rd Qu.:0.0744741  
+ Max.   :0.0954947   Max.   :1.638442    Max.   :0.186869   Max.   :0.2822741  
+ mean_median_c         symmetry_c     declination2_c      EG_pres_c        
+ Min.   :0.0000539   Min.   :0.0000   Min.   :0.00194   Min.   :0.0006947  
+ 1st Qu.:0.0448689   1st Qu.:0.0768   1st Qu.:0.24662   1st Qu.:0.1196667  
+ Median :0.0475356   Median :0.0919   Median :0.26856   Median :0.1225960  
+ Mean   :0.0475356   Mean   :0.0919   Mean   :0.26856   Mean   :0.1225960  
+ 3rd Qu.:0.0475356   3rd Qu.:0.0919   3rd Qu.:0.26856   3rd Qu.:0.1225960  
+ Max.   :0.1475095   Max.   :0.2778   Max.   :0.76946   Max.   :0.2833375  
+ mean_median_pres_c declination2_pres_c symmetry_pres_c 
+ Min.   :0.000375   Min.   :0.00357     Min.   :0.0000  
+ 1st Qu.:0.033211   1st Qu.:0.32253     1st Qu.:0.1083  
+ Median :0.033592   Median :0.32253     Median :0.1083  
+ Mean   :0.033592   Mean   :0.32253     Mean   :0.1083  
+ 3rd Qu.:0.033592   3rd Qu.:0.32253     3rd Qu.:0.1083  
+ Max.   :0.088292   Max.   :0.97423     Max.   :0.2778  </code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Analyze and describe the sub-indicators chosen by Grumbach</li>
+</ol>
+<ul>
+<li>How do the different measures of democracy compare? How highly do they correlate?</li>
+<li>What specific indicators is MO best in? Which worst? What is the trajectory over time?</li>
+<li>What are the primary areas we could target in MO to improve our democracy? How hard would it be to change these things?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -435,7 +788,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -690,18 +1042,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -733,11 +1074,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -747,8 +1127,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -762,7 +1151,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
