@@ -14,11 +14,9 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**I. Road testing measures of democracy**
 
-Policies to Address Misinformation
-
-- Proposal 3: Changing the news consumption habits of American voters/consumers
+- Revise and resubmit the paper
 
 :::
 
@@ -31,31 +29,31 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+1. TBD
 
 :::
 
 
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+## Research Paper 1 {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 <br>
 
-Proposal 3: Changing the news consumption habits of American voters/consumers
+Write a report **summarizing and evaluating** the current health of American democracy
 
-1. Peterson and Iyengar (2021)
+- Remember the target audience matters!
 
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
+<br>
+
+### The Revision
+
+- **Address ALL feedback AND highlight ALL changes**
+
+- **Due: Oct 20th**
 
 ::: notes
 
-Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
-
-- Paying for the "right" answers doesn't overcome partisan motivated reasoning
-- Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)
-
+**Questions on the assignment?**
 
 :::
 
@@ -65,12 +63,33 @@ Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Informati
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
+::: {.r-fit-text}
+**Do we have a misinformation problem?**
 
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
+1. Kavanagh and Rich (2018), "Chapter 1 Introduction"
 
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+2. Vraga and Bode (2020)
+
+3. Li and Wagner (2020)
+
+:::
 
 ::: notes
 
+Next class we shift to our final section of the class focused on contemporary threats to American democracy
+
+<br>
+
+Three short readings to help us:
+
+1. Define the concepts, and 
+
+2. Provide us a basic model to clarify our thinking about the problem
+
+<br>
+
+- **Questions on the assignment?**
+
 :::
+
+

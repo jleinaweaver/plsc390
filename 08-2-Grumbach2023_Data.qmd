@@ -8,10 +8,12 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
+library(haven)
 
 # Input data
 d_in <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022-Input_Data.xlsx")
 d_index <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022_state_democracy_index.xlsx")
+d_party <- read_csv("../../Data_to_Explore/Grumbach2022/party_control_post2014.csv")
 
 # Subsets
 d_mo_index <- d_index |> filter(state == "Missouri")
@@ -119,7 +121,7 @@ SLIDE: Discussion and histogram
 
 
 
-## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## The State Democracy Index: Variation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 ```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
 # Histogram
@@ -160,7 +162,7 @@ Now I want you to focus on the states themselves
 
 
 
-## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## The State Democracy Index: Cases {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 ```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
 # dot plot by state
@@ -184,6 +186,57 @@ Let's now look at the states themselves
 
 <br>
 
+SLIDE: Let's now color the states by party control
+
+:::
+
+
+
+## The State Democracy Index: Cases {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
+# dot plot by state colored by party in control
+d_party18 <- d_party |>
+  filter(year == 2018)
+
+left_join(d_index_2018, d_party18, by = "state") |>
+  mutate(
+    party = case_when(
+      partycontrolpost2014 == 0 ~ "Republicans",
+      partycontrolpost2014 == 1 ~ "Divided Government",
+      partycontrolpost2014 == 2 ~ "Democrats"
+    )
+  ) |>
+  filter(!is.na(party)) |>
+  ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
+  geom_text(aes(label = state, color = party), size = 3.5) +
+  theme_bw() +
+  labs(x = "The State Democracy Index in 2018", y = "",
+       title = "Unified Republican control is associated with lower democracy scores",
+       color = "",
+       caption = "Source: Grumbach (2023)") +
+  theme(axis.text.y = element_blank(), legend.position=c(.2,.75)) +
+  scale_color_manual(values = c("blue", "grey", "red"))
+```
+
+::: notes
+
+Clearly an association here
+
+- **But what would it take to convince you that this is a causal relationship?**
+
+<br>
+
+**Does Grumbach's model do it? Why or why not?**
+
+- Wealthy GOP elite incentivized to restrict the electorate away from those with different "class interests"
+
+- GOP base incentivized to restrict the electorate to protect their racial and partisan identity
+
+- Different reasons, but both push to restrict democracy
+
+<br>
+
 Ok, next challenge!
 
 - How have these scores and this distribution changed since 2000?
@@ -198,98 +251,44 @@ Ok, next challenge!
 
 
 
-## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## The State Democracy Index: Changes {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
-```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
+```{r, fig.retina=3, fig.asp=1, fig.align='center', out.width="100%", fig.width=9}
 # Arrow segments for differences
-d_index |>
+d2 <- d_index |>
   filter(year %in% c(2000, 2018)) |>
   select(state, year, democracy_mcmc) |>
   pivot_wider(names_from = year, values_from = democracy_mcmc, names_prefix = "yr") |>
   mutate(
-    diff = yr2018 - yr2000
-  ) |>
-  ggplot(aes(x = diff, y = reorder(state, diff))) +
-  geom_text(aes(label = state, color = diff), size = 3.5) +
+    diff = yr2018 - yr2000,
+    color1 = if_else(diff > 0, "blue", "red")
+  )
+
+order1 <- d2 |>
+  arrange(diff) |>
+  select(state)
+
+d2 |>
+  ggplot(aes(y = state)) +
+  geom_segment(aes(x = 0, xend = diff, yend = state, color = color1), arrow = arrow(length = unit(0.1, "inches"))) +
   labs(x = "", y = "",
        title = "State Movements (2000 to 2018) on the State Democracy Index",
        caption = "Source: Grumbach (2023)") +
-  theme(axis.text.y = element_blank()) +
-  guides(color = "none") +
-  scale_color_gradient2(low = "red", mid = "black", high = "blue")
-
-
-# Arrow segments arranged by size of move
-d_index |>
-  filter(year %in% c(2000, 2018)) |>
-  select(state, year, democracy_mcmc) |>
-  pivot_wider(names_from = year, values_from = democracy_mcmc, names_prefix = "yr") |>
-  mutate(
-    diff = yr2018 - yr2000
-  ) |> 
-  ggplot(aes(y = reorder(state, diff))) +
-  # geom_point(aes(x = yr2000)) +
-  # geom_point(aes(x = yr2018)) +
-  geom_segment(aes(x = yr2000, xend = yr2018), arrow = arrow()) +
-  theme_bw()
-
-
-order2 <- d_index_2000 |>
-  arrange(desc(state)) |>
-  select(state)
-
-d_index |>
-  filter(year %in% c(2000, 2018)) |>
-  ggplot(aes(x = democracy_mcmc, y = state)) +
-  geom_point() +
-  scale_y_discrete(limits = order2[[1]]) +
-  theme_bw()
-
-
-
-
-# dot plot by state (labels in 2000, arrow to score in 2018)
-order1 <- d_index_2000 |>
-  arrange(democracy_mcmc) |>
-  select(state)
-
-d_index_2000 |>
-  ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
-  geom_point(data = d_index_2018, aes(x = democracy_mcmc, y = state)) +
-  geom_text(aes(label = state), size = 3.5) +
-  #geom_point(aes(x = democracy_mcmc, y = state)) +
+  scale_y_discrete(limits = order1[[1]]) +
   theme_bw() +
-  labs(x = "The State Democracy Index", y = "",
-       title = "Time (the GOP?) has not been kind to American democracy",
-       caption = "Source: Grumbach (2023)") +
-  guides(color = "none") +
-  scale_y_discrete(limits = order1[[1]])
-
-# d_index_2000 |>
-#   ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
-#   geom_text(aes(label = state), size = 3.5) +
-#   geom_point(data = d_index_2018, aes(x = democracy_mcmc, y = state)) +
-#   theme_bw() +
-#   labs(x = "The State Democracy Index", y = "",
-#        title = "Time (the GOP?) has not been kind to American democracy",
-#        caption = "Source: Grumbach (2023)") +
-#   theme(axis.text.y = element_blank()) +
-#   guides(color = "none") +
-#   scale_y_discrete(limits = order1[[1]])
-
-
-
-
+  scale_color_manual(values = c("blue", "red")) +
+  guides(color = "none")
 ```
 
 ::: notes
 
+**Talk to me about the states "getting better" and those "getting worse"**
 
+<br>
 
+SLIDE: Let's track across time
 
 :::
-
-
 
 
 
@@ -314,7 +313,7 @@ d_index_2000 |>
 
 
 
-## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## The State Democracy Index: Missouri {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 ```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
 # MO trajectory over time
@@ -364,7 +363,7 @@ SLIDE: Add some context!
 
 
 
-## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## The State Democracy Index: Missouri {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 ```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
 # MO trajectory over time
@@ -412,7 +411,7 @@ SLIDE: Alright, let's unpack that Missouri score
 
 
 
-## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## The State Democracy Index: Inputs {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 <br>
 
@@ -420,11 +419,30 @@ SLIDE: Alright, let's unpack that Missouri score
 
 ### Grumbach2022-Variables_list.xlsx
 
-- Which variables does Missouri score the worst in?
-
-- Which the best?
-
 ::: notes
+
+Let's now shift our focus to the input variables
+
+- e.g. the 51 indicators that Grumbach uses to construct his state democracy index.
+
+<br>
+
+**Which variables do we want to dig into? Help me make a list!**
+
+- *List on board*
+
+- *Divy out to small groups*
+
+<br>
+
+Ok groups, dig into your assigned variable for 2018
+
+- What do we learn about the states from analyzing your variable?
+
+- Get ready to report back!
+
+- *PRESENT and DISCUSS each*
+
 
 ```{r}
 # Best and worst input variables for Missouri in 2018
@@ -437,21 +455,21 @@ d_in |>
 
 summary(d_in)
 
-
-
-
 ```
-
-2. Analyze and describe the sub-indicators chosen by Grumbach
-- How do the different measures of democracy compare? How highly do they correlate?
-- What specific indicators is MO best in? Which worst? What is the trajectory over time?
-- What are the primary areas we could target in MO to improve our democracy? How hard would it be to change these things?
 
 :::
 
 
 
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
+![](Images/08_1-Grumbach2023-Header.png)
+
+::: notes
+
+Now having had the chance to examine the data, where do we end up?
+
+- **Are you convinced by Grumbach's argument? Why or why not?**
 
 
 
