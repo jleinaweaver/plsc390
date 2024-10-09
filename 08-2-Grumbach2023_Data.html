@@ -319,6 +319,8 @@
       margin-right: 0; 
     }
   </style>
+  <script src="08-2-Grumbach2023_Data_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="08-2-Grumbach2023_Data_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -348,8 +350,7 @@
 </ul></li>
 <li>Data
 <ul>
-<li>Grumbach2022-Input_Data.xlsx</li>
-<li>Grumbach2022_state_democracy_index.xlsx</li>
+<li>Grumbach2022_Main_Dataset_Combined.xlsx</li>
 <li>Grumbach2022-Variables_list.xlsx</li>
 </ul></li>
 </ol>
@@ -403,7 +404,7 @@
 <section id="section-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2></h2>
 <p><br></p>
-<h3 id="grumbach2022_state_democracy_index.xlsx">Grumbach2022_state_democracy_index.xlsx</h3>
+<h3 id="grumbach2022_main_dataset_combined.xlsx">Grumbach2022_Main_Dataset_Combined.xlsx</h3>
 <ul>
 <li>Analyze the variation in state scores on the State Democracy Index (<code>democracy_mcmc</code>) in 2018</li>
 </ul>
@@ -443,10 +444,10 @@
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
--3.10021 -0.65410  0.01288 -0.16254  0.48285  1.92009 </code></pre>
+-3.09481 -0.65799 -0.01534 -0.17013  0.46836  1.89061 </code></pre>
 </div>
 </div>
-<p>Standard deviation: 1.0723474</p>
+<p>Standard deviation: 1.0657272</p>
 <p><br></p>
 <p>Now I want you to focus on the states themselves</p>
 <ul>
@@ -505,30 +506,8 @@
 <p><br></p>
 <p>Ok, next challenge!</p>
 <ul>
-<li><p>How have these scores and this distribution changed since 2000?</p></li>
-<li><p>Compare these results to the spread and scores in 2000 and report back to me the differences</p></li>
+<li>SLIDE: Let’s re-examine this relationship but across time</li>
 </ul>
-<p><br></p>
-<p>(SLIDE)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-state-democracy-index-changes" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
-<h2>The State Democracy Index: Changes</h2>
-
-<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
-<p><strong>Talk to me about the states “getting better” and those “getting worse”</strong></p>
-<p><br></p>
-<p>SLIDE: Let’s track across time</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -543,8 +522,188 @@
 </section>
 <section id="section-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2></h2>
+<h3 id="what-is-the-average-score-of-democracy_mcmc-for-each-type-of-party-control">What is the average score of <code>democracy_mcmc</code> for each type of party control?</h3>
+<ul>
+<li>e.g.&nbsp;unified democrat, divided and unified republican governments</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">party</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Avg</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Median</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Divided Government</td>
+<td style="text-align: right;">0.181</td>
+<td style="text-align: right;">0.246</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unified Democratic</td>
+<td style="text-align: right;">0.496</td>
+<td style="text-align: right;">0.461</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unified Republican</td>
+<td style="text-align: right;">-0.580</td>
+<td style="text-align: right;">-0.333</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Group the data by party in control (not by state)</p>
 <p><br></p>
-<h3 id="grumbach2022_state_democracy_index.xlsx-1">Grumbach2022_state_democracy_index.xlsx</h3>
+<p>REVEAL: <strong>What does this imply is true across the whole dataset?</strong></p>
+<p><br></p>
+<p>Strong correlation, but causality could still run either way!</p>
+<ul>
+<li>Averages are also not the most precise tool for comparison</li>
+</ul>
+<p><br></p>
+<p>SLIDE: Let’s redo the analysis for every year in the dataset</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<h3 id="what-is-the-average-score-of-democracy_mcmc-by-party-and-by-year">What is the average score of <code>democracy_mcmc</code> by party and by year?</h3>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p><strong>What do we learn from this per year analysis?</strong></p>
+<ul>
+<li><strong>Have we addressed the correlation not causation problem here?</strong></li>
+</ul>
+<p><br></p>
+<p>Not yet!</p>
+<ul>
+<li><p>Now we have correlations per year</p></li>
+<li><p>This evidence is still consistent with a story that states with weaker democratic institutions are more likely to elect Republicans.</p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: Let’s add a one year lag!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<h3 id="lets-recheck-the-averages-with-a-one-year-lag">Let’s recheck the averages with a one year lag</h3>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p>This plot redoes our analysis but with a time lag</p>
+<ul>
+<li>e.g.&nbsp;does party control this year correlate with average levels of democracy next year?</li>
+</ul>
+<p><br></p>
+<p><strong>What do we see in this?</strong></p>
+<ul>
+<li><strong>Is this more convincing? Why or why not?</strong></li>
+</ul>
+<p><br></p>
+<p>SLIDE: What about changes rather than overall averages?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-5" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<h3 id="do-changes-in-party-control-predict-changes-in-democracy-one-year-later">Do changes in party control predict changes in democracy one year later?</h3>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p>For these box plots I’ve focused in on only those cases in the dataset where the party control variable changed</p>
+<ul>
+<li><p>e.g.&nbsp;the state moved from democratic to divided or divided to republican or the other direction</p></li>
+<li><p>I am then plotting the change in democracy score the year after this change in party control</p></li>
+</ul>
+<p><br></p>
+<p><strong>Remind me, how do we read a box plot?</strong></p>
+<p><br></p>
+<p><strong>And how do we read these specific box plots?</strong></p>
+<p><br></p>
+<p>SLIDE: Turns out there are some outliers my plot is ignoring…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-6" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<h3 id="do-changes-in-party-control-predict-changes-in-democracy-one-year-later-1">Do changes in party control predict changes in democracy one year later?</h3>
+
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p>There are five cases where the new unified republican government reduced the quality of the state’s democracy by so much as to be outside the usual box plot constraints</p>
+<ul>
+<li>e.g.&nbsp;1.5 x the width of the IQR</li>
+</ul>
+<p><br></p>
+<p>Note: NC went from unified democratic control to divided government in 2011</p>
+<p><br></p>
+<p><strong>Does this change anything for us?</strong></p>
+<ul>
+<li>The story is much worse</li>
+</ul>
+<p><br></p>
+<p><strong>Are we getting closer to a causal argument here?</strong></p>
+<p><br></p>
+<p>SLIDE: Let’s track some states!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-7" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<p><br></p>
+<h3 id="grumbach2022_state_democracy_index.xlsx">Grumbach2022_state_democracy_index.xlsx</h3>
 <ul>
 <li>Make a line plot of Missouri’s scores on the State Democracy Index (<code>democracy_mcmc</code>)</li>
 </ul>
@@ -569,7 +728,7 @@
 <section id="the-state-democracy-index-missouri" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2>The State Democracy Index: Missouri</h2>
 
-<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
 <p>In 2000, MO had a negative democracy score AND was only in the 20th percentile of US states by health of American democracy</p>
 <ul>
 <li>40 states had a better democracy score!</li>
@@ -597,7 +756,7 @@
 <section id="the-state-democracy-index-missouri-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2>The State Democracy Index: Missouri</h2>
 
-<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
+<img data-src="08-2-Grumbach2023_Data_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes">
 <p>I gotta be honest, my gut intuition had been that Kansas, Oklahoma and Alabama would be way lower</p>
 <ul>
 <li><p>But that’s the value of data over intuitions!</p></li>
@@ -640,172 +799,6 @@
 <li><p>Get ready to report back!</p></li>
 <li><p><em>PRESENT and DISCUSS each</em></p></li>
 </ul>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>                               [,1]        
-...1                           "2463"      
-year                           "2018"      
-state                          "Missouri"  
-absvot                         "0"         
-earlvot                        "0"         
-nofelons                       "0.015875"  
-w_felon_disenfranchise         "0"         
-sdr                            "0"         
-avr_any                        "0"         
-avr_backend                    "0"         
-voterid_any                    "1"         
-voterid_strict                 "1"         
-prisoner_vote                  "0"         
-website_pollingplace           "1"         
-website_reg_status             "1"         
-website_precinct_ballot        "1"         
-website_absentee_status        "0"         
-website_provisional_status     "0"         
-reg_rej                        "0.0051779" 
-prov_partic                    "0.0017601" 
-prov_rej_all                   "0.0011605" 
-uocava_rej                     "0.0635151" 
-uocava_nonret                  "0.3467222" 
-eavs_completeness              "0.882166"  
-post_election_audit            "1"         
-nonvoter_illness_onyear_pct    "0.1709015" 
-nonvoter_illness_offyear_pct   "0.1351317" 
-nonvoter_reg_onyear_pct        "0.05723101"
-nonvoter_reg_offyear_pct       "0.0339938" 
-online_reg                     "1"         
-wait                           "7.875763"  
-residual                       "0.01128196"
-pct_reg_of_vep_vrs             "0.8674462" 
-compactness                    "51.22667"  
-econ_opinion_residual          "0.03463433"
-social_opinion_residual        "3.668816"  
-youth_preregistration          "2"         
-registration_drive_restriction "2"         
-EG_s                           "0.05858689"
-mean_median_s                  "0.07192691"
-symmetry_s                     "0.145845"  
-declination2_s                 "0.7679836" 
-EG_pres_s                      "0.09832455"
-mean_median_pres_s             "0.06385573"
-declination2_pres_s            "0.9803221" 
-symmetry_pres_s                "0.1464027" 
-EG_c                           "0.1215502" 
-mean_median_c                  "0.1029657" 
-symmetry_c                     "0.1363636" 
-declination2_c                 "0.4454367" 
-EG_pres_c                      "0.05940456"
-mean_median_pres_c             "0.08264561"
-declination2_pres_c            "0.3407394" 
-symmetry_pres_c                "0.1363636" </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      ...1             year         state               absvot      
- Min.   :  30.0   Min.   :2000   Length:950         Min.   :0.0000  
- 1st Qu.: 739.5   1st Qu.:2004   Class :character   1st Qu.:0.0000  
- Median :1375.5   Median :2009   Mode  :character   Median :1.0000  
- Mean   :1365.9   Mean   :2009                      Mean   :0.5105  
- 3rd Qu.:2018.8   3rd Qu.:2014                      3rd Qu.:1.0000  
- Max.   :2488.0   Max.   :2018                      Max.   :1.0000  
-    earlvot          nofelons        w_felon_disenfranchise      sdr        
- Min.   :0.0000   Min.   :0.000000   Min.   :0.0000         Min.   :0.0000  
- 1st Qu.:0.0000   1st Qu.:0.004259   1st Qu.:0.0000         1st Qu.:0.0000  
- Median :0.0000   Median :0.008254   Median :0.0000         Median :0.0000  
- Mean   :0.2958   Mean   :0.009150   Mean   :0.3379         Mean   :0.2232  
- 3rd Qu.:1.0000   3rd Qu.:0.012676   3rd Qu.:1.0000         3rd Qu.:0.0000  
- Max.   :1.0000   Max.   :0.032005   Max.   :2.0000         Max.   :1.0000  
-    avr_any         avr_backend        voterid_any     voterid_strict  
- Min.   :0.00000   Min.   :0.000000   Min.   :0.0000   Min.   :0.0000  
- 1st Qu.:0.00000   1st Qu.:0.000000   1st Qu.:0.0000   1st Qu.:0.0000  
- Median :0.00000   Median :0.000000   Median :0.0000   Median :0.0000  
- Mean   :0.01158   Mean   :0.005263   Mean   :0.4421   Mean   :0.1474  
- 3rd Qu.:0.00000   3rd Qu.:0.000000   3rd Qu.:1.0000   3rd Qu.:0.0000  
- Max.   :1.00000   Max.   :1.000000   Max.   :1.0000   Max.   :1.0000  
- prisoner_vote  website_pollingplace website_reg_status website_precinct_ballot
- Min.   :0.00   Min.   :0.0000       Min.   :0.0000     Min.   :0.0000         
- 1st Qu.:0.00   1st Qu.:1.0000       1st Qu.:0.0000     1st Qu.:0.0000         
- Median :0.00   Median :1.0000       Median :1.0000     Median :1.0000         
- Mean   :0.04   Mean   :0.8126       Mean   :0.7035     Mean   :0.5042         
- 3rd Qu.:0.00   3rd Qu.:1.0000       3rd Qu.:1.0000     3rd Qu.:1.0000         
- Max.   :1.00   Max.   :1.0000       Max.   :1.0000     Max.   :1.0000         
- website_absentee_status website_provisional_status    reg_rej        
- Min.   :0.0000          Min.   :0.0000             Min.   :0.000000  
- 1st Qu.:0.0000          1st Qu.:0.0000             1st Qu.:0.004614  
- Median :1.0000          Median :0.0000             Median :0.039070  
- Mean   :0.6153          Mean   :0.4252             Mean   :0.054058  
- 3rd Qu.:1.0000          3rd Qu.:1.0000             3rd Qu.:0.063343  
- Max.   :1.0000          Max.   :1.0000             Max.   :0.671974  
-  prov_partic         prov_rej_all        uocava_rej      uocava_nonret   
- Min.   :0.0000000   Min.   :0.000000   Min.   :0.00000   Min.   :0.0000  
- 1st Qu.:0.0007535   1st Qu.:0.000270   1st Qu.:0.02259   1st Qu.:0.2128  
- Median :0.0031853   Median :0.001453   Median :0.04606   Median :0.2778  
- Mean   :0.0106869   Mean   :0.002608   Mean   :0.05574   Mean   :0.3189  
- 3rd Qu.:0.0096773   3rd Qu.:0.003394   3rd Qu.:0.07375   3rd Qu.:0.3491  
- Max.   :0.0894693   Max.   :0.019162   Max.   :0.50000   Max.   :0.8805  
- eavs_completeness post_election_audit nonvoter_illness_onyear_pct
- Min.   :0.0000    Min.   :0.0000      Min.   :0.03417            
- 1st Qu.:0.8889    1st Qu.:0.0000      1st Qu.:0.12815            
- Median :0.9634    Median :1.0000      Median :0.16029            
- Mean   :0.9104    Mean   :0.5526      Mean   :0.15616            
- 3rd Qu.:1.0000    3rd Qu.:1.0000      3rd Qu.:0.18059            
- Max.   :1.0000    Max.   :1.0000      Max.   :0.23240            
- nonvoter_illness_offyear_pct nonvoter_reg_onyear_pct nonvoter_reg_offyear_pct
- Min.   :0.04675              Min.   :0.008173        Min.   :0.007456        
- 1st Qu.:0.10696              1st Qu.:0.046514        1st Qu.:0.025623        
- Median :0.12463              Median :0.062407        Median :0.032804        
- Mean   :0.12581              Mean   :0.062127        Mean   :0.037141        
- 3rd Qu.:0.14412              3rd Qu.:0.080254        3rd Qu.:0.044921        
- Max.   :0.18657              Max.   :0.139338        Max.   :0.102112        
-   online_reg          wait            residual        pct_reg_of_vep_vrs
- Min.   :0.0000   Min.   : 0.4064   Min.   :0.001717   Min.   :0.6400    
- 1st Qu.:0.0000   1st Qu.: 5.3197   1st Qu.:0.006981   1st Qu.:0.7952    
- Median :0.0000   Median : 8.6466   Median :0.010565   Median :0.8305    
- Mean   :0.2277   Mean   :11.4473   Mean   :0.011282   Mean   :0.8228    
- 3rd Qu.:0.1708   3rd Qu.:14.3159   3rd Qu.:0.014128   3rd Qu.:0.8555    
- Max.   :1.0000   Max.   :61.5021   Max.   :0.031688   Max.   :0.9181    
-  compactness    econ_opinion_residual social_opinion_residual
- Min.   :28.27   Min.   :0.000001      Min.   :0.0000         
- 1st Qu.:46.58   1st Qu.:0.072661      1st Qu.:0.1657         
- Median :53.99   Median :0.270853      Median :0.7536         
- Mean   :53.85   Mean   :0.596249      Mean   :1.3378         
- 3rd Qu.:61.58   3rd Qu.:0.778242      3rd Qu.:2.0035         
- Max.   :76.70   Max.   :5.161743      Max.   :7.9601         
- youth_preregistration registration_drive_restriction      EG_s          
- Min.   :0.0000        Min.   :0.0000                 Min.   :0.0005928  
- 1st Qu.:0.0000        1st Qu.:0.0000                 1st Qu.:0.0231092  
- Median :0.0000        Median :0.0000                 Median :0.0502146  
- Mean   :0.9905        Mean   :0.7463                 Mean   :0.0517019  
- 3rd Qu.:2.0000        3rd Qu.:1.0000                 3rd Qu.:0.0717428  
- Max.   :4.0000        Max.   :3.0000                 Max.   :0.1882276  
- mean_median_s         symmetry_s      declination2_s        EG_pres_s        
- Min.   :0.0002024   Min.   :0.00000   Min.   :0.0003496   Min.   :0.0009308  
- 1st Qu.:0.0147589   1st Qu.:0.02727   1st Qu.:0.1430357   1st Qu.:0.0384284  
- Median :0.0312234   Median :0.05455   Median :0.2955310   Median :0.0771721  
- Mean   :0.0319238   Mean   :0.05565   Mean   :0.3077990   Mean   :0.0828082  
- 3rd Qu.:0.0427077   3rd Qu.:0.07845   3rd Qu.:0.4156834   3rd Qu.:0.1136057  
- Max.   :0.1019909   Max.   :0.18320   Max.   :1.2786009   Max.   :0.2656436  
- mean_median_pres_s  declination2_pres_s symmetry_pres_s         EG_c          
- Min.   :0.0001843   Min.   :0.003857    Min.   :0.001212   Min.   :0.0000891  
- 1st Qu.:0.0165988   1st Qu.:0.212066    1st Qu.:0.033939   1st Qu.:0.0682178  
- Median :0.0315778   Median :0.478382    Median :0.060506   Median :0.0744741  
- Mean   :0.0316353   Mean   :0.485960    Mean   :0.062383   Mean   :0.0744741  
- 3rd Qu.:0.0449479   3rd Qu.:0.673014    3rd Qu.:0.079431   3rd Qu.:0.0744741  
- Max.   :0.0954947   Max.   :1.638442    Max.   :0.186869   Max.   :0.2822741  
- mean_median_c         symmetry_c     declination2_c      EG_pres_c        
- Min.   :0.0000539   Min.   :0.0000   Min.   :0.00194   Min.   :0.0006947  
- 1st Qu.:0.0448689   1st Qu.:0.0768   1st Qu.:0.24662   1st Qu.:0.1196667  
- Median :0.0475356   Median :0.0919   Median :0.26856   Median :0.1225960  
- Mean   :0.0475356   Mean   :0.0919   Mean   :0.26856   Mean   :0.1225960  
- 3rd Qu.:0.0475356   3rd Qu.:0.0919   3rd Qu.:0.26856   3rd Qu.:0.1225960  
- Max.   :0.1475095   Max.   :0.2778   Max.   :0.76946   Max.   :0.2833375  
- mean_median_pres_c declination2_pres_c symmetry_pres_c 
- Min.   :0.000375   Min.   :0.00357     Min.   :0.0000  
- 1st Qu.:0.033211   1st Qu.:0.32253     1st Qu.:0.1083  
- Median :0.033592   Median :0.32253     Median :0.1083  
- Mean   :0.033592   Mean   :0.32253     Mean   :0.1083  
- 3rd Qu.:0.033592   3rd Qu.:0.32253     3rd Qu.:0.1083  
- Max.   :0.088292   Max.   :0.97423     Max.   :0.2778  </code></pre>
-</div>
-</div>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -818,7 +811,7 @@ symmetry_pres_c                "0.1363636" </code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-3" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<section id="section-8" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2></h2>
 
 <img data-src="Images/08_1-Grumbach2023-Header.png" class="r-stretch"><aside class="notes">

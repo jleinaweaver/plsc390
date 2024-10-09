@@ -8,17 +8,26 @@ format: revealjs
 # background-size="1920px 1080px"
 library(tidyverse)
 library(readxl)
-library(haven)
+#library(haven)
 
 # Input data
-d_in <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022-Input_Data.xlsx")
-d_index <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022_state_democracy_index.xlsx")
-d_party <- read_csv("../../Data_to_Explore/Grumbach2022/party_control_post2014.csv")
+# d_in <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022-Input_Data.xlsx")
+# d_index <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022_state_democracy_index.xlsx")
+# d_party <- read_csv("../../Data_to_Explore/Grumbach2022/party_control_post2014.csv")
+
+d <- read_excel("../../Data_to_Explore/Grumbach2022/Grumbach2022_Main_Dataset_Combined.xlsx", na = "NA") |>
+  mutate(
+    party = case_when(
+      partycontrol == 0 ~ "Unified Republican",
+      partycontrol == 1 ~ "Divided Government",
+      partycontrol == 2 ~ "Unified Democratic"
+    )
+  )
 
 # Subsets
-d_mo_index <- d_index |> filter(state == "Missouri")
-d_index_2000 <- d_index |> filter(year == 2000)
-d_index_2018 <- d_index |> filter(year == 2018)
+d_mo_index <- d |> filter(state == "Missouri")
+d_index_2000 <- d |> filter(year == 2000)
+d_index_2018 <- d |> filter(year == 2018)
 ```
 
 <br>
@@ -45,8 +54,7 @@ Prep for Class
     - Figures in paper: https://www.cambridge.org/core/journals/american-political-science-review/article/laboratories-of-democratic-backsliding/0742F08306EFDD8612539F089853E4FE#figures
 
 2. Data
-    - Grumbach2022-Input_Data.xlsx
-    - Grumbach2022_state_democracy_index.xlsx
+    - Grumbach2022_Main_Dataset_Combined.xlsx
     - Grumbach2022-Variables_list.xlsx
 
 <br>
@@ -93,7 +101,7 @@ Grumbach is transparent in his methodology and provides access to all of it to a
 
 <br>
 
-### Grumbach2022_state_democracy_index.xlsx
+### Grumbach2022_Main_Dataset_Combined.xlsx
 
 - Analyze the variation in state scores on the State Democracy Index (`democracy_mcmc`) in 2018
 
@@ -125,8 +133,7 @@ SLIDE: Discussion and histogram
 
 ```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
 # Histogram
-d_index |>
-  filter(year == 2018) |>
+d_index_2018 |>
   ggplot(aes(x = democracy_mcmc)) +
   geom_histogram(bins = 11, color = "white") +
   theme_bw() +
@@ -145,10 +152,10 @@ d_index |>
 Summary stats
 
 ```{r}
-summary(d_index$democracy_mcmc[d_index$year == 2018])
+summary(d_index_2018$democracy_mcmc)
 ```
 
-Standard deviation: `r sd(d_index$democracy_mcmc[d_index$year == 2018])`
+Standard deviation: `r sd(d_index_2018$democracy_mcmc)`
 
 <br>
 
@@ -166,8 +173,7 @@ Now I want you to focus on the states themselves
 
 ```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
 # dot plot by state
-d_index |>
-  filter(year == 2018) |>
+d_index_2018 |>
   ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
   geom_text(aes(label = state, color = democracy_mcmc), size = 3.5) +
   theme_bw() +
@@ -196,17 +202,7 @@ SLIDE: Let's now color the states by party control
 
 ```{r, fig.retina=3, fig.asp=.85, fig.align='center', out.width="100%", fig.width=9}
 # dot plot by state colored by party in control
-d_party18 <- d_party |>
-  filter(year == 2018)
-
-left_join(d_index_2018, d_party18, by = "state") |>
-  mutate(
-    party = case_when(
-      partycontrolpost2014 == 0 ~ "Republicans",
-      partycontrolpost2014 == 1 ~ "Divided Government",
-      partycontrolpost2014 == 2 ~ "Democrats"
-    )
-  ) |>
+d_index_2018 |>
   filter(!is.na(party)) |>
   ggplot(aes(y = reorder(state, democracy_mcmc), x = democracy_mcmc)) +
   geom_text(aes(label = state, color = party), size = 3.5) +
@@ -239,56 +235,259 @@ Clearly an association here
 
 Ok, next challenge!
 
-- How have these scores and this distribution changed since 2000?
-
-- Compare these results to the spread and scores in 2000 and report back to me the differences
-
-<br>
-
-(SLIDE)
+- SLIDE: Let's re-examine this relationship but across time
 
 :::
 
 
 
-## The State Democracy Index: Changes {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
-```{r, fig.retina=3, fig.asp=1, fig.align='center', out.width="100%", fig.width=9}
-# Arrow segments for differences
-d2 <- d_index |>
-  filter(year %in% c(2000, 2018)) |>
-  select(state, year, democracy_mcmc) |>
-  pivot_wider(names_from = year, values_from = democracy_mcmc, names_prefix = "yr") |>
-  mutate(
-    diff = yr2018 - yr2000,
-    color1 = if_else(diff > 0, "blue", "red")
-  )
+### What is the average score of `democracy_mcmc` for each type of party control?
 
-order1 <- d2 |>
-  arrange(diff) |>
-  select(state)
+- e.g. unified democrat, divided and unified republican governments
 
-d2 |>
-  ggplot(aes(y = state)) +
-  geom_segment(aes(x = 0, xend = diff, yend = state, color = color1), arrow = arrow(length = unit(0.1, "inches"))) +
-  labs(x = "", y = "",
-       title = "State Movements (2000 to 2018) on the State Democracy Index",
-       caption = "Source: Grumbach (2023)") +
-  scale_y_discrete(limits = order1[[1]]) +
+::: {.fragment}
+```{r}
+d |>
+  filter(!is.na(party)) |>
+  group_by(party) |>
+  summarize(
+    Avg = mean(democracy_mcmc),
+    Median = median(democracy_mcmc)
+  ) |>
+  kableExtra::kbl(digits = 3)
+```
+:::
+
+::: notes
+
+Group the data by party in control (not by state)
+
+<br>
+
+REVEAL: **What does this imply is true across the whole dataset?**
+
+<br>
+
+Strong correlation, but causality could still run either way!
+
+- Averages are also not the most precise tool for comparison
+
+<br>
+
+SLIDE: Let's redo the analysis for every year in the dataset
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### What is the average score of `democracy_mcmc` by party and by year?
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+d |>
+  filter(!is.na(party)) |>
+  group_by(year, party) |>
+  summarize(
+    Avg = mean(democracy_mcmc)
+  ) |>
+#  pivot_wider(names_from = party, values_from = Avg) 
+  ggplot(aes(x = year, y = Avg, color = party)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey") +
+  geom_line() +
   theme_bw() +
-  scale_color_manual(values = c("blue", "red")) +
-  guides(color = "none")
+  labs(x = "", y = "Mean State Democracy Index Score", color = "",
+       caption = "Source: Grumbach (2023)") +
+  scale_y_continuous(limits = c(-1.5, 1)) +
+  scale_x_continuous(breaks = seq(2000, 2018, 2)) +
+  scale_color_manual(values = c("darkgrey", "blue", "red")) +
+  #guides(color = "none")
+  theme(legend.position=c(.2,.2))
+
 ```
 
 ::: notes
 
-**Talk to me about the states "getting better" and those "getting worse"**
+**What do we learn from this per year analysis?**
+
+- **Have we addressed the correlation not causation problem here?**
 
 <br>
 
-SLIDE: Let's track across time
+Not yet!
+
+- Now we have correlations per year
+
+- This evidence is still consistent with a story that states with weaker democratic institutions are more likely to elect Republicans.
+
+<br>
+
+SLIDE: Let's add a one year lag!
 
 :::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### Let's recheck the averages with a one year lag
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+d |>
+  arrange(state, year) |>
+  mutate(
+    partycontrol2 = lag(partycontrol, n = 1)
+  ) |>
+  filter(!is.na(partycontrol2)) |>
+  group_by(year, partycontrol2) |>
+  summarize(
+    Avg = mean(democracy_mcmc)
+  ) |>
+  mutate(
+    party = case_when(
+      partycontrol2 == 0 ~ "Unified Republican",
+      partycontrol2 == 1 ~ "Divided Government",
+      partycontrol2 == 2 ~ "Unified Democratic"
+    )
+  ) |>
+#  pivot_wider(names_from = party, values_from = Avg) 
+  ggplot(aes(x = year, y = Avg, color = party)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey") +
+  geom_line() +
+  theme_bw() +
+  labs(x = "", y = "Mean State Democracy Index Score", color = "",
+       caption = "Source: Grumbach (2023)",
+       title = "Analyzing changes in democracy on a one year time lag") +
+  scale_y_continuous(limits = c(-1.5, 1)) +
+  scale_x_continuous(breaks = seq(2000, 2018, 2)) +
+  scale_color_manual(values = c("darkgrey", "blue", "red")) +
+  #guides(color = "none")
+  theme(legend.position=c(.2,.2))
+
+```
+
+::: notes
+
+This plot redoes our analysis but with a time lag
+
+- e.g. does party control this year correlate with average levels of democracy next year?
+
+<br>
+
+**What do we see in this?**
+
+- **Is this more convincing? Why or why not?**
+
+<br>
+
+SLIDE: What about changes rather than overall averages?
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### Do changes in party control predict changes in democracy one year later?
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+# Find the cases with a change in party control then record the change in democracy
+# 112 cases
+d_changes <- d |>
+  arrange(state, year) |>
+  group_by(state) |>
+  mutate(
+    last_party = lag(party, n = 1),
+    change_party = if_else(lag(party, n = 1) != party, 1, 0),
+    change_democ = lead(democracy_mcmc, n = 1) - democracy_mcmc
+  ) |>
+  select(state, year, last_party, party, change_party, democracy_mcmc, change_democ) |>
+  ungroup() |>
+  filter(change_party == 1)
+
+d_changes |>
+  select(state, year, last_party, party, change_democ) |>
+  ggplot(aes(x = party, y = change_democ)) +
+  geom_boxplot(fill = c("blue3", "grey", "red4"), outliers = FALSE) +
+  theme_bw() +
+  scale_x_discrete(limits = c("Unified Democratic", "Divided Government", "Unified Republican")) +
+  labs(x = "", y = "Change in Democracy Index (1 Year)",
+       caption = "Source: Grumbach (2023)")
+```
+
+::: notes
+
+For these box plots I've focused in on only those cases in the dataset where the party control variable changed
+
+- e.g. the state moved from democratic to divided or divided to republican or the other direction
+
+- I am then plotting the change in democracy score the year after this change in party control
+
+<br>
+
+**Remind me, how do we read a box plot?**
+
+<br>
+
+**And how do we read these specific box plots?**
+
+<br>
+
+SLIDE: Turns out there are some outliers my plot is ignoring...
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### Do changes in party control predict changes in democracy one year later?
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+# Flag the outliers
+out1 <- d_changes |>
+  filter(change_democ < -1.5)
+
+d_changes |>
+  select(state, year, last_party, party, change_democ) |>
+  ggplot(aes(x = party, y = change_democ)) +
+  geom_boxplot(fill = c("blue3", "grey", "red4"), outliers = TRUE) +
+  theme_bw() +
+  scale_x_discrete(limits = c("Unified Democratic", "Divided Government", "Unified Republican")) +
+  labs(x = "", y = "Change in Democracy Index (1 Year)",
+       caption = "Source: Grumbach (2023)") +
+    ggrepel::geom_text_repel(data = out1, aes(label = state), size = 3)
+```
+
+::: notes
+
+There are five cases where the new unified republican government reduced the quality of the state's democracy by so much as to be outside the usual box plot constraints
+
+- e.g. 1.5 x the width of the IQR
+
+<br>
+
+Note: NC went from unified democratic control to divided government in 2011
+
+<br>
+
+**Does this change anything for us?**
+
+- The story is much worse
+
+<br>
+
+**Are we getting closer to a causal argument here?**
+
+<br>
+
+SLIDE: Let's track some states!
+
+:::
+
+
 
 
 
@@ -315,9 +514,9 @@ SLIDE: Let's track across time
 
 ## The State Democracy Index: Missouri {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
-```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
+```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%", eval=TRUE}
 # MO trajectory over time
-d_index |>
+d |>
   ggplot() +
   geom_line(aes(x = year, y = democracy_mcmc, color = state)) +
   geom_line(data = d_mo_index, aes(x = year, y = democracy_mcmc), color = "darkred", linewidth = 1.4) +
@@ -365,7 +564,7 @@ SLIDE: Add some context!
 
 ## The State Democracy Index: Missouri {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
-```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%"}
+```{r, fig.retina=3, fig.asp=.7, fig.align='center', out.width="100%", eval=TRUE}
 # MO trajectory over time
 labs_better <- d_index_2018 |>
   filter(state %in% c("Florida", "Iowa", "Washington", "California", "Colorado")) |>
@@ -379,7 +578,7 @@ labs_worse <- d_index_2018 |>
     year2 = year + .5
   )
 
-d_index |>
+d |>
   ggplot() +
   geom_line(aes(x = year, y = democracy_mcmc, color = state)) +
   geom_line(data = d_mo_index, aes(x = year, y = democracy_mcmc), color = "darkred", linewidth = 1.4) +
@@ -444,7 +643,7 @@ Ok groups, dig into your assigned variable for 2018
 - *PRESENT and DISCUSS each*
 
 
-```{r}
+```{r, eval=FALSE}
 # Best and worst input variables for Missouri in 2018
 d_in |>
   filter(state == "Missouri") |> View()
