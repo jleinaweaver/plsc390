@@ -66,11 +66,9 @@ Write a report **summarizing and evaluating** the current health of American dem
 ::: {.r-fit-text}
 **Do we have a misinformation problem?**
 
-1. Kavanagh and Rich (2018), "Chapter 1 Introduction"
+1. Vraga and Bode (2020)
 
-2. Vraga and Bode (2020)
-
-3. Li and Wagner (2020)
+2. Li and Wagner (2020)
 
 :::
 

@@ -14,7 +14,7 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**II. Contemporary Threats to American Democracy**
 
 1. Defining "misinformation"
 
@@ -31,45 +31,98 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Update attendance list before class
-
-2. Readings
+1. Readings
     - Kavanagh, J., & Rich, M. D. (2018). Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
     - Vraga, E. K., & Bode, L. (2020). Defining Misinformation and Understanding its Bounded Nature: Using Expertise and Evidence for Describing Misinformation. Political Communication, 37(1), 136–144. https://doi.org/10.1080/10584609.2020.1716500
     - Li, J., & Wagner, M. W. (2020). The Value of Not Knowing: Partisan Cue-Taking and Belief Updating of the Uninformed, the Ambiguous, and the Misinformed. Journal of Communication, 70(5), 646–669. https://doi.org/10.1093/joc/jqaa022
 
 <br>
 
+Let's warm up with election news!
 
+- *Open google news and search 'election'*
 
-:::
+- **What's been going on since we last met? Anything noteworthy?**
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+- **Any changes in the stakes we discussed last class?**
 
 <br>
 
-Defining the concepts and giving us a basic model to clarify our thinking about the problem
+SLIDE: Next section of the class
 
-1. Kavanagh and Rich (2018), "Chapter 1 Introduction"
+:::
 
-2. Vraga and Bode (2020)
 
-3. Li and Wagner (2020)
+## Section 2 {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+**Contemporary Threats to American Democracy**
+
+1. Misinformation
+
+2. Polarization
+
+3. Affective Polarization
+
+:::
 
 ::: notes
 
-Avoid overlap, first-come, first-served
+This week we shift into the second half of our class with a focus on contemporary threats to American democracy
 
-Include APA citations with web links!
+- Do we have a problem with misinformation and how big is it?
+
+- How polarized are we in policy and ideological terms?
+
+- Is affective polarization on the rise and what does that mean for us?
+
+<br>
+
+These are all hugely important topics with enormous academic literatures exploring them
+
+- I've selected relevant work from as recent as I could find, e.g. the cutting-edge!
+
+- Useful to see how dynamic and fast this area is expanding
+
+<br>
+
+Today we set the table on misinformation
+
+- What is it precisely?
 
 :::
 
 
 
-## What do we mean by "misinformation"? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Defining Misinformation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+"...misinformation as occurring when 'people hold inaccurate beliefs, and do so confidently'" (Kuklinski, Quirk, Jerit, Schwieder & Rich 2000)
+
+- Ignorance (lack of knowledge)
+
+vs
+
+- Misinformation (confident, yet inaccurate knowledge)
 
 ::: notes
+
+Per the Vraga and Bode (2020) piece
+
+
+
+**GROUPS: Based on the readings, how do we define "misinformation" in the literature?**
+
+- Get ready to report back.
+
+- *DISCUSS*
+
+
+
 
 Compare and contrast Kavanagh and Rich's (2018) concept "truth decay" to the academic treatments in Vraga and Bode (2020) and Li and Wagner (2020)
 
@@ -95,7 +148,11 @@ Compare and contrast Kavanagh and Rich's (2018) concept "truth decay" to the aca
 
 <br>
 
-1. Kavanagh and Rich (2018) "Chapter 5. The Consequences of Truth Decay"
+::: {.r-fit-text}
+
+**How big is the problem?**
+
+1. Kavanagh and Rich (2018) Chapter 5
 
 2. Gawiser and Witt (2006)
 
@@ -103,7 +160,16 @@ Compare and contrast Kavanagh and Rich's (2018) concept "truth decay" to the aca
 
 4. KFF (2023) health misinformation survey
 
+:::
 
 ::: notes
+
+Four short pieces of material to familiarize yourself with before our next class
+
+- The Kavanagh and Rich chapter is all about the consequences of "truth decay"
+
+- The Gawiser and Witt represents a crash course in thinking critically about survey design
+
+- And then the findings of two surveys of the American public with some concerning results
 
 :::
