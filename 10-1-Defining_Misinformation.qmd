@@ -16,9 +16,7 @@ library(readxl)
 
 **II. Contemporary Threats to American Democracy**
 
-1. Defining "misinformation"
-
-2. Evaluating a model of "misinformation"
+- What is the "misinformation" problem?
 
 :::
 
@@ -31,8 +29,9 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Kavanagh, J., & Rich, M. D. (2018). Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
+1. Open the Li and Wagner appendix
+
+2. Open the readings on your computer to discuss
     - Vraga, E. K., & Bode, L. (2020). Defining Misinformation and Understanding its Bounded Nature: Using Expertise and Evidence for Describing Misinformation. Political Communication, 37(1), 136–144. https://doi.org/10.1080/10584609.2020.1716500
     - Li, J., & Wagner, M. W. (2020). The Value of Not Knowing: Partisan Cue-Taking and Belief Updating of the Uninformed, the Ambiguous, and the Misinformed. Journal of Communication, 70(5), 646–669. https://doi.org/10.1093/joc/jqaa022
 
@@ -89,58 +88,359 @@ These are all hugely important topics with enormous academic literatures explori
 
 <br>
 
-Today we set the table on misinformation
+Today we set the table for our explorations of misinformation in the American public.
 
-- What is it precisely?
+- Specifically, my hope is that we can clarify what we mean precisely by misinformation
+
+- SLIDE
 
 :::
 
 
 
-## Defining Misinformation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+:::: {.r-fit-text}
+**Vraga and Bode (2020) on Misinformation**
+
+::: {.fragment}
+1. Define "misinformation"
+
+2. ID the challenges to measuring "misinformation"
+
+:::
+
+::::
+
+::: notes
+
+Let's start with the Vraga and Bode piece in Political Communication from 2020.
+
+- I really appreciate how these authors are trying to bring us up-to-speed on a dynamic literature
+
+- BUT, I'll be honest, it's a bit tough to unpack
 
 <br>
 
-"...misinformation as occurring when 'people hold inaccurate beliefs, and do so confidently'" (Kuklinski, Quirk, Jerit, Schwieder & Rich 2000)
-
-- Ignorance (lack of knowledge)
-
-vs
-
-- Misinformation (confident, yet inaccurate knowledge)
-
-::: notes
-
-Per the Vraga and Bode (2020) piece
 
 
+Work with the people around you and get ready to report back on two things...
 
-**GROUPS: Based on the readings, how do we define "misinformation" in the literature?**
+- REVEAL
 
-- Get ready to report back.
+1. How do these authors define "misinformation"?
 
-- *DISCUSS*
+2. What do we have to keep in mind any time we seek to measure "misinformation" in the public?
 
+<br>
 
-
-
-Compare and contrast Kavanagh and Rich's (2018) concept "truth decay" to the academic treatments in Vraga and Bode (2020) and Li and Wagner (2020)
+SLIDE: Figure 1 and your discussion notes
 
 :::
 
 
 
-## Li and Wagner (2020): The Model {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+::: {.r-fit-text}
+**Vraga and Bode (2020) on Misinformation**
+:::
+
+![](Images/10_1-Vraga_Bode_Fig1.png){style="display: block; margin: 0 auto"}
 
 ::: notes
+
+*DISCUSS*
+
+1. **Based on this reading, define misinformation for me**
+
+2. **What are the specific challenges we need to keep in mind anytime we try to measure "misinformation"?**
+
+<br>
+
+SLIDE: Ok, let's segue to the other article before we move to analysis
+
+<br>
+
+*Notes*
+
+Article proceeds in three basic sections
+
+1. Defining the concepts (although tough to unpack without Figure 1 at end)
+2. The challenges of measuring misinformation
+3. Advice for researchers
+
+<br>
+
+**Definitions**
+
+Common definition 1: Kuklinski, Quirk, Jerit, Schwieder, & Rich (2000): Ignorance vs Misinformation
+
+- Ignorance = lack of knowledge
+- Misinformation = confident, yet inaccurate knowledge
+- So identifying true misinformation requires evaluating BOTH confidence AND accuracy
+
+Common definition 2: Nyhan and Reifler (2010): Misinformation vs Misperceptions
+
+- Misinformation: Getting the facts wrong
+- Misperception: When your beliefs about a fact are "not supported by clear evidence and expert opinion"
+
+**The Challenges of Measuring Misinformation if based on expert consensus and evidence**
+
+1. how should skeptics without evidence be treated? 
+    - In other words, if a study participant believes what at the time is misinformation, but later becomes accurate (or at least, contested), should we classify them the same as someone who is on the wrong side of an issue that never changes?
+
+2. Second, the line between “consensus” and “controversy” is not well defined. If we define misinformation in terms of the best available evidence from experts, as we propose above, what level of certainty or agreement must experts express before we can define what is misinformation or not?
+
+3. A third concern this raises is the ability to study emerging issues, where expert consensus has not yet solidifed and “best evidence” is necessarily evolving.
+
+4. A fourth complication arises when the “best available evidence” at the time is contradictory or speculative.
+
+**A Call for Transaparency**
+
+- Researchers should be able to clearly and transparently answer the following questions:
+    1. What expert consensus exists, if any? 
+    2. Who are the experts in question and based on what criteria can we validate their expertise? 
+    3. How time-sensitive is the study – that is, how much in flux is expert consensus or evidence on the subject? 
+    4. And, of course, how are misinformation and thus individual misperceptions defined in relation to all of these criteria?
+
+- In terms of expertise, information accuracy is most readily recognized when the relevant experts are clear, there is consensus among those experts, and public perceptions of expert bias are low.
+
+- At the top of Figure 1, the lines between accurate information and misinformation are relatively clear: the information either aligns with the experts and the evidence (and is thus considered accurate) or does not (and is thus misinformation). Unfortunately the issues for which the expertise and evidence are both clear and settled – like vaccination or climate change – are relatively rare. Contentious issues – like coffee’s health benefits or the effects of Russian interference in the 2016 election – are more common, and the boundaries between accurate and inaccurate information are also less clear for these issues.
+
+:::
+
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+:::: {.r-fit-text}
+**Li and Wagner (2020) on Misinformation**
+
+1. Define "misinformation"
+
+2. ID the challenges to measuring "misinformation"
+
+::::
+
+::: notes
+
+Let's now jump to the Li and Wagner piece from the same year published in the Journal of Communication
+
+- This article offers us a model of misinformation and reports on a series of experiments meant to test that model
+
+- Before we discuss the experiments, let's talk about the model
+
+- Go!
+
+<br>
+
+SLIDE: Figure 1 and discussion notes
+
+:::
+
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+::: {.r-fit-text}
+**Li and Wagner (2020) on Misinformation**
+:::
+
+![](Images/10_1-Li_Wagner-Fig1.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+*DISCUSS*
+
+1. **Based on this reading, define misinformation for me**
+
+2. **What are the specific challenges we need to keep in mind anytime we try to measure "misinformation"?**
+
+<br>
+
+SLIDE: Compare and contrast models
+
+<br>
+
+*Notes*
+
+**Prior literature makes clear that most Americans are uninformed:**
+
+1. it is often rational for voters to spend little time acquiring political information (Popkin, 1991)
+2. Most citizens hold ideologically unconstrained and inconsistent political beliefs (Converse, 1964)
+3. most Americans seldom recall basic facts about major political issues (Delli Carpini & Keeter, 1996)
+
+**Prior literature suggests the true danger is the misinformed!**
+
+1. the US public holds many "beliefs contrary to the factual evidence on issues"
+2. misinformed individuals not only hold inaccurate beliefs, but also are highly certain of their beliefs (Flynn, Nyhan, & Reifler, 2017)
+
+<br>
+
+The Differential Informedness Model is meant to help us focus on the problem using a series of steps:
+
+1. Belief Presence: First we prune away those who "are truly ignorant of the facts"
+2. Belief Accuracy: Is the answer "consistent with the best available evidence"
+3. Belief Certainty: Is the answer "held confidently"
+
+- The Misinformed: Answers that are certainly held but inconsistent with the evidence
 
 - Three types of individuals: the uninformed, the ambiguous, and the misinformed
+    - Isn't this really four? Also should include the informed, no?
 
 :::
 
 
 
-## Li and Wagner (2020): The Results {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+## Models of Misinformation {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+![](Images/10_1-Vraga-Fig1smaller.png){.absolute left=0 bottom=200 height=275}
+
+![](Images/10_1-Li_Wagner-Fig1.png){.absolute right=0 bottom=50 width=500}
+
+::: notes
+
+**Ok, big picture and based on these readings, can we define misinformation?**
+
+- **Put differently, what is the "problem" of misinformation?**
+
+- (Confidently held beliefs that run counter to the best available evidence / expert consensus)
+
+- (The level of the problem appears to be dependent on the level of expert consensus x the amount of evidence)
+
+<br>
+
+**How hard is it to identify someone who is "misinformed"?**
+
+- **Give me an example of misinformation in the world today that clearly meets these definitions.**
+
+<br>
+
+**What proportion of the lies currently relevant in our election are in the "settled" category? e.g. the biggest threat?**
+
+<br>
+
+SLIDE: Let's examine the experiments run by Li and Wagner to see what they found regarding misinformation in the American public
+
+:::
+
+
+
+## Li & Wagner (2020) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+**Appendix 2: Factual Statements**
+
+- Sources: PolitiFact, FactCheck and Washington Post
+
+- 50 statements selected in 2017
+
+- True (12), Half-true (15), False (23)
+:::
+
+::: notes
+
+I posted the online appendix for the Li and Wagner (2020) piece on Canvas.
+
+- Everybody take a look at the list of "facts" they used in their experiments
+
+- **Is this a good list of facts for identifying misinformation? Why or why not?**
+
+<br>
+
+This list is super arcane!
+
+- I would answer a bunch of these with 'don't know'!
+
+<br>
+
+Funnily enough, that speaks to the value of some of these as tests!
+
+- To confidently claim you know the answer to some of these is really saying something!
+
+<br>
+
+Check out the results reported in Appendix 4
+
+- These stacked bar plots show the breakdown of evaluations in each survey experiment
+
+- Blue is the proportion misinformed (don't know), green is informed and red is misinformed
+
+<br>
+
+**See Figure 1: Which statements had the most "uninformed" responses (e.g. don't know)?**
+
+- **What do we learn about a respondent who confidently gives the wrong answer to these most difficult statements?**
+
+<br>
+
+**See figure 3: Which statements had the most informed responses?**
+
+- **Did you know all of these?**
+
+<br>
+
+**See Figure 2: What is it about these statements that explains why misinformed is the biggest group?**
+
+<br>
+
+SLIDE: Results
+
+:::
+
+
+
+## Li and Wagner (2020): Study 1 {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.align='center', fig.retina=3, fig.asp=.7}
+tab1 <- tibble(
+  groups1 = c("Informed", "Uninformed", "Misinformed", "Ambiguous"),
+  rates1 = c(.2, .4, .27, .13)
+)
+
+tab1 |>
+  ggplot(aes(x = groups1, y = rates1)) +
+  geom_col(fill = c("green3", "dodgerblue", "red3", "orange2"), width = .7) +
+  geom_hline(yintercept = seq(.1, .3, .1), color = "white") +
+  theme_bw() +
+  labs(x = "", y = "Proportions",
+       title = "Study 1 results: An uninformed rather than misinformed citizenry") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_discrete(limits = c("Informed", "Uninformed", "Ambiguous", "Misinformed"))
+```
+
+::: notes
+
+Study 1 Results
+
+- Individuals are more likely to be uninformed or ambiguous rather than misinformed about the truthfulness of statements without a partisan source attached
+
+- Informed rate is 20%
+
+- Uninformed rate is 40%
+
+- Misinformed rate is 27%
+
+- Ambiguous rate is 13% (8% incorrect, 5% correct)
+
+<br>
+
+There's a lot more in this paper and they test some more complex mechanisms, but I want to circle back to our definitional work for today
+
+1. **Is this a good measure of misinformation in the American public? Why or why not?**
+
+2. **Does this result comfort or disturb you? e.g. 67% wrong due to ignorance or misinformation**
+
+<br>
+
+*If time remains you can get into the partisan cues and more complex mechanisms examined in Study 2*
+
+:::
 
 
 
@@ -150,7 +450,7 @@ Compare and contrast Kavanagh and Rich's (2018) concept "truth decay" to the aca
 
 ::: {.r-fit-text}
 
-**How big is the problem?**
+**How big is the misinformation problem?**
 
 1. Kavanagh and Rich (2018) Chapter 5
 

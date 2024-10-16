@@ -14,9 +14,9 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**II. Contemporary Threats to American Democracy**
 
-1. Exploring the current evidence of misinformation?
+- How serious is the "misinformation" problem?
 
 :::
 
@@ -29,9 +29,7 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Update attendance list before class
-
-2. Readings
+1. Readings
     - Kavanagh, J., & Rich, M. D. (2018). Chapter 5 The Consequences of Truth Decay. In Truth Decay: An Initial Exploration of the Diminishing Role of Facts and Analysis in American Public Life. RAND Corporation. https://www.rand.org/pubs/research_reports/RR2314.html
 
     - Gawiser, S. R., & Witt, G. E. (2006). 20 Questions A Journalist Should Ask About Poll Results (3rd Edition). The National Council on Public Polls. https://ropercenter.cornell.edu/media-usage-guide-20-questions-journalist-should-ask-about-poll-results
@@ -42,39 +40,311 @@ Prep for Class
     - Lopes, L., Kearney, A., Washington, I., Valdes, I., Yilma, H., & Hamel, L. (2023, August 22). KFF Health Misinformation Tracking Poll Pilot. KFF. https://www.kff.org/coronavirus-covid-19/poll-finding/kff-health-misinformation-tracking-poll-pilot/
         - And survey link: https://files.kff.org/attachment/Topline-KFF-Health-Misinformation-Tracking-Poll-Pilot-August-2023.pdf
 
+<br>
+
+<br>
+
+Let's warm up with election news!
+
+- *Open google news and search 'election'*
+
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
 
 :::
 
 
 
+## Models of Misinformation {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
 
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+![](Images/10_1-Vraga-Fig1smaller.png){.absolute left=0 bottom=200 height=275}
 
-<br>
-
-1. Kavanagh and Rich (2018) "Chapter 5. The Consequences of Truth Decay"
-
-2. Gawiser and Witt (2006)
-
-3. YouGov survey (2023) on belief in conspiracy theories
-
-4. KFF (2023) health misinformation survey
+![](Images/10_1-Li_Wagner-Fig1.png){.absolute right=0 bottom=50 width=500}
 
 ::: notes
 
-Current evidence of misinformation?
-1. What are the consequences? Why do we care?
-- Discuss Ch 5 in Kavanagh and Rich 2018
-2. Crash course in data (and surveys)
-- Moving from concept to data requires operationalization, instrumentation, measurement
-- Surveys add their own complications (question wording, question ordering) 
-- Yes, Minister clip!
-- Check old data analysis class slides (2018FA 08-2, 2019FA 06-2, ??? you have a more recent version of this material. What class was that??? Political violence has a slide in 2023FA 04-3 that is good one page summary)
-- Extrapolating from sample to population requires thoughtful case selection / sampling technique
-3. How serious a problem are the results in the YouGov survey?
-- Evaluate design, sampling and results
-4. How serious a problem are the results in the KFF survey?
-5. What are the consequences of these beliefs? 
+What are our takeaways from the work last class?
+
+<br>
+
+**How do we define misinformation?**
+
+- (Confidently held beliefs that run counter to the best available evidence / expert consensus)
+
+- (The level of the problem appears to be dependent on the level of expert consensus x the amount of evidence)
+
+<br>
+
+**Give me an example of misinformation in the world today that clearly meets these definitions.**
+
+<br>
+
+Today I want us to explore evidence that speaks to the magnitude of this problem
+
+- SLIDE: Let's start with the Kavanagh and Rich (2018) chapter
+
+:::
+
+
+
+## Kavanagh and Rich (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+**Truth Decay in Four Trends:**
+
+::: {.incremental}
+
+1. Increasing disagreement about facts and analytical interpretations of facts and data
+
+2. A blurring of the line between opinion and fact
+
+3. The increasing relative volume, and resulting influence, of opinion and personal experience over fact
+
+4. Declining trust in formerly respected sources of factual information
+
+:::
+
+::: notes
+
+The Kavanagh and Rich book is the result of a research project hosted by the Rand Corporation
+
+- Rand is a think-tank that historically has focused on security and military issues for the US government
+
+<br>
+
+This book is titled Truth Decay
+
+- The big picture aim of the project is to "Restore the Role of Facts and Analysis in Public Life"
+
+- The authors define truth decay as four trends they see operating in America today
+
+- REVEAL x 4
+
+<br>
+
+**How does "truth decay" compare to our definitions of "misinformation" from the literature?**
+
+- **How similar? How different?**
+
+<br>
+
+SLIDE: The consequences
+
+:::
+
+
+
+## Kavanagh and Rich (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+**The Consequences of Truth Decay**
+
+1. Erosion of Civil Discourse (192-199)
+
+2. Political Paralysis (199-207)
+
+3. Alienation and Disengagement (207-216)
+
+4. Policy Uncertainty (216-221)
+
+:::
+
+::: notes
+
+Chapter 5 lays out these four consequences of truth decay
+
+<br>
+
+GROUPS (x4)
+
+- *Assign one consequence to each group*
+
+<br>
+
+GROUPS, I'd like you to evaluate two aspects of your assigned consequence
+
+- SLIDE
+
+:::
+
+
+
+## Kavanagh and Rich (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+**The Consequences of Truth Decay**
+
+- Erosion of Civil Discourse, Political Paralysis, Alienation and Disengagement, Policy Uncertainty
+
+**Are you convinced:**
+
+1. This is **actually** happening?
+
+2. It is caused **primarily** by misinformation?
+
+
+::: notes
+
+Get ready to report back your evaluations
+
+- **Questions on the assignment?**
+
+<br>
+
+*PRESENT and DISCUSS each*
+
+<br>
+
+**What stands out here as the most pressing problem for America today?**
+
+<br>
+
+**To what degree do we believe that addressing the misinformation problem will correct these problems?**
+
+<br>
+
+The other two pieces of evidence on isinformation I want us to consider today is survey data
+
+- SLIDE: Quick tangent on survey data
+
+:::
+
+
+## Gawiser and Witt (2006) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+![](Images/10_2-gawiser_20qs.png)
+
+::: notes
+
+Thus far this semester we have focused our evaluations of methodologies on data projects all aiming to measure democracy using expert analyses
+
+- For each of those we focused on the challenge of moving from a concept to a measurement
+
+- Included: Conceptual definitions, operationalizations, instrumentation and the process of actual measurement
+
+<br>
+
+Surveys add EVEN MORE complications!
+
+- Who gets asked, how they get asked, the order of the questions, and on and on
+
+<br>
+
+Survey design is a deep specialty that we won't have the time to deeply explore
+
+- HOWEVER, I think this piece by Gawiser and Witt offers very useful advice for being careful when reading survey results
+
+<br>
+
+**Any questions on the "20 Questions" proposed here to guide your analyses?**
+
+<br>
+
+*NOTES*
+
+[LINK](https://ropercenter.cornell.edu/sites/default/files/pdf/20%20Questions%203rd%20edition_Web%20ver_2006.pdf)
+
+1. Who did the poll?
+2. Who paid for the poll and why was it done?
+3. How many people were interviewed for the survey? 
+4. How were those people chosen?
+5. What area (nation, state, or region) or what group (teachers, lawyers, Democratic voters, etc.) were these people chosen from?
+6. Are the results based on the answers of all the people interviewed?
+7. Who should have been interviewed and was not? Or do response rates matter?
+8. When was the poll done?
+9. How were the interviews conducted?
+10. What about polls on the Internet or World Wide Web?
+11. What is the sampling error for the poll results?
+12. Who’s on first?
+13. What other kinds of factors can skew poll results?
+14. What questions were asked?
+15. In what order were the questions asked?
+16. What about "push polls"?
+17. What other polls have been done on this topic? Do they say the same thing? If they are different, why are they different?
+18. What about exit polls?
+19. What else needs to be included in the report of the poll?
+20. So I've asked all the questions. The answers sound good. Should we report the results?
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+:::{.r-fit-text}
+**Belief in Conspiracy Theories (Orth 2023)**
+:::
+
+![](Images/10_2-YouGov_Conspiracy2.png){.absolute left=75 width=420}
+
+![](Images/10_2-YouGov_Conspiracy.png){.absolute right=75 width=430}
+
+::: notes
+
+*YouGov survey (2023) on belief in conspiracy theories*
+
+<br>
+
+Everybody take a look at the YouGov survey on Americans' beliefs in conspiracy theories
+
+- Get ready to report back on two things
+
+1. How big is the problem?
+
+2. How confident are you in these estimates of the size of the problem?
+
+<br>
+
+*DISCUSS*
+
+:::
+
+
+
+## Health Misinformation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+**(Lopes, Kearney, Washington, Valdes, Yilma & Hamel 2023)**
+
+![](Images/10_2-KFF_Figure1.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+KFF Health Misinformation Tracking Poll Pilot
+
+- There is **SO MUCH GOOD STUFF** here to explore
+
+<br>
+
+GROUPS, dig into the results and call out results that catch your eye!
+
+- **What stands out here as surprising?**
+
+<br>
+
+**How big is the misinformation problem measured by this survey?**
+
+<br>
+
+SLIDE: touching base on American democracy
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### Should we add measures of the spread of misinformation to our criteria for evaluating the health of American democracy?
+
+::: notes
+
+**Why or why not?**
 
 :::
 
@@ -84,12 +354,31 @@ Current evidence of misinformation?
 
 <br>
 
-1. Pennycook, Cannon and Rand (2018) on repetition
+1. Pennycook, Cannon and Rand (2018). Prior exposure increases perceived accuracy of fake news. *Journal of Experimental Psychology: General*, 147(12), 1865–1880.
 
-2. Lyons et al (2021) on overconfidence
-
-3. Lyons appendix which has their survey questions for us to evaluate: Are these good tests of knowledge? Of misinformation?
+2. Canvas Assignment: Repetition and Misinformation
 
 ::: notes
 
+Next week, theories of misinformation!
+
+<br>
+
+Gordon Pennycook, Tyrone D. Cannon, and David G. Rand (2018). “Prior exposure increases perceived accuracy of fake news.” Journal of Experimental Psychology: General 147(12): 1865–1880. 
+
+<br>
+
+Repetition and Misinformation: 
+
+- Find us an example from the ongoing election dynamics of someone using repetition to spread misinformation. 
+
+- Provide the APA citation and explain your example.
+
+
 :::
+
+
+
+
+
+
