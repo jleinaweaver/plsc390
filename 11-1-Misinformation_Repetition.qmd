@@ -14,10 +14,9 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**II. Contemporary Threats to American Democracy**
 
-1. Theories of Misinformation: Psychology
-    - Repetition and Overconfidence
+- Theories of Misinformation: Repetition
 
 :::
 
@@ -30,109 +29,401 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Update attendance list before class
+1. Review Canvas submissions
+    - Repetition and Misinformation: Find us an example from the ongoing election dynamics of someone using repetition to spread misinformation. Provide the APA citation and explain your example.
 
 2. Readings
-    - Gordon Pennycook, Tyrone D. Cannon, and David G. Rand (2018). “Prior exposure increases perceived accuracy of fake news.” Journal of Experimental Psychology: General 147(12): 1865–1880. https://static1.squarespace.com/static/51ed234ae4b0867e2385d879/t/5c0b718d352f539a3059adb9/1544253851708/2018+Pennycook+-+JEPG.pdf
+    - Gordon Pennycook, Tyrone D. Cannon, and David G. Rand (2018). “Prior exposure increases perceived accuracy of fake news.” Journal of Experimental Psychology: General 147(12): 1865–1880.
     
-    - Benjamin A. Lyons, Jacob M. Montgomery, Andrew M. Guess, Brendan Nyhan, and Jason Reifler (2021). “Overconfidence in news judgments is associated with false news susceptibility.” Proceedings of the National Academy of Sciences June 8, 2021 118 (23) e2019527118.
-https://www.pnas.org/doi/10.1073/pnas.2019527118
+<br>
+
+Let's warm up with election news!
+
+- *Open google news and search 'election'*
+
+- **What's been going on since we last met? Anything noteworthy?**
+
+- **Any changes in the stakes we discussed last class?**
+ 
+:::
+
+
+
+## The Threat of Misinformation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+1. How big is the threat?
+
+2. How serious is the threat?
+
+:::
+
+::: notes
+
+Last week we began exploring our first big contemporary problem: Misinformation
+
+<br>
+
+**What were your takeaways from our work last week?**
+
+<br>
+
+- Challenges to measuring misinformation?
+
+- Challenges to identifying misinformation in the American public?
+
+- Possible impacts of misinformation: 1. Erosion of Civil Discourse, 2. Political Paralysis, 3. Alienation and Disengagement, 4. Policy Uncertainty
+
+<br>
+
+Our work for this week is to explore the academic literature that aims to explain how misinformation works
+
+- We need theories!
+
+<br>
+
+Our plan for today is to explore the research article and then use it as a jumping off point to discuss the examples you submitted to Canvas
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+![](Images/11_1-Pennycook-header.png)
+
+::: notes
+
+**Kick us off with, what is the research question this article attempts to answer?**
+
+- (RQ: How do people come to believe stories that are patently and demonstrably untrue? (1866))
+
+<br>
+
+**Do these researchers make an effective argument that this is an important question? How specifically?**
+
+- (Nice opening section on why we should care about misinformation)
+
+<br>
+
+**Ok, what is the big, terrifying central conclusion of this research paper?**
+
+- **What is the "illusory truth effect"?**
+
+- (SLIDE)
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+![](Images/11_1-Illusorytrutheffect.avif)
+
+::: notes
+
+The key causal mechanism being studied here is called the "illusory truth effect"
+
+- In short, frequently repeated lies come to sound like truth over time
+
+<br>
+
+More technically, this effect is scary because it abuses two very useful aspects of your learning
+
+<br>
+
+FIRST, your brain is designed to adapt to the messages you hear the most frequently
+
+- In other words, you are wired to develop fluency in the messages you hear the most often
+    
+- This is why it is easier to learn a foreign language in the country that uses that language
+
+- Being surrounded by the language rewires your brain more quickly
+
+<br>
+
+SECOND, your brain tends to assume that the messages you are fluent in are useful 
+
+- e.g. Fluency serves as a heuristic device to infer accuracy (p1866)
+
+<br>
+
+In other words, hearing a lie repeated over and over rewires your brain to recognize the idea, AND
+
+- The easier it is for you to recognize an idea, the more likely you are to assume it is true!
+
+<br>
+
+IMO this is a terrifying conclusion and a serious concern for those of us worried about the health of our democracy
+
+<br>
+
+The aim of this paper is to test two boundary conditions for this effect
+
+1. Does extreme implausibility stop you from believing repeated lies?
+
+2. Does the motivated reasoning of partisanship prevent the illusory truth effect?
+
+<br>
+
+SLIDE: Let's examine the experiments!
+
+:::
+
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+**Study 1: Extreme Implausibility Boundary Condition**
+
+- p1867-1868
+:::
+
+::: notes
+
+**Ok, what do we learn from their first experiment?**
+
+- **What do they conclude and are you convinced by what they did? Why or why not?**
+
+<br>
+
+- Final sample size of 409
+    - excluding 51 dropping out, 50 admitting they answered randomly, 24 searched online for info, 32 didn't complete the two parts
+    
+- SLIDE: "Facts" on next slide
+    - 4 implausible lies, 4 known truths and 20 items sampled from list of "largely unknown facts"
+    
+- Surveying Procedure
+    1. Half of items ("facts") presented in "familiarization stage" where respondents asked to rate the "interestingness" of each fact on a 1-6 scale; means some of the "facts" have been heard or considered before being evaluated
+    2. 2 minutes of "filler" questions, e.g. demographics
+    3. Accuracy portion: "assess the accuracy of the statements on a 6-point scale ranging from 1 (definitely false) to 6 (definitely true)"
+    4. Questions to check quality of responses (did you google anything? did you answer randomly? etc)
+
+- Results two slides away
+
+:::
+
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+**Study 1: Extreme Implausibility Boundary Condition**
+:::
+
+![](Images/11_1-Pennycook-TableA1.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+**Good selection of "facts" that mix known vs unknown and true vs false?**
+
+<br>
+
+SLIDE: Results
+
+:::
+
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+**Study 1: Extreme Implausibility Boundary Condition**
+:::
+
+![](Images/11_1-Pennycook-Table2.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+**Questions on reading the results in Table 2?**
+
+<br>
+
+- Accuracy questions 1-6 scale (from "definitely false" to "definitely true")
+
+- Idea here is to compare the group means
+
+- Is there a difference in level of perceived accuracy between "facts" respondent hears for the first time ("Novel") vs those they already considered as interesting or not at the beginning of the survey ("Familiarized")?
+
+<br>
+
+Start with the "known facts"
+
+- e.g. the obviously true (there are > 50 stars in the universe) and the obviously false (Earth is not a perfect square)
+
+- Essentially there is NO DIFFERENCE in accuracy ratings between new and repeated facts
+
+<br>
+
+BUT, when the "facts" are unknown the simple act of repetition increased perceived accuracy!
+
+<br>
+
+**Takeaways for us?**
+
+<br>
+
+Scary!
+
+- And this was a SUPER mild treatment!
+
+- It's not like the respondents have been hearing the lies repeated ad nauseum for years, just introduced to them a few minutes prior as interesting or not
+
+:::
+
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+**Study 2: Fake News**
+
+![](Images/11_1-Pennycook-TableA3A4.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+**What do you think of the "fake news" definition employed in the paper?**
+
+- ("Fake news" defined (p1865): "...news stories that were fabricated (but presented as if from legitimate sources) and promoted on social media to deceive the public for ideological and/or financial gain (Lazer et al., 2018).")
+
+<br>
+
+**Good examples of this here? Why or why not?**
+
+<br>
+
+Process this time mirrors the first but three-stage experiment with a few tweaks (1869)
 
 :::
 
 
 
 
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 <br>
 
-1. Pennycook, Cannon and Rand (2018) on repetition
+**Study 2: Fake News**
 
-2. Lyons et al (2021) on overconfidence
-
-3. Lyons appendix which has their survey questions for us to evaluate: Are these good tests of knowledge? Of misinformation?
+![](Images/11_1-Pennycook-Figure2.png){style="display: block; margin: 0 auto"}
 
 ::: notes
 
-- Both articles are fairly short, describe survey experiments and extrapolate out
-- In class explore the articles (Research question, theory, data and analysis) then extrapolate to current election and tease out policy design to address it: what does this mean we can do about it?
-- End class by connecting these arguments to the current election
+**Ok, what do we learn from their second experiment?**
 
-Save for Class (data figures):
-Michael Barthel, Amy Mitchell and Jesse Holcomb (2016). “Many Americans Believe Fake News Is Sowing Confusion.” Pew Research Center, December 15, 2016.
-- The Pew Report is very accessible and paints a picture of Americans suspicious of fake news and way too confident in their own ability to spot and ignore it
+- **What do they conclude and are you convinced by what they did? Why or why not?**
 
-Gordon Pennycook, Tyrone D. Cannon, and David G. Rand (2018). “Prior exposure increases perceived accuracy of fake news.” Journal of Experimental Psychology: General 147(12): 1865–1880. 
+<br>
 
-Nice opening section on why we should care about misinformation
+Figure 2, Panel B
 
-RQ: How do people come to believe stories that are patently and demonstrably untrue? (1866)
+- Note how the distribution of accuracy evaluations flattens for "familiar" "facts"
 
-“Fake news” defined (p1865): “…news stories that were fabricated (but presented as if from legitimate sources) and promoted on social media to deceive the public for ideological and/or financial gain (Lazer et al., 2018).”
+- The shift to the right (more perceived accuracy) is unmistakable
 
-Causal mechanism: Prior Exposure  
-- The “illusory truth effect”: Repetition eases processing (i.e. processing fluency) and that fluency comes to serve as a heuristic device to infer accuracy (p1866)
+<br>
 
-Authors suggest two boundary conditions that may reduce the power of the repetition effect  
-1. Fake news is often implausible  
-2. Fake news is highly partisan and motivated reasoning may work internally to a respondent to deny its acceptance
+Figure 2, Panel A
 
-Experiment 1 (1867-1868): Extreme implausibility limits the illusory truth effect  
-- Repetition works if the truth of the “fact” is unknown to the respondent
+- Flagging the "lies" by fact checkers DIDN'T help!
 
-Experiment 2 (1868-1871): A SINGLE prior exposure boosts perceived accuracy for both fake and real news.  
+- Flagged lies got lower scores overall BUT the difference remains
+
+- The illusory truth effect in practice!
+
+<br>
+
+**Takeaways for us?**
+
+<br>
+
+A SINGLE prior exposure boosts perceived accuracy for both fake and real news.  
+
 - This works even if a) the fake news is flagged (fact checking), b) the news conflicts with your partisan view of the world, and c) when focused on stories perceived as unknown during the “familiarity stage” of the experiment.
 
-Experiment 3 (1871-1874): The effect of repetition persists over time (1 week later) and increases with additional repetition of the treatment
+<br>
 
-General Discussion (1874-1875)  
+SLIDE: Political valence results
+
+:::
+
+
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+**Study 2: Fake News**
+
+![](Images/11_1-Pennycook-Table3.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Tougher table to disentangle but the key here is that the difference between "familiar" and "novel" "facts" is significant in all conditions
+
+- Just hearing about a "fact" prepares you to believe it!
+
+:::
+
+
+
+
+## Pennycook, Cannon & Rand (2018) {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+**Study 3: Fake News, 1-Week Interval**
+
+![](Images/11_1-Pennycook-Figure3.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Last study before we bring this into our discussion of the election
+
+- **What is the takeaway from experiment three?**
+
+<br>
+
+The effect of repetition **persists** over time (1 week later), AND **increases** with additional repetition of the treatment
+
 - Small effect after the first repetition (EXPLORE THIS IN CLASS)  
+
 - Scary that this effect works even when we aren’t aware of the exposure! Suggests that this fluency effect is powerful and may be subconscious  
+
 - The effect is NOT countered by by motivated reasoning  
+
 - Fact checking may help BUT it does not outweigh the effect of the repetition
 
+<br>
 
+Ok, connect these dots for me to the cases you submitted to Canvas for today
 
+- **Who has an example of these dynamics at play in the current election?**
 
-Benjamin A. Lyons, Jacob M. Montgomery, Andrew M. Guess, Brendan Nyhan, and Jason Reifler (2021). “Overconfidence in news judgments is associated with false news susceptibility.” Proceedings of the National Academy of Sciences June 8, 2021 118 (23) e2019527118.
-https://www.pnas.org/doi/10.1073/pnas.2019527118
+<br>
 
-Why do we care?
-- However, though Americans believe confusion caused by false news is extensive, relatively few indicate having seen or shared it
+Bottom-line:
 
-RQ: How pervasive is overconfidence? Is overconfidence related to false news exposure? Are overconfident individuals actually more likely to hold misperceptions or share false stories?
-1. To what extent will people who are least accurate at distinguishing between legitimate and false
-news overrate their ability to distinguish mainstream from false news?
-2. Is overconfidence in one’s ability to distinguish mainstream from false news positively related to false news exposure?
-3. (1) Is overconfidence positively related to holding misperceptions on specific topics? (2) Is this relationship stronger when the claim is politically congenial?
-4. (1) Is overconfidence positively related to self-reported willingness to like or share false content? (2) Is this relationship stronger when the claim is politically congenial?
+1. **How much trouble are we in?**
+    - **How susceptible are you to this illusory truth effect?**
 
-Bottom line: Our results paint a worrying picture. The vast majority of respondents (about 90%) reported that they are above average in their ability to discern false and legitimate news headlines, meaning that many Americans substantially overestimate their abilities. Accordingly, people’s self-perceptions are only weakly correlated with actual performance. Further, using data measuring respondents’ online behavior, we show that those who overrate their ability more frequently visit websites known to spread false or misleading news (1).
+2. **What can we do to protect ourselves?**
 
-Prior Research on p2: Who Spreads False News? 1) Partisanship / motivated reasoning, 2) information literacy skills matter, 3) analytical not emotional thinking
-
-This paper seems to spread the theory in the section(s) that pitches each research question. Let's unpack it... All if it seems to hinge on the the Dunning–Kruger Effect (DKE)
-- Generally speaking, poor performers in social and intellectual domains tend to be unaware of their own deficiency whereas competent performers slightly underestimate their own ability relative to others
-- Poor performers suffer from a double bind: Not only does a lack of expertise produce errors in the first place, it also prevents recognition of these errors and awareness of others’ capabilities.
-- To begin, we expect a positive association between overconfidence and visits to false news websites. The DKE implies less ability to discern which news stories are false when an individual is exposed (e.g., on a social media platform) combined with lesser awareness of this discernment deficiency, which would lead to greater incidental exposure to false news stories.
-- Similarly, overconfidence may be seen as a form of invulnerability bias in which assumed mastery leads people to feel little need to take preventative actions (e.g., to be cautious or
-engage in deliberate thinking about which sites one visits), which may produce additional exposure to questionable media messages (28, 29).
-- high confidence is associated with less reflection. As a result, people who are overconfident may be more willing to accept false claims and to engage with false content in the form of liking or sharing these stories
-- individuals are generally more likely to believe false claims when they are consistent with their own prior political beliefs
-
-Definitely review the survey questions in the appendix
-
-Results p3-6; tons to discuss
-
-Discussion conclusions p7
-- "We find that respondents tend to think they are better than the average person at news discernment, and perceived ability is only weakly associated with actual ability, with the worst performers also being the most overconfident. Importantly, overconfidence is associated with a range of normatively troubling outcomes, including visits to false news websites in online behavior data. The overconfident also express greater willingness to share false headlines and are less able to discern between true and false statements about contemporaneous news events. Notably, the overconfident are particularly susceptible to congenial false news. These results suggest that overconfidence may be a crucial factor for explaining how false and low-quality information spreads via social media."
-- "Targeting these overconfident individuals could be an important step toward reducing misinformation on social media sites, though how best to do so remains an open question."
-- "Most critically, our analyses are correlational and, thus, face concerns about endogeneity. ... For instance, habitual exposure to false news might lead to poorly calibrated estimates of one’s ability to detect it, especially given the tendency for people to treat incoming information as true and the subsequent effects this can have on feelings of fluency (54). Overconfidence and false news engagement could even mutually reinforce one another over time (55)."
-
-
-
-
+3. **Is being concerned about the spread of misinformation a partisan issue or not?**
 
 
 :::
@@ -143,11 +434,13 @@ Discussion conclusions p7
 
 <br>
 
-1. ASSIGNMENT - Bring a case from the current election that illustrates any of the dynamics discussed in the readings for today (e.g. paranoia, conspiracy theories, elites promoting these kinds of ideas)
+::: {.r-fit-text}
+**How widespread is the fake news problem?**
+:::
 
-2. Oliver and Wood (2014) on paranoia and belief in conspiracies
+1. Barthel, Mitchell & Holcomb (2016). "Many Americans Believe Fake News Is Sowing Confusion." *Pew Research Center*
 
-3. Clayton et al (2021) on elite cues
+2. Lyons, Montgomery, Guess, Nyhan & Reifler (2021). "Overconfidence in news judgments is associated with false news susceptibility." *Proceedings of the National Academy of Sciences*
 
 
 ::: notes

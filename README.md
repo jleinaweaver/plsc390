@@ -38,13 +38,11 @@ Data, slides and errata for my class at Drury University (PLSC 390: The Policy L
 
 10-2-Consequences_of_Misinformation.html
 
-10-2-Inequality.html
-
 11-1-Misinformation_Repetition.html
 
 11-2-Misinformation_Overconfidence.html
 
-12-1-Election_Predictions.html
+12-1-Is_Voting_Rational.html
 
 12-2-Election_Aftermath.html
 
