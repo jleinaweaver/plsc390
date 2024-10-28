@@ -159,6 +159,8 @@ Today I'll walk you through one particular model by Edlin, Gelman and Kaplan in 
 
 - &#916;U = B − c
 
+- &#916;U = pB − c
+
 :::
 :::
 
@@ -168,61 +170,37 @@ We'll start by attacking this with a simple assumption
 
 - REVEAL: We expect an individual to vote when the perceived benefits of voting exceed the costs of voting
 
-- REVEAL: We can convert this into a simple algebraic formula
+<br>
 
-- REVEAL: We can then replace these words with symbols
+REVEAL: Let's now present this as a complete equation without an inequality
+
+- This presents the idea as the benefits minus the costs
     
-    - U = utility or the total amount of satisfaction you get from doing something
+- If the result is greater than zero then we expect you to vote
     
-    - The delta refers to the change in the variable (e.g. the change in utility) and we use this because these are probabilities not certainties
+<br>
+
+REVEAL: Let's now use symbols for these ideas and root it in the concept of your utility
     
-    - B = the benefits of voting
+- B = the benefits of voting
     
-    - c = the costs of voting
+- c = the costs of voting
+
+- "Utility" is a concept commonly used in economics to represent the total amount of satisfaction you get from doing something or consuming something
+
+- The delta before `U` represents the relative utility of voting
+
+- Put it all together and this says we expect your likelihood to vote increases with the size of this difference
 
 <br>
 
-So, our simple model here expects your utility of voting to be sensitive to both the benefits and the costs of voting
-
-- If the benefits exceed the costs then you are more likely to vote
-
-- **Fair place to start?**
-
-<br>
-
-**Per your arguments on Canvas, what are examples of the specific costs and benefits that fit into this formula?**
-
-- Benefits = Pride? Policy specifics? etc.
-
-- Costs = getting informed, going to poll, etc.
-
-<br>
-
-SLIDE: Add more to the formula
-
-:::
-
-
-
-## When should I vote? {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
-
-<br>
-
-::: {.r-fit-text}
-
-&#916;U = pB − c
-
-:::
-
-::: notes
-
-Here I am adding a new variable to the model
+REVEAL: One more change and we arrive at the basic rational-choice model of voting and political participation (*see Blais 2000 for overview and references*)
 
 - The benefits assume that your preferred candidate wins, but that's not a guarantee.
 
 - So, `p` is the probability that your vote is decisive in the election
 
-- `p` is a probability running from 0 to 100%.
+- `p` is a probability running from 0 to 100%
 
 <br>
 
@@ -230,169 +208,225 @@ Here I am adding a new variable to the model
 
 - (They get smaller!)
 
-<br>
-
-**So, let's say you have a 50% chance of casting the decisive vote, how much does this shrink your "benefits of voting" by?**
-
-- Half!
-
-- **Everybody understand this?**
+- So, if your likelihood of being THE decisive vote (e.g. the vote that wins the election) is tiny then your benefits of voting shrink to almost nothing!
 
 <br>
 
-**So, when should you vote according to this model?**
-
-- Vote if ∆U > 0, Don’t vote if ∆U < 0.
-
-- When the B is big.
-
-- When the c is small.
-
-- When the p is close to 1.
+**Questions on the basic model here?**
 
 <br>
 
-**Are we clear on all these?**
+Blais, A. 2000. To Vote or Not to Vote: The Merits and Limits of Rational Choice Theory. University of Pittsburgh Press.
 
-<br>
-
-SLIDE: Let's go deeper
 :::
 
 
 
-## When should I vote? {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
-
-<br>
+## A Basic Rational-choice Model of Voting and Participation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 ::: {.r-fit-text}
 
-&#916;U = pB − c
+$$\Delta U = pB − c$$
 
 :::
 
 ::: notes
 
-Formal models are especially useful for helping us identify testable hypotheses. 
+In sum, the basic rational-choice model of voting and political participation expects your utility of voting to be sensitive to the benefits of voting, the costs of voting and the likelihood that YOUR vote will decide the election
+
+- Let's use this model to identify hypotheses that predict voting behavior
 
 <br>
 
-**Refresh my memory, what is the difference between a theory and a hypothesis?**
+Expectation 1: The bigger the benefits of voting (`B`) the more likely voting returns a positive utility
 
-- **Is this (point to the model) a theory or a hypothesis?**
-
-<br>
-
-- Theory is a causal story that explains how the world works
-
-- A hypothesis is a falsifiable, testable implication of the theory
-
-- In other words, if the world works like this model, then the hypotheses are the specific things we should see in the world
+- **What characteristics of a state or an election should be associated with larger benefits of voting?**
 
 <br>
 
-So, this model is our theory of voting. Let’s figure out what the testable implications of it are.
+1. The more you "like" the candidate and want them to be the leader
+
+2. The bigger the differences between the candidates (ideology, policy promises, temperament, etc)
+
+3. Electoral systems that give us more parties (proportional representation > majoritarian) should increase the likelihood you "like" one of them or the differences between them are large!
 
 <br>
 
-**Focus on p, what state characteristics should tell us the size of this variable?**
+Expectation 2: The smaller the costs of voting (`s`) the more likely voting returns a positive utility
 
-- (Population size? So, big states should see smaller turnout.)
-
-- (Anticipated closeness of the election? So, tight races should increase turnout.)
+- **What characteristics of a state or an election should be associated with smaller costs of voting?**
 
 <br>
 
-**Focus on B, what kinds of state characteristics should increase B?**
+- Policies to reduce the obstacles to voting: postal voting, weekend voting, election day as national holiday, easier ballots to read and use, more assistance for people who need help, same day registration
 
-- (When the candidates are very different from each other; ideological distance)
+- Policies to increase the obstacles to voting: strict voter ID, early registration deadlines, long election day lines
 
 <br>
 
+Expectation 3: The greater the likelihood that your vote will be decisive (`p`) the more likely voting returns a positive utility
+
+- **What characteristics of a state or an election should be associated with a larger probability of being decisive?**
+
+<br>
+
+1. The smaller the size of the population the better chance your vote will be the important one!
+
+2. the closer the election is anticipated to be the better chance your vote will be the important one!
+    - Tight races should increase turnout.
+
+<br>
+
+**Are we clear on all these?**
+
+- **What do these predictions tell us to expect in our election today?**
+
+<br>
+
+SLIDE: Let's develop this model further
+:::
 
 
 
+## A Basic Rational-choice Model of Voting and Participation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
+::: {.r-fit-text}
 
-- Draw simple, 1-d line. 5% income tax to 95% income tax. If the two candidates are distant from each other the likely policy made will mean much bigger stakes than if they are next to each other.
+$$\Delta U = pB − c$$
 
-So, what state characteristics should increase the ideological distance between parties?
-(Electoral rules. PR systems allow more parties to be competitive, so, PR systems should have greater turnout than FPTP.)
+$$B = B_{self} + N B_{soc}$$
 
-Focus on c, what kinds of state characteristics should reduce c?
-(Postal voting, Weekend voting, Easier ballot construction, etc.
-So, states with those features should have greater turnout.)
+:::
 
-According to this model, should we vote in the US? 
-- What value is p? 
-- B? 
-- c? 
-In sum? (Don’t vote)
+::: notes
 
-Is this a good model of voting or not?
-(Maybe. On the one hand more people vote than it would probably argue should, but on the other hand, turnout in the US isn’t very high...)
+Traditionally, `B` is understood to refer to direct benefits to you, the voter. 
 
-Remember, we care about instrumental rationality (not procedural). This means an actor chooses whichever option she prefers and we don’t judge your preferences. So, what about actors who include societal benefits in their preferences? 
+- This is the assumption of self-interest.
 
-We may be looking at an incomplete conceptualization of B. Let’s expand our view of B.
-ON BOARD: B = B_self + N * B_soc
+- But maybe this is a too limited view of the benefits imagined by most voters
 
-B_self are individual benefits, what we talked about before. 
-- How big are these? (Not huge, depend on ideological distance, etc.)
+<br>
 
-B_soc are the benefits to society “as perceived by the person making the decision whether to vote.”
-- What do we think are societal benefits? What are plausible things a voter might believe about what will happen if their preferred candidate wins?
-(Leader X will lower taxes, lower taxes makes everybody personally wealthier, more money in the economy means more jobs are created...)
-(Leader Y will increase taxes to pay for job training for the unemployed, better trained workers get better jobs and get off of welfare...)
-(Leader Z will be more respected globally which will translate to better trade deals and more international cooperation on security issues...)
+Here we are adding a second equation to our model
 
-- How big are these? 
-(Hard to quantify, probably tiny because they are somewhat uncertain.)
+- You have to solve the second equation to find the value of `B` that you will plug into the first one
 
-N is the population.
-- We multiply those societal benefits by the population.
+- New approach: TWO types of benefit to voting
 
-How big does this make B in the US case? (Huge, even if the societal benefit is tiny.)
-- So, even a small benefit seen going to society becomes a huge incentive to vote if the population is huge.
+- B_self are the individual benefits of voting directly to you,  e.g. traditional self-interest
+    - Typically very small
+    
+- B_soc are the benefits to society "as perceived by the person making the decision whether to vote."
 
-Is everyone clear on that?
+<br>
 
-Any problems with this version of the model? Be critical.
-(Sure, I value the benefits I get way more than the benefits that go to society as a whole.)
-(People can be selfish!)
+**What do we think are societal benefits of your preferred candidate winning office?**
 
-ON BOARD: B = B_self + α * N * B_soc
+- **In other words, how big are the societal stakes you believe are tied to your candidate winning?**
 
-α is discounting factor b/c “benefits to others are less important than benefits to self”. 
-- A voter is selfish at α = 0 and social if α > 0. Most people between 0 and 1.
+- (Leader X will lower taxes, lower taxes makes everybody personally wealthier, more money in the economy means more jobs are created...)
 
-What does this do to the effect of population size?
-(If very selfish than even a huge population doesn’t change the calculus much, but very selfless will see a big benefit even if population is small.)
+- (Leader Y will increase taxes to pay for job training for the unemployed, better trained workers get better jobs and get off of welfare...)
 
-ON BOARD: ∆U = p * (B_self + α * N * B_soc) − c
+- (Leader Z will be more respected globally which will translate to better trade deals and more international cooperation on security issues...)
 
-Ok, what does this modification do to our expectations re: voting? Hypotheses?
-(1. The benefits may be much bigger than previously assumed. 
-2. Selfish voter sees odds of being pivotal shrink as N grows. 
-3. Social voter sees B_soc grow as N grows (offsetting reduced likelihood of being pivotal).
+<br>
 
-So, is it rational to vote?
-It certainly can be...
+The `N` here is the population
 
-Which model do we prefer?
+- In other words, this formula assumes we multiply those societal benefits by the population!
 
+- **How big does this make `B` in the US case?**
+
+- (Huge, even if the societal benefit is tiny.)
+
+<br>
+
+**Is everyone clear on this addition to our model?**
+
+<br>
+
+**Any problems with this version of the model? Be critical!**
+
+- This may WILDLY overestimate the benefits of voting
+
+- Even a TINY value for B_Soc will be a HUGE number if the population is large!
+
+<br>
+
+SLIDE: Let's fix it!
 
 :::
 
 
 
+## A Basic Rational-choice Model of Voting and Participation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+::: {.r-fit-text}
+
+$$\Delta U = pB − c$$
+
+$$B = B_{self} + \alpha N B_{soc}$$
+
+:::
+
+::: notes
+
+The alpha here is a discounting factor, just like the `p` in the top line formula
+
+- We add to the model an assumption that I value the benefits to me more than I value the benefits to the wider society
+
+- When alpha = 0 a voter is selfish (e.g. only values their own benefits and completely discounts the effects on society)
+
+- The more a voter cares about the benefits to society, the higher the value of the alpha
+
+- Most people between 0 and 1.
+
+<br>
+
+**What does this do to the effect of population size on the likelihood of voting?**
+
+- (If you are *selfish* than even a huge population doesn’t change the calculus)
+
+- (If you are more *social* then even a small societal benefit motivates your decision to vote)
+
+<br>
+
+SLIDE: Put it all together
+
+:::
 
 
 
+## A Basic Rational-choice Model of Voting and Participation {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
+::: {.r-fit-text}
 
+$$\Delta U = p(B_{self} + \alpha N B_{soc}) − c$$
 
+:::
 
+::: notes
+
+Ok, bottom line time
+
+- **When is it rational to vote?**
+
+<br>
+
+Absolutely (for some people)!
+
+- Selfish voters should be very unlikely to turn out IF their odds of being decisive are small
+
+- BUT, the benefits for a socially minded person can be huge even if you aren't the pivotal vote!
+    - B_soc grows with N!
+
+<br>
+
+Formal models are kind of cool, no?
+
+:::
 
 
 
@@ -400,10 +434,12 @@ Which model do we prefer?
 
 <br>
 
-The aftermath!
+### The election aftermath!
 
-ASSIGNMENT - Submit something specific (e.g. a "hot take", data, etc) that we can use as a jumping off point to discuss the aftermath of the election!
+Submit something specific to Canvas (e.g. a "hot take", data, etc) that we can use as a jumping off point to discuss the aftermath of the election!
 
 ::: notes
+
+**Questions on the assignment?**
 
 :::

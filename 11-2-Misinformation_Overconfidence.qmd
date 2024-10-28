@@ -385,7 +385,9 @@ What I'd like us to do is focus on the uncertainty in these conclusions
 
 <br>
 
-### Is it rational for you to vote?
+::: {.r-fit-text}
+**Is it rational for you to vote?**
+:::
 
 ::: notes
 

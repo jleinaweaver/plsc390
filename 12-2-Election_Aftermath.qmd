@@ -14,7 +14,7 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**III. The 2024 Election**
+**III. The 2024 Election is over (?)**
 
 - What just happened?!?!
 
@@ -31,33 +31,13 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Definitely need laptops in class next week! Or computer lab?
+1. Review Canvas submissions
 
 <br>
 
+For today I asked you to submit jumping off points for discussion (e.g. "hot takes", data, etc)
 
-:::
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
-
-The aftermath!
-
-ASSIGNMENT - Submit something specific (e.g. a "hot take", data, etc) that we can use as a jumping off point to discuss the aftermath of the election!
-
-
-::: notes
-
-In class build arguments for each side and discuss
-
-:::
-
-
-## Section 4: How serious and substantial are the threats to American democracy? What can we do about it? {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-::: notes
-
-Final section of our class!
+- **What do you want to discuss?**
 
 :::
 
@@ -67,14 +47,20 @@ Final section of our class!
 
 <br>
 
-Defining and Measuring Democracy (national)
+### Polarization - Ideology and Policy
 
-1. Diamond (1999)
+1. Fiorina & Abrams (2008). Political Polarization in the American Public. *Annual Review of Political Science*, 11(1), 563–588. 
 
-2. ASSIGNMENT - After completing the reading, submit to Canvas your preferred definition of democracy. In other words, what are the primary criteria or conditions you believe must be present to describe a state as a democracy?
-
-3. Tons of other references/resources on Canvas!
+2. Canvas Assignment
 
 ::: notes
+
+ASSIGNMENT: What are the biggest POLICY differences between the two parties today? 
+
+- Submit evidence to support your answer and let's try to build a big list across the class (e.g. minimize the overlap!)
+
+<br>
+
+**Questions on the assignment?**
 
 :::
