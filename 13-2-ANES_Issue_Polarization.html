@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="07-2-ANES_Data_Polarization_files/libs/clipboard/clipboard.min.js"></script>
-<script src="07-2-ANES_Data_Polarization_files/libs/quarto-html/tabby.min.js"></script>
-<script src="07-2-ANES_Data_Polarization_files/libs/quarto-html/popper.min.js"></script>
-<script src="07-2-ANES_Data_Polarization_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="07-2-ANES_Data_Polarization_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="07-2-ANES_Data_Polarization_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="07-2-ANES_Data_Polarization_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="07-2-ANES_Data_Polarization_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+<script src="13-2-ANES_Issue_Polarization_files/libs/clipboard/clipboard.min.js"></script>
+<script src="13-2-ANES_Issue_Polarization_files/libs/quarto-html/tabby.min.js"></script>
+<script src="13-2-ANES_Issue_Polarization_files/libs/quarto-html/popper.min.js"></script>
+<script src="13-2-ANES_Issue_Polarization_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="13-2-ANES_Issue_Polarization_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="13-2-ANES_Issue_Polarization_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="13-2-ANES_Issue_Polarization_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="13-2-ANES_Issue_Polarization_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
 
-  <title>anes_data_polarization</title>
+  <title>anes_issue_polarization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="07-2-ANES_Data_Polarization_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="07-2-ANES_Data_Polarization_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="13-2-ANES_Issue_Polarization_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="13-2-ANES_Issue_Polarization_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="07-2-ANES_Data_Polarization_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="13-2-ANES_Issue_Polarization_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -155,7 +155,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -328,9 +329,9 @@
 <h2>Today’s Agenda</h2>
 <p><br></p>
 <div class="r-fit-text">
-<p><strong>II. How serious is the problem of affective polarization in the American electorate?</strong></p>
+<p><strong>II. Contemporary Threats to American Democracy</strong></p>
 <ul>
-<li>Getting hands-on with ANES data to examine polarization trends since 2008</li>
+<li>Getting hands-on with ANES data</li>
 </ul>
 </div>
 <p><br></p>
@@ -342,9 +343,8 @@
 <ol type="1">
 <li>Readings
 <ul>
-<li>(Homans and McFadden 2022 - NYT on how politics is ending friendships and harming relationships)</li>
-<li>(Aldrich 2017 on ANES, e.g.&nbsp;what is it?)</li>
-<li>(Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded)</li>
+<li><p>Aldrich 2017 on ANES, e.g.&nbsp;what is it?</p></li>
+<li><p>Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded</p></li>
 </ul></li>
 </ol>
 <style type="text/css">
@@ -364,12 +364,15 @@
 <p><br></p>
 <p>Getting hands-on with ANES data to examine polarization trends since 2008</p>
 <ol type="1">
-<li><p>Homans and McFadden (2022)</p></li>
 <li><p>Aldrich (2017) on ANES</p></li>
-<li><p>Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded</p></li>
+<li><p>Review the ANES data extract and codebook</p></li>
 </ol>
 <aside class="notes">
-
+<p>I’ve given you two extracts from the ANES data</p>
+<ul>
+<li><p>The “original” file is the variables as they appear in the raw data</p></li>
+<li><p>The “processed” version is me recoding the levels to help you understand what is bening measured in each variable</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -382,121 +385,47 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="is-something-changing" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>Is something changing?</h2>
-<p>Homans and McFadden 2022 - NYT on how politics is ending friendships and harming relationships</p>
-</section>
-<section id="what-is-the-anes" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<section id="what-is-the-anes" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2>What is the ANES?</h2>
+<p><br></p>
 <p>Aldrich 2017 on ANES, e.g.&nbsp;what is it?</p>
 </section>
-<section id="the-anes-codebook" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<section id="the-anes-codebook" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2>The ANES Codebook</h2>
+<p><br></p>
 <p>Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded</p>
 <ul>
 <li>Evaluate the survey designs</li>
 <li>What does this show us?</li>
 </ul>
 </section>
-<section id="the-anes-data-prompt-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 1</h2>
+<section id="anes-prompt-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>ANES Prompt 1</h2>
+<p><br></p>
 <div class="r-fit-text">
-<p>Count proportion party identification across time (omit don’t knows)</p>
-</div>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-2-1.png" width="816" class="r-stretch quarto-figure-center"></section>
-<section id="the-anes-data-prompt-1-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 1</h2>
-<div class="r-fit-text">
-<p>Count proportion party identification across time (omit don’t knows)</p>
-</div>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-3-1.png" width="768" class="r-stretch quarto-figure-center"></section>
-<section id="the-anes-data-prompt-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 2</h2>
-<p>How much does each group like their own party (averages across time)?</p>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-4-1.png" width="768" class="r-stretch quarto-figure-center"></section>
-<section id="the-anes-data-prompt-3" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 3</h2>
-<p>How much does each group like the other party (averages across time)?</p>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-5-1.png" width="768" class="r-stretch quarto-figure-center"><aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-anes-data-prompt-4" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 4</h2>
-<p>Is the difference growing or shrinking across time? e.g.&nbsp;own party average minus rival party average feelings across time</p>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-6-1.png" width="768" class="r-stretch quarto-figure-center"><aside class="notes">
-<p>Next slide: underlying averages</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-anes-data-prompt-4-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 4</h2>
-<p>Is the difference growing or shrinking across time? e.g.&nbsp;own party average minus rival party average feelings across time</p>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-7-1.png" width="768" class="r-stretch quarto-figure-center"><aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-anes-data-prompt-5" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 5</h2>
-<p>Are the effects more dramatic for the politically active? e.g.&nbsp;“Voter” variable I created that asks if the respondent voted in the last election</p>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-8-1.png" width="768" class="r-stretch quarto-figure-center"><aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-anes-data-prompt-6" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>The ANES Data: Prompt 6</h2>
-<p>Are the effects more dramatic for various confounders? e.g.&nbsp;age, gender, race/ethnicity, education, region, knowledge</p>
-
-<img data-src="07-2-ANES_Data_Polarization_files/figure-revealjs/unnamed-chunk-9-1.png" width="768" class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Voters vs Non-voters (VCF9027) in 2020 (VCF0004)</p>
 <ul>
-<li><p>Check your results while adjusting for the confounder</p></li>
-<li><p>Omitted: Repeat prompts 1-4 using ideology not party</p></li>
+<li><p>Gender (VCF0104)</p></li>
+<li><p>Age (VCF0103)</p></li>
+<li><p>Race/ethnicity (VCF0105b)</p></li>
+<li><p>Education (VCF0110)</p></li>
+</ul>
+</div>
+<aside class="notes">
+<p>Let’s start by examining the sample in the most recent year available (2020)</p>
+<ul>
+<li><p>I’d like to know the demographic breakdown for voters vs non-voters</p></li>
+<li><p>e.g.&nbsp;Are voters more likely to be men or women? Older or younger? More educated or less?</p></li>
+</ul>
+<p><br></p>
+<p><em>Assign each confounder to different groups</em></p>
+<ul>
+<li>GROUPS, get to it and report back on what you find!</li>
+</ul>
+<p><br></p>
+<p><em>After they work for a bit go to the next slide which has your key conclusion</em></p>
+<ul>
+<li>SLIDE</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -509,6 +438,109 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="section" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<h3 id="voters-in-2020-are-more-likely-to-be-female-older-and-white-with-a-college-degree">Voters in 2020 are more likely to be female, older and white with a college degree</h3>
+<aside class="notes">
+<p><strong>Per your analyses, which of these are the strongest correlations with reporting having voted in 2020?</strong></p>
+<ul>
+<li>SLIDE x 5 with bar plots</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="voters-in-2020-gender" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<h2>Voters in 2020: Gender</h2>
+
+<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
+<section id="voters-in-2020-age" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<h2>Voters in 2020: Age</h2>
+
+<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
+<section id="voters-in-2020-raceethnicity" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<h2>Voters in 2020: Race/Ethnicity</h2>
+
+<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
+<section id="voters-in-2020-raceethnicity-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<h2>Voters in 2020: Race/Ethnicity</h2>
+
+<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
+<section id="anes-prompt-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>ANES Prompt 2</h2>
+<p><br></p>
+<h3 id="visualize-political-identities-across-time-s-omitting-dont-knows">Visualize political identities across time (%’s omitting don’t knows)</h3>
+<ul>
+<li><p>Has party identification (VCF0303) changed?</p></li>
+<li><p>Has ideological affinity (VCF0804) changed?</p></li>
+</ul>
+</section>
+<section id="section-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<h2></h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-6-2.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" width="816"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" width="816"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="anes-prompt-3" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>ANES Prompt 3</h2>
+<p><br></p>
+<div class="r-fit-text">
+<p>Are we polarizing on the issues?</p>
+<ul>
+<li><p>VCF0842 Environmental Regulations (p366)</p></li>
+<li><p>VCF0878 Should Gays/Lesbians Be Able to Adopt Children? (p388)</p></li>
+<li><p>VCF9231 Should we limit imports to protect American jobs? (p600)</p></li>
+<li><p>VCF9237 The death penalty for murderers (p603)</p></li>
+<li><p>VCF9238 Should it be harder to buy a gun? (p604)</p></li>
+</ul>
+</div>
 </section>
 <section id="for-next-class" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
 <h2>For Next Class</h2>
@@ -531,27 +563,29 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="07-2-ANES_Data_Polarization_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="13-2-ANES_Issue_Polarization_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -561,7 +595,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -816,18 +849,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -859,11 +881,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -873,8 +934,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -888,7 +958,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

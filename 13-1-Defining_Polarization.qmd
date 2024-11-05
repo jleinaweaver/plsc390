@@ -14,7 +14,7 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**II. How serious is the problem of affective polarization in the American electorate?**
+**II. Contemporary Threats to American Democracy**
 
 - Defining and Measuring Polarization
 
@@ -29,87 +29,599 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
+1. Check Canvas submissions
+
+    - ASSIGNMENT: Policy Polarization? What are the biggest POLICY differences between the two parties today? Submit evidence to support your answer and let's try to build a big list across the class (e.g. minimize the overlap!)
+
+2. Readings
     - Fiorina, M. P., & Abrams, S. J. (2008). Political Polarization in the American Public. Annual Review of Political Science, 11(1), 563–588.
+    
+<br>
 
-:::
+This week we shift our focus from misinformation to polarization as a threat to American democracy.
 
+- Our article for today comes from two of the biggest names in studying polarization and American public opinion
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+- To be clear, this article surveys the literature on mass polarization (e.g. the public), not elite (e.g. elected leaders, party officials)
 
 <br>
 
-1. Fiorina and Abrams (2008)
-
-2. ASSIGNMENT - What are the biggest POLICY differences between the two parties today? Submit evidence to support your answer and let's try to build a big list across the class (e.g. minimize the overlap!).
-
-::: notes
-
+SLIDE: Let's start by defining the concept
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig1.png" .center background-size='75%'}
+## Define Polarization {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+![](Images/07_1-Fiorina2008-Fig1.png){.absolute left=0 width=580}
+
+![](Images/07_1-Fiorina2008-Fig2.png){.absolute right=0 bottom=0 width=580}
 
 ::: notes
+
+**Per Fiorina and Adams (2008) what is polarization?**
+
+- **Key takeaways from p566-567?**
+
+<br>
+
+FIRST, identifying *levels* of polarization is HARD
+
+- Figures 1 and 2 illustrate the two common intuitions re polarization
+
+- Fig 1: Top is polarized, bottom is not
+
+    - Bimodality as necessary but not sufficient condition
+
+- Fig 2: Top is bimodal but not polarized, and the bottom is both
+
+    - the two modes of the distribution lie at the extremes, not near the center.
+
+<br>
+
+SECOND, identifying *trends* of polarization is much easier
+
+- As in Figure 2, voters moving towards the extremes is easier to classify even if classifying the start and end points is more debatable
+
+<br>
+
+THIRD, moving from one consensus to another can look like increasing polarization
+
+- Paper example is gay marriage
+
+- Moving from one end of the spectrum (no gay marriage) to consensus at the other end (gay marriage is ok) will look like society is polarizing during the transition.
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig3.png" .center background-size='75%'}
+## Polarization: Five Types of Evidence {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+1. Differences in Sociocultural Characteristics
+
+2. Differing World Views or Moral Visions
+
+3. Opposing Positions
+
+4. Polarized Choices
+
+5. Differences in Where We Live
+
+:::
 
 ::: notes
+
+*Split class into five groups, one per type of evidence*
+
+- GROUPS, tell us your assigned story of American polarization, AND why Fiorina and Abrams are not convinced by it.
+
+<br>
+
+*PRESENT and DISCUSS each*
+
+<br>
+
+**Are we convinced by Fiorina and Abrams that these five types of evidence do not show polarization in the mass American public up to 2007?**
+
+- **Why or why not?**
+
+<br>
+
+*NOTES*
+
+Differences in Sociocultural Characteristics (race, religion, consumption preferences, etc)
+
+- "The relationships between most social characteristics and political positions are not terribly strong. ... In addition, the correlations between social characteristics and political preferences vary over time" (568).
+
+Differing World Views or Moral Visions
+
+- Seems to suggest that the views of different moral camps (say, traditional vs secular) are converging over time (on everything except abortion). 
+
+- The visions absolutely differ and likely relate to political attitudes, BUT do not appear to be driving polarization
+
+Opposing Positions
+
+- Data from the 1970s to 2004 seem to show "no support for the proposition that the United States has experienced dramatic polarization in public opinion on social issues" (569). 
+
+- Very little change in the trends of self-reported ideology across time (Fig 3 and 4).
+
+- Hard to track these effects on specific issues due to a lack of high quality longitudinal data, but NES (now ANES) gives us a few questions to track. And yet, "Even in the purportedly polarized context of 2004, the general pattern is centrist, with more people placing themselves near the center of the scales than at the extremes. How much have the distributions changed? Not much" (573).
+
+- "Thus, whether the analysis focuses on particular issues or general ideological categorizations, there is little indication of increasing polarization, namely, the middle losing people to both extremes. Rather, we see a largely centrist public drifting slightly rightward on some issues, slightly leftward on others, but with only very small declines (of 2–5 percentage points) in the number of moderates" (574).
+
+Polarized Choices
+
+- Do we see polarization in terms of candidate choice? Very hard to say given the number of variables underpinning candidate choice. "But when it comes to vote decisions and approval ratings, candidates’ positions and actions are unmeasured variables that contribute as much as the voters’ positions to their choices and evaluations" (575). 
+
+- So, even if a strong partisan split (each candidate gets 90% of own party support) it's hard to use this as evidence of polarization.
+
+Differences in Where We Live
+
+- Klinkner & Hapanowicz (2005): “While there may be a slight increase in political segregation, it is still in line with historical trends and is not anything unexpected”
+
+- Nunn & Evans (2006): "They find evidence of increasing spatial polarization of party identification, liberal–conservative ideology, and confidence in government institutions, but perhaps surprisingly, in view of Bishop’s argument, not in voting behavior" (576).
+
+- This section is a bit confusing. Fiorina and Abrams argue all the methodological problems of earlier sections apply to these conclusions. 
+
+- Regional demographics have changed across time (income inequality growing, urban segregation falling) BUT do these demographics correlate with changing political preferences?
+
+- We can plausibly suppose those moving to the suburbs have different values from those staying in the cities but how different?
+
+- AND most important, very few surveys have samples that allow us to reliably measure small jurisdictions (barely reliable at the state level), too much of this research relies on vote choice as a proxy for polarization (which was noted above is deeply problematic). "Election returns are not measures of voter positions and cannot be used as indicators of such" (p577).
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig4.png" .center background-size='75%'}
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: {.r-fit-text}
+**Party Sorting (aka Partisan Polarization)**
+:::
+
+![](Images/07_1-Fiorina2008-Fig8.png){style="display: block; margin: 0 auto"}
 
 ::: notes
+
+The next big idea in the polarization literature asks us to consider the importance of party sorting
+
+- **What is party sorting and how can it give the impression of increasing polarization?**
+
+<br>
+
+SLIDE: Illustrate...
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig5.png" .center background-size='75%'}
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.46, out.width='70%'}
+voters1 <- read_csv("13-1-simulated_voters.csv")
+
+voters1 |>
+  ggplot(aes(x = economics)) +
+  geom_histogram(bins = 20) +
+  theme_bw() +
+  labs(x = "", y = "",
+       title = "Simulating American Policy Preferences: Economic Policy") +
+  scale_x_continuous(breaks = c(-9, 8.5), labels = c("Less\nEconomic\nRegulation", "More\nEconomic\nRegulation"))
+
+voters1 |>
+  ggplot(aes(x = social)) +
+  geom_histogram(bins = 20) +
+  theme_bw() +
+  labs(x = "", y = "",
+       title = "Simulating American Policy Preferences: Social Policy") +
+  scale_x_continuous(breaks = c(-9, 9), labels = c("Progressive\nValues", "Traditional\nValues"))
+```
 
 ::: notes
+
+Let's visualize the intuition behind partisan sorting
+
+- Here are two histograms of simulated American voters policy preferences in terms of the economy and social policy
+
+<br>
+
+So, we're starting our analyses with an assumption that there is not much polarization at the mass public level
+
+<br>
+
+**Everybody understand what they see here?**
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig6.png" .center background-size='75%'}
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# View both
+voters1 |>
+  ggplot(aes(x = economics, y = social)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .4) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues"))
+```
 
 ::: notes
+
+We can visualize these non-polarized voters on a scatterplot
+
+- x-axis is the economic dimension
+
+- y-axis is the social dimension
+
+<br>
+
+**Everybody understand what they see here?**
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig8.png" .center background-size='75%'}
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# US parties in the 1970s
+# LOTS of room for compromise between the parties
+voters1 |>
+  ggplot(aes(x = economics, y = social, color = party1)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red"))
+```
 
 ::: notes
+
+Per the General Social Survey (GSS)
+
+- [In the 1970s, there was not much difference between Democrats and Republicans, in terms of their political views](https://www.allendowney.com/blog/2022/09/11/polarization-and-partisan-sorting/)
+
+- IN OTHER WORDS, party ID was not a strong predictor of ideology (e.g. plenty of conservatives in the Dems and liberals in the Repubs)
+
+<br>
+
+SLIDE: This led to...
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Fig9.png" .center background-size='75%'}
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# US parties in the 1970s
+# LOTS of room for compromise between the parties
+voters1 |>
+  ggplot(aes(x = economics, y = social, color = party1)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red")) +
+  annotate("rect", xmin = -6, xmax = 9, ymin = -6, ymax = 9, alpha = .2, fill = "red") +
+ annotate("rect", xmin = -9, xmax = 6, ymin = -9, ymax = 6, alpha = .2, fill = "blue") 
+```
 
 ::: notes
+
+This means there was lots of room for compromise between the parties
+
+- Congress was frequently very productive in this era
+
+<br>
+
+**Everybody understand what they see here?**
+
+<br>
+
+Let's now illustrate partisan sorting
+
+- Remember, in none of the following are we moving ANY voters
+
+- No individual polarization necessary
 
 :::
 
 
 
-## {background-image="Images/07_1-Fiorina2008-Table1.png" .center background-size='75%'}
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# US parties have been sorting since the 1970s
+
+# Illustrate the sorting step-by-step
+# 1. Dems with conservative views on econ and social, convert them to republicans!
+voters1 |>
+  ggplot(aes(x = economics, y = social, color = party1)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red")) +
+  annotate("rect", xmin = 2.7, xmax = 5.1, ymin = 4.9, ymax = 10.2, alpha = .2)
+```
 
 ::: notes
+
+Now let's talk about what started to change as we moved forward in time since the 1970s
+
+- Take these six simulated voters in the democratic party but who hold conservative positions on both the social and economic dimensions
+
+:::
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# 2. convert them to republicans
+voters1 |>
+  mutate(
+    party1a = case_when(
+      party1 == "Democratic" & economics >= 2.65 & social >=4.8 ~ "Republican",
+      TRUE ~ party1)
+  ) |>
+  ggplot(aes(x = economics, y = social, color = party1a)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red")) +
+  annotate("rect", xmin = 2.7, xmax = 5.1, ymin = 4.9, ymax = 10.2, alpha = .2)
+```
+
+::: notes
+
+Here we see these six voters changing parties to better relate their policy positions with their party identification
+
+<br>
+
+Per the literature, this dynamic tended to be an elite driven process
+
+- Largely a top-down process "wherein the more visible and active members of a party, especially its elected officials and party activists, sort first and provide cues to voters that party positions are evolving" (581).
+
+<br>
+
+SLIDE: And if these six voters represent the "elites" then we should next see...
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# 3. Repeat for more voters in this quadrant
+voters1 |>
+  mutate(
+    party1a = case_when(
+      party1 == "Democratic" & economics > 0 & social > 0 ~ "Republican",
+      TRUE ~ party1)
+  ) |>
+  ggplot(aes(x = economics, y = social, color = party1a)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red"))
+```
+
+::: notes
+
+The key here is that no individuals changed their issue positions, they simply followed the partisan elites in terms of party ID
+
+<br>
+
+**Does this make sense?**
+
+<br>
+
+SLIDE: We can see the dynamic happening in both parties
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# 4. Repeat for more liberal voters
+voters1 |>
+  mutate(
+    party1a = case_when(
+      party1 == "Democratic" & economics > 0 & social > 0 ~ "Republican",
+      party1 == "Republican" & economics < 0 & social < 0 ~ "Democratic",
+      TRUE ~ party1)
+  ) |>
+  ggplot(aes(x = economics, y = social, color = party1a)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red"))
+```
+
+::: notes
+
+Also, per the literature, strong partisan sorting in terms of economics, abortion, homosexuality, foreign policy and defense
+
+<br>
+
+This translated into Republicans with more liberal positions becoming Democrats and vice versa
+
+<br>
+
+SLIDE: This sorting creates the appearance of polarization
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.85, out.width='100%'}
+# 5. Sorted parties appear polarized WITHOUT moving ANY voters
+voters1 |>
+  ggplot(aes(x = economics, y = social, color = party2)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_point(alpha = .6) +
+  theme_void() +
+  labs(x = "", y = "") +
+  annotate("text", x = c(-10, 10), y = -1.5, label = c("More\nEconomic\nRegulation", "Less\nEconomic\nRegulation")) +
+  annotate("text", x = 1, y = c(-10, 10), label = c("Progressive\nValues", "Traditional\nValues")) +
+  guides(color = "none") + 
+  scale_color_manual(values = c("blue", "red")) +
+  annotate("rect", xmin = -1, xmax = 10, ymin = -1, ymax = 10, fill = "red", alpha = .2) +
+  annotate("rect", xmin = 1, xmax = -10, ymin = 1, ymax = -10, fill = "blue", alpha = .2)
+```
+
+::: notes
+
+The key here is that no individuals changed their issue positions, BUT the end result was parties that overlapped less on the key issues
+
+- e.g. less room for compromise and the appearance of greater polarization
+
+- And then, less policy being produced!
+
+<br>
+
+**Does the concept of partisan sorting make sense?**
+
+<br>
+
+SLIDES: There are also arguments out there that we may be seeing geographic sorting
+:::
+
+
+
+
+## Geographic Sorting {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+![](Images/13_1-NYT_Geographic_Sorting1.png){.absolute left=0 width=480}
+
+![](Images/13_1-NYT_Geographic_Sorting2.png){.absolute right=0 width=500}
+
+::: notes
+
+From the [New York Times last week (Oct 31, 2024)](https://www.nytimes.com/interactive/2024/10/30/upshot/voters-moving-polarization.html):
+
+- "While the overall population shows little or no change, subpopulations can sort themselves out in ways that heighten their differences. People may move to neighborhoods or join churches where others have similar political views, changing their partisan identifications to match their ideological and issue positions" (Fiorina and Abrams, 577). 
+
+<br>
+
+**Any takeaways from this data?**
+
+- **Inferences we can make?**
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+::: {.r-fit-text}
+**How much partisan sorting is there in your life?**
+
+- Within your family?
+
+- Within your friends group?
+
+- On your social media feeds?
+
+- In your chosen news sources?
+
+:::
+
+::: notes
+
+*DISCUSS*
+
+<br>
+
+SLIDE: Evidence of mass polarization?
+
+:::
+
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+::: {.r-fit-text}
+**Elite Polarization of the Mass Public**
+:::
+
+![](Images/07_1-Fiorina2008-Fig9.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Not a ton as of yet, but even in 2007 things were starting to trend like this
+
+<br>
+
+"How do ordinary citizens who remain generally moderate and nonideological respond to a more polarized elite politics? 
+
+- The hypothesized consequences of elite polarization are numerous, but for the most part, research is still in its early stages and conclusions remain tentative" (582).
+
+<br>
+
+SLIDE: Segue into Canvas assignment
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### What are the biggest POLICY differences between the two parties today? 
+
+::: notes
+
+Discuss the Canvas submissions
+
+
+Policy Polarization? 
+    
+- Submit evidence to support your answer and let's try to build a big list across the class (e.g. minimize the overlap!)
 
 :::
 
@@ -118,15 +630,20 @@ Prep for Class
 
 ## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
 
+<br>
+
 Getting hands-on with ANES data to examine polarization trends since 2008
 
-1. Homans and McFadden (2022)
+1. Aldrich (2017) on ANES
 
-2. Aldrich (2017) on ANES
-
-3. Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded
-    - Have a laptop! Or do we need a pc lab?
+2. Review the ANES data extract and codebook
 
 ::: notes
+
+I've given you two extracts from the ANES data
+
+- The "original" file is the variables as they appear in the raw data
+
+- The "processed" version is me recoding the levels to help you understand what is bening measured in each variable
 
 :::
