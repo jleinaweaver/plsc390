@@ -43,6 +43,59 @@ For today I asked you to submit jumping off points for discussion (e.g. "hot tak
 
 
 
+## {background-image="Images/background-news_v2.png" .center}
+
+![](Images/12_2-presidential_approval_election.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Political science is undefeated!
+
+- Biden at 38.5% which per this model predicts 46-ish% of the vote which is close to Harris's predicted total
+
+<br>
+
+Want to get fancier?
+
+- 
+
+- SLIDE
+
+:::
+
+
+
+## {background-image="Images/background-news_v2.png" .center}
+
+![](Images/12_2-PS_Forecast_Election.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Every four years the journal PS solicits election forecasts from experts in political science. 
+
+- The following is the predicted electoral college results published a month ago. 
+
+- Isn't that insane? Fundamentals based models basically predicted the result perfectly!
+
+[This was published at the beginning of October!](https://politicalsciencenow.com/now-online-special-issue-on-forecasting-the-2024-us-elections-ps-political-science-politics/)
+
+
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
 
 <br>

@@ -331,7 +331,7 @@
 <div class="r-fit-text">
 <p><strong>II. Contemporary Threats to American Democracy</strong></p>
 <ul>
-<li>Getting hands-on with ANES data</li>
+<li>Using ANES data to measure issue polarization</li>
 </ul>
 </div>
 <p><br></p>
@@ -343,90 +343,20 @@
 <ol type="1">
 <li>Readings
 <ul>
-<li><p>Aldrich 2017 on ANES, e.g.&nbsp;what is it?</p></li>
+<li><p>Aldrich 2017 on ANES: “The American National Elections Study as ‘Gold Standard’ for Survey Research in the Twenty-First Century”</p></li>
 <li><p>Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded</p></li>
 </ul></li>
 </ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="for-today" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
-<h2>For Today</h2>
 <p><br></p>
-<p>Getting hands-on with ANES data to examine polarization trends since 2008</p>
-<ol type="1">
-<li><p>Aldrich (2017) on ANES</p></li>
-<li><p>Review the ANES data extract and codebook</p></li>
-</ol>
-<aside class="notes">
-<p>I’ve given you two extracts from the ANES data</p>
+<p>Today I want us to get hands-on with some high quality data on the American electorate</p>
+<p><br></p>
+<p>Specifically, I’ve given you two extracts from the American National Election Studies surveys</p>
 <ul>
 <li><p>The “original” file is the variables as they appear in the raw data</p></li>
-<li><p>The “processed” version is me recoding the levels to help you understand what is bening measured in each variable</p></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="what-is-the-anes" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
-<h2>What is the ANES?</h2>
-<p><br></p>
-<p>Aldrich 2017 on ANES, e.g.&nbsp;what is it?</p>
-</section>
-<section id="the-anes-codebook" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
-<h2>The ANES Codebook</h2>
-<p><br></p>
-<p>Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded</p>
-<ul>
-<li>Evaluate the survey designs</li>
-<li>What does this show us?</li>
-</ul>
-</section>
-<section id="anes-prompt-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
-<h2>ANES Prompt 1</h2>
-<p><br></p>
-<div class="r-fit-text">
-<p>Voters vs Non-voters (VCF9027) in 2020 (VCF0004)</p>
-<ul>
-<li><p>Gender (VCF0104)</p></li>
-<li><p>Age (VCF0103)</p></li>
-<li><p>Race/ethnicity (VCF0105b)</p></li>
-<li><p>Education (VCF0110)</p></li>
-</ul>
-</div>
-<aside class="notes">
-<p>Let’s start by examining the sample in the most recent year available (2020)</p>
-<ul>
-<li><p>I’d like to know the demographic breakdown for voters vs non-voters</p></li>
-<li><p>e.g.&nbsp;Are voters more likely to be men or women? Older or younger? More educated or less?</p></li>
+<li><p>The “processed” version is me recoding the levels to help you understand what is being measured in each variable</p></li>
 </ul>
 <p><br></p>
-<p><em>Assign each confounder to different groups</em></p>
-<ul>
-<li>GROUPS, get to it and report back on what you find!</li>
-</ul>
-<p><br></p>
-<p><em>After they work for a bit go to the next slide which has your key conclusion</em></p>
-<ul>
-<li>SLIDE</li>
-</ul>
+<p>SLIDE: Before analyzing, let’s discuss the source of this data</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -441,11 +371,38 @@
 </section>
 <section id="section" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
 <h2></h2>
-<h3 id="voters-in-2020-are-more-likely-to-be-female-older-and-white-with-a-college-degree">Voters in 2020 are more likely to be female, older and white with a college degree</h3>
+<div class="r-fit-text">
+<p><strong>The American National Election Study (ANES)</strong></p>
+</div>
+<p><br></p>
+<div class="r-fit-text">
+<p><strong>Big Picture Goals of the Project</strong></p>
+<ol type="1">
+<li><p>Analyzing individuals as voters</p></li>
+<li><p>Analyzing the public’s role in our democracy</p></li>
+</ol>
+</div>
 <aside class="notes">
-<p><strong>Per your analyses, which of these are the strongest correlations with reporting having voted in 2020?</strong></p>
+<p>The individual goals of the project are meant to help us answer two questions</p>
+<ol type="1">
+<li><p>Why do some people vote and other do not?</p></li>
+<li><p>How do voters decide who/what to vote for?</p></li>
+</ol>
+<p><br></p>
+<p>The second big picture goal is meant to help us understand the mass public more broadly</p>
 <ul>
-<li>SLIDE x 5 with bar plots</li>
+<li>If democracy depends on voters using their vote to punish bad leaders and reward good ones, does the data show us actually doing that or not?</li>
+</ul>
+<p><br></p>
+<p><strong>Generally speaking, did the write-up by Aldrich claiming the ANES is a “gold standard” give you confidence in the quality of the data?</strong></p>
+<ul>
+<li><strong>What specific design choices stood out to you as boosting your confidence?</strong></li>
+</ul>
+<p><br></p>
+<p>In our work last class, we examined polarization trends in the Fiorina and Abrams (2008)</p>
+<ul>
+<li><p>That research only had data up to 2007 so today we will extend those analyses to 2020 using the latest ANES data</p></li>
+<li><p>SLIDE</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -459,88 +416,385 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="voters-in-2020-gender" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>Voters in 2020: Gender</h2>
-
-<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
-<section id="voters-in-2020-age" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>Voters in 2020: Age</h2>
-
-<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
-<section id="voters-in-2020-raceethnicity" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>Voters in 2020: Race/Ethnicity</h2>
-
-<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
-<section id="voters-in-2020-raceethnicity-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2>Voters in 2020: Race/Ethnicity</h2>
-
-<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="816"></section>
-<section id="anes-prompt-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
-<h2>ANES Prompt 2</h2>
+<section id="party-identification-in-the-anes" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Party Identification in the ANES</h2>
 <p><br></p>
-<h3 id="visualize-political-identities-across-time-s-omitting-dont-knows">Visualize political identities across time (%’s omitting don’t knows)</h3>
+<h3 id="visualize-the-breakdown-of-respondents-by-party-identification-vcf0303-across-time">Visualize the breakdown of respondents by party identification (VCF0303) across time</h3>
 <ul>
-<li><p>Has party identification (VCF0303) changed?</p></li>
-<li><p>Has ideological affinity (VCF0804) changed?</p></li>
+<li>e.g.&nbsp;the proportion of Democrats, Republicans and Independents across time</li>
 </ul>
+<aside class="notes">
+<p>Lots of options for how to do this</p>
+<ul>
+<li><p>RTutor can do it for you!</p></li>
+<li><p>In Excel you’d need a couple of steps:</p>
+<ol type="1">
+<li>Make a pivot table that counts the responses per year,</li>
+<li>Add a column to convert the counts to proportions (e.g.&nbsp;count/total)</li>
+<li>Highlight the table and insert a line plot</li>
+</ol></li>
+<li><p>Get to it!</p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: The result</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="section-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2></h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-6-2.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="party-identification-in-the-anes-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Party Identification in the ANES</h2>
+
+<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
+<p>I actually think the relative stability of these proportions is useful for our work today measuring polarization</p>
+<ul>
+<li>If party identification is stable but issue positions are moving then we have stronger evidence of polarization!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="section-2" class="slide level2 center" data-background-image="Images/background-white_house_graphic_v4_muted_text2.png">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" width="816"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" width="816"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="anes-prompt-3" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
-<h2>ANES Prompt 3</h2>
+<section id="polarization-and-the-anes" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Polarization and the ANES</h2>
 <p><br></p>
 <div class="r-fit-text">
-<p>Are we polarizing on the issues?</p>
-<ul>
-<li><p>VCF0842 Environmental Regulations (p366)</p></li>
-<li><p>VCF0878 Should Gays/Lesbians Be Able to Adopt Children? (p388)</p></li>
-<li><p>VCF9231 Should we limit imports to protect American jobs? (p600)</p></li>
-<li><p>VCF9237 The death penalty for murderers (p603)</p></li>
-<li><p>VCF9238 Should it be harder to buy a gun? (p604)</p></li>
-</ul>
+<ol type="1">
+<li><p>Gay Adoption (VCF0878, p388)</p></li>
+<li><p>Limit trade to protect US jobs (VCF9231, p600)</p></li>
+<li><p>Death penalty for murderers (VCF9237, p603)</p></li>
+<li><p>Guns (VCF9238, p604)</p></li>
+</ol>
 </div>
+<aside class="notes">
+<p>The ANES includes a bunch of survey questions designed to track issue positions across time</p>
+<ul>
+<li><p>HOWEVER, not all of them are used in each survey and some have more complicated response options than others</p></li>
+<li><p>I’ve chosen these four because they have been asked many times in the past, their response options are fairly simple and they represent big divides between the parties at least at the elite level</p></li>
+</ul>
+<p><br></p>
+<p>Note that the “limiting trade” one is particularly relevant today given that the most common approach to limiting imports is by imposing tariffs!</p>
+<p><br></p>
+<p><em>Assign each to GROUPS (mix up the groups as you need a mix of skill levels with stats in each one!)</em></p>
+<p><br></p>
+<p>GROUPS, review the question in the codebook AND the responses in the data BOTH in the original AND the processed data files</p>
+<ul>
+<li>Make sure you understand the instrument and the coding in the data files</li>
+</ul>
+<p><br></p>
+<p><strong>Ok, groups are you ready to start analyzing the polarization in your issue?</strong></p>
+<p><br></p>
+<p>Groups, your job today is to answer this research question:</p>
+<ul>
+<li>Does the data on your issue show an increase in partisan polarization over time?</li>
+</ul>
+<p><br></p>
+<p>SLIDE: Let’s step through your analyses in a series of tasks</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="polarization-and-the-anes-1" class="slide level2 center" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2>Polarization and the ANES</h2>
+<p><br></p>
+<ol type="1">
+<li>Gay Adoption (VCF0878, p388)
+<ul>
+<li>“Yes”</li>
+</ul></li>
+<li>Limit trade to protect US jobs (VCF9231, p600)
+<ul>
+<li>“Favor new limits”</li>
+</ul></li>
+<li>Death penalty for murderers (VCF9237_v2, p603)
+<ul>
+<li>“Favor” (combines “not strongly” + “strongly”)</li>
+</ul></li>
+<li>Guns (VCF9238, p604)
+<ul>
+<li>“More difficult”</li>
+</ul></li>
+</ol>
+<aside class="notes">
+<p>STEP 1: Let’s get a sense of the overall trend in your data</p>
+<ul>
+<li>e.g.&nbsp;is support/opposition for this issue changing across time?</li>
+</ul>
+<p><br></p>
+<p>GROUPS, visualize the proportion of responses selecting the option on the slide across time</p>
+<ul>
+<li><p>For group 1, what proportion of respondents are in favor of gay adoption in each year in the dataset?</p></li>
+<li><p>For group 4, what proportion of respondents are in favor of making gun purchases more difficult in each year in the dataset?</p></li>
+<li><p><strong>Make sense?</strong></p></li>
+</ul>
+<p><br></p>
+<p>SLIDE: To make sure you’re on the right track let’s check these results before moving to tougher tasks</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Gay Adoption</a></li><li><a href="#tabset-1-2">Limit Trade</a></li><li><a href="#tabset-1-3">Death Penalty</a></li><li><a href="#tabset-1-4">Guns</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p><em>Step through each and make sure they got these results PLUS understand what this shows</em></p>
+<p><br></p>
+<p>Time to use this data to measure polarization!</p>
+<ul>
+<li><p>GROUPS, redo this exercise but create separate lines for the Republicans and the Democrats in the sample (VCF0303)</p></li>
+<li><p><strong>Questions?</strong></p></li>
+<li><p>Go!</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Gay Adoption</a></li><li><a href="#tabset-2-2">Limit Trade</a></li><li><a href="#tabset-2-3">Death Penalty</a></li><li><a href="#tabset-2-4">Guns</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-4">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p><em>Step through each and make sure they got these results</em></p>
+<p><br></p>
+<p>GROUPS, now I want you to directly measure the polarization!</p>
+<ul>
+<li><p>Make me a single line that represents the difference between the proportion of Democrats and the proportion of Republicans</p></li>
+<li><p><strong>Questions on the task?</strong></p></li>
+<li><p>Go!</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Gay Adoption</a></li><li><a href="#tabset-3-2">Limit Trade</a></li><li><a href="#tabset-3-3">Death Penalty</a></li><li><a href="#tabset-3-4">Guns</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-4">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p><em>Step through each and make sure they got these results PLUS understand what this shows</em></p>
+<p><br></p>
+<p><strong>BOTTOM LINE, how much partisan polarization are we seeing in these issues?</strong></p>
+<ul>
+<li><strong>And how much since 2007 (the end of the analyses in the Fiorina and Abrams)?</strong></li>
+</ul>
+<p><br></p>
+<p>SLIDE: What happened?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2" data-background-image="Images/background-white_house_graphic_blue_v2.png">
+<h2></h2>
+
+<img data-src="13-2-ANES_Issue_Polarization_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"><aside class="notes">
+<p><strong>Any hypotheses as to what happened since the Fiorina and Abrams article to explain the growing issue polarization?</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="for-next-class" class="slide level2 center" data-background-image="Images/background-blue_triangles_flipped.png">
 <h2>For Next Class</h2>
@@ -548,7 +802,7 @@
 <p>Defining and Measuring Affective Polarization</p>
 <ol type="1">
 <li><p>Iyengar, Lelkes, Levendusky, Malhotra, &amp; Westwood (2019)</p></li>
-<li><p>ASSIGNMENT - Find us an example of affective polarization in action with the current election. In other words, an expression of “animosity between the parties” that is NOT based on a difference in policy preferences.</p></li>
+<li><p>Canvas: Find us an example of affective polarization in our current events. In other words, an expression of “animosity between the parties” that is NOT based on a difference in policy preferences.</p></li>
 </ol>
 <aside class="notes">
 

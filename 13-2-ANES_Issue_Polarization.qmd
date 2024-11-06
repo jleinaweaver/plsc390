@@ -10,7 +10,7 @@ library(tidyverse)
 library(readxl)
 
 # Input ANES data
-d <- read_excel("../../Data_to_Explore/ANES/ANES-1978-2020-Issue_Polarization_Variables_v2.xlsx", na = "NA", guess_max = 100000) |>
+d <- read_excel("../../Data_to_Explore/ANES/ANES-1978-2020-Issue_Polarization_Variables-PROCESSED.xlsx", na = "NA", guess_max = 100000) |>
   mutate(
     Age = case_when(
       VCF0103 == 1 ~ "18-29",
@@ -32,7 +32,7 @@ d2 <- d |> filter(VCF0004 == 2020)
 
 **II. Contemporary Threats to American Democracy**
 
-- Getting hands-on with ANES data
+- Using ANES data to measure issue polarization
 
 :::
 
@@ -46,95 +46,25 @@ Justin Leinaweaver (Fall 2024)
 Prep for Class
 
 1. Readings
-    - Aldrich 2017 on ANES, e.g. what is it?
+    - Aldrich 2017 on ANES: "The American National Elections Study as 'Gold Standard' for Survey Research in the Twenty-First Century"
     
     - Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded
 
-:::
+<br>
 
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+Today I want us to get hands-on with some high quality data on the American electorate
 
 <br>
 
-Getting hands-on with ANES data to examine polarization trends since 2008
-
-1. Aldrich (2017) on ANES
-
-2. Review the ANES data extract and codebook
-
-::: notes
-
-I've given you two extracts from the ANES data
+Specifically, I've given you two extracts from the American National Election Studies surveys
 
 - The "original" file is the variables as they appear in the raw data
 
-- The "processed" version is me recoding the levels to help you understand what is bening measured in each variable
-
-:::
-
-
-
-
-## What is the ANES? {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+- The "processed" version is me recoding the levels to help you understand what is being measured in each variable
 
 <br>
 
-Aldrich 2017 on ANES, e.g. what is it?
-
-
-
-
-## The ANES Codebook {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
-
-<br>
-
-Review the ANES data extract and codebook: Make sure you understand what each variable represents and how they are coded
-
-- Evaluate the survey designs
-- What does this show us?
-
-
-
-
-
-## ANES Prompt 1 {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
-
-<br>
-
-::: {.r-fit-text}
-Voters vs Non-voters (VCF9027) in 2020 (VCF0004)
-
-- Gender (VCF0104)
-
-- Age (VCF0103)
-
-- Race/ethnicity (VCF0105b)
-
-- Education (VCF0110)
-
-:::
-
-::: notes
-
-Let's start by examining the sample in the most recent year available (2020)
-
-- I'd like to know the demographic breakdown for voters vs non-voters
-
-- e.g. Are voters more likely to be men or women? Older or younger? More educated or less?
-
-<br>
-
-*Assign each confounder to different groups*
-
-- GROUPS, get to it and report back on what you find!
-
-<br>
-
-*After they work for a bit go to the next slide which has your key conclusion*
-
-- SLIDE
+SLIDE: Before analyzing, let's discuss the source of this data
 
 :::
 
@@ -142,306 +72,590 @@ Let's start by examining the sample in the most recent year available (2020)
 
 ## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
-### Voters in 2020 are more likely to be female, older and white with a college degree
-
-::: notes
-
-**Per your analyses, which of these are the strongest correlations with reporting having voted in 2020?**
-
-- SLIDE x 5 with bar plots
-
+::: {.r-fit-text}
+**The American National Election Study (ANES)**
 :::
-
-
-
-## Voters in 2020: Gender {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
-# Gender
-#round(proportions(table(d2$VCF0104, d2$VCF9027), margin = 2), 3)*100
-d2 |>
-  filter(!is.na(VCF0104)) |>
-  ggplot(aes(x = VCF9027, fill = VCF0104)) +
-  geom_bar(position = "fill", width=.5) +
-  scale_y_continuous(labels = scales::percent_format()) +
-  labs(x = "", y = "", title = "Voter Profiles: Gender Breakdown") +
-  theme_bw() +
-  guides(fill = "none") +
-  annotate("text", x = 1, y = c(.75, .25), label = c("Female\n52%", "Male\n48%"), color = "white", size = 6) +
-  annotate("text", x = 2, y = c(.75, .25), label = c("Female\n55%", "Male\n45%"), color = "white", size = 6)
-```
-
-
-
-## Voters in 2020: Age {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
-# Age
-#round(proportions(table(d2$VCF0103, d2$VCF9027), margin = 2), 3)*100
-# d2 |>
-#   filter(!is.na(VCF0103)) |>
-#   ggplot(aes(x = VCF9027, fill = Age)) +
-#   geom_bar(position = "fill", width=.5) +
-#   scale_y_continuous(labels = scales::percent_format()) +
-#   labs(x = "", y = "", title = "Voter Profiles: Age Breakdown") +
-#   theme_bw() +
-#   #scale_fill_brewer(type = "seq") +
-#   scale_fill_manual(limits = c("18-29", "30-45", "46-61", "62-77", "78-93", "94-109", "110-125"), values = RColorBrewer::brewer.pal(n = 7, name = "Blues"))
-
-counts1 <- table(d2$VCF0103)
-
-d2 |>
-  filter(!is.na(VCF0103)) |>
-  ggplot(aes(x = Age, fill = VCF9027)) +
-  geom_bar(position = "fill", width=.5) +
-  labs(x = "", y = "", title = "Voter Profiles: Age Breakdown") +
-  theme_bw() +
-  scale_x_discrete(limits = c("18-29", "30-45", "46-61", "62-77", "78-93", "94-109", "110-125")) +
-  scale_y_continuous(labels = scales::percent_format()) +
-  annotate("text", x = 1, y = c(.25, .75), label = c("Voted", "Did not vote"), color = "white", srt = 90, size = 6) +
-  guides(fill = "none") +
-  annotate("text", x = 1:7, y = 1.05, label = as.vector(counts1))
-```
-
-
-
-## Voters in 2020: Race/Ethnicity {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
-# Race/ethnicity (VCF0105b)
-counts2 <- table(d2$VCF0105b)
-
-d2 |>
-  filter(!is.na(VCF0105b)) |>
-  ggplot(aes(x = VCF0105b, fill = VCF9027)) +
-  geom_bar(position = "fill", width=.5) +
-  labs(x = "", y = "", title = "Voter Profiles: Race/Ethnicity Breakdown") +
-  theme_bw() +
-  scale_x_discrete(limits = c("Hispanic", "Other", "Black non-Hispanic", "White non-Hispanic")) +
-  annotate("text", x = 1, y = c(.3, .8), label = c("Voted", "Did not"), color = "white", srt = 90, size = 5) +
-  guides(fill = "none") +
-  scale_y_continuous(labels = scales::percent_format()) +
-  annotate("text", x = 1:4, y = 1.05, label = c(762, 727, 726, 5963))
-```
-
-
-
-## Voters in 2020: Race/Ethnicity {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
-# Education (VCF0110)
-counts3 <- table(d2$VCF0110)
-
-d2 |>
-  filter(!is.na(VCF0110)) |>
-  ggplot(aes(x = VCF0110, fill = VCF9027)) +
-  geom_bar(position = "fill", width=.5) +
-  labs(x = "", y = "", title = "Voter Profiles: Education Breakdown") +
-  theme_bw() +
-  scale_x_discrete(limits = c("Grade school or less", "HS or less", "Some college", "College degree or more")) +
-  annotate("text", x = 1, y = c(.23, .77), label = c("Voted", "Did not"), color = "white", srt = 90, size = 5) +
-  guides(fill = "none") +
-  scale_y_continuous(labels = scales::percent_format()) +
-  annotate("text", x = 1:4, y = 1.05, label = c(376, 1336, 2790, 3647))
-```
-
-
-
-## ANES Prompt 2 {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
-
-<br>
-
-### Visualize political identities across time (%'s omitting don't knows)
-
-- Has party identification (VCF0303) changed?
-
-- Has ideological affinity (VCF0804) changed?
-
-
-
-## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', out.width="55%"}
-# p116-117: Party Identification - VCF0303 (Party Identification - Summary 3 categories)
-parties_time <- d |>
-  group_by(VCF0004) |>
-  count(VCF0303) |>
-  filter(!is.na(VCF0303))
-
-# ## Version 1: Filled bar plot
-# parties_time |>
-#   ggplot(aes(x = VCF0004, y = n, fill = VCF0303)) +
-#   geom_col(position = "fill") +
-#   theme_bw() +
-#   labs(x = "", y = "", fill = "") +
-#   scale_fill_manual(values = c("dodgerblue", "bisque1", "firebrick2")) +
-#   scale_y_continuous(labels = scales::percent_format()) +
-#   scale_x_continuous(breaks = seq(1978, 2020, 2)) +
-#   guides(fill = "none") +
-#   annotate("text", x = 1978, y = .13, label = "Republican", srt = 90, color = "white") +
-#   annotate("text", x = 1978, y = .71, label = "Democratic", srt = 90, color = "white")
-
-## Version 2: Line plot
-parties_time |>
-  mutate(
-    Total = sum(n),
-    Proportion = n/Total
-  ) |>
-  ggplot(aes(x = VCF0004, y = Proportion, color = VCF0303)) +
-  geom_line() +
-  geom_point() +
-  theme_bw() +
-  labs(x = "", y = "", fill = "") +
-  scale_color_manual(values = c("dodgerblue", "tan1", "firebrick2")) +
-  scale_y_continuous(limits = c(0, .65), breaks = seq(0, .6, .1), labels = scales::percent_format()) +
-  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
-  guides(color = "none") +
-  annotate("text", x = 1980, y = c(.6, .27, .08), label = c("Democratic", "Republican", "Independent"), color = c("dodgerblue", "firebrick2", "tan1"))
-
-
-# Count ideology leanings across time
-# - Convert to proportions
-# - Convert to difference between the parties (tilt)
-# - Interesting to compare/contrast strength in dem prty identifiers and weakness of liberal identifier
-
-ideology_time <- d |>
-  group_by(VCF0004) |>
-  count(VCF0804) |>
-  filter(!is.na(VCF0804))
-
-ideology_time |>
-  mutate(
-    Total = sum(n),
-    Proportion = n/Total
-  ) |>
-  ggplot(aes(x = VCF0004, y = Proportion, color = VCF0804)) +
-  geom_line() +
-  geom_point() +
-  theme_bw() +
-  labs(x = "", y = "", fill = "") +
-  scale_y_continuous(limits = c(.15, .5), breaks = seq(0, .6, .1), labels = scales::percent_format()) +
-  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
-  scale_color_manual(values = c("firebrick2", "dodgerblue", "tan1")) +
-  annotate("text", x = 1980, y = c(.47, .21, .28), label = c("Conservative", "Liberal", "Moderate"), color = c("firebrick2", "dodgerblue", "tan1")) +
-  guides(color = "none")
-```
-
-
-
-
-## {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
-# p116-117: Party Identification - VCF0303 (Party Identification - Summary 3 categories)
-parties_time <- d |>
-  group_by(VCF0004) |>
-  count(VCF0303) |>
-  filter(!is.na(VCF0303))
-
-# ## Version 1: Filled bar plot
-# parties_time |>
-#   ggplot(aes(x = VCF0004, y = n, fill = VCF0303)) +
-#   geom_col(position = "fill") +
-#   theme_bw() +
-#   labs(x = "", y = "", fill = "") +
-#   scale_fill_manual(values = c("dodgerblue", "bisque1", "firebrick2")) +
-#   scale_y_continuous(labels = scales::percent_format()) +
-#   scale_x_continuous(breaks = seq(1978, 2020, 2)) +
-#   guides(fill = "none") +
-#   annotate("text", x = 1978, y = .13, label = "Republican", srt = 90, color = "white") +
-#   annotate("text", x = 1978, y = .71, label = "Democratic", srt = 90, color = "white")
-
-## Version 2: Line plot
-parties_time |>
-  mutate(
-    Total = sum(n),
-    Proportion = n/Total
-  ) |>
-  ggplot(aes(x = VCF0004, y = Proportion, color = VCF0303)) +
-  geom_line() +
-  geom_point() +
-  theme_bw() +
-  labs(x = "", y = "", fill = "") +
-  scale_color_manual(values = c("dodgerblue", "tan1", "firebrick2")) +
-  scale_y_continuous(limits = c(0, .65), breaks = seq(0, .6, .1), labels = scales::percent_format()) +
-  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
-  guides(color = "none") +
-  annotate("text", x = 1980, y = c(.6, .27, .08), label = c("Democratic", "Republican", "Independent"), color = c("dodgerblue", "firebrick2", "tan1"))
-```
-:::
-
-::: {.column width="50%"}
-```{r, fig.retina=3, fig.asp=0.618, fig.align='center', fig.width=8.5}
-
-# Count ideology leanings across time
-# - Convert to proportions
-# - Convert to difference between the parties (tilt)
-# - Interesting to compare/contrast strength in dem prty identifiers and weakness of liberal identifier
-
-ideology_time <- d |>
-  group_by(VCF0004) |>
-  count(VCF0804) |>
-  filter(!is.na(VCF0804))
-
-ideology_time |>
-  mutate(
-    Total = sum(n),
-    Proportion = n/Total
-  ) |>
-  ggplot(aes(x = VCF0004, y = Proportion, color = VCF0804)) +
-  geom_line() +
-  geom_point() +
-  theme_bw() +
-  labs(x = "", y = "", fill = "") +
-  scale_y_continuous(limits = c(.15, .5), breaks = seq(0, .6, .1), labels = scales::percent_format()) +
-  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
-  scale_color_manual(values = c("firebrick2", "dodgerblue", "tan1")) +
-  annotate("text", x = 1980, y = c(.47, .21, .28), label = c("Conservative", "Liberal", "Moderate"), color = c("firebrick2", "dodgerblue", "tan1")) +
-  guides(color = "none")
-```
-
-:::
-
-::::
-
-
-
-
-
-
-## ANES Prompt 3 {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 <br>
 
 ::: {.r-fit-text}
 
-Are we polarizing on the issues?
+**Big Picture Goals of the Project**
 
-- VCF0842 Environmental Regulations (p366)
+1. Analyzing individuals as voters
 
-- VCF0878 Should Gays/Lesbians Be Able to Adopt Children? (p388)
+2. Analyzing the public's role in our democracy
 
-- VCF9231 Should we limit imports to protect American jobs? (p600)
+:::
 
-- VCF9237 The death penalty for murderers (p603)
+::: notes
 
-- VCF9238 Should it be harder to buy a gun? (p604)
+The individual goals of the project are meant to help us answer two questions 
+
+1. Why do some people vote and other do not?
+
+2. How do voters decide who/what to vote for?
+
+<br>
+
+The second big picture goal is meant to help us understand the mass public more broadly
+
+- If democracy depends on voters using their vote to punish bad leaders and reward good ones, does the data show us actually doing that or not?
+
+<br>
+
+**Generally speaking, did the write-up by Aldrich claiming the ANES is a "gold standard" give you confidence in the quality of the data?**
+
+- **What specific design choices stood out to you as boosting your confidence?**
+
+<br>
+
+In our work last class, we examined polarization trends in the Fiorina and Abrams (2008)
+
+- That research only had data up to 2007 so today we will extend those analyses to 2020 using the latest ANES data
+
+- SLIDE
+
+:::
+
+
+
+## Party Identification in the ANES {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+### Visualize the breakdown of respondents by party identification (VCF0303) across time
+
+- e.g. the proportion of Democrats, Republicans and Independents across time
+
+::: notes
+
+Lots of options for how to do this
+
+- RTutor can do it for you!
+
+- In Excel you'd need a couple of steps:
+    1. Make a pivot table that counts the responses per year, 
+    2. Add a column to convert the counts to proportions (e.g. count/total)
+    3. Highlight the table and insert a line plot
+
+- Get to it!
+
+<br>
+
+SLIDE: The result
+
+:::
+
+
+
+## Party Identification in the ANES {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618}
+d |>
+  filter(!is.na(VCF0303)) |>
+  group_by(VCF0004) |>
+  summarize(
+    Democrats = mean(VCF0303 == "Democrats"),
+    Republicans = mean(VCF0303 == "Republicans"),
+    Independents = mean(VCF0303 == "Independents")
+  ) |>
+  pivot_longer(cols = Democrats:Independents, names_to = "party", values_to = "value") |>
+  ggplot(aes(x = VCF0004, y = value, color = party)) +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, .7), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1978, 2020, 2)) +
+  labs(x = "", y = "",
+       title = "The partisan makeup of the American electorate has been fairly stable since 1978") +
+  scale_color_manual(values = c("blue", "darkgrey", "red")) +
+  guides(color = "none") +
+  annotate("text", x = 1980, y = c(.09, .27, .49), label = c("Independents", "Republicans", "Democrats"), color = c("darkgrey", "red", "blue"))
+```
+
+::: notes
+
+I actually think the relative stability of these proportions is useful for our work today measuring polarization
+
+- If party identification is stable but issue positions are moving then we have stronger evidence of polarization!
 
 :::
 
 
 
 
+## Polarization and the ANES {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+1. Gay Adoption (VCF0878, p388)
+
+2. Limit trade to protect US jobs (VCF9231, p600)
+
+3. Death penalty for murderers (VCF9237, p603)
+
+4. Guns (VCF9238, p604)
+:::
+
+::: notes
+
+The ANES includes a bunch of survey questions designed to track issue positions across time
+
+- HOWEVER, not all of them are used in each survey and some have more complicated response options than others
+
+- I've chosen these four because they have been asked many times in the past, their response options are fairly simple and they represent big divides between the parties at least at the elite level
+
+<br>
+
+Note that the "limiting trade" one is particularly relevant today given that the most common approach to limiting imports is by imposing tariffs!
+
+<br>
+
+*Assign each to GROUPS (mix up the groups as you need a mix of skill levels with stats in each one!)*
+
+<br>
+
+GROUPS, review the question in the codebook AND the responses in the data BOTH in the original AND the processed data files
+
+- Make sure you understand the instrument and the coding in the data files
+
+<br>
+
+**Ok, groups are you ready to start analyzing the polarization in your issue?**
+
+<br>
+
+Groups, your job today is to answer this research question:
+
+- Does the data on your issue show an increase in partisan polarization over time?
+
+<br>
+
+SLIDE: Let's step through your analyses in a series of tasks
+
+:::
 
 
 
 
+## Polarization and the ANES {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+1. Gay Adoption (VCF0878, p388)
+    - "Yes"
+
+2. Limit trade to protect US jobs (VCF9231, p600)
+    - "Favor new limits"
+
+3. Death penalty for murderers (VCF9237_v2, p603)
+    - "Favor" (combines "not strongly" + "strongly")
+
+4. Guns (VCF9238, p604)
+    - "More difficult"
+
+::: notes
+
+STEP 1: Let's get a sense of the overall trend in your data
+
+- e.g. is support/opposition for this issue changing across time?
+
+<br>
+
+GROUPS, visualize the proportion of responses selecting the option on the slide across time
+
+- For group 1, what proportion of respondents are in favor of gay adoption in each year in the dataset?
+
+- For group 4, what proportion of respondents are in favor of making gun purchases more difficult in each year in the dataset?
+
+- **Make sense?**
+
+<br>
+
+SLIDE: To make sure you're on the right track let's check these results before moving to tougher tasks
+
+:::
 
 
 
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.panel-tabset}
+
+### Gay Adoption
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab1a <- d |>
+  filter(!is.na(VCF0878)) |>
+  group_by(VCF0004) |>
+  summarize(
+    prop = mean(VCF0878 == "Yes")
+  )
+
+tab1a |>
+  ggplot(aes(x = VCF0004, y = prop)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1992, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval of Gay Adoption") +
+  #ggrepel::geom_text_repel(aes(label = str_c(round(prop, 2)*100, "%")))
+  geom_text(aes(label = str_c(round(prop, 2)*100, "%")), nudge_y = .05)
+```
+
+### Limit Trade
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab1b <- d |>
+  filter(!is.na(VCF9231)) |>
+  group_by(VCF0004) |>
+  summarize(
+    prop = mean(VCF9231 == "Favor new limits")
+  )
+
+tab1b |>
+  ggplot(aes(x = VCF0004, y = prop)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval of Limiting Trade") +
+  #ggrepel::geom_text_repel(aes(label = str_c(round(prop, 2)*100, "%")))
+  geom_text(aes(label = str_c(round(prop, 2)*100, "%")), nudge_y = .05)
+```
+
+### Death Penalty
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab1c <- d |>
+  filter(!is.na(VCF9237_v2)) |>
+  group_by(VCF0004) |>
+  summarize(
+    prop = mean(VCF9237_v2 == "Favor")
+  )
+
+tab1c |>
+  ggplot(aes(x = VCF0004, y = prop)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval of the Death Penalty") +
+  #ggrepel::geom_text_repel(aes(label = str_c(round(prop, 2)*100, "%")))
+  geom_text(aes(label = str_c(round(prop, 2)*100, "%")), nudge_y = .05)
+```
+
+### Guns
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab1d <- d |>
+  filter(!is.na(VCF9238)) |>
+  group_by(VCF0004) |>
+  summarize(
+    prop = mean(VCF9238 == "More difficult")
+  )
+
+tab1d |>
+  ggplot(aes(x = VCF0004, y = prop)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval for New Restrictions on Guns") +
+  #ggrepel::geom_text_repel(aes(label = str_c(round(prop, 2)*100, "%")))
+  geom_text(aes(label = str_c(round(prop, 2)*100, "%")), nudge_y = .05)
+```
+
+:::
+
+::: notes
+
+*Step through each and make sure they got these results PLUS understand what this shows*
+
+<br>
+
+Time to use this data to measure polarization!
+
+- GROUPS, redo this exercise but create separate lines for the Republicans and the Democrats in the sample (VCF0303)
+
+- **Questions?**
+
+- Go!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.panel-tabset}
+
+### Gay Adoption
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+# Yes % by party ID
+d |>
+  filter(!is.na(VCF0878)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF0878 == "Yes")
+  ) |>
+  filter(!is.na(VCF0303)) |>
+  ggplot(aes(x = VCF0004, y = prop, color = VCF0303)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1992, 2020, 2)) +
+  labs(x = "", y = "", title = "Approval of Gay Adoption by Party Identification", color = "") +
+  scale_color_manual(values = c("blue", "darkgrey", "red"))
+```
+
+### Limit Trade
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+d |>
+  filter(!is.na(VCF9231)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF9231 == "Favor new limits")
+  ) |>
+  filter(!is.na(VCF0303)) |>
+  ggplot(aes(x = VCF0004, y = prop, color = VCF0303)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval of Limiting Trade by Party Identification", color = "") +
+  scale_color_manual(values = c("blue", "darkgrey", "red"))
+
+```
+
+### Death Penalty
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+d |>
+  filter(!is.na(VCF9237_v2)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF9237_v2 == "Favor")
+  ) |>
+  filter(!is.na(VCF0303)) |>
+  ggplot(aes(x = VCF0004, y = prop, color = VCF0303)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval of Death Penalty by Party Identification", color = "") +
+  scale_color_manual(values = c("blue", "darkgrey", "red"))
+```
+
+### Guns
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+d |>
+  filter(!is.na(VCF9238)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF9238 == "More difficult")
+  ) |>
+  filter(!is.na(VCF0303)) |>
+  ggplot(aes(x = VCF0004, y = prop, color = VCF0303)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "", title = "US Public Approval for New Restrictions on Guns by Party Identification", color = "") +
+  scale_color_manual(values = c("blue", "darkgrey", "red"))
+```
+
+:::
+
+::: notes
+
+*Step through each and make sure they got these results*
+
+<br>
+
+GROUPS, now I want you to directly measure the polarization!
+
+- Make me a single line that represents the difference between the proportion of Democrats and the proportion of Republicans 
+
+- **Questions on the task?**
+
+- Go!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+::: {.panel-tabset}
+
+### Gay Adoption
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+# Difference by party ID
+tab2a <- d |>
+  filter(!is.na(VCF0878)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF0878 == "Yes")
+  ) |>
+  filter(VCF0303 %in% c("Democrats", "Republicans")) |>
+  pivot_wider(names_from = VCF0303, values_from = prop) |>
+  mutate(
+    difference = Democrats - Republicans,
+    policy = "Gay Adoption"
+  )
+
+tab2a |>
+  ggplot(aes(x = VCF0004, y = difference)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(0, .4), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1992, 2020, 2)) +
+  labs(x = "", y = "Approval Differences",
+       title = "Differences in Approval of Gay Adoption (Democrats - Republicans)") +
+  geom_text(aes(label = str_c(round(difference, 2)*100, "%")), nudge_y = .02)
+```
+
+### Limit Trade
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab2b <- d |>
+  filter(!is.na(VCF9231)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF9231 == "Favor new limits")
+  ) |>
+  filter(VCF0303 %in% c("Democrats", "Republicans")) |>
+  pivot_wider(names_from = VCF0303, values_from = prop) |>
+  mutate(
+    difference = Democrats - Republicans,
+    policy = "Limit Trade"
+  )
+
+tab2b |>
+  ggplot(aes(x = VCF0004, y = difference)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(-.4, .2), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "Approval Differences",
+       title = "Differences in Approval of Limiting Trade (Democrats - Republicans)") +
+  geom_text(aes(label = str_c(round(difference, 2)*100, "%")), nudge_y = .02)
+```
+
+### Death Penalty
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab2c <- d |>
+  filter(!is.na(VCF9237_v2)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF9237_v2 == "Favor")
+  ) |>
+  filter(VCF0303 %in% c("Democrats", "Republicans")) |>
+  pivot_wider(names_from = VCF0303, values_from = prop) |>
+  mutate(
+    difference = Democrats - Republicans,
+    policy = "Death Penalty"
+  )
+
+tab2c |>
+  ggplot(aes(x = VCF0004, y = difference)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(-.5, 0), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "Approval Differences",
+       title = "Differences in Approval of the Death Penalty (Democrats - Republicans)") +
+  geom_text(aes(label = str_c(round(difference, 2)*100, "%")), nudge_y = .02)
+```
+
+### Guns
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+tab2d <- d |>
+  filter(!is.na(VCF9238)) |>
+  group_by(VCF0303, VCF0004) |>
+  summarize(.groups = "keep",
+    prop = mean(VCF9238 == "More difficult")
+  ) |>
+  filter(VCF0303 %in% c("Democrats", "Republicans")) |>
+  pivot_wider(names_from = VCF0303, values_from = prop) |>
+  mutate(
+    difference = Democrats - Republicans,
+    policy = "Gun Control"
+  )
+
+tab2d |>
+  ggplot(aes(x = VCF0004, y = difference)) +
+  geom_point() +
+  geom_line() +
+  theme_bw() +
+  scale_y_continuous(limits = c(.1, .6), labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  labs(x = "", y = "Approval Differences",
+       title = "Differences in Approval of New Restrictions on Guns (Democrats - Republicans)") +
+  geom_text(aes(label = str_c(round(difference, 2)*100, "%")), nudge_y = .02)
+```
+
+:::
+
+::: notes
+
+*Step through each and make sure they got these results PLUS understand what this shows*
+
+<br>
+
+**BOTTOM LINE, how much partisan polarization are we seeing in these issues?**
+
+- **And how much since 2007 (the end of the analyses in the Fiorina and Abrams)?**
+
+<br>
+
+SLIDE: What happened?
+
+:::
+
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png"}
+
+```{r, fig.retina=3, fig.align='center', fig.asp=.618, out.width="85%"}
+rbind(tab2b, tab2c, tab2d) |>
+  ggplot(aes(x = VCF0004, y = difference, color = policy)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  scale_y_continuous(limits = c(-.5, .5), labels = scales::percent_format()) +
+  labs(x = "", y = "Differences in Policy Support (Dems - Repubs)",
+       title = "Measuring Issue Polarization using ANES Data") +
+  scale_x_continuous(breaks = seq(1988, 2020, 2)) +
+  annotate("text", x = c(1990, 1990, 2001), y = c(-.25, .05, .23), label = c("Death Penalty", "Limit Trade", "Gun Control")) +
+  guides(color = "none")
+```
+
+::: notes
+
+**Any hypotheses as to what happened since the Fiorina and Abrams article to explain the growing issue polarization?**
+
+:::
 
 
 
@@ -453,8 +667,7 @@ Defining and Measuring Affective Polarization
 
 1. Iyengar, Lelkes, Levendusky, Malhotra, & Westwood (2019)
 
-2. ASSIGNMENT - Find us an example of affective polarization in action with the current election. In other words, an expression of "animosity between the parties" that is NOT based on a difference in policy preferences.
-
+2. Canvas: Find us an example of affective polarization in our current events. In other words, an expression of "animosity between the parties" that is NOT based on a difference in policy preferences.
 
 ::: notes
 
