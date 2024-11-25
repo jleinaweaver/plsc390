@@ -14,14 +14,11 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**I. How serious is the problem of misinformation in the American electorate?**
+**III. The Final Paper**
 
-Policies to Address Misinformation
-
-- Proposal 3: Changing the news consumption habits of American voters/consumers
+- Op-ed writing Workshop
 
 :::
-
 <br>
 
 ::: r-stack
@@ -31,46 +28,32 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
-    - Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
+1. TBD
+
+<br>
+
+**So, what have we missed in post-election news?**
+
+- **What's going on in the world?**
 
 :::
 
 
 
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
-
-<br>
-
-Proposal 3: Changing the news consumption habits of American voters/consumers
-
-1. Peterson and Iyengar (2021)
-
-2. ASSIGNMENT - 1) What are the "best" sources of daily news if your goal is to minimize your intake of misinformation? 2) How close do you come to that goal with your normal approach to tracking current events? 3) What would it take to get you to change?
-
-::: notes
-
-Erik Peterson and Shanto Iyengar (2021). “Partisan Gaps in Political Information and Information-Seeking Behavior: Motivated Reasoning or Cheerleading?” American Journal of Political Science 65(1): 133–147.
-
-- Paying for the "right" answers doesn't overcome partisan motivated reasoning
-- Incentives help, but not enough BECAUSE of partisan information selection (news searches but only in your partisan media)
-
-
-:::
-
-
-
-## For Next Class {background-image="Images/background-blue_triangles_flipped.png" .center}
+## The Final Paper {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
 
 <br>
 
-Proposal 4: Reducing misinformation on social media
+What is one specific policy we could implement at the local, state or national level that would reduce the levels of misinformation, polarization or affective polarization in American society?
 
-1. Budak, Nyhan, Rothschild, Thorson & Watts (2024)
-
-2. Find an example of a government policy or a proposal for a new policy from an NGO, politician or thinktank aiming to address the misinformation problem on social media. How do they frame the problem? How do they hope to address it? Is it a good idea? Why or why not?
+Make your argument in the style of an **op-ed of no more than 800 words (excluding the bibliography)** that you could submit to a newspaper or website interested in thoughtful, well researched analyses of the world we live in.
 
 ::: notes
+
+**Questions on the final paper prompt or expected style?**
+
+<br>
+
+Writing Workshop
 
 :::

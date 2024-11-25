@@ -14,11 +14,12 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**II. How serious is the problem of affective polarization in the American electorate?**
+**II. Contemporary Threats to American Democracy**
 
-- Defining affective polarization
+- Defining and Measuring Affective Polarization
 
 :::
+
 
 <br>
 
@@ -29,39 +30,253 @@ Justin Leinaweaver (Fall 2024)
 ::: notes
 Prep for Class
 
-1. Readings
+1. Check Canvas submissions
+    - Find us an example of affective polarization in action with the current election / current events. In other words, an expression of "animosity between the parties" that is NOT based on a difference in policy preferences.
+
+2. Readings
     - Iyengar, S., Lelkes, Y., Levendusky, M., Malhotra, N., & Westwood, S. J. (2019). The Origins and Consequences of Affective Polarization in the United States. Annual Review of Political Science, 22(1), 129–146. https://doi.org/10.1146/annurev-polisci-051117-073034
 
 <br>
 
+*Check in with class*
 
-
-:::
-
-
-
-
-## For Today {background-image="Images/background-blue_triangles_flipped.png" .center}
+- **Any big post-election news we should check-in on?**
 
 <br>
 
-Defining and Measuring Affective Polarization
+This week we shift our focus from issue-based to affective polarization
 
-1. Iyengar, Lelkes, Levendusky, Malhotra, & Westwood (2019)
+- I'd like to use the Iyengar et al (2019) to define the concept and then your Canvas submissions to identify real-world cases
 
-2. ASSIGNMENT - Find us an example of affective polarization in action with the current election. In other words, an expression of "animosity between the parties" that is NOT based on a difference in policy preferences.
+<br>
+
+Let's start big picture
+
+- **How do these researchers define affective polarization?**
+
+- (SLIDE)
+:::
+
+
+
+## Affective Polarization {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+"Democrats and Republicans both say that the other party’s members are hypocritical, selfish,
+and closed-minded, and they are unwilling to socialize across party lines, or even to partner with
+opponents in a variety of other activities. **This phenomenon of animosity between the parties is
+known as affective polarization**" (130).
 
 ::: notes
 
-- Touches on describing what is happening, introducing the danger and three proposed mechanisms for addressing it. This might be a good choice as a preview of what's to come.
-- Sections: Theory - AP as social identity (and the factors that strengthen it); Difficulty measuring it; Origins and causes (theory again?); Nonpolitical consequences; Strategies to address it; open questions remaining
-- Dig into how hard it is to measure this stuff
+Make this clear for me.
 
-Save for Class
-Webster, S. W., & Abramowitz, A. I. (2017). The Ideological Foundations of Affective Polarization in the U.S. Electorate. American Politics Research, 45(4), 621–647. https://doi.org/10.1177/1532673X17703132
-- Argues that other research gets it wrong, affective polarization and policy polarization are correlated
+- **How is this different from the issue polarization we studied last week?**
+
+<br>
+
+This is a separate divide from policy polarization. 
+
+- "Rather, we argue that affective polarization is largely distinct from the ideological divide, and that extremity in issue opinions is not a necessary condition for affective polarization (Iyengar et al. 2012, Mason 2015)."
+
+- Indeed, in some settings, affective polarization can increase while ideological divisions shrink (Levendusky & Malhotra 2016a)" (131).
+
+<br>
+
+**And what do these authors argue are the consequences of affective polarization for our society?**
+
+- The Nonpolitical Consequences of Affective Polarization (136-139)
+
+- "Longitudinal survey data have shown that people self-report that they are less comfortable with social relationships with out partisans" (136).
+
+- Evidence that partisanship impacts economic decisionmaking and "how people perceive the state of the economy"
+
+- "Research into the consequences of affective polarization is only beginning. More research is
+needed to understand how these factors play out in different political contexts" (139).
+
+<br>
+
+Ok, if this is the concept in action, let's discuss your examples
+
+- **What did you find (and submit to Canvas) as examples of affective polarization in the world today?**
+
+- *PRESENT and DISCUSS each*
+
+<br>
+
+SLIDE: Measurement approaches in the research
 
 :::
+
+
+
+## Measuring Affective Polarization {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+1. Survey Self-Reports (131-132)
+
+2. Implicit Measures (133)
+
+3. Behavioral Measures (133-134)
+
+:::
+
+::: notes
+
+The authors discuss these three approaches to measuring affective polarization in the mass public.
+
+- **Which do you find the most compelling? Why?**
+
+<br>
+
+*NOTES*
+
+How do we measure affective polarization? (131-134) Three main techniques...
+
+Technique 1. Survey Self-Reports (131-132)
+
+- Approach 1: ANES feeling thermometer approach, respondents asked to rate each party on a scale from cold (0) to warm (100). "Affective polarization is then computed as the difference between the score given to the party of the respondent and the score given to the opposing party, which we also refer to as the out party" (131).
+    - Figure 1 (132) shows: a significant increase in affective polarization since 1980, the change is not that people like their own party more over time; rather, there is an increase in out-party animus, especially in recent years, and affective polarization actually decreased between 2012 and 2016
+
+- Approach 2: "use trait ratings of party supporters to measure affective discord: Are they intelligent, open-minded, and generous, or hypocritical, selfish, and mean trait ratings" (131) OR 
+ask people to list what they like and dislike about each party OR measure positive/negative reactions to presidential candidates
+
+- Approach 3: "A less obtrusive measure of partisan affect is social distance, the extent to which individuals feel comfortable interacting with out-group members in various settings. If partisanship is an important social identity in its own right, partisans should be averse to entering into close interpersonal relations with their opponents" (132).
+
+<br>
+
+Technique 2. Implicit Measures (133)
+
+- Since survey respondents may misrepresent their positions due to normative pressures, "Iyengar & Westwood (2015) developed an Implicit Association Test to document unconscious partisan bias, based on the brief version of the race IAT."
+
+<br>
+
+Technique 3. Behavioral Measures (133-134)
+
+- Since the implicit measures "are weak predictors of relevant behaviors," "scholars
+have turned to behavioral manifestations of partisan animus in both lab and naturalistic settings."
+
+- Economic games like the trust game and the dictator game
+
+- Other experiments in nonpolitical settings, e.g. review job candidates that are identical except for experimentally varied race, ethnicity, gender or partisanship. 
+
+- Much evidence of partisanship mattering in these experiments
+
+:::
+
+
+
+## Sources of Affective Polarization {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+1. Partisan Sorting
+
+2. Ideological polarization
+
+3. Partisan news sources
+
+4. Social Media
+
+5. Coverage of polarization in media / campaigns  
+
+:::
+
+::: notes
+
+The article explores a series of causal mechanisms proposed in the academic literature
+
+- **Explain each of these to me.**
+
+- **How does this mechanism increase affective polarization?**
+
+<br>
+
+**If you were designing a model to explain variation in levels of affective polarization which of these would you focus on? Why?**
+
+<br>
+
+
+*NOTES*
+
+1. Lit: Partisan sorting leads to AP
+    
+    - "Sorting likely leads people to perceive both opposing partisans and copartisans as more extreme than they really are, with misperceptions about opposing partisans being more acute (Levendusky & Malhotra 2016b)."
+
+    - Mason (2015 and 2018) "has shown that those with consistent partisan and ideological identities became more hostile toward the out party without necessarily changing their ideological positions, and those who have aligned religious, racial, and partisan identities react more emotionally to information that threatens their partisan identities or issue stances" (134).
+
+2. Lit: Ideological polarization (e.g. issue polarization) increases AP
+
+3. Lit: Growing availability of partisan news sources may increase AP (precise mechanism unclear); This dynamic may predominantly only impact those already holding the most extreme positions.
+
+4. Lit: Debate remains about the effect of social media on AP
+
+5. Other possible mechanisms: Mainstream media coverage of polarization has been shown to increase AP, political campaigns can increase AP and the existence of echo chambers (if they are real) may increase AP
+
+:::
+
+
+
+## Decreasing Affective Polarization {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+1. Correcting misperceptions
+
+2. Shifting the salience of respondents' partisan identities
+
+3. Making partisanship and politics less salient
+
+4. Increasing constructive engagement
+
+:::
+
+::: notes
+
+The article explores a series of approaches considered in the literature for decreasing AP
+
+- Give me an example of how we can do each of these things
+
+1. **How do we correct misperceptions in a way that would decrease partisan animosity?**
+
+2. **How do we shift the salience of partisan identities?**
+
+3. **How do we make partisanship and politics less salient?**
+
+4. **How do we increase constructive engagement?**
+
+<br>
+
+**So, what's our best bet for making a difference in our lives?**
+
+<br>
+
+*NOTES*
+
+Decreasing Affective Polarization (139-141)
+
+- "First, scholars have shown that correcting misperceptions about party supporters reduces
+animus toward the other side (Ahler & Sood 2018)."
+
+- "A second approach tries to shift the salience of respondents’ partisan identities. ... Using a set of survey experiments, as well as a natural experiment stemming from the July Fourth holiday, Levendusky (2018a) shows that emphasizing American identity reduces animus toward the other party."
+
+- "More generally, the evidence suggests that making partisanship and politics less salient—and
+emphasizing other factors—can potentially change behavior as well. ... In an era of affective polarization, downplaying politics can help to mitigate partisan divisions."
+
+- BUT! 1) "First, while both types of efforts appear to be effective, we should not expect reduction of partisan animus to be easy, even in the survey context, where behavior tends to be quite malleable. While some strategies will work, many sensible strategies will fail." 2) "Further, it is unclear to what extent treatments that work in a survey experiment (or other controlled settings) work in the messy environment of real-world politics."
+
+- "One potentially promising strand of research is to build on the insights of intergroup contact theory (Pettigrew & Tropp 2011) and examine whether constructive engagement between Democrats and Republicans could potentially reduce partisan animus."
+
+:::
+
 
 
 
@@ -69,11 +284,15 @@ Webster, S. W., & Abramowitz, A. I. (2017). The Ideological Foundations of Affec
 
 <br>
 
-Defining and Measuring Political Sectarianism
+::: {.r-fit-text}
 
-1. Finkel, Bail, Cikara, Ditto, Iyengar, Klar, Mason, McGrath, Nyhan, Rand, Skitka, Tucker, Van Bavel, Wang, & Druckman (2020)
+1. Homans and McFadden (2022)
 
-2.  ASSIGNMENT - Find us an example of political sectarianism in action with the current election. In other words, an expression of "othering", "aversion" or "moralization" that goes beyond the affective polarization from last class.
+2. Let's get ready to analyze the data!
+
+    - ANES-1978-2020-Affective_Polarization_Variables.xlsx
+
+:::
 
 ::: notes
 

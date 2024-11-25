@@ -14,11 +14,9 @@ library(readxl)
 
 ::: {.r-fit-text}
 
-**III. The 2024 Election is over (?)**
+**III. The 2024 Election is over!**
 
-- What just happened?!?!
-
-- What will happen next?
+- What just happened? What will happen next?
 
 :::
 
@@ -37,7 +35,9 @@ Prep for Class
 
 For today I asked you to submit jumping off points for discussion (e.g. "hot takes", data, etc)
 
-- **What do you want to discuss?**
+<br>
+
+SLIDE: Let's start with my hot take!
 
 :::
 
@@ -49,17 +49,24 @@ For today I asked you to submit jumping off points for discussion (e.g. "hot tak
 
 ::: notes
 
-Political science is undefeated!
+Political science is awesome!
 
-- Biden at 38.5% which per this model predicts 46-ish% of the vote which is close to Harris's predicted total
+- AND, the models we develop can be incredibly powerful!
+
+<br>
+
+Biden currently at 38% or 39% which per this model predicts 46-ish% of the vote which is close to Harris's predicted total
 
 <br>
 
 Want to get fancier?
 
-- 
+- Every four years the journal PS solicits election forecasts from experts in political science. 
+
+- This year they took the state-level forecasts from five different teams of political scientists to predict the EC outcome
 
 - SLIDE
+
 
 :::
 
@@ -71,28 +78,67 @@ Want to get fancier?
 
 ::: notes
 
-Every four years the journal PS solicits election forecasts from experts in political science. 
-
-- The following is the predicted electoral college results published a month ago. 
+[They published this a month ago!](https://politicalsciencenow.com/now-online-special-issue-on-forecasting-the-2024-us-elections-ps-political-science-politics/)
 
 - Isn't that insane? Fundamentals based models basically predicted the result perfectly!
 
-[This was published at the beginning of October!](https://politicalsciencenow.com/now-online-special-issue-on-forecasting-the-2024-us-elections-ps-political-science-politics/)
+<br>
+
+BOOM!
+
+- My hot take: Political science is awesome
+
+<br>
+
+**Ok, what do you have?**
+
+:::
 
 
+
+## {background-image="Images/background-news_v2.png" .center}
+
+![](Images/12_2-FT_Covid_Elections.jpg){style="display: block; margin: 0 auto"}
+
+::: notes
+
+"Every governing party facing election in a developed country this year lost vote share"
+
+- The Covid pandemic plus the inflation IT caused has devastated governing parties in democracies around the world
+
+- Full credit to the Harris campaign for doing as well as they did given these headwinds against them
+
+:::
+
+
+
+## {background-image="Images/background-news_v2.png" .center}
+
+![](Images/12_2-Change_in_Latino_Support.jpg){style="display: block; margin: 0 auto"}
+
+::: notes
+
+[Philip bump in WaPo](https://www.washingtonpost.com/politics/2024/11/06/trump-big-cities-popular-vote/?itid=ap_philipbump)
 
 :::
 
 
 
 
+## {background-image="Images/background-news_v2.png" .center}
+
+![](Images/12_2-Scientific_American_Vaccine_Lives_Saved.jpg){style="display: block; margin: 0 auto"}
+
+::: notes
+
+[SciAmerican on Vaccines saving lives](https://www.scientificamerican.com/article/see-how-many-lives-vaccines-have-saved-around-the-world/)
+
+<br>
+
+Insane to think we may actually have to defend the science on vaccines, but here we are
 
 
-
-
-
-
-
+:::
 
 
 

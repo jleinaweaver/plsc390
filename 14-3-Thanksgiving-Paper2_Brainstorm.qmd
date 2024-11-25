@@ -1,0 +1,104 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**III. The Final Paper**
+
+- Brainstorming policy options
+
+:::
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Review Canvas submissions
+
+<br>
+
+**So, what have we missed in post-election news?**
+
+- **What's going on in the world?**
+
+:::
+
+
+
+
+## The Final Paper {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+What is one specific policy we could implement at the local, state or national level that would reduce the levels of misinformation, polarization or affective polarization in American society?
+
+::: notes
+
+This is the big picture prompt for your final paper in this class.
+
+- For today, each of you submitted to Canvas an example policy or proposal produced by a good quality think tank, non-profit or government agency
+
+<br>
+
+Let's go around the room to hear what each of you submitted
+
+- Tell us what you picked and why you think it would accomplish one of the goals listed in the prompt
+
+- *PRESENT and DISCUSS each*
+
+<br>
+
+SLIDE: Let's talk final paper in more detail
+
+:::
+
+
+
+
+## The Final Paper {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+What is one specific policy we could implement at the local, state or national level that would reduce the levels of misinformation, polarization or affective polarization in American society?
+
+Make your argument in the style of an **op-ed of no more than 800 words (excluding the bibliography)** that you could submit to a newspaper or website interested in thoughtful, well researched analyses of the world we live in.
+
+::: notes
+
+I've shared the link to two pieces of advice to help you do this
+
+- Both are on Canvas for today
+
+- One is produced by the Op-Ed Project and the other by the Kennedy School of Government at Harvard
+
+- Everybody review these two links and then let's discuss.
+
+<br>
+
+**So, questions about the assignment?**
+
+<br>
+
+ASSIGNMENT FOR TUESDAY: Submit a completed rough draft of your op-ed before class Dec 3rd.
+
+- COMPLETED meaning all the words with a recognizable macro and meso structure
+
+- Make sure you can share this draft with others in the class.
+
+:::

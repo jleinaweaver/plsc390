@@ -38,6 +38,169 @@ Prep for Class
     
 <br>
 
+*Check in with class*
+
+- **Any big post-election news we should check-in on?**
+
+<br>
+
+SLIDE: Data on voting in the last election
+
+:::
+
+
+
+## 2024 Election Results {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+![](Images/13_1-US_Election_Totals_AP.png){style="display: block; margin: 0 auto"}
+
+::: notes
+
+Here are the election results per the AP as of last night.
+
+- **What do we learn from these results about the country?**
+
+- **What do we learn about the future from this?**
+
+<br>
+
+SLIDE: Let's look at this differently
+
+:::
+
+
+
+
+## {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
+
+```{r, fig.align='center', fig.retina=3, fig.asp=.65, fig.width=9}
+# # Jennifer Victor's Plot
+# # Not eligible = VAP - VEP
+# # Not voting = VAP - ballots - not eligible
+# 154757700/244666890 # Ballots / VEP = 63%
+# 154757700/264798961 # Ballots / VAP = 58%
+# 264798961 - 244666890 # removed from VAP = 20,132,071 
+# 264798961 - 154757700 - 20132071 # not voting = VAP - ballots - not eligible
+
+# Turnout data from the Election Lab at UF: https://election.lab.ufl.edu/2024-general-election-turnout/
+
+# Current vote totals from AP (Nov 11, 8:10a)
+# Trump = 74,834,277
+# Harris = 71,239,855
+# Stein = 705,486
+# RFK = 681,139
+# Chase Oliver (libertarian) = 611,188
+# Other = 357,261
+
+e24 <- tribble(
+  ~state, ~ballots, ~vep_pop, ~vap_pop, ~trump, ~harris, ~other,
+  "United States", 154757700, 244666890, 264798961, 74834277, 71239855, 705486+681139+611188+357261,
+  "Missouri", 2940000, 4662988, 4856207, 1739117, 1190859, 23756+16958
+) |>
+  mutate(
+    vep_rate = ballots / vep_pop,
+    vap_rate = ballots / vap_pop,
+    not_eligible = vap_pop - vep_pop,
+    ne_prop = not_eligible / vap_pop,
+    not_voting = vap_pop - ballots - not_eligible,
+    nv_prop = not_voting / vap_pop,
+    trump_prop = trump / vap_pop,
+    harris_prop = harris / vap_pop,
+    other_prop = other / vap_pop,
+  )
+
+e24 |>
+  select(state, other_prop, ne_prop, harris_prop, trump_prop, nv_prop) |>
+  filter(state == "United States") |>
+  pivot_longer(cols = other_prop:nv_prop, names_to = "category", values_to = "values") |>
+  ggplot(aes(y = reorder(category, values), x = values)) +
+  geom_col(width = .75, fill = "green4") +
+  theme_bw() +
+  scale_x_continuous(labels = scales::percent_format(), breaks = seq(0, .35, .05)) +
+  labs(x = "Proportion of VAP", y = "",
+       title = "Election 2024: Turnout in the US",
+       caption = "Source: Election results from AP, turnout data from the Election Lab at UF") +
+  scale_y_discrete(limits = c("other_prop", "ne_prop", "harris_prop", "trump_prop", "nv_prop"), labels = c("Other Candidates", "Not Eligible", "Harris Votes", "Trump Votes", "Not Voting")) +
+  annotate("text", y = 1:5, x = .01, label = c("2.3 million (1%)", "20.1 million (8%)", "71.2 million (27%)", "74.8 million (28%)", "89.9 million (34%)"), hjust = 0, size = 5, color = c("black", "black", rep("white", 3)))
+
+
+
+# e24 |>
+#   select(state, other_prop, ne_prop, harris_prop, trump_prop, nv_prop) |>
+#   filter(state == "Missouri") |>
+#   pivot_longer(cols = other_prop:nv_prop, names_to = "category", values_to = "values") |>
+#   ggplot(aes(y = reorder(category, values), x = values)) +
+#   geom_col(width = .75, fill = "green4") +
+#   theme_bw() +
+#   scale_x_continuous(labels = scales::percent_format(), breaks = seq(0, .35, .05)) +
+#   labs(x = "Proportion of VAP", y = "",,
+#        title = "Election 2024: Turnout in Missouri",
+#        caption = "Source: Election results from AP, turnout data from the Election Lab at UF") +
+#   scale_y_discrete(limits = c("other_prop", "ne_prop", "harris_prop", "trump_prop", "nv_prop"), labels = c("Other Candidates", "Not Eligible", "Harris Votes", "Trump Votes", "Not Voting")) +
+#   annotate("text", y = 1:5, x = .01, label = c("40 thousand (1%)", "193 thousand (4%)", "1.2 million (25%)", "1.7 million (36%)", "1.7 million (36%)"), hjust = 0, size = 5, color = c("black", rep("white", 4)))
+
+
+
+# e24 |>
+#   select(other_prop, ne_prop, nv_prop, trump_prop, harris_prop) |>
+#   mutate(
+#     check = nv_prop + trump_prop + harris_prop + other_prop + ne_prop
+#   )
+
+# e24 |>
+#   select(state, other, not_eligible, harris, trump, not_voting) |>
+#   filter(state == "United States") |>
+#   pivot_longer(cols = other:not_voting, names_to = "category", values_to = "values") |>
+#   ggplot(aes(y = reorder(category, values), x = values)) +
+#   geom_col() +
+#   theme_bw()
+
+```
+
+::: notes
+
+In this visualization I'm pulling together election results data from the AP and turnout data from the Election Lab at the University of Florida
+
+- AP results current as of yesterday
+
+- Turnout data is "current" as of 1pm on Saturday, Nov 9th
+
+<br>
+
+The denominator for the plot is the voting-age population (VAP) in the US
+
+- The VAP is defined by the Bureau of the Census as everyone residing in the United States, age 18 and older.
+
+- SO, each bar represents the proportion of the adult population in the US by category
+
+<br>
+
+**What are your takeaways from this? Any surprises here?**
+
+- **How does this change your impression of the election? Of the candidates? Of the country?**
+
+<br>
+
+- Note: Proportions currently add up to 98%. 
+
+- Might be evidence of an undercount (e.g. ballots with no presidential vote, spoiled ballots or something else yet to be cleaned up in the process)
+
+<br>
+
+For me?
+
+1. Talk about "mandates" in American politics are fairly stupid.
+  
+    - None of these bars reflect deep policy debates about a single issue.
+
+2. Trump's electoral "mandate" is ONLY based on 28% of the adult population. 
+
+    - Trump didn't win a majority in terms of adults
+    
+    - He "might" win a majority of those voting
+
+<br>
+
 This week we shift our focus from misinformation to polarization as a threat to American democracy.
 
 - Our article for today comes from two of the biggest names in studying polarization and American public opinion
@@ -52,6 +215,8 @@ SLIDE: Let's start by defining the concept
 
 
 
+
+
 ## Define Polarization {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
 
 ![](Images/07_1-Fiorina2008-Fig1.png){.absolute left=0 width=580}
@@ -60,7 +225,7 @@ SLIDE: Let's start by defining the concept
 
 ::: notes
 
-**Per Fiorina and Adams (2008) what is polarization?**
+**Per Fiorina and Abrams (2008) what is polarization?**
 
 - **Key takeaways from p566-567?**
 
@@ -202,7 +367,7 @@ SLIDE: Illustrate...
 
 ## {background-image="Images/background-white_house_graphic_v4_muted_text2.png"}
 
-```{r, fig.retina=3, fig.align='center', fig.asp=.46, out.width='70%'}
+```{r, fig.retina=3, fig.align='center', fig.asp=.46, out.width='65%'}
 voters1 <- read_csv("13-1-simulated_voters.csv")
 
 voters1 |>
