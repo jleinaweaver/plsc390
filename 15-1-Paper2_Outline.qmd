@@ -54,15 +54,49 @@ Make your argument in the style of an **op-ed of no more than 800 words (excludi
 
 <br>
 
-Ok, your job today is to read EVERYBODY'S op-ed draft and give them feedback!
+Here's the deal, writing an effective op-ed requires iteration
 
-- Writing an effective op-ed requires iteration
+- You only have a few words but you still have to do a number of important things
 
-- With this tiny amount of words you have to be concise BUT ALSO compelling
+- Getting an op-ed into great shape takes revision!
 
 <br>
 
-Let's go!
+SLIDE: So, let's work on that today!
+
+:::
+
+
+
+## {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+### Read and give feedback on all of the drafts
+
+<br>
+
+::: {.incremental}
+::: {.r-fit-text}
+1. How effective is their news hook (intro)?
+
+2. How clear is their call to action (thesis)? 
+
+3. How credible is their argument (evidence)? 
+
+4. Have they addressed a counter argument (analysis)?
+:::
+:::
+
+::: notes
+
+Your job today is to read everybody's op-ed in class and give them feedback across four things
+
+- REVEAL x 4
+
+<br>
+
+**Questions on the task?**
+
+- Let's go!
 
 <br>
 

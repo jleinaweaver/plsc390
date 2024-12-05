@@ -1,0 +1,169 @@
+---
+format: revealjs
+---
+
+## Today's Agenda {background-image="Images/background-white_house_graphic_v4_muted_text2.png" .center}
+
+```{r}
+# background-size="1920px 1080px"
+library(tidyverse)
+library(readxl)
+```
+
+<br>
+
+::: {.r-fit-text}
+
+**Wrapping up the semester**
+
+:::
+
+<br>
+
+<br>
+
+::: r-stack
+Justin Leinaweaver (Fall 2024)
+:::
+
+::: notes
+Prep for Class
+
+1. Bring a marker
+
+<br>
+
+**So, what have we missed in post-election news?**
+
+- **What's going on in the world?**
+
+<br>
+
+Today I'd like us to wrap up our work from the semester
+
+- e.g. see where you ended up on the key concepts, on evaluating American democracy and then make a few predictions
+
+:::
+
+
+
+## {background-image="Images/15_2-Democracy_Word_Cloud.jpg" .center background-size='98%'}
+
+::: notes
+
+We focused the first section of the class on the contested concept that is democracy.
+
+<br>
+
+Help me make a list of the key criteria in your definition of democracy
+
+- **So, where did you end up on "democracy"?**
+
+- *ON BOARD*
+
+<br>
+
+**Which of these criteria do you all include and which not?**
+
+<br>
+
+**Can we rank these in terms of importance or are all of them necessary simultaneously?**
+
+:::
+
+
+
+## {background-image="Images/15_2-US_Democracy.jpg" .center}
+
+::: notes
+
+**Per these criteria, is America a democracy? e.g. as a dichotomous measure, yes or no?**
+
+- **Why or why not?**
+
+<br>
+
+**Per these criteria, is America a "good" democracy? e.g. as a level of democracy**
+
+- **Why or why not?**
+
+:::
+
+
+
+## Class Design: Section 2 {background-image="Images/background-white_house_graphic_color.png" .center}
+
+<br>
+
+::: {.r-fit-text}
+
+**Contemporary Threats to American Democracy**
+
+- Misinformation
+
+- Issue Polarization
+
+- Affective Polarization
+
+:::
+
+::: notes
+
+In the second half of our semester we shifted our focus to the cutting edge of political science research on new threats to American democracy.
+
+<br>
+
+**Which of these is the most serious threat to our country? Why?**
+
+<br>
+
+Each of you are focusing your final papers on one, or more, of these problems.
+
+- Let's go around the room and hear each of your "calls to action"!
+
+- **So, which problem are you targeting and what do you want me, the reader of your op-ed, to do about it?**
+
+:::
+
+
+
+## Predicting Our Future: 2025 - 2028 {background-image="Images/background-white_house_graphic_color.png" .center}
+
+![](Images/15_2-predictions.jpg)
+
+::: notes
+
+I want to hear your predictions for the next four years!
+
+- *ON BOARD*
+
+- Classify each as high vs low confidence
+
+<br>
+
+SLIDE: Final paper
+
+:::
+
+
+
+
+
+
+## The Final Paper {background-image="Images/background-white_house_graphic_blue_v2.png" .center}
+
+<br>
+
+What is one specific policy we could implement at the local, state or national level that would reduce the levels of misinformation, polarization or affective polarization in American society?
+
+Make your argument in the style of an **op-ed of no more than 800 words (excluding the bibliography)** that you could submit to a newspaper or website interested in thoughtful, well researched analyses of the world we live in.
+
+::: notes
+
+**Questions on the final paper prompt or expected style?**
+
+<br>
+
+Writing Workshop
+
+:::
